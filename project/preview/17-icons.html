@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 24px 32px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .tile {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 10px;
+    color: var(--noche-800);
+  }
+  .tile i { width: 26px; height: 26px; }
+  .tile span {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px; color: var(--niebla-700);
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="tile"><i data-lucide="book-open"></i><span>book-open</span></div>
+    <div class="tile"><i data-lucide="headphones"></i><span>headphones</span></div>
+    <div class="tile"><i data-lucide="mic"></i><span>mic</span></div>
+    <div class="tile"><i data-lucide="mail"></i><span>mail</span></div>
+    <div class="tile"><i data-lucide="search"></i><span>search</span></div>
+    <div class="tile"><i data-lucide="menu"></i><span>menu</span></div>
+    <div class="tile"><i data-lucide="arrow-up-right"></i><span>arrow-up-right</span></div>
+    <div class="tile"><i data-lucide="play"></i><span>play</span></div>
+    <div class="tile"><i data-lucide="bookmark"></i><span>bookmark</span></div>
+    <div class="tile"><i data-lucide="calendar"></i><span>calendar</span></div>
+    <div class="tile"><i data-lucide="download"></i><span>download</span></div>
+    <div class="tile"><i data-lucide="clock"></i><span>clock</span></div>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

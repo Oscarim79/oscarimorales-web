@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>A · Índice editorial</title>
+<link rel="stylesheet" href="../../colors_and_type.css" />
+<style>
+  /* Variant A — Índice editorial
+     Un solo serif. Página estrecha tipo página de libro.
+     El archivo es el único contenido. */
+  :root { --col: 720px; }
+  body {
+    background: var(--crema-50);
+    color: var(--noche-800);
+    font-family: var(--font-serif);
+    margin: 0;
+  }
+  .wrap { width: 100%; max-width: var(--col); margin: 0 auto; padding: 0 32px; box-sizing: border-box; }
+
+  /* Nav */
+  .nav { padding: 36px 0 0; }
+  .nav__inner { display: flex; align-items: baseline; gap: 24px; }
+  .nav__brand {
+    font-family: var(--font-serif); font-style: italic; font-weight: 500;
+    font-size: 17px; color: var(--noche-800); letter-spacing: -0.005em;
+  }
+  .nav__links { display: flex; gap: 22px; margin-left: auto; }
+  .nav__link {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400;
+    font-size: 15px; color: var(--niebla-700); text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .nav__link:hover { color: var(--noche-800); border-bottom-color: currentColor; }
+
+  /* Hero — sólo serif, sin eyebrow, sin stats */
+  .hero { padding: 120px 0 96px; }
+  .hero__title {
+    font-family: var(--font-serif);
+    font-weight: 400; font-style: normal;
+    font-size: clamp(44px, 5.5vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--noche-800);
+    margin: 0 0 28px;
+    text-wrap: balance;
+  }
+  .hero__title em {
+    font-style: italic; font-weight: 400;
+    color: var(--noche-800);
+  }
+  .hero__lead {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400;
+    font-size: 19px; line-height: 1.6;
+    color: var(--niebla-700);
+    margin: 0;
+    max-width: 36ch;
+  }
+
+  /* Archive — sencillo, columna única */
+  .archive { padding: 24px 0 80px; }
+  .archive__year {
+    padding: 56px 0 8px;
+  }
+  .archive__year:first-child { padding-top: 24px; }
+  .archive__year-num {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400;
+    font-size: 32px; line-height: 1;
+    color: var(--niebla-500);
+    margin: 0 0 28px;
+    letter-spacing: -0.01em;
+  }
+  .archive__entry {
+    display: block;
+    padding: 18px 0;
+    border-top: 1px solid rgba(13, 27, 42, 0.10);
+    text-decoration: none;
+    color: inherit;
+  }
+  .archive__entry:last-child { border-bottom: 1px solid rgba(13, 27, 42, 0.10); }
+  .archive__entry-title {
+    font-family: var(--font-serif); font-weight: 400; font-style: normal;
+    font-size: 22px; line-height: 1.25; letter-spacing: -0.005em;
+    color: var(--noche-800);
+    margin: 0 0 6px;
+    transition: color 140ms ease;
+  }
+  .archive__entry:hover .archive__entry-title {
+    font-style: italic;
+  }
+  .archive__entry-meta {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400;
+    font-size: 14px; color: var(--niebla-600);
+  }
+  .archive__entry-meta span + span::before {
+    content: " · "; color: var(--niebla-400);
+  }
+
+  /* Footer — mínimo */
+  .footer {
+    padding: 60px 0 48px;
+    border-top: 1px solid rgba(13, 27, 42, 0.10);
+    margin-top: 40px;
+  }
+  .footer__row {
+    display: flex; justify-content: space-between; gap: 24px;
+    font-family: var(--font-serif); font-style: italic; font-weight: 400;
+    font-size: 14px; color: var(--niebla-600);
+  }
+  .footer a { color: inherit; border-bottom: 1px solid rgba(13, 27, 42, 0.20); text-decoration: none; }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav__inner">
+      <span class="nav__brand">Oscar I. Morales</span>
+      <div class="nav__links">
+        <a class="nav__link" href="#">Escritos</a>
+        <a class="nav__link" href="#">Boletín</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__title">
+        Notas sobre la fe, la familia y la <em>vida común</em>.
+      </h1>
+      <p class="hero__lead">
+        Ensayos pausados, meditaciones y apologética &mdash; escritos desde Guatemala,
+        en convicción reformada, desde 2014.
+      </p>
+    </div>
+  </section>
+
+  <section class="archive">
+    <div class="wrap" id="archive-root"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <span>&copy; Oscar I. Morales</span>
+      <a href="#">me@oscarimorales.com</a>
+    </div>
+  </footer>
+
+  <script src="posts-data.js"></script>
+  <script>
+    const MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    const root = document.getElementById('archive-root');
+    const byYear = {};
+    POSTS.forEach(p => {
+      const y = p.date.slice(0, 4);
+      (byYear[y] = byYear[y] || []).push(p);
+    });
+    Object.keys(byYear).sort((a, b) => b - a).forEach(year => {
+      const yEl = document.createElement('div');
+      yEl.className = 'archive__year';
+      yEl.innerHTML = `<h2 class="archive__year-num">${year}</h2>`;
+      byYear[year].forEach(p => {
+        const [yy, mm, dd] = p.date.split('-').map(Number);
+        const long = `${dd} de ${MONTHS[mm - 1]}`;
+        const a = document.createElement('a');
+        a.className = 'archive__entry';
+        a.href = p.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.innerHTML = `
+          <h3 class="archive__entry-title">${p.title}</h3>
+          <div class="archive__entry-meta">
+            <span>${long}</span>
+            <span>${p.cats.join(', ')}</span>
+          </div>`;
+        yEl.appendChild(a);
+      });
+      root.appendChild(yEl);
+    });
+  </script>
+</body>
+</html>

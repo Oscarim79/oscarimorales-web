@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .card { padding: 26px 32px; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: grid; grid-template-columns: 80px 1fr; gap: 18px; align-items: baseline; }
+  .meta {
+    font-family: var(--font-descriptor);
+    font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600);
+    padding-top: 4px;
+  }
+  p { margin: 0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="row"><div class="meta">Lead · 22</div>
+      <p class="lead">Una invitación a la pausa, desde el evangelio.</p>
+    </div>
+    <div class="row"><div class="meta">Body · 17</div>
+      <p>El pastor sabe que su lector llega cansado o distraído; por eso escribe despacio, con frases cortas que dejan respirar.</p>
+    </div>
+    <div class="row"><div class="meta">Body sm · 15</div>
+      <p class="body-sm">Cuerpo secundario para meta-información, captions y bloques densos donde el aire ya está limitado.</p>
+    </div>
+    <div class="row"><div class="meta">Fineprint · 12</div>
+      <p class="fineprint">© 2026 Oscar I. Morales · Todos los derechos reservados.</p>
+    </div>
+  </div>
+</body>
+</html>

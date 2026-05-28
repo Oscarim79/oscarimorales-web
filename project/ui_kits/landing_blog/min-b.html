@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>B · Sans suiza</title>
+<link rel="stylesheet" href="../../colors_and_type.css" />
+<style>
+  /* Variant B — Sans suiza
+     Sólo Montserrat. Sólo noche-sobre-crema. Hairlines.
+     Todo a una columna izquierda. Cero acentos cálidos. */
+  body {
+    background: var(--crema-100);
+    color: var(--noche-800);
+    font-family: var(--font-sans);
+    margin: 0;
+    font-feature-settings: "ss01";
+  }
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; }
+
+  /* Nav — solo texto, sin botón CTA */
+  .nav { padding: 28px 0; border-bottom: 1px solid rgba(13, 27, 42, 0.10); }
+  .nav__inner { display: flex; align-items: baseline; gap: 28px; }
+  .nav__brand {
+    font-family: var(--font-sans); font-weight: 700;
+    font-size: 14px; letter-spacing: -0.005em;
+    color: var(--noche-800);
+  }
+  .nav__brand-sub {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 14px; color: var(--niebla-600);
+    margin-left: 10px;
+  }
+  .nav__links { display: flex; gap: 24px; margin-left: auto; }
+  .nav__link {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 14px; color: var(--niebla-700); text-decoration: none;
+  }
+  .nav__link:hover { color: var(--noche-800); }
+
+  /* Hero — declaración tipográfica, alineada a la izquierda */
+  .hero { padding: 110px 0 88px; }
+  .hero__title {
+    font-family: var(--font-sans); font-weight: 600;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.08; letter-spacing: -0.022em;
+    color: var(--noche-800);
+    margin: 0 0 32px;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .hero__lead {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 18px; line-height: 1.55;
+    color: var(--niebla-700);
+    margin: 0;
+    max-width: 56ch;
+  }
+
+  /* Archive — grid año / título / fecha */
+  .archive { padding: 24px 0 80px; }
+  .archive__count {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 13px; color: var(--niebla-600);
+    padding: 18px 0;
+    border-top: 1px solid rgba(13, 27, 42, 0.10);
+    border-bottom: 1px solid rgba(13, 27, 42, 0.10);
+    display: flex; justify-content: space-between;
+  }
+  .archive__count span:last-child { letter-spacing: 0.01em; }
+
+  .archive__entry {
+    display: grid;
+    grid-template-columns: 64px 1fr 120px;
+    gap: 32px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+    text-decoration: none;
+    color: inherit;
+  }
+  .archive__entry-year {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 13px; color: var(--niebla-500);
+    font-variant-numeric: tabular-nums;
+  }
+  .archive__entry-year--same { color: transparent; }
+  .archive__entry-title {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 17px; line-height: 1.35;
+    color: var(--noche-800);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .archive__entry-cats {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 13px; color: var(--niebla-600);
+    margin-top: 4px;
+  }
+  .archive__entry-date {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 13px; color: var(--niebla-600);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+  }
+  .archive__entry:hover .archive__entry-title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 56px 0 40px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(13, 27, 42, 0.10);
+  }
+  .footer__row {
+    display: flex; justify-content: space-between; gap: 24px;
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 13px; color: var(--niebla-600);
+  }
+  .footer a { color: inherit; text-decoration: none; }
+  .footer a:hover { color: var(--noche-800); text-decoration: underline; text-underline-offset: 3px; }
+  .footer__links { display: flex; gap: 18px; }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav__inner">
+      <span class="nav__brand">Oscar I. Morales<span class="nav__brand-sub">— Secundum Fidem</span></span>
+      <div class="nav__links">
+        <a class="nav__link" href="#">Escritos</a>
+        <a class="nav__link" href="#">Boletín</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__title">Notas sobre la fe, la familia y la vida común.</h1>
+      <p class="hero__lead">
+        Ensayos, meditaciones y apologética &mdash; escritos desde Guatemala, en
+        convicción reformada, desde 2014. Para los que quieren pensar el
+        evangelio despacio.
+      </p>
+    </div>
+  </section>
+
+  <section class="archive">
+    <div class="wrap">
+      <div class="archive__count">
+        <span>Archivo completo</span>
+        <span id="archive-total"></span>
+      </div>
+      <div id="archive-root"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <span>&copy; Oscar I. Morales &middot; Guatemala</span>
+      <span class="footer__links">
+        <a href="#">Facebook</a>
+        <a href="#">X</a>
+        <a href="#">Instagram</a>
+        <a href="mailto:me@oscarimorales.com">Correo</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="posts-data.js"></script>
+  <script>
+    const MONTHS = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+    const root = document.getElementById('archive-root');
+    document.getElementById('archive-total').textContent = POSTS.length + ' escritos';
+
+    let lastYear = null;
+    POSTS.forEach(p => {
+      const [y, m, d] = p.date.split('-').map(Number);
+      const year = y;
+      const date = `${String(d).padStart(2,'0')} ${MONTHS[m - 1]} ${y}`;
+      const a = document.createElement('a');
+      a.className = 'archive__entry';
+      a.href = p.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      const yearCls = year === lastYear ? 'archive__entry-year archive__entry-year--same' : 'archive__entry-year';
+      a.innerHTML = `
+        <span class="${yearCls}">${year}</span>
+        <div>
+          <h3 class="archive__entry-title">${p.title}</h3>
+          <div class="archive__entry-cats">${p.cats.join(', ')}</div>
+        </div>
+        <span class="archive__entry-date">${date}</span>`;
+      root.appendChild(a);
+      lastYear = year;
+    });
+  </script>
+</body>
+</html>

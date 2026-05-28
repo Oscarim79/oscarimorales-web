@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 22px 28px; display: flex; flex-direction: column; gap: 16px; }
+  .nav {
+    background: rgba(245, 240, 232, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 var(--rule);
+    padding: 16px 22px;
+    display: flex; align-items: center; gap: 22px;
+    border-radius: 4px;
+  }
+  .nav img { height: 28px; }
+  .nav .links { display: flex; gap: 18px; margin-left: auto; }
+  .nav .links a {
+    font-family: var(--font-descriptor); font-weight: 800;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    font-size: 11px; color: var(--noche-800);
+    border: none; padding: 4px 0;
+  }
+  .nav .links a.active { color: var(--terracota-600); border-bottom: 1px solid var(--terracota-600); }
+
+  .nav-noche {
+    background: rgba(13, 27, 42, 0.86);
+    color: var(--crema-100);
+    backdrop-filter: blur(14px);
+  }
+  .nav-noche .links a { color: var(--crema-100); }
+  .nav-noche .links a.active { color: var(--terracota-400); border-bottom-color: var(--terracota-400); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="nav">
+      <img src="../assets/logo-icon.png" alt="OM" />
+      <div class="links">
+        <a class="active">ESCRITOS</a>
+        <a>SERMONES</a>
+        <a>CONSEJERÍA</a>
+        <a>SOBRE</a>
+      </div>
+    </div>
+    <div class="nav nav-noche">
+      <img src="../assets/logo-icon.png" alt="OM" style="filter: brightness(0) saturate(100%) invert(60%) sepia(34%) saturate(454%) hue-rotate(338deg) brightness(91%) contrast(85%);" />
+      <div class="links">
+        <a class="active">ESCRITOS</a>
+        <a>SERMONES</a>
+        <a>CONSEJERÍA</a>
+        <a>SOBRE</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

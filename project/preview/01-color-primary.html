@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html, body { margin:0; background: var(--bg); }
+  .card { padding: 28px 32px; }
+  .row { display: flex; gap: 14px; align-items: stretch; }
+  .swatch {
+    flex: 1;
+    aspect-ratio: 1.1 / 1;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-inset-hairline);
+    display: flex; flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px 14px;
+    color: var(--fg-on-dark);
+  }
+  .swatch .name {
+    font-family: var(--font-descriptor);
+    font-weight: 800; font-size: 11px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    opacity: 0.92;
+  }
+  .swatch .hex {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    opacity: 0.78;
+    margin-top: 2px;
+  }
+  .swatch.light { color: var(--noche-800); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="row">
+      <div class="swatch" style="background: var(--color-azul-noche)">
+        <div class="name">Azul Noche</div>
+        <div class="hex">#0D1B2A</div>
+      </div>
+      <div class="swatch" style="background: var(--color-terracota)">
+        <div class="name">Terracota</div>
+        <div class="hex">#C47E5A</div>
+      </div>
+      <div class="swatch light" style="background: var(--color-crema)">
+        <div class="name">Crema</div>
+        <div class="hex">#F5F0E8</div>
+      </div>
+      <div class="swatch" style="background: var(--color-dorado)">
+        <div class="name">Dorado</div>
+        <div class="hex">#B89A6A</div>
+      </div>
+      <div class="swatch" style="background: var(--color-niebla)">
+        <div class="name">Niebla</div>
+        <div class="hex">#8A9AAA</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

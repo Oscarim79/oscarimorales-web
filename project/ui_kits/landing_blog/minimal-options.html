@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landing Blog · Opciones minimalistas</title>
+  <link rel="icon" href="../../assets/logo-icon.png" />
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #f0eee9; }
+    .frame-wrap {
+      width: 100%; height: 100%;
+      background: var(--bg, #f5f0e8);
+      overflow: hidden;
+      position: relative;
+    }
+    .frame-wrap iframe {
+      display: block;
+      border: 0;
+      transform-origin: top left;
+    }
+    .frame-note {
+      position: absolute; left: 16px; right: 16px; bottom: 16px;
+      font: 12px/1.4 -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: rgba(13, 27, 42, 0.55);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      padding: 10px 12px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    .frame-note strong { color: rgba(13, 27, 42, 0.9); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div id="root" data-screen-label="Landing Blog · Opciones minimalistas"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+
+  <script type="text/babel">
+    /* global React, ReactDOM, DesignCanvas, DCSection, DCArtboard */
+
+    /* Variant preview: iframe sized to 1280x natural, but each artboard has
+       a fixed (1280 x 2200) viewport. The iframe content is the full page
+       and scrolls within the artboard via the artboard's own scroll.
+       Artboards in design_canvas are static frames, not scrollable, so we
+       size them tall enough to show hero + first ~15 entries + footer.   */
+
+    // Each artboard shows a full landing rendered at 1280×2400 inside an
+    // iframe, but the iframe is css-scaled down so the artboard fits on screen
+    // at default canvas zoom. Net effect: 4 mini-previews side-by-side.
+    const INNER_W = 1280;
+    const INNER_H = 2400;
+    const SCALE   = 0.34;   // 1280 * 0.34 ≈ 435, 2400 * 0.34 ≈ 816
+    const ARTBOARD_W = Math.round(INNER_W * SCALE);
+    const ARTBOARD_H = Math.round(INNER_H * SCALE);
+
+    const VariantFrame = ({ src, label, note }) => (
+      <div className="frame-wrap" style={{ width: ARTBOARD_W, height: ARTBOARD_H, background: '#f5f0e8' }}>
+        <iframe
+          src={src}
+          title={label}
+          style={{
+            width: INNER_W,
+            height: INNER_H,
+            transform: `scale(${SCALE})`,
+            transformOrigin: 'top left',
+          }}
+        />
+        <div className="frame-note">{note}</div>
+      </div>
+    );
+
+    const App = () => (
+      <DesignCanvas
+        title="Landing Blog · Opciones minimalistas"
+        subtitle="Tres direcciones para simplificar la landing. Cuando elijas una, actualizo el Design System y la landing principal."
+      >
+        <DCSection
+          id="minimalistas"
+          title="Opciones minimalistas"
+          subtitle="Tres grados de minimalismo &mdash; del más editorial al más radical. Click en cualquier tarjeta para abrirla a pantalla completa."
+        >
+          <DCArtboard
+            id="min-a"
+            label="A · Índice editorial"
+            width={ARTBOARD_W}
+            height={ARTBOARD_H}
+          >
+            <VariantFrame
+              src="min-a.html"
+              label="A · Índice editorial"
+              note="Sólo Playfair. Columna estrecha. Archivo como único contenido. Cero descriptores en mayúsculas."
+            />
+          </DCArtboard>
+
+          <DCArtboard
+            id="min-b"
+            label="B · Sans suiza"
+            width={ARTBOARD_W}
+            height={ARTBOARD_H}
+          >
+            <VariantFrame
+              src="min-b.html"
+              label="B · Sans suiza"
+              note="Sólo Montserrat. Sólo noche-sobre-crema. Hairlines. Grid año / título / fecha. Cero terracota y dorado."
+            />
+          </DCArtboard>
+
+          <DCArtboard
+            id="min-c"
+            label="C · Casi nada"
+            width={ARTBOARD_W}
+            height={ARTBOARD_H}
+          >
+            <VariantFrame
+              src="min-c.html"
+              label="C · Casi nada"
+              note="Header micro. Un título. Una lista. Terracota sólo en hover. Cuánto se puede quitar."
+            />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+    );
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

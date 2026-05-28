@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 18px 22px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
+  .row { display: flex; align-items: center; gap: 14px; padding: 8px 0; }
+  .lbl {
+    font-family: var(--font-descriptor); font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600); width: 86px; flex-shrink: 0;
+  }
+  /* mini button replicas for state demo */
+  .btn {
+    font-family: var(--font-descriptor); font-weight: 800;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    font-size: 11px; padding: 10px 16px; border-radius: 2px; border: none;
+  }
+  .b-default { background: var(--terracota-500); color: var(--crema-50); }
+  .b-hover { background: var(--terracota-600); color: var(--crema-50); }
+  .b-active { background: var(--terracota-700); color: var(--crema-50); }
+  .b-focus { background: var(--terracota-500); color: var(--crema-50); box-shadow: 0 0 0 3px var(--focus-ring); }
+  .b-disabled { background: var(--terracota-500); color: var(--crema-50); opacity: 0.45; }
+
+  /* link demo */
+  .lnk { font-family: var(--font-sans); color: var(--terracota-600); font-size: 15px; }
+  .lnk.hover, .lnk.focus { border-bottom: 1px solid currentColor; }
+  .lnk.visited { color: var(--terracota-700); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div>
+      <div class="row"><span class="lbl">Default</span><button class="btn b-default">Suscribirme</button></div>
+      <div class="row"><span class="lbl">Hover</span><button class="btn b-hover">Suscribirme</button></div>
+      <div class="row"><span class="lbl">Active</span><button class="btn b-active">Suscribirme</button></div>
+      <div class="row"><span class="lbl">Focus</span><button class="btn b-focus">Suscribirme</button></div>
+      <div class="row"><span class="lbl">Disabled</span><button class="btn b-disabled">Suscribirme</button></div>
+    </div>
+    <div>
+      <div class="row"><span class="lbl">Link</span><span class="lnk">Continuar leyendo</span></div>
+      <div class="row"><span class="lbl">L · hover</span><span class="lnk hover">Continuar leyendo</span></div>
+      <div class="row"><span class="lbl">L · focus</span><span class="lnk focus">Continuar leyendo</span></div>
+      <div class="row"><span class="lbl">L · visit</span><span class="lnk visited">Continuar leyendo</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .card { padding: 24px 32px; display: flex; flex-direction: column; gap: 6px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 18px; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--rule); }
+  .row:first-child { border-top: none; }
+  .meta {
+    font-family: var(--font-descriptor);
+    font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600);
+    padding-top: 6px;
+  }
+  h1, h2, h3, h4 { margin: 0; color: var(--noche-800); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="row"><div class="meta">H1 · Mont · 78 · 700</div><h1>Lo pequeño sostiene lo grande.</h1></div>
+    <div class="row"><div class="meta">H2 · Mont · 46 · 700</div><h2>El descanso es un acto de fe.</h2></div>
+    <div class="row"><div class="meta">H3 · Mont · 36 · 600</div><h3>Una conversación pausada</h3></div>
+    <div class="row"><div class="meta">H4 · Mont · 28 · 600</div><h4>Notas desde la mesa</h4></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 22px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .tile {
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .tile img { width: 64%; height: 64%; object-fit: contain; }
+  .lbl {
+    position: absolute;
+    bottom: 8px; left: 10px;
+    font-family: var(--font-descriptor); font-weight: 800; font-size: 9px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    opacity: 0.7;
+  }
+  .wrap { position: relative; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="wrap"><div class="tile" style="background:var(--crema-100)"><img src="../assets/logo-icon.png" alt="" style="filter:none" /></div><div class="lbl" style="color:var(--noche-800)">CREMA</div></div>
+    <div class="wrap"><div class="tile" style="background:var(--noche-800)"><img src="../assets/logo-full-noche.png" alt="" /></div><div class="lbl" style="color:var(--crema-100)">NOCHE</div></div>
+    <div class="wrap"><div class="tile" style="background:var(--terracota-500)"><img src="../assets/logo-icon.png" alt="" style="filter:brightness(0) invert(1)" /></div><div class="lbl" style="color:var(--crema-100)">TERRACOTA</div></div>
+  </div>
+</body>
+</html>

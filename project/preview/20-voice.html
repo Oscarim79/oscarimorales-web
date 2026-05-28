@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 28px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .col h5 {
+    font-family: var(--font-descriptor); font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600);
+    margin: 0 0 10px;
+  }
+  .ex { font-family: var(--font-serif); font-size: 17px; line-height: 1.45; color: var(--noche-800); font-style: italic; margin: 0 0 10px; }
+  .neg { color: var(--niebla-600); text-decoration: line-through; text-decoration-color: var(--terracota-500); text-decoration-thickness: 1.5px; font-style: normal; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="col">
+      <h5>SÍ — voz pastoral</h5>
+      <p class="ex">«El descanso es un acto de fe.»</p>
+      <p class="ex">«Vamos despacio. Hay tiempo.»</p>
+      <p class="ex">«Te acompaño en esta caminata.»</p>
+    </div>
+    <div class="col">
+      <h5>NO — voz que no somos</h5>
+      <p class="ex neg">«¡Transforma tu vida hoy!»</p>
+      <p class="ex neg">«5 hacks espirituales que cambiarán todo 🚀»</p>
+      <p class="ex neg">«Empodérate en tu journey de fe.»</p>
+    </div>
+  </div>
+</body>
+</html>

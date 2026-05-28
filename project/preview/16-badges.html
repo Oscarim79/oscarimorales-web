@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .frame { padding: 24px 32px; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .badge {
+    font-family: var(--font-descriptor); font-weight: 800;
+    font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    padding: 6px 10px;
+    border-radius: 2px;
+  }
+  .b-terra { background: var(--terracota-100); color: var(--terracota-700); }
+  .b-gilt { background: transparent; color: var(--dorado-700); box-shadow: inset 0 0 0 1px var(--dorado-500); }
+  .b-noche { background: var(--noche-800); color: var(--crema-100); }
+  .b-niebla { background: var(--niebla-200); color: var(--niebla-700); }
+
+  .chip {
+    font-family: var(--font-sans); font-size: 13px;
+    color: var(--noche-800);
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-inset-hairline);
+  }
+  .chip.active { background: var(--noche-800); color: var(--crema-100); box-shadow: none; }
+  .lbl {
+    font-family: var(--font-descriptor); font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600);
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="row"><span class="lbl">Badges</span>
+      <span class="badge b-terra">Nuevo</span>
+      <span class="badge b-gilt">Capítulo</span>
+      <span class="badge b-noche">En vivo</span>
+      <span class="badge b-niebla">Borrador</span>
+    </div>
+    <div class="row"><span class="lbl">Chips · filtros</span>
+      <span class="chip active">Todos</span>
+      <span class="chip">Ensayos</span>
+      <span class="chip">Sermones</span>
+      <span class="chip">Consejería</span>
+    </div>
+  </div>
+</body>
+</html>

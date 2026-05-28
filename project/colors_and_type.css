@@ -1,0 +1,345 @@
+/* ============================================================================
+   OSCAR I. MORALES — Foundations
+   Pastor · Autor · Consejero Bíblico
+   Voz pastoral, cálida y narrativa. Pausada. Llena de gracia.
+   ============================================================================ */
+
+/* ----- FONTS ---------------------------------------------------------------
+   Display serif (Playfair Display) — para títulos, citas, capítulos.
+   Sans (Mulish, sustituto Google de Proxima Nova) — para cuerpo y descriptores.
+   Proxima Nova Extrabold (TTF propio) — reservado a logotipo y descriptores
+   destacados todo-mayúsculas con tracking generoso. NUNCA para cuerpo.
+   --------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/ProximaNova-Extrabold.ttf") format("truetype");
+}
+
+:root {
+  /* ====================================================================
+     COLOR — Paleta primaria
+     -------------------------------------------------------------------- */
+  --color-azul-noche:   #0D1B2A;  /* primario · profundidad · noche bíblica  */
+  --color-terracota:    #C47E5A;  /* acento cálido · tierra · cuerpo         */
+  --color-crema:        #F5F0E8;  /* fondo · papel · luz tamizada            */
+  --color-dorado:       #B89A6A;  /* secundario · gloria · sello             */
+  --color-niebla:       #8A9AAA;  /* muted · velo · descanso                 */
+
+  /* Escala de la paleta — derivados (oklch para armonía) */
+  --noche-900: #060D17;
+  --noche-800: #0D1B2A;   /* base */
+  --noche-700: #15293F;
+  --noche-600: #1E3B57;
+  --noche-500: #2C4D6E;
+
+  --terracota-700: #9C5F40;
+  --terracota-600: #B06E4D;
+  --terracota-500: #C47E5A;  /* base */
+  --terracota-400: #D29478;
+  --terracota-300: #DFAA94;
+  --terracota-200: #ECC8B7;
+  --terracota-100: #F6E2D6;
+
+  --crema-50:  #FBF8F3;
+  --crema-100: #F5F0E8;     /* base */
+  --crema-200: #ECE4D5;
+  --crema-300: #DDD1BC;
+
+  --dorado-700: #8E7549;
+  --dorado-600: #A38659;
+  --dorado-500: #B89A6A;     /* base */
+  --dorado-400: #CBB287;
+  --dorado-300: #DBC8A6;
+
+  --niebla-700: #5F6D7C;
+  --niebla-600: #748493;
+  --niebla-500: #8A9AAA;     /* base */
+  --niebla-400: #A4B1BE;
+  --niebla-300: #C0CAD3;
+  --niebla-200: #DCE2E8;
+
+  /* ====================================================================
+     COLOR — Semánticos (sobre fondo crema por defecto)
+     -------------------------------------------------------------------- */
+  --bg:          var(--crema-100);
+  --bg-elevated: var(--crema-50);
+  --bg-sunken:   var(--crema-200);
+  --bg-invert:   var(--noche-800);
+
+  --fg:          var(--noche-800);
+  --fg-muted:    var(--niebla-700);
+  --fg-subtle:   var(--niebla-500);
+  --fg-on-dark:  var(--crema-100);
+  --fg-on-accent: var(--crema-50);
+
+  --accent:           var(--terracota-500);
+  --accent-hover:     var(--terracota-600);
+  --accent-press:     var(--terracota-700);
+  --accent-soft:      var(--terracota-100);
+
+  --gilt:        var(--dorado-500);   /* "dorado" para sellos, números, escritura */
+  --gilt-soft:   var(--dorado-300);
+
+  --rule:        rgba(13, 27, 42, 0.12);    /* hairline sobre crema */
+  --rule-strong: rgba(13, 27, 42, 0.22);
+  --rule-on-dark: rgba(245, 240, 232, 0.16);
+
+  --focus-ring:  rgba(196, 126, 90, 0.35);
+
+  /* Modo "Noche" — fondo Azul Noche */
+  --on-noche-fg:        var(--crema-100);
+  --on-noche-fg-muted:  var(--niebla-400);
+  --on-noche-rule:      rgba(245, 240, 232, 0.12);
+
+  /* ====================================================================
+     TIPOGRAFÍA — Familias
+     -------------------------------------------------------------------- */
+  --font-serif: "Playfair Display", "Cormorant Garamond", "Iowan Old Style",
+                "Apple Garamond", Georgia, "Times New Roman", serif;
+  /* Serif de lectura para CUERPO de texto — credibilidad literaria,
+     carácter editorial. Interlineado 1.6–1.7. NUNCA Georgia/Times como primario. */
+  --font-body:  "Spectral", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans:  "Montserrat", "Proxima Nova", -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-descriptor: "Proxima Nova", "Montserrat", system-ui, sans-serif;
+
+  /* ====================================================================
+     TIPOGRAFÍA — Escala (modular ratio 1.250 sobre 17px)
+     -------------------------------------------------------------------- */
+  --text-xs:   13px;
+  --text-sm:   15px;
+  --text-base: 17px;
+  --text-md:   19px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  46px;
+  --text-4xl:  60px;
+  --text-5xl:  78px;
+  --text-6xl:  102px;
+
+  --leading-tight:   1.08;
+  --leading-snug:    1.18;
+  --leading-normal:  1.45;
+  --leading-relaxed: 1.62;
+  --leading-loose:   1.85;
+
+  --tracking-tight:  -0.012em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-wider:  0.16em;   /* descriptores · uppercase */
+  --tracking-widest: 0.28em;   /* eyebrows muy pequeños */
+
+  /* ====================================================================
+     LAYOUT — espaciado, radios, sombras
+     -------------------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 144px;
+
+  /* radios discretos — el sello es la geometría circular, NO el rounding */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* sombras cálidas, suaves — papel sobre mesa, no UI fría */
+  --shadow-xs:  0 1px 0 rgba(13, 27, 42, 0.04);
+  --shadow-sm:  0 1px 2px rgba(13, 27, 42, 0.06), 0 1px 1px rgba(13, 27, 42, 0.04);
+  --shadow-md:  0 4px 14px -6px rgba(13, 27, 42, 0.14),
+                0 2px 4px -2px rgba(13, 27, 42, 0.06);
+  --shadow-lg:  0 18px 40px -20px rgba(13, 27, 42, 0.28),
+                0 6px 14px -8px rgba(13, 27, 42, 0.10);
+  --shadow-inset-hairline: inset 0 0 0 1px var(--rule);
+
+  --transition-fast:  140ms cubic-bezier(.2, .6, .2, 1);
+  --transition-base:  220ms cubic-bezier(.2, .6, .2, 1);
+  --transition-slow:  420ms cubic-bezier(.2, .6, .2, 1);
+}
+
+/* ============================================================================
+   ELEMENT DEFAULTS
+   ============================================================================ */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ----- Titulares (Montserrat, tracking ajustado a tamaño) ------------------
+   Sans geométrica para titulares: seria, moderna, cálida en sus pesos medios.
+   Playfair se reserva para momentos editoriales: lead itálico, pullquotes,
+   referencias bíblicas y dropcap. Ver `.lead`, `.pullquote`, `.scripture`.
+   --------------------------------------------------------------------------- */
+.h-display, h1.display {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--text-6xl);
+  line-height: 1.02;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--text-5xl);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+h2, .h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-3xl);
+  line-height: 1.12;
+  letter-spacing: -0.006em;
+  text-wrap: balance;
+}
+h3, .h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  line-height: 1.18;
+  letter-spacing: -0.004em;
+}
+h4, .h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+/* ----- Descriptores — sans, uppercase, tracking generoso -------------------
+   "PASTOR · AUTOR · CONSEJERO BÍBLICO"
+   ---------------------------------------------------------------------------- */
+.eyebrow, .descriptor {
+  font-family: var(--font-descriptor);
+  font-weight: 800;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+}
+.eyebrow--gilt { color: var(--gilt); }
+.eyebrow--mist { color: var(--niebla-600); }
+.eyebrow--micro {
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+}
+
+/* ----- Cuerpo — serif de lectura (Spectral), interlineado 1.65–1.68 -------- */
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--body-leading, 1.68);
+  color: var(--fg);
+  text-wrap: pretty;
+}
+.body-lg {
+  font-size: var(--text-md);
+  line-height: 1.66;
+}
+.body-sm { font-size: var(--text-sm); }
+.lead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-muted);
+}
+
+/* ----- Citas — capítulo iniciático ----------------------------------------- */
+blockquote, .pullquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  color: var(--fg);
+  border-left: 2px solid var(--gilt);
+  padding-left: var(--space-5);
+  margin: var(--space-6) 0;
+  text-wrap: balance;
+}
+.scripture {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-md);
+  color: var(--fg-muted);
+}
+.scripture-ref {
+  font-family: var(--font-descriptor);
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  font-weight: 800;
+  color: var(--gilt);
+}
+
+/* ----- Enlaces ------------------------------------------------------------- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+a:hover  { border-bottom-color: currentColor; }
+a:active { color: var(--accent-press); }
+
+/* ----- Capital — la letra capitular abre los ensayos largos --------------- */
+.dropcap::first-letter {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 4.6em;
+  float: left;
+  line-height: 0.86;
+  margin: 0.08em 0.10em 0 -0.04em;
+  color: var(--accent);
+}
+
+/* ----- Marca registrada / fineprint --------------------------------------- */
+.fineprint {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--fg-subtle);
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================================
+   MODO NOCHE — invertido (sobre azul noche)
+   ============================================================================ */
+.on-noche, .surface-noche {
+  background: var(--noche-800);
+  color: var(--on-noche-fg);
+  --fg: var(--on-noche-fg);
+  --fg-muted: var(--on-noche-fg-muted);
+  --rule: var(--on-noche-rule);
+}
+.on-noche a { color: var(--terracota-400); }
+.on-noche .eyebrow { color: var(--terracota-400); }
+.on-noche .eyebrow--gilt { color: var(--dorado-400); }
+.on-noche blockquote { border-left-color: var(--dorado-400); }

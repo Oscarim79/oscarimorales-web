@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin:0; background: var(--bg); }
+  .card { padding: 24px 32px; }
+  .scale-label {
+    font-family: var(--font-descriptor);
+    font-weight: 800; font-size: 10px;
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    color: var(--niebla-600);
+    margin-bottom: 8px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
+    height: 56px;
+    margin-bottom: 14px;
+  }
+  .step {
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 6px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--crema-100);
+    border-radius: 3px;
+  }
+  .step.light { color: var(--noche-800); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="scale-label">Terracota — escala</div>
+    <div class="row">
+      <div class="step light" style="background:#F6E2D6">100</div>
+      <div class="step light" style="background:#ECC8B7">200</div>
+      <div class="step light" style="background:#DFAA94">300</div>
+      <div class="step" style="background:#D29478">400</div>
+      <div class="step" style="background:#C47E5A">500</div>
+      <div class="step" style="background:#B06E4D">600</div>
+      <div class="step" style="background:#9C5F40">700</div>
+      <div class="step" style="background:#7C4B33">800</div>
+      <div class="step" style="background:#5A3624">900</div>
+    </div>
+    <div class="scale-label">Azul Noche — escala</div>
+    <div class="row">
+      <div class="step light" style="background:#C2D0DC">100</div>
+      <div class="step light" style="background:#94A8BC">200</div>
+      <div class="step" style="background:#5F7A95">300</div>
+      <div class="step" style="background:#3D5876">400</div>
+      <div class="step" style="background:#2C4D6E">500</div>
+      <div class="step" style="background:#1E3B57">600</div>
+      <div class="step" style="background:#15293F">700</div>
+      <div class="step" style="background:#0D1B2A">800</div>
+      <div class="step" style="background:#060D17">900</div>
+    </div>
+  </div>
+</body>
+</html>
