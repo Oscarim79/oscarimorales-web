@@ -615,8 +615,15 @@
     function place(sel) {
       var rect = sel.getRangeAt(0).getBoundingClientRect();
       if (!rect || (!rect.width && !rect.height)) return false;
-      bar.style.top  = (window.scrollY + rect.top - 10) + 'px';
-      bar.style.left = (window.scrollX + rect.left + rect.width / 2) + 'px';
+      bar.style.top = (window.scrollY + rect.top - 10) + 'px';
+      // Centrar sobre la selección, pero sin que la barra se salga de la pantalla
+      // (la barra usa translateX(-50%), así que limitamos su centro).
+      var vw = document.documentElement.clientWidth;
+      var half = (bar.offsetWidth || 220) / 2;
+      var margin = 8;
+      var cx = rect.left + rect.width / 2;
+      cx = Math.max(half + margin, Math.min(vw - half - margin, cx));
+      bar.style.left = (window.scrollX + cx) + 'px';
       return true;
     }
 

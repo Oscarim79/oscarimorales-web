@@ -1617,3 +1617,18 @@
   border-top: 1px solid rgba(245, 240, 232, 0.08);
   font-family: var(--font-sans); font-size: 12px; color: var(--niebla-500);
 }
+
+/* ============================================================================
+   RESPONSIVE — refuerzos para teléfonos (evitar desbordes / scroll horizontal)
+   ============================================================================ */
+@media (max-width: 600px) {
+  /* Márgenes laterales más cómodos en pantallas angostas. */
+  .wrap { padding: 0 20px; }
+
+  /* Nav: reducir espacios y permitir que envuelva como último recurso,
+     para que nunca cause scroll horizontal en teléfonos pequeños. */
+  .nav__inner { padding: 14px 20px; gap: 12px; flex-wrap: wrap; row-gap: 8px; }
+  .nav__links { gap: 16px; }
+  .nav__cta { padding: 9px 13px; }
+  .nav__wordmark { font-size: 12px; letter-spacing: 0.05em; }
+}

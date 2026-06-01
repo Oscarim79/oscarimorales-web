@@ -212,3 +212,8 @@ body { font-family: var(--font-body); }
 @media (max-width: 600px) {
   .readnote { left: 12px; right: 12px; bottom: 12px; max-width: none; }
 }
+@media (max-width: 480px) {
+  /* Que los 4 botones de la barra de selección quepan en teléfonos pequeños. */
+  .selshare { padding: 3px; }
+  .selshare__btn { padding: 7px 8px; font-size: 10px; }
+}
