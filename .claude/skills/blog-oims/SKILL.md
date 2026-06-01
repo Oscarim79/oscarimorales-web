@@ -72,6 +72,10 @@ Aquí Oscar te da el ángulo ya formado. Si el tema hace referencia a un evento,
 o contenido real y actual (como el ejemplo de Shia LaBeouf, que reacciona a un video
 viral), **busca y lee ese contenido en la web ANTES de escribir** (ver "Investigación").
 
+> Si Oscar pide **ideas** o no tiene tema definido, consulta `references/banco-de-ideas.md`
+> (≈70 títulos ya organizados por frente y categoría) y propónle 3–5 que encajen con el
+> momento. Si elige uno de ahí, ese título es el ancla del Modo A.
+
 ### MODO B — Reacción a contenido externo
 Oscar pide una perspectiva pastoral sobre un sermón, video, artículo, película, canción
 o noticia específica.
@@ -384,4 +388,5 @@ correo vía el feed RSS. (Config de correo: `SUBSCRIPTIONS.md`.)
   cuidado pastoral y sobriedad — Oscar ya ha escrito sobre estos temas con gravedad.
 - Si Oscar da un tema muy amplio, propón un ángulo específico en lugar de pedirle que lo
   acote — y deja claro que es tu propuesta, ajustable.
-- Recursos de referencia: `references/voz-y-marco.md` y `references/ejemplos-de-posts.md`.
+- Recursos de referencia: `references/voz-y-marco.md`, `references/ejemplos-de-posts.md`
+  y `references/banco-de-ideas.md` (≈70 títulos por frente/categoría, para Modo A).
