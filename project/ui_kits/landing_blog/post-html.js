@@ -1,11 +1,7 @@
 // ============================================================================
-// post-html.js — Cuerpo HTML de los 51 artículos importados de oscarimorales.com/blog
-// ----------------------------------------------------------------------------
-// Generado desde la exportación WordPress (WXR). HTML saneado: solo etiquetas
-// semánticas (p, h2-h4, ul/ol/li, blockquote, a, em/strong, img, figure, iframe,
-// sup, table). Enlaces internos reescritos a post.html?n=…; spam inyectado removido.
-// Videos en <div class="embed"> responsivo (fuera de <p>, HTML válido).
-// El N.º 51 usa su versión curada de POST_BODIES. Render en <div class="prose__html">.
+// post-html.js — GENERADO por scripts/build-posts.mjs · NO editar a mano.
+// Cuerpo HTML de cada post (window.POST_HTML[n]). Fuente: content/posts/*.
+// Se renderiza dentro de <div class="prose__html"> con el estilo editorial.
 // ============================================================================
 
 window.POST_HTML = {
