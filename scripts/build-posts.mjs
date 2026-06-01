@@ -30,7 +30,7 @@ const OUT_HTML = path.join(ROOT, 'project', 'ui_kits', 'landing_blog', 'post-htm
 const OUT_MAP  = path.join(ROOT, 'sitemap.xml');
 const OUT_FEED = path.join(ROOT, 'feed.xml');
 
-const SITE_TITLE = 'Oscar I. Morales · Secundum Fidem Meam';
+const SITE_TITLE = 'Oscar I. Morales · Secundum Fidem';
 const SITE_DESC  = 'Ensayos y meditaciones para pensar el evangelio despacio.';
 
 // URL base del sitio publicado. Cámbiala aquí si migras a un dominio propio

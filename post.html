@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Oscar I. Morales · Secundum Fidem Meam</title>
-  <meta name="description" content="Un escrito de Oscar I. Morales · Secundum Fidem Meam." />
+  <title>Oscar I. Morales · Secundum Fidem</title>
+  <meta name="description" content="Un escrito de Oscar I. Morales · Secundum Fidem." />
   <meta name="author" content="Oscar I. Morales" />
   <meta name="theme-color" content="#0D1B2A" />
   <link rel="canonical" href="" id="js-canonical" />
-  <link rel="alternate" type="application/rss+xml" title="Oscar I. Morales · Secundum Fidem Meam" href="feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Oscar I. Morales · Secundum Fidem" href="feed.xml" />
 
   <!-- Open Graph / Twitter — el contenido se rellena por artículo en render() -->
-  <meta property="og:site_name" content="Oscar I. Morales · Secundum Fidem Meam" />
+  <meta property="og:site_name" content="Oscar I. Morales · Secundum Fidem" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:title" content="" />
@@ -172,6 +172,77 @@
       .news__inner { grid-template-columns: 1fr; gap: 40px; }
       .footer__grid { grid-template-columns: 1fr; }
     }
+
+    /* ----------------------------------------------------------------------
+       Selecciona para compartir — barra flotante sobre el texto resaltado.
+       ---------------------------------------------------------------------- */
+    .selshare {
+      position: absolute; z-index: 60;
+      display: flex; gap: 2px; padding: 4px;
+      background: var(--noche-900, #0D1B2A);
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(13, 27, 42, 0.30);
+      transform: translate(-50%, -100%);
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.12s ease;
+      white-space: nowrap;
+    }
+    .selshare--on { opacity: 1; visibility: visible; }
+    .selshare::after {
+      content: ""; position: absolute; left: 50%; bottom: -4px;
+      width: 9px; height: 9px; background: var(--noche-900, #0D1B2A);
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .selshare__btn {
+      position: relative;
+      font-family: var(--font-descriptor), sans-serif;
+      font-weight: 800; font-size: 11px;
+      letter-spacing: var(--tracking-wide, 0.04em);
+      color: var(--crema-50, #FBF7F0);
+      background: transparent; border: 0;
+      padding: 7px 11px; border-radius: 3px;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.12s ease, color 0.12s ease;
+    }
+    .selshare__btn:hover { background: rgba(255, 255, 255, 0.13); }
+    .selshare__btn.is-done { color: var(--dorado-300, #E4C690); }
+
+    /* ----------------------------------------------------------------------
+       Notita que acompaña la lectura (abajo a la izquierda, se puede cerrar).
+       ---------------------------------------------------------------------- */
+    .readnote {
+      position: fixed; left: 20px; bottom: 20px; z-index: 55;
+      max-width: 280px;
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 14px 16px;
+      background: var(--crema-50, #FBF7F0);
+      border: 1px solid var(--niebla-300, #D9D2C7);
+      border-left: 2px solid var(--terracota-500);
+      border-radius: 3px;
+      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.16);
+      transform: translateY(16px);
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .readnote--on { opacity: 1; visibility: visible; transform: translateY(0); }
+    .readnote__text {
+      margin: 0;
+      font-family: var(--font-descriptor), sans-serif;
+      font-size: 12.5px; line-height: 1.5;
+      color: var(--noche-800, #1B2A3A);
+    }
+    .readnote__close {
+      flex: none; width: 22px; height: 22px;
+      display: grid; place-items: center;
+      font-size: 17px; line-height: 1;
+      color: var(--niebla-700, #7C7468);
+      background: transparent; border: 0; cursor: pointer; border-radius: 3px;
+    }
+    .readnote__close:hover { background: rgba(13, 27, 42, 0.06); color: var(--noche-800, #1B2A3A); }
+
+    @media (max-width: 600px) {
+      .readnote { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+    }
   </style>
 </head>
 <body>
@@ -251,7 +322,7 @@
             '<img src="project/assets/logo-icon.png" alt="OM" width="36" height="36" />' +
             '<span class="nav__brand-text">' +
               '<span class="nav__wordmark">OSCAR I. MORALES</span>' +
-              '<span class="nav__tagline">Secundum Fidem Meam</span>' +
+              '<span class="nav__tagline">Secundum Fidem</span>' +
             '</span>' +
           '</a>' +
           '<div class="nav__links">' +
@@ -417,7 +488,7 @@
     // ------------------------------------------------------------------------
     function buildFooter(post, prev, next) {
       var shareUrl = encodeURIComponent(post.url);
-      var shareText = encodeURIComponent('"' + post.title + '" — Secundum Fidem Meam');
+      var shareText = encodeURIComponent('"' + post.title + '" — Secundum Fidem');
 
       var section = el('section', 'afoot');
       var wrap = el('div', 'wrap wrap--narrow');
@@ -501,7 +572,7 @@
       sigLogo.alt = 'Oscar I. Morales';
       sig.appendChild(sigLogo);
       sig.appendChild(el('span', 'afoot__signature-name', 'OSCAR I. MORALES'));
-      sig.appendChild(el('span', 'afoot__signature-tag', 'Secundum Fidem Meam'));
+      sig.appendChild(el('span', 'afoot__signature-tag', 'Secundum Fidem'));
       wrap.appendChild(sig);
 
       // Prev / Next
@@ -538,7 +609,7 @@
         c.href = 'index.html';
         c.appendChild(el('span', 'afoot__nav-lbl', 'Inicio →'));
         c.appendChild(el('span', 'afoot__nav-title', 'Volver al inicio'));
-        c.appendChild(el('span', 'afoot__nav-num', 'Secundum Fidem Meam'));
+        c.appendChild(el('span', 'afoot__nav-num', 'Secundum Fidem'));
       }
       return c;
     }
@@ -629,7 +700,7 @@
                 'style="filter:brightness(0) saturate(100%) invert(60%) sepia(34%) saturate(454%) hue-rotate(338deg) brightness(91%) contrast(85%)" />' +
               '<span class="footer__brand-stack">' +
                 '<span class="footer__brand-name">Oscar I. Morales</span>' +
-                '<span class="footer__brand-tagline">Secundum Fidem Meam</span>' +
+                '<span class="footer__brand-tagline">Secundum Fidem</span>' +
               '</span>' +
             '</div>' +
             '<p class="footer__tagline">Notas sobre la fe, la familia y la vida común — un blog ' +
@@ -648,7 +719,7 @@
           '</ul></div>' +
         '</div>' +
         '<div class="footer__bottom">' +
-          '<span>© ' + year + ' Oscar I. Morales · Secundum Fidem Meam</span>' +
+          '<span>© ' + year + ' Oscar I. Morales · Secundum Fidem</span>' +
           '<span>Guatemala</span>' +
         '</div></div>';
       return footer;
@@ -678,7 +749,7 @@
         text = tmp.textContent || '';
       }
       return metaText(text, 175) ||
-        'Un escrito de Oscar I. Morales · Secundum Fidem Meam.';
+        'Un escrito de Oscar I. Morales · Secundum Fidem.';
     }
 
     function setMeta(selector, content) {
@@ -746,6 +817,126 @@
     }
 
     // ------------------------------------------------------------------------
+    // SELECCIONA PARA COMPARTIR — barra flotante sobre el texto resaltado
+    // ------------------------------------------------------------------------
+    function initSelectionShare(post) {
+      var article = document.querySelector('.prose');
+      if (!article) return;
+      var url = post.url;
+      var SIG = ' — Secundum Fidem';
+
+      var bar = el('div', 'selshare');
+      bar.setAttribute('role', 'toolbar');
+      bar.setAttribute('aria-label', 'Compartir la frase seleccionada');
+      var copyBtn = el('button', 'selshare__btn selshare__btn--copy', 'Copiar');
+      copyBtn.type = 'button';
+      var waBtn = el('a', 'selshare__btn', 'WhatsApp');
+      var xBtn  = el('a', 'selshare__btn', 'X');
+      var fbBtn = el('a', 'selshare__btn', 'Facebook');
+      [copyBtn, waBtn, xBtn, fbBtn].forEach(function (b) { bar.appendChild(b); });
+      document.body.appendChild(bar);
+
+      var current = '';
+
+      function quoted(text) { return '“' + text + '”' + SIG; }
+      function hide() { bar.classList.remove('selshare--on'); }
+
+      function selText() {
+        var sel = window.getSelection();
+        if (!sel || sel.isCollapsed || !sel.rangeCount) return '';
+        if (!sel.anchorNode || !article.contains(sel.anchorNode)) return '';
+        return sel.toString().replace(/\s+/g, ' ').trim();
+      }
+
+      function place(sel) {
+        var rect = sel.getRangeAt(0).getBoundingClientRect();
+        if (!rect || (!rect.width && !rect.height)) return false;
+        bar.style.top  = (window.scrollY + rect.top - 10) + 'px';
+        bar.style.left = (window.scrollX + rect.left + rect.width / 2) + 'px';
+        return true;
+      }
+
+      function update() {
+        var text = selText();
+        if (!text) { hide(); return; }
+        current = text;
+        var t = quoted(text);
+        waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(t + ' ' + url);
+        xBtn.href  = 'https://x.com/intent/post?text=' + encodeURIComponent(t) +
+                     '&url=' + encodeURIComponent(url);
+        fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) +
+                     '&quote=' + encodeURIComponent(t);
+        [waBtn, xBtn, fbBtn].forEach(function (a) {
+          a.target = '_blank'; a.rel = 'noopener noreferrer';
+        });
+        if (place(window.getSelection())) bar.classList.add('selshare--on');
+      }
+
+      copyBtn.addEventListener('click', function () {
+        var payload = quoted(current) + '\n' + url;
+        var ok = false;
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(payload); ok = true;
+          }
+        } catch (e) {}
+        copyBtn.textContent = ok ? '¡Copiado!' : 'Copiar';
+        copyBtn.classList.toggle('is-done', ok);
+        setTimeout(function () {
+          copyBtn.textContent = 'Copiar';
+          copyBtn.classList.remove('is-done');
+        }, 1800);
+      });
+
+      // Mantener la selección al pulsar la barra.
+      bar.addEventListener('mousedown', function (e) { e.preventDefault(); });
+
+      document.addEventListener('mouseup', function () { setTimeout(update, 10); });
+      document.addEventListener('selectionchange', function () { if (!selText()) hide(); });
+      document.addEventListener('scroll', function () {
+        if (!bar.classList.contains('selshare--on')) return;
+        var sel = window.getSelection();
+        if (sel && selText()) place(sel); else hide();
+      }, { passive: true });
+    }
+
+    // ------------------------------------------------------------------------
+    // NOTITA DE LECTURA — aparece al entrar al cuerpo del artículo
+    // ------------------------------------------------------------------------
+    function initReadNote() {
+      try { if (sessionStorage.getItem('readnote-closed') === '1') return; } catch (e) {}
+      var article = document.querySelector('.prose');
+      if (!article) return;
+
+      var note = el('div', 'readnote');
+      note.appendChild(el('p', 'readnote__text',
+        'Puedes copiar cualquier frase del texto para compartirla o copiarla.'));
+      var close = el('button', 'readnote__close', '×');
+      close.type = 'button';
+      close.setAttribute('aria-label', 'Cerrar');
+      note.appendChild(close);
+      document.body.appendChild(note);
+
+      close.addEventListener('click', function () {
+        note.classList.remove('readnote--on');
+        try { sessionStorage.setItem('readnote-closed', '1'); } catch (e) {}
+        setTimeout(function () { if (note.parentNode) note.parentNode.removeChild(note); }, 300);
+      });
+
+      function show() { note.classList.add('readnote--on'); }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { show(); io.disconnect(); }
+          });
+        }, { rootMargin: '0px 0px -40% 0px' });
+        io.observe(article);
+      } else {
+        setTimeout(show, 1200);
+      }
+    }
+
+    // ------------------------------------------------------------------------
     // Render
     // ------------------------------------------------------------------------
     function render() {
@@ -785,6 +976,8 @@
       app.appendChild(site);
 
       initProgress();
+      initSelectionShare(post);
+      initReadNote();
 
       if (typeof window.wireSubscribe === 'function') {
         window.wireSubscribe(document.getElementById('js-news-form'), {
