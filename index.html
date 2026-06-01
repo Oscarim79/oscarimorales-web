@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oscar I. Morales · Secundum Fidem Meam</title>
+  <meta name="description" content="Ensayos y meditaciones para pensar el evangelio despacio. El blog de Oscar I. Morales desde 2014." />
+  <meta property="og:title" content="Oscar I. Morales · Secundum Fidem Meam" />
+  <meta property="og:description" content="Ensayos y meditaciones para pensar el evangelio despacio." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="project/assets/logo-icon.png" />
+  <link rel="stylesheet" href="project/colors_and_type.css" />
+  <link rel="stylesheet" href="project/ui_kits/landing_blog/landing.css" />
+  <style>
+    /* Production overrides / additions not in landing.css */
+    .nav__brand img { width: 36px; height: 36px; }
+    .nav__brand-text { gap: 3px; }
+
+    /* Ensure body uses serif at correct leading */
+    body { font-family: var(--font-body); line-height: 1.68; }
+
+    /* Slider: all slides stack absolutely; only the active one is visible */
+    .slider__stage { position: relative; }
+    .slider__slide { position: absolute; inset: 0; }
+
+    /* Archive responsive */
+    @media (max-width: 760px) {
+      .archive__year { grid-template-columns: 80px 1fr; gap: 24px; }
+      .archive__entry { grid-template-columns: 48px 1fr; }
+      .archive__entry-date { display: none; }
+      .popular__grid { grid-template-columns: 1fr; }
+      .news__inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .start__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .archive__year { grid-template-columns: 1fr; }
+      .archive__year > div:first-child { display: flex; align-items: baseline; gap: 16px; }
+      .archive__year-num { position: static; font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================ NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <button class="nav__brand" id="js-nav-top" aria-label="Inicio">
+      <img src="project/assets/logo-icon.png" alt="OM" width="36" height="36" />
+      <span class="nav__brand-text">
+        <span class="nav__wordmark">OSCAR I. MORALES</span>
+        <span class="nav__tagline">Secundum Fidem Meam</span>
+      </span>
+    </button>
+    <div class="nav__links">
+      <button class="nav__link nav__link--active" id="js-nav-inicio">Inicio</button>
+      <button class="nav__link" id="js-nav-blog">Blog</button>
+      <button class="nav__cta" id="js-nav-suscribir">Suscribirme</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ STAGE -->
+<section class="stage" id="js-stage">
+  <div class="stage__bg" aria-hidden="true">
+    <img src="project/assets/oscar-stage.png" alt="" loading="eager" />
+    <div class="stage__bg-grade"></div>
+    <div class="stage__bg-vignette"></div>
+  </div>
+
+  <div class="stage__topbar">
+    <div class="wrap stage__topbar-inner">
+      <span class="stage__eyebrow">
+        <span class="stage__eyebrow-dot" aria-hidden="true"></span>
+        El blog de Oscar I. Morales
+      </span>
+      <span class="stage__lede">Notas desde 2014 &middot; Guatemala</span>
+    </div>
+  </div>
+
+  <div class="stage__title-wrap">
+    <div class="wrap stage__title-inner">
+      <div class="stage__panel">
+        <span class="stage__kicker">Pastor &middot; Autor &middot; Guatemala</span>
+        <h1 class="stage__title" aria-label="Secundum Fidem Meam">
+          <span class="stage__title-line">Secundum</span>
+          <span class="stage__title-line">Fidem</span>
+          <span class="stage__title-line">Meam</span>
+        </h1>
+        <span class="stage__translation">&laquo;Seg&uacute;n mi fe&raquo;</span>
+        <p class="stage__value">
+          Ensayos y meditaciones para pensar el evangelio despacio.
+          Suscr&iacute;bete y recibe <em>una lectura para empezar</em> &mdash;
+          y un aviso cuando hay algo nuevo.
+        </p>
+        <form class="stage__capture" id="js-stage-form">
+          <input type="email" class="stage__capture-input"
+                 placeholder="tucorreo@ejemplo.com"
+                 aria-label="Tu correo electrónico" required />
+          <button type="submit" class="stage__capture-btn">Recibir &rarr;</button>
+        </form>
+        <div class="stage__capture-foot">
+          <span class="stage__capture-fine">Sin spam. Solo escritos. Te puedes ir cuando quieras.</span>
+          <button class="stage__secondary" id="js-stage-link">o mira d&oacute;nde empezar &darr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage__footrail">
+    <div class="wrap stage__footrail-inner">
+      <span class="stage__footrail-note">
+        Notas sobre la fe, la familia y la vida com&uacute;n &mdash; desde 2014.
+      </span>
+      <button class="stage__footrail-link" id="js-stage-empezar">
+        Empieza aqu&iacute; <span aria-hidden="true">&darr;</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ EMPIEZA AQUÍ -->
+<section class="start" id="empezar">
+  <div class="wrap">
+    <div class="start__head">
+      <span class="start__eb">Empieza aqu&iacute;</span>
+      <h2 class="start__title">Tres maneras de <em>entrar</em>.</h2>
+      <p class="start__lead" id="js-start-lead"></p>
+    </div>
+    <div class="start__grid">
+      <a class="start__door" href="#populares" id="js-door-1">
+        <span class="start__door-num">01</span>
+        <h3 class="start__door-title">&iquest;Primera vez aqu&iacute;?</h3>
+        <p class="start__door-desc">
+          Empieza por lo m&aacute;s le&iacute;do &mdash; los escritos por los que
+          la mayor&iacute;a llega y se queda.
+        </p>
+        <span class="start__door-cta">Ver los esenciales &rarr;</span>
+      </a>
+      <a class="start__door start__door--feature" href="#suscribir" id="js-door-2">
+        <div class="start__door-toprow">
+          <span class="start__door-num">02</span>
+          <span class="start__door-tag">Pronto</span>
+        </div>
+        <h3 class="start__door-title">La serie de libros</h3>
+        <p class="start__door-desc">
+          Estoy escribiendo una serie sobre
+          <span class="start__edit">[tema de la serie]</span>.
+          Los suscriptores ser&aacute;n los primeros en saber &mdash; y en leer
+          los primeros cap&iacute;tulos.
+        </p>
+        <span class="start__door-cta">Av&iacute;same primero &rarr;</span>
+      </a>
+      <a class="start__door" href="#suscribir" id="js-door-3">
+        <span class="start__door-num">03</span>
+        <h3 class="start__door-title">Recibe los nuevos</h3>
+        <p class="start__door-desc">
+          Un correo cuando publico, con una l&iacute;nea de contexto. Sin agenda
+          fija, sin ruido.
+        </p>
+        <span class="start__door-cta">Suscribirme &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FEATURED SLIDER -->
+<section class="featured" id="ultimo">
+  <div class="wrap">
+    <div class="featured__head">
+      <span class="featured__eb">&Uacute;ltimo publicado</span>
+    </div>
+    <div class="slider">
+      <div class="slider__stage" id="js-slider-stage"></div>
+      <div class="slider__excerpt is-pre" id="js-slider-excerpt"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ POPULAR -->
+<section class="popular" id="populares">
+  <div class="wrap">
+    <div class="popular__head">
+      <div>
+        <span class="popular__eb">M&aacute;s le&iacute;dos</span>
+        <h2 class="popular__title">Los que m&aacute;s han caminado.</h2>
+      </div>
+    </div>
+    <div class="popular__grid" id="js-popular-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================ ARCHIVE -->
+<section class="archive" id="archivo">
+  <div class="wrap">
+    <div class="archive__head">
+      <div>
+        <span class="archive__eb">Archivo completo</span>
+        <h2 class="archive__title">Todo, ordenado por a&ntilde;o.</h2>
+      </div>
+      <div class="archive__filter-wrap">
+        <label class="archive__filter-lbl" for="js-theme-filter">Filtrar por tema</label>
+        <div class="archive__select">
+          <select id="js-theme-filter"></select>
+          <span class="archive__select-caret" aria-hidden="true">&#9662;</span>
+        </div>
+      </div>
+    </div>
+    <div id="js-archive-list"></div>
+  </div>
+</section>
+
+<!-- ============================================================ NEWSLETTER -->
+<section class="news" id="suscribir">
+  <div class="wrap">
+    <div class="news__inner">
+      <div class="news__left">
+        <span class="news__eb">La lista de correo</span>
+        <h2 class="news__title">Recibe una <em>lectura para empezar</em>.</h2>
+        <p class="news__sub">
+          Al suscribirte te llega un escrito escogido para comenzar. Despu&eacute;s,
+          solo un correo cuando publico algo nuevo &mdash; con una l&iacute;nea
+          de contexto. Te puedes ir cuando quieras.
+        </p>
+        <ul class="news__list">
+          <li>Una lectura escogida, apenas te suscribes.</li>
+          <li>Aviso de cada nuevo ensayo o meditaci&oacute;n.</li>
+          <li>Acceso anticipado a la serie de libros que viene.</li>
+        </ul>
+      </div>
+      <form class="news__form" id="js-news-form">
+        <div class="news__field">
+          <label for="js-news-name">TU NOMBRE</label>
+          <input id="js-news-name" type="text" placeholder="C&oacute;mo te llaman en casa" autocomplete="given-name" />
+        </div>
+        <div class="news__field">
+          <label for="js-news-email">TU CORREO</label>
+          <input id="js-news-email" type="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email" />
+        </div>
+        <button type="submit" class="news__submit">Recibir mi lectura &rarr;</button>
+        <p class="news__fine">Sin publicidad. Sin compartir tu correo. S&oacute;lo nuevos escritos.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__brand-row">
+          <img src="project/assets/logo-icon.png" alt="" width="36" height="36"
+               style="filter:brightness(0) saturate(100%) invert(60%) sepia(34%) saturate(454%) hue-rotate(338deg) brightness(91%) contrast(85%)" />
+          <span class="footer__brand-stack">
+            <span class="footer__brand-name">Oscar I. Morales</span>
+            <span class="footer__brand-tagline">Secundum Fidem Meam</span>
+          </span>
+        </div>
+        <p class="footer__tagline">
+          Notas sobre la fe, la familia y la vida com&uacute;n.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Sitio</h4>
+        <ul>
+          <li><a href="#" id="js-footer-top">Inicio</a></li>
+          <li><a href="#archivo" id="js-footer-blog">Blog &middot; Archivo</a></li>
+          <li><a href="#suscribir" id="js-footer-suscribir">Suscribirme</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/oscarimoraless" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/oscarimoraless" target="_blank" rel="noopener">X &middot; Twitter</a></li>
+          <li><a href="https://www.instagram.com/oscarimorales" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:me@oscarimorales.com">Correo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span id="js-footer-copy"></span>
+      <span>Guatemala</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Data + cover generator (must load before app.js) -->
+<script src="project/ui_kits/landing_blog/posts-data.js"></script>
+<script src="project/ui_kits/landing_blog/covers.js"></script>
+
+<script>
+/* ============================================================================
+   Secundum Fidem Meam — Production JS
+   Oscar I. Morales · oscarimorales.com
+   ============================================================================ */
+(function () {
+  'use strict';
+
+  // --------------------------------------------------------------------------
+  // Constants
+  // --------------------------------------------------------------------------
+  var MONTHS = ['enero','febrero','marzo','abril','mayo','junio',
+                'julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var MONTHS_SHORT = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  var INTERNAL = new Set([51]);
+  var POST_TPL  = 'project/ui_kits/landing_blog/post.html';
+
+  var SVG_CAL = '<svg class="slider__ico" viewBox="0 0 16 16" aria-hidden="true">' +
+    '<rect x="2" y="3" width="12" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
+    '<line x1="2" y1="6.5" x2="14" y2="6.5" stroke="currentColor" stroke-width="1.3"/>' +
+    '<line x1="5" y1="1.4" x2="5" y2="4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>' +
+    '<line x1="11" y1="1.4" x2="11" y2="4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>';
+
+  var SVG_USER = '<svg class="slider__ico" viewBox="0 0 16 16" aria-hidden="true">' +
+    '<circle cx="8" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
+    '<path d="M2.6 14c0-3 2.4-5 5.4-5s5.4 2 5.4 5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>';
+
+  // --------------------------------------------------------------------------
+  // Helpers
+  // --------------------------------------------------------------------------
+  function esc(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function fmtDate(iso) {
+    var p = iso.split('-').map(Number);
+    return p[2] + ' ' + MONTHS_SHORT[p[1]-1] + ' ' + p[0];
+  }
+
+  function fmtDateLong(iso) {
+    var p = iso.split('-').map(Number);
+    return p[2] + ' de ' + MONTHS[p[1]-1] + ' de ' + p[0];
+  }
+
+  function postHref(post) {
+    return INTERNAL.has(post.n) ? POST_TPL : post.url;
+  }
+
+  function postTarget(post) {
+    return INTERNAL.has(post.n) ? '_self' : '_blank';
+  }
+
+  // Stable per-category class assignment
+  var CAT_CLASSES = ['cat', 'cat cat--alt', 'cat cat--mist'];
+  var CAT_DARK    = ['cat cat--noche', 'cat cat--noche-alt', 'cat cat--mist'];
+  function catHtml(cats, dark) {
+    var pool = dark ? CAT_DARK : CAT_CLASSES;
+    return cats.map(function(c, i) {
+      var idx = (c.length + i) % pool.length;
+      return '<span class="' + pool[idx] + '">' + esc(c) + '</span>';
+    }).join('');
+  }
+
+  // Fallback cover: use makeCover from covers.js
+  function cover(post) {
+    return post.image || (typeof makeCover === 'function' ? makeCover(post) : '');
+  }
+
+  // --------------------------------------------------------------------------
+  // Smooth scroll
+  // --------------------------------------------------------------------------
+  function scrollTo(id) {
+    var el = id ? document.getElementById(id) : null;
+    var target = el
+      ? Math.max(0, el.getBoundingClientRect().top + window.scrollY - 72)
+      : 0;
+    var start = window.scrollY;
+    var dist  = target - start;
+    if (Math.abs(dist) < 2) return;
+    var dur = Math.min(900, Math.max(350, Math.abs(dist) * 0.5));
+    var t0  = performance.now();
+    function ease(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2; }
+    function step(now) {
+      var p = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, start + dist * ease(p));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // --------------------------------------------------------------------------
+  // Navigation
+  // --------------------------------------------------------------------------
+  function initNav() {
+    function wire(id, target) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('click', function(e) { e.preventDefault(); scrollTo(target); });
+    }
+    wire('js-nav-top',       null);
+    wire('js-nav-inicio',    null);
+    wire('js-nav-blog',      'archivo');
+    wire('js-nav-suscribir', 'suscribir');
+    wire('js-stage-link',    'empezar');
+    wire('js-stage-empezar', 'empezar');
+    wire('js-footer-top',    null);
+    wire('js-footer-blog',   'archivo');
+    wire('js-footer-suscribir', 'suscribir');
+    wire('js-door-1', 'populares');
+    wire('js-door-2', 'suscribir');
+    wire('js-door-3', 'suscribir');
+  }
+
+  // --------------------------------------------------------------------------
+  // Stage parallax + cascade animation
+  // --------------------------------------------------------------------------
+  function initParallax() {
+    var stage = document.getElementById('js-stage');
+    if (!stage) return;
+
+    // Cascade entrance animation
+    var raf0 = requestAnimationFrame(function() {
+      stage.classList.add('js-anim');
+      setTimeout(function() { stage.classList.remove('js-anim'); }, 2400);
+    });
+
+    // Parallax
+    var raf = 0;
+    function update() {
+      raf = 0;
+      var rect = stage.getBoundingClientRect();
+      var h = rect.height || 1;
+      var p = Math.min(Math.max(-rect.top / h, 0), 1.2);
+      stage.style.setProperty('--p', p.toFixed(4));
+      stage.style.setProperty('--p-fade', Math.max(0, 1 - p * 1.6).toFixed(4));
+    }
+    function onScroll() { if (!raf) raf = requestAnimationFrame(update); }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  }
+
+  // --------------------------------------------------------------------------
+  // "Empieza aquí" — dynamic year count
+  // --------------------------------------------------------------------------
+  function initStartHere(posts) {
+    var firstYear = Math.min.apply(null, posts.map(function(p) { return Number(p.date.split('-')[0]); }));
+    var years = new Date().getFullYear() - firstYear;
+    var el = document.getElementById('js-start-lead');
+    if (el) {
+      el.textContent = years + ' años escribiendo sobre la fe, la familia y la vida común. ' +
+                       'No tienes que leerlo todo — entra por una puerta.';
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // Featured slider
+  // --------------------------------------------------------------------------
+  function initSlider(posts) {
+    var stageEl   = document.getElementById('js-slider-stage');
+    var excerptEl = document.getElementById('js-slider-excerpt');
+    if (!stageEl || !posts.length) return;
+
+    var n = posts.length;
+    var current = 0;
+    var busy = false;
+    var hovered = false;
+
+    // Build slides
+    var slides = posts.map(function(post, idx) {
+      var a = document.createElement('a');
+      a.className = 'slider__slide ' + (idx === 0 ? 'is-in' : 'is-pre');
+      a.href = postHref(post);
+      a.target = postTarget(post);
+      a.rel = 'noopener noreferrer';
+
+      var src = cover(post);
+      a.innerHTML =
+        '<img class="slider__img" src="' + esc(src) + '" alt="' + esc(post.title) + '" ' +
+          'referrerpolicy="no-referrer" loading="' + (idx === 0 ? 'eager' : 'lazy') + '" />' +
+        '<div class="slider__scrim" aria-hidden="true"></div>' +
+        '<div class="slider__caption">' +
+          '<div class="slider__cats">' + catHtml(post.cats, true) + '</div>' +
+          '<h2 class="slider__title">' + esc(post.title) + '</h2>' +
+          '<div class="slider__meta">' +
+            '<span class="slider__metaitem">' + SVG_CAL + ' ' + esc(fmtDateLong(post.date)) + '</span>' +
+            '<span class="slider__metaitem">' + SVG_USER + ' Oscar I. Morales</span>' +
+          '</div>' +
+          '<span class="slider__read">Leer ensayo completo &rarr;</span>' +
+        '</div>';
+
+      // Image error fallback
+      var img = a.querySelector('.slider__img');
+      img.addEventListener('error', function() {
+        if (typeof makeCover === 'function') img.src = makeCover(post);
+      });
+
+      stageEl.appendChild(a);
+      return a;
+    });
+
+    // Prev / Next buttons
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'slider__arrow slider__arrow--prev';
+    prevBtn.setAttribute('aria-label', 'Anterior');
+    prevBtn.innerHTML = '&lsaquo;';
+    stageEl.appendChild(prevBtn);
+
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'slider__arrow slider__arrow--next';
+    nextBtn.setAttribute('aria-label', 'Siguiente');
+    nextBtn.innerHTML = '&rsaquo;';
+    stageEl.appendChild(nextBtn);
+
+    // Thumbnails
+    var thumbsDiv = document.createElement('div');
+    thumbsDiv.className = 'slider__thumbs';
+    thumbsDiv.setAttribute('role', 'tablist');
+    thumbsDiv.setAttribute('aria-label', 'Posts recientes');
+    var thumbs = posts.map(function(post, idx) {
+      var btn = document.createElement('button');
+      btn.className = 'slider__thumb' + (idx === 0 ? ' is-active' : '');
+      btn.style.backgroundImage = 'url("' + cover(post) + '")';
+      btn.setAttribute('aria-label', 'Ver "' + post.title + '"');
+      btn.setAttribute('aria-selected', idx === 0);
+      btn.setAttribute('role', 'tab');
+      thumbsDiv.appendChild(btn);
+      return btn;
+    });
+    stageEl.appendChild(thumbsDiv);
+
+    // Excerpt display
+    function showExcerpt(post) {
+      var text = post.excerpt || post.quote || '';
+      excerptEl.classList.remove('is-in');
+      if (!text) return;
+      requestAnimationFrame(function() {
+        excerptEl.innerHTML =
+          '<p>' + esc(text) + '</p>' +
+          '<a class="slider__excerpt-link" href="' + esc(postHref(post)) + '" ' +
+            'target="' + postTarget(post) + '" rel="noopener noreferrer">' +
+            'Seguir leyendo &rarr;</a>';
+        requestAnimationFrame(function() { excerptEl.classList.add('is-in'); });
+      });
+    }
+
+    // Slide transition
+    function goTo(idx) {
+      if (idx === current || busy) return;
+      busy = true;
+
+      slides[current].classList.remove('is-in');
+      slides[current].classList.add('is-pre');
+      thumbs[current].classList.remove('is-active');
+      thumbs[current].setAttribute('aria-selected', false);
+      excerptEl.classList.remove('is-in');
+
+      current = idx;
+      slides[current].classList.remove('is-pre');
+
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          slides[current].classList.add('is-in');
+          thumbs[current].classList.add('is-active');
+          thumbs[current].setAttribute('aria-selected', true);
+          setTimeout(function() {
+            showExcerpt(posts[current]);
+            busy = false;
+          }, 300);
+        });
+      });
+    }
+
+    function go(dir) { goTo((current + dir + n) % n); }
+
+    // Show first excerpt
+    showExcerpt(posts[0]);
+
+    // Wire controls
+    prevBtn.addEventListener('click', function() { go(-1); });
+    nextBtn.addEventListener('click', function() { go(1);  });
+    thumbs.forEach(function(btn, idx) {
+      btn.addEventListener('click', function() { goTo(idx); });
+    });
+
+    var section = document.getElementById('ultimo');
+    if (section) {
+      section.addEventListener('mouseenter', function() { hovered = true;  });
+      section.addEventListener('mouseleave', function() { hovered = false; });
+    }
+
+    // Auto-advance
+    setInterval(function() { if (!hovered) go(1); }, 4500);
+  }
+
+  // --------------------------------------------------------------------------
+  // Popular grid
+  // --------------------------------------------------------------------------
+  function initPopular(posts) {
+    var grid = document.getElementById('js-popular-grid');
+    if (!grid) return;
+
+    posts.forEach(function(post) {
+      var p = post.date.split('-').map(Number);
+      var yr = p[0], mo = p[1], dy = p[2];
+      var src = cover(post);
+      var href = postHref(post);
+      var tgt  = postTarget(post);
+
+      var a = document.createElement('a');
+      a.className = 'popcard';
+      a.href = href;
+      a.target = tgt;
+      a.rel = 'noopener noreferrer';
+      a.innerHTML =
+        '<div class="popcard__media">' +
+          '<img src="' + esc(src) + '" alt="' + esc(post.title) + '" ' +
+            'referrerpolicy="no-referrer" loading="eager" />' +
+          '<div class="popcard__date" aria-hidden="true">' +
+            '<span class="popcard__date-m">' + MONTHS_SHORT[mo-1].toUpperCase() + '</span>' +
+            '<span class="popcard__date-d">' + dy + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<h3 class="popcard__title">' + esc(post.title) + '</h3>' +
+        '<div class="popcard__meta">' +
+          '<span class="popcard__cats">' + esc(post.cats.join(', ')) + '</span>' +
+          '<span class="popcard__meta-sep">&middot;</span>' +
+          '<span class="popcard__author">Por Oscar I. Morales</span>' +
+          '<span class="popcard__meta-sep">&middot;</span>' +
+          '<span class="popcard__date-long">' + dy + ' ' + MONTHS[mo-1] + ', ' + yr + '</span>' +
+        '</div>';
+
+      var img = a.querySelector('img');
+      img.addEventListener('error', function() {
+        if (typeof makeCover === 'function') img.src = makeCover(post);
+      });
+
+      grid.appendChild(a);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // Archive (list grouped by year + category filter)
+  // --------------------------------------------------------------------------
+  function initArchive(posts) {
+    var filterEl = document.getElementById('js-theme-filter');
+    var listEl   = document.getElementById('js-archive-list');
+    if (!filterEl || !listEl) return;
+
+    // Build category map (sorted by count desc)
+    var catMap = new Map();
+    posts.forEach(function(p) {
+      p.cats.forEach(function(c) { catMap.set(c, (catMap.get(c) || 0) + 1); });
+    });
+    var cats = Array.from(catMap.entries()).sort(function(a, b) { return b[1] - a[1]; });
+
+    // Populate filter dropdown
+    var allOpt = document.createElement('option');
+    allOpt.value = 'Todos';
+    allOpt.textContent = 'Todos los temas · ' + posts.length;
+    filterEl.appendChild(allOpt);
+    cats.slice(0, 10).forEach(function(entry) {
+      var opt = document.createElement('option');
+      opt.value = entry[0];
+      opt.textContent = entry[0] + ' · ' + entry[1];
+      filterEl.appendChild(opt);
+    });
+
+    function renderList(filter) {
+      var filtered = filter === 'Todos' ? posts : posts.filter(function(p) { return p.cats.includes(filter); });
+
+      // Group by year (desc)
+      var groups = {};
+      filtered.forEach(function(p) {
+        var y = p.date.split('-')[0];
+        (groups[y] = groups[y] || []).push(p);
+      });
+      var years = Object.keys(groups).sort(function(a, b) { return b - a; });
+
+      listEl.innerHTML = '';
+      years.forEach(function(year) {
+        var group = groups[year];
+        var div = document.createElement('div');
+        div.className = 'archive__year';
+
+        var entries = group.map(function(p) {
+          var pts = p.date.split('-').map(Number);
+          var dateStr = (pts[2] + ' ' + MONTHS_SHORT[pts[1]-1] + ' ' + pts[0]).toUpperCase();
+          var href = postHref(p);
+          var tgt  = postTarget(p);
+          return '<a class="archive__entry" href="' + esc(href) + '" target="' + tgt + '" rel="noopener noreferrer">' +
+            '<span class="archive__entry-num"><sup>N.º</sup>' + p.n + '</span>' +
+            '<div class="archive__entry-body">' +
+              '<h4 class="archive__entry-title">' + esc(p.title) + '</h4>' +
+              '<div class="archive__entry-cats">' +
+                p.cats.map(function(c) { return '<span>' + esc(c) + '</span>'; }).join('') +
+              '</div>' +
+            '</div>' +
+            '<span class="archive__entry-date">' + dateStr + '</span>' +
+          '</a>';
+        }).join('');
+
+        div.innerHTML =
+          '<div>' +
+            '<div class="archive__year-num">' + year + '</div>' +
+            '<span class="archive__year-count">' + group.length + ' escritos</span>' +
+          '</div>' +
+          '<div class="archive__list">' + entries + '</div>';
+
+        listEl.appendChild(div);
+      });
+    }
+
+    renderList('Todos');
+    filterEl.addEventListener('change', function() { renderList(filterEl.value); });
+  }
+
+  // --------------------------------------------------------------------------
+  // Forms
+  // --------------------------------------------------------------------------
+  function initForms() {
+    var stageForm = document.getElementById('js-stage-form');
+    if (stageForm) {
+      stageForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Gracias. Te envío una lectura para empezar a tu correo.');
+        stageForm.reset();
+      });
+    }
+
+    var newsForm = document.getElementById('js-news-form');
+    if (newsForm) {
+      newsForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Gracias por suscribirte.');
+        newsForm.reset();
+      });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // Footer copyright year
+  // --------------------------------------------------------------------------
+  function initFooter() {
+    var el = document.getElementById('js-footer-copy');
+    if (el) {
+      el.textContent = '© ' + new Date().getFullYear() +
+                       ' Oscar I. Morales · Secundum Fidem Meam';
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // Compute "popular" posts (up to 9, prioritise posts with images)
+  // --------------------------------------------------------------------------
+  function popularPosts(posts) {
+    var withImg   = posts.filter(function(p) { return !!p.image; });
+    var featNoImg = posts.filter(function(p) { return !p.image && p.featured; });
+    var seen = new Set();
+    var pick = [];
+    var pool = withImg.concat(featNoImg, posts);
+    for (var i = 0; i < pool.length && pick.length < 9; i++) {
+      var p = pool[i];
+      if (!seen.has(p.n)) { seen.add(p.n); pick.push(p); }
+    }
+    return pick;
+  }
+
+  // --------------------------------------------------------------------------
+  // Boot
+  // --------------------------------------------------------------------------
+  function boot() {
+    var posts = window.POSTS;
+    if (!posts || !posts.length) {
+      console.error('POSTS not loaded');
+      return;
+    }
+
+    initNav();
+    initParallax();
+    initStartHere(posts);
+    initSlider(posts.slice(0, 5));
+    initPopular(popularPosts(posts));
+    initArchive(posts);
+    initForms();
+    initFooter();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>
