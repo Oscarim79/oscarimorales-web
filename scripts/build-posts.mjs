@@ -324,14 +324,18 @@ function genPostPage(p) {
   <meta property="og:description" content="${xmlEsc(desc)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${xmlEsc(img)}" />
+  <meta property="og:image:alt" content="${xmlEsc(p.title + ' — Oscar I. Morales')}" />
   <meta property="article:published_time" content="${p.date}" />
   <meta property="article:author" content="Oscar I. Morales" />
 ${p.cats[0] ? `  <meta property="article:section" content="${xmlEsc(p.cats[0])}" />\n` : ''}\
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oscarimoraless" />
+  <meta name="twitter:creator" content="@oscarimoraless" />
   <meta name="twitter:title" content="${xmlEsc(p.title)}" />
   <meta name="twitter:description" content="${xmlEsc(desc)}" />
   <meta name="twitter:image" content="${xmlEsc(img)}" />
+  <meta name="twitter:image:alt" content="${xmlEsc(p.title + ' — Oscar I. Morales')}" />
 
   <script type="application/ld+json">${JSON.stringify(ld)}</script>
 

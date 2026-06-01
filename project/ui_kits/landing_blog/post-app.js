@@ -244,7 +244,9 @@
   // ------------------------------------------------------------------------
   function buildFooter(post, prev, next) {
     var shareUrl = encodeURIComponent(post.url);
-    var shareText = encodeURIComponent('"' + post.title + '" — Secundum Fidem #SecundumFidem');
+    // Formato del texto al compartir: Título — Por: Ps. Oscar I. Morales — #SecundumFidem
+    var shareText = encodeURIComponent(
+      post.title + ' — Por: Ps. Oscar I. Morales — #SecundumFidem');
 
     var section = el('section', 'afoot');
     var wrap = el('div', 'wrap wrap--narrow');
@@ -257,9 +259,9 @@
     var wa = el('a', 'afoot__share-btn', 'WhatsApp');
     wa.href = 'https://wa.me/?text=' + shareText + '%20' + shareUrl;
     var fb = el('a', 'afoot__share-btn', 'Facebook');
-    fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '&hashtag=%23SecundumFidem';
+    fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '&quote=' + shareText;
     var tw = el('a', 'afoot__share-btn', 'X');
-    tw.href = 'https://x.com/intent/post?text=' + shareText + '&url=' + shareUrl + '&hashtags=SecundumFidem';
+    tw.href = 'https://x.com/intent/post?text=' + shareText + '&url=' + shareUrl;
     [wa, fb, tw].forEach(function (a) {
       a.target = '_blank'; a.rel = 'noopener noreferrer';
       row.appendChild(a);
@@ -528,6 +530,9 @@
     if (img) {
       setMeta('meta[property="og:image"]', img);
       setMeta('meta[name="twitter:image"]', img);
+      var alt = post.title + ' — Oscar I. Morales';
+      setMeta('meta[property="og:image:alt"]', alt);
+      setMeta('meta[name="twitter:image:alt"]', alt);
     }
     var canon = document.getElementById('js-canonical');
     if (canon) canon.setAttribute('href', url);
@@ -580,7 +585,7 @@
     var article = document.querySelector('.prose');
     if (!article) return;
     var url = post.url;
-    var SIG = ' — Secundum Fidem';
+    var SIG = ' — Por: Ps. Oscar I. Morales — #SecundumFidem';
 
     var bar = el('div', 'selshare');
     bar.setAttribute('role', 'toolbar');
@@ -618,11 +623,11 @@
       if (!text) { hide(); return; }
       current = text;
       var t = quoted(text);
-      waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(t + ' #SecundumFidem ' + url);
+      waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(t + ' ' + url);
       xBtn.href  = 'https://x.com/intent/post?text=' + encodeURIComponent(t) +
-                   '&url=' + encodeURIComponent(url) + '&hashtags=SecundumFidem';
+                   '&url=' + encodeURIComponent(url);
       fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) +
-                   '&hashtag=%23SecundumFidem&quote=' + encodeURIComponent(t);
+                   '&quote=' + encodeURIComponent(t);
       [waBtn, xBtn, fbBtn].forEach(function (a) {
         a.target = '_blank'; a.rel = 'noopener noreferrer';
       });
@@ -630,7 +635,7 @@
     }
 
     copyBtn.addEventListener('click', function () {
-      var payload = quoted(current) + '\n#SecundumFidem · ' + url;
+      var payload = quoted(current) + '\n' + url;
       var ok = false;
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
