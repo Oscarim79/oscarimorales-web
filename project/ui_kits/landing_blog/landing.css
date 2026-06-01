@@ -1571,6 +1571,12 @@
   letter-spacing: 0.005em;
   color: var(--terracota-400);
 }
+.footer__bio {
+  font-family: var(--font-serif);
+  font-size: 14.5px; line-height: 1.65;
+  color: var(--niebla-200, #d6cfc4);
+  margin: 0;
+}
 .footer__tagline {
   font-family: var(--font-serif); font-style: italic;
   font-size: 15px; line-height: 1.55; color: var(--niebla-300);

@@ -455,6 +455,10 @@
     footer.innerHTML =
       '<div class="wrap"><div class="footer__grid">' +
         '<div class="footer__brand">' +
+          '<p class="footer__bio">El Pastor Oscar ha servido en el ministerio por más de ' +
+          '20 años, es un apasionado comunicador del Evangelio, dedicado a inspirar a las ' +
+          'personas a profundizar en su fe y caminar con Dios.</p>' +
+          '<p class="footer__tagline">Notas sobre la fe, la familia y la vida común.</p>' +
           '<div class="footer__brand-row">' +
             '<img src="project/assets/logo-icon.png" alt="" ' +
               'style="filter:brightness(0) saturate(100%) invert(60%) sepia(34%) saturate(454%) hue-rotate(338deg) brightness(91%) contrast(85%)" />' +
@@ -463,8 +467,6 @@
               '<span class="footer__brand-tagline">Secundum Fidem</span>' +
             '</span>' +
           '</div>' +
-          '<p class="footer__tagline">Notas sobre la fe, la familia y la vida común — un blog ' +
-          'escrito desde Guatemala, desde 2014.</p>' +
         '</div>' +
         '<div class="footer__col"><h4>Sitio</h4><ul>' +
           '<li><a href="index.html">Inicio</a></li>' +
