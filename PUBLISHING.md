@@ -88,13 +88,31 @@ El build avisa si falta `n` o si hay un `n` duplicado.
 
 ## 3. Publicar
 
+Tienes **tres formas**, de más a menos automática:
+
+**A) Solo agregar el archivo (lo más automático).**
+Sube el `.md` a `content/posts/` (incluso desde la web/móvil de GitHub) y haz
+commit a `main`. El **GitHub Action** (`.github/workflows/build.yml`) compila solo
+y deja todo listo. No necesitas terminal ni correr el build.
+
+**B) Un comando (desde una terminal):**
 ```bash
-git add -A
-git commit -m "Nuevo post: El Temor de Dios"
-git push
+./scripts/publish.sh "Nuevo post: El Temor de Dios"
+```
+Compila, commitea y sube de una vez.
+
+**C) Manual:**
+```bash
+node scripts/build-posts.mjs
+git add -A && git commit -m "Nuevo post: El Temor de Dios" && git push
 ```
 
-GitHub Pages publica automáticamente.
+En los tres casos, **GitHub Pages publica** el sitio y **Buttondown envía** el
+artículo por correo (vía el feed RSS).
+
+> ⚙️ Para que el Action pueda commitear: en GitHub → **Settings → Actions →
+> General → Workflow permissions** debe estar en **"Read and write permissions"**
+> (se configura una sola vez).
 
 ---
 
