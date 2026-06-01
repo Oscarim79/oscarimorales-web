@@ -320,6 +320,7 @@ function genPostPage(p) {
   <link rel="alternate" type="application/rss+xml" title="${xmlEsc(SITE_TITLE)}" href="feed.xml" />
 
   <!-- Open Graph -->
+  <meta property="fb:app_id" content="1364767002169360" />
   <meta property="og:site_name" content="${xmlEsc(SITE_TITLE)}" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="es_ES" />
