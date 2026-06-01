@@ -39,6 +39,117 @@
     }
     .prose__fallback-btn:hover { background: var(--terracota-600); }
 
+    /* ----------------------------------------------------------------------
+       Cuerpo HTML importado de WordPress — hereda el estilo editorial.
+       ---------------------------------------------------------------------- */
+    .prose__html > p,
+    .prose__html li {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 1.72;
+      color: var(--noche-800);
+      letter-spacing: -0.003em;
+      text-wrap: pretty;
+    }
+    .prose__html > p { margin: 0 0 24px; }
+    .prose__html li { margin: 0 0 10px; }
+    /* Drop cap en el primer párrafo */
+    .prose__html > p:first-of-type::first-letter {
+      font-weight: 700;
+      font-size: 5.4em;
+      line-height: 0.86;
+      color: var(--terracota-500);
+      float: left;
+      margin: 6px 12px 0 0;
+      font-family: var(--font-serif);
+    }
+    .prose__html h2 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: clamp(24px, 2.4vw, 32px);
+      line-height: 1.15;
+      letter-spacing: -0.018em;
+      color: var(--noche-800);
+      margin: 56px 0 24px;
+      padding-left: 16px;
+      border-left: 2px solid var(--terracota-500);
+      text-wrap: balance;
+    }
+    .prose__html h3 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: clamp(19px, 1.8vw, 23px);
+      line-height: 1.25;
+      letter-spacing: -0.012em;
+      color: var(--noche-800);
+      margin: 40px 0 16px;
+    }
+    .prose__html h4 {
+      font-family: var(--font-descriptor);
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wider);
+      color: var(--dorado-700);
+      margin: 32px 0 14px;
+    }
+    .prose__html a {
+      color: var(--terracota-600);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--terracota-300);
+      transition: color var(--transition-fast);
+    }
+    .prose__html a:hover { color: var(--terracota-700); text-decoration-color: currentColor; }
+    .prose__html strong, .prose__html b { font-weight: 700; color: var(--noche-900); }
+    .prose__html em, .prose__html i { font-style: italic; }
+    .prose__html ul, .prose__html ol { margin: 0 0 24px; padding-left: 1.5em; }
+    .prose__html ul { list-style: none; padding-left: 1.3em; }
+    .prose__html ul > li { position: relative; }
+    .prose__html ul > li::before {
+      content: "—"; color: var(--terracota-500);
+      position: absolute; left: -1.3em; font-weight: 700;
+    }
+    .prose__html ol > li::marker { color: var(--terracota-500); font-weight: 700; }
+    .prose__html li > ul, .prose__html li > ol { margin: 10px 0 6px; }
+    .prose__html blockquote {
+      margin: 40px 0; padding: 4px 0 4px 28px;
+      border-left: 2px solid var(--terracota-400);
+      font-family: var(--font-serif); font-style: italic;
+      font-size: clamp(19px, 2vw, 23px); line-height: 1.5;
+      color: var(--noche-800);
+    }
+    .prose__html blockquote p { margin: 0 0 12px; }
+    .prose__html blockquote p:last-child { margin: 0; }
+    .prose__html img {
+      display: block; max-width: 100%; height: auto;
+      margin: 36px auto; border-radius: 2px;
+    }
+    .prose__html figure { margin: 36px 0; }
+    .prose__html figcaption {
+      font-family: var(--font-descriptor); font-size: 12px;
+      text-transform: uppercase; letter-spacing: var(--tracking-wide);
+      color: var(--niebla-700); margin-top: 10px; text-align: center;
+    }
+    .prose__html .embed {
+      position: relative; aspect-ratio: 16 / 9;
+      margin: 36px 0; background: var(--noche-900); border-radius: 2px; overflow: hidden;
+    }
+    .prose__html .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prose__html sup { font-size: 0.7em; line-height: 0; }
+    .prose__html hr { border: 0; height: 1px; background: var(--niebla-300); margin: 44px auto; width: 64px; }
+    .prose__html table {
+      width: 100%; border-collapse: collapse; margin: 32px 0;
+      font-family: var(--font-serif); font-size: 16px; color: var(--noche-800);
+    }
+    .prose__html td, .prose__html th {
+      border: 1px solid var(--niebla-300); padding: 10px 14px;
+      text-align: left; vertical-align: top;
+    }
+    .prose__html th { font-family: var(--font-sans); font-weight: 700; }
+
     @media (max-width: 900px) {
       .news__inner { grid-template-columns: 1fr; gap: 40px; }
       .footer__grid { grid-template-columns: 1fr; }
@@ -51,13 +162,15 @@
   <script src="project/ui_kits/landing_blog/posts-data.js"></script>
   <script src="project/ui_kits/landing_blog/covers.js"></script>
   <script src="project/ui_kits/landing_blog/post-content.js"></script>
+  <script src="project/ui_kits/landing_blog/post-html.js"></script>
 
   <script>
   (function () {
     'use strict';
 
     var POSTS  = window.POSTS || [];
-    var BODIES = window.POST_BODIES || {};
+    var BODIES = window.POST_BODIES || {};   // cuerpos curados (estructurados) — p.ej. N.º 51
+    var HTML   = window.POST_HTML || {};     // cuerpos HTML importados de WordPress (los 51)
 
     var MONTHS = ['enero','febrero','marzo','abril','mayo','junio',
                   'julio','agosto','septiembre','octubre','noviembre','diciembre'];
@@ -236,17 +349,23 @@
       }
     }
 
-    function buildBody(post, blocks) {
+    function buildBody(post, blocks, html) {
       var article = el('article', 'prose');
       var wrap = el('div', 'wrap wrap--narrow');
 
       if (blocks && blocks.length) {
+        // Cuerpo curado a mano (bloques estructurados).
         blocks.forEach(function (b) {
           var node = buildBlock(b);
           if (node) wrap.appendChild(node);
         });
+      } else if (html) {
+        // Cuerpo HTML importado de WordPress, con estilo editorial heredado.
+        var holder = el('div', 'prose__html');
+        holder.innerHTML = html;
+        wrap.appendChild(holder);
       } else {
-        // Graceful fallback: this post has no structured body on the site yet.
+        // Último recurso: el escrito aún no tiene cuerpo dentro del sitio.
         if (post.excerpt) wrap.appendChild(el('p', 'prose__lead', post.excerpt));
         var box = el('div', 'prose__fallback');
         box.appendChild(el('span', 'prose__fallback-lbl', 'Escrito completo'));
@@ -263,6 +382,14 @@
 
       article.appendChild(wrap);
       return article;
+    }
+
+    // Cuenta de palabras a partir de HTML (para el tiempo de lectura).
+    function wordsFromHtml(html) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      var t = (tmp.textContent || '').trim();
+      return t ? t.split(/\s+/).filter(Boolean).length : 0;
     }
 
     // ------------------------------------------------------------------------
@@ -523,11 +650,13 @@
       var prev = POSTS[idx + 1]; // POSTS ordered newest -> oldest
       var next = POSTS[idx - 1];
       var blocks = BODIES[n] || [];
+      var html = (!blocks.length) ? (HTML[n] || '') : '';
 
-      // Reading-time estimate (~220 wpm) from the structured body
+      // Reading-time estimate (~220 wpm) — desde bloques o desde el HTML importado.
       var wc = blocks.reduce(function (a, b) {
         return a + ((b.text || '').split(/\s+/).filter(Boolean).length);
       }, 0);
+      if (!wc && html) wc = wordsFromHtml(html);
       var readMinutes = wc ? Math.max(1, Math.round(wc / 220)) : 0;
 
       // Document title + meta
@@ -538,7 +667,7 @@
       var site = el('div', 'site site--post');
       site.appendChild(buildNav());
       site.appendChild(buildCover(post, readMinutes));
-      site.appendChild(buildBody(post, blocks));
+      site.appendChild(buildBody(post, blocks, html));
       site.appendChild(buildFooter(post, prev, next));
       site.appendChild(buildRelated(relatedPosts(post)));
       site.appendChild(buildNews());
