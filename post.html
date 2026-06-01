@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Oscar I. Morales · Secundum Fidem Meam</title>
   <meta name="description" content="Un escrito de Oscar I. Morales · Secundum Fidem Meam." />
+  <meta name="author" content="Oscar I. Morales" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="canonical" href="" id="js-canonical" />
+
+  <!-- Open Graph / Twitter — el contenido se rellena por artículo en render() -->
+  <meta property="og:site_name" content="Oscar I. Morales · Secundum Fidem Meam" />
   <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+  <script type="application/ld+json" id="js-jsonld"></script>
+
   <link rel="icon" href="project/assets/logo-icon.png" />
   <link rel="stylesheet" href="project/colors_and_type.css" />
   <link rel="stylesheet" href="project/ui_kits/landing_blog/landing.css" />
@@ -635,6 +652,97 @@
     }
 
     // ------------------------------------------------------------------------
+    // SEO — metadatos por artículo (Open Graph, Twitter, canonical, JSON-LD)
+    // ------------------------------------------------------------------------
+    function metaText(s, max) {
+      s = String(s || '').replace(/\s+/g, ' ').trim();
+      if (s.length <= max) return s;
+      var cut = s.slice(0, max);
+      var sp = cut.lastIndexOf(' ');
+      return (sp > 40 ? cut.slice(0, sp) : cut).replace(/[\s,;:.]+$/, '') + '…';
+    }
+
+    function describePost(post, html, blocks) {
+      if (post.excerpt) return metaText(post.excerpt, 175);
+      var text = '';
+      if (blocks && blocks.length) {
+        for (var i = 0; i < blocks.length; i++) {
+          if (blocks[i].type === 'lead' || blocks[i].type === 'p') { text = blocks[i].text; break; }
+        }
+      } else if (html) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        text = tmp.textContent || '';
+      }
+      return metaText(text, 175) ||
+        'Un escrito de Oscar I. Morales · Secundum Fidem Meam.';
+    }
+
+    function setMeta(selector, content) {
+      var m = document.head.querySelector(selector);
+      if (m) m.setAttribute('content', content);
+    }
+
+    function applySeo(post, html, blocks) {
+      var url = window.location.href.split('#')[0];
+      var desc = describePost(post, html, blocks);
+      var img = post.image || '';
+
+      setMeta('meta[name="description"]', desc);
+      setMeta('meta[property="og:title"]', post.title);
+      setMeta('meta[property="og:description"]', desc);
+      setMeta('meta[property="og:url"]', url);
+      setMeta('meta[name="twitter:title"]', post.title);
+      setMeta('meta[name="twitter:description"]', desc);
+      if (img) {
+        setMeta('meta[property="og:image"]', img);
+        setMeta('meta[name="twitter:image"]', img);
+      }
+      var canon = document.getElementById('js-canonical');
+      if (canon) canon.setAttribute('href', url);
+
+      // article:published_time + section (se crean si no existen)
+      ensureMeta('property', 'article:published_time').setAttribute('content', post.date);
+      ensureMeta('property', 'article:author').setAttribute('content', 'Oscar I. Morales');
+      if (post.cats && post.cats[0]) {
+        ensureMeta('property', 'article:section').setAttribute('content', post.cats[0]);
+      }
+
+      // JSON-LD BlogPosting
+      var ld = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: desc,
+        datePublished: post.date,
+        inLanguage: 'es',
+        url: url,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        author: { '@type': 'Person', name: 'Oscar I. Morales' },
+        publisher: {
+          '@type': 'Person',
+          name: 'Oscar I. Morales',
+          logo: { '@type': 'ImageObject',
+            url: 'https://oscarim79.github.io/oscarimorales-web/project/assets/logo-icon.png' }
+        }
+      };
+      if (img) ld.image = img;
+      if (post.cats) ld.keywords = post.cats.join(', ');
+      var holder = document.getElementById('js-jsonld');
+      if (holder) holder.textContent = JSON.stringify(ld);
+    }
+
+    function ensureMeta(attr, key) {
+      var m = document.head.querySelector('meta[' + attr + '="' + key + '"]');
+      if (!m) {
+        m = document.createElement('meta');
+        m.setAttribute(attr, key);
+        document.head.appendChild(m);
+      }
+      return m;
+    }
+
+    // ------------------------------------------------------------------------
     // Render
     // ------------------------------------------------------------------------
     function render() {
@@ -659,10 +767,9 @@
       if (!wc && html) wc = wordsFromHtml(html);
       var readMinutes = wc ? Math.max(1, Math.round(wc / 220)) : 0;
 
-      // Document title + meta
+      // Título + metadatos SEO (Open Graph, Twitter, canonical, JSON-LD)
       document.title = post.title + ' · Oscar I. Morales';
-      var metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc && post.excerpt) metaDesc.setAttribute('content', post.excerpt);
+      applySeo(post, html, blocks);
 
       var site = el('div', 'site site--post');
       site.appendChild(buildNav());
