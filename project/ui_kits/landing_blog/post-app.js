@@ -259,7 +259,9 @@
     var wa = el('a', 'afoot__share-btn', 'WhatsApp');
     wa.href = 'https://wa.me/?text=' + shareText + '%20' + shareUrl;
     var fb = el('a', 'afoot__share-btn', 'Facebook');
-    fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '&quote=' + shareText;
+    // Facebook ignora el texto prellenado (política suya); solo respeta el hashtag.
+    fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl +
+              '&hashtag=%23SecundumFidem&quote=' + shareText;
     var tw = el('a', 'afoot__share-btn', 'X');
     tw.href = 'https://x.com/intent/post?text=' + shareText + '&url=' + shareUrl;
     [wa, fb, tw].forEach(function (a) {
@@ -627,7 +629,7 @@
       xBtn.href  = 'https://x.com/intent/post?text=' + encodeURIComponent(t) +
                    '&url=' + encodeURIComponent(url);
       fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) +
-                   '&quote=' + encodeURIComponent(t);
+                   '&hashtag=%23SecundumFidem&quote=' + encodeURIComponent(t);
       [waBtn, xBtn, fbBtn].forEach(function (a) {
         a.target = '_blank'; a.rel = 'noopener noreferrer';
       });
