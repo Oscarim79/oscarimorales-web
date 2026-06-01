@@ -20,7 +20,21 @@ description: >
 
 Oscar I. Morales es pastor, consejero bíblico y autor. Su blog se llama **"Secundum
 Fidem"** (oscarimorales.com). Escribe en español, desde Guatemala, para un lector
-hispanohablante. Es esposo de Regina, papá de Oscar Alejandro (Alex) y Ana Sofía (Sofi).
+hispanohablante. Es esposo de Regina, papá de Oscar Alejandro (Alex, 12) y Ana Sofía
+(Sofi, 7). *(Las edades avanzan con el tiempo; los ejemplos antiguos pueden citarlos más
+pequeños — eso es histórico, no actual.)*
+
+**Sus tres frentes hoy** (úsalos para anclar ejemplos y elegir ángulos):
+
+- **Replantación de iglesia.** Oscar está **empezando de nuevo "otra vez"** una plantación
+  — con la fragilidad, los comienzos pequeños, la fe en lo lento y la tentación de medir
+  por aplausos. Es su Subversión Pacífica en acción.
+- **El Primer Altar (familia).** Criar en equipo con Regina a un **preadolescente (Alex)**
+  y a una **niña (Sofi)** — dos edades, dos mundos, bajo el mismo techo.
+- **Vivir sostenido por la gracia.** Oscar vive con **fibromialgia y espondilitis
+  anquilosante**. No lo presenta como derrota, sino como la providencia que lo ha hecho
+  **más humilde y dependiente de Dios** ("mi gracia te basta"). Maneja este tema con
+  sobriedad y sin autocompasión; es el corazón del manifiesto hecho carne.
 
 La misión del blog, en sus propias palabras, es ser un **"intérprete de la cultura a
 través de la Palabra de Dios, con conclusiones prácticas."** Oscar toma lo que está
