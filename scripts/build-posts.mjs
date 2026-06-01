@@ -166,7 +166,7 @@ function load() {
 function genData(posts) {
   const lines = posts.map(p => {
     const f = [`n: ${p.n}`, `title: ${JSON.stringify(p.title)}`, `date: ${JSON.stringify(p.date)}`,
-               `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(`${SITE}/post.html?n=${p.n}`)}`];
+               `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(`${SITE}/post-${p.n}.html`)}`];
     if (p.cover) f.push(`image: ${JSON.stringify(p.cover)}`);
     if (p.excerpt) f.push(`excerpt: ${JSON.stringify(p.excerpt)}`);
     if (p.quote) f.push(`quote: ${JSON.stringify(p.quote)}`);
@@ -208,7 +208,7 @@ function genSitemap(posts) {
   const byN = [...posts].sort((a, b) => a.n - b.n);
   const u = [`  <url>\n    <loc>${SITE}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`];
   for (const p of byN) {
-    u.push(`  <url>\n    <loc>${SITE}/post.html?n=${p.n}</loc>\n    <lastmod>${p.date}</lastmod>` +
+    u.push(`  <url>\n    <loc>${SITE}/post-${p.n}.html</loc>\n    <lastmod>${p.date}</lastmod>` +
            `\n    <changefreq>yearly</changefreq>\n    <priority>0.8</priority>\n  </url>`);
   }
   return '<?xml version="1.0" encoding="UTF-8"?>\n' +
@@ -229,7 +229,7 @@ function feedSummary(p) {
 
 function genFeed(posts) {
   const items = posts.map(p => {
-    const link = `${SITE}/post.html?n=${p.n}`;
+    const link = `${SITE}/post-${p.n}.html`;
     const pub = new Date(p.date + 'T08:00:00Z').toUTCString();
     const cats = p.cats.map(c => `      <category>${xmlEsc(c)}</category>`).join('\n');
     return [
@@ -262,6 +262,113 @@ function genFeed(posts) {
 }
 
 // ----------------------------------------------------------------------------
+// Páginas estáticas por artículo (post-<n>.html)
+// ----------------------------------------------------------------------------
+// Cada post se publica también como una página HTML propia con los metadatos
+// (título, descripción, imagen) ya "horneados" en el HTML. Así Facebook,
+// WhatsApp y X — que NO ejecutan JavaScript — muestran la vista previa correcta
+// (imagen + título del artículo). El cuerpo lo renderiza post-app.js leyendo
+// window.POST_N. Es la URL canónica y compartible de cada escrito.
+
+const DEFAULT_IMAGE = `${SITE}/project/assets/oscar-stage.png`;
+
+// Descripción corta (excerpt o texto del cuerpo, recortada a ~175 caracteres).
+function metaDesc(p) {
+  let s = p.excerpt || p.html.replace(/<[^>]+>/g, ' ');
+  s = s.replace(/\s+/g, ' ').trim();
+  if (s.length <= 175) return s;
+  const cut = s.slice(0, 175);
+  const sp = cut.lastIndexOf(' ');
+  return (sp > 40 ? cut.slice(0, sp) : cut).replace(/[\s,;:.]+$/, '') + '…';
+}
+
+// URL absoluta de la imagen de portada (o la imagen por defecto del sitio).
+function absImage(p) {
+  if (!p.cover) return DEFAULT_IMAGE;
+  return /^https?:\/\//.test(p.cover) ? p.cover : `${SITE}/${p.cover.replace(/^\//, '')}`;
+}
+
+function genPostPage(p) {
+  const url = `${SITE}/post-${p.n}.html`;
+  const title = `${p.title} · Oscar I. Morales`;
+  const desc = metaDesc(p);
+  const img = absImage(p);
+  const ld = {
+    '@context': 'https://schema.org', '@type': 'BlogPosting',
+    headline: p.title, description: desc, datePublished: p.date, inLanguage: 'es',
+    url, mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    author: { '@type': 'Person', name: 'Oscar I. Morales' },
+    publisher: {
+      '@type': 'Person', name: 'Oscar I. Morales',
+      logo: { '@type': 'ImageObject', url: `${SITE}/project/assets/logo-icon.png` }
+    },
+    image: img, keywords: p.cats.join(', ')
+  };
+  return `<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>${xmlEsc(title)}</title>
+  <meta name="description" content="${xmlEsc(desc)}" />
+  <meta name="author" content="Oscar I. Morales" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="canonical" href="${url}" />
+  <link rel="alternate" type="application/rss+xml" title="${xmlEsc(SITE_TITLE)}" href="feed.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="${xmlEsc(SITE_TITLE)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="${xmlEsc(p.title)}" />
+  <meta property="og:description" content="${xmlEsc(desc)}" />
+  <meta property="og:url" content="${url}" />
+  <meta property="og:image" content="${xmlEsc(img)}" />
+  <meta property="article:published_time" content="${p.date}" />
+  <meta property="article:author" content="Oscar I. Morales" />
+${p.cats[0] ? `  <meta property="article:section" content="${xmlEsc(p.cats[0])}" />\n` : ''}\
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${xmlEsc(p.title)}" />
+  <meta name="twitter:description" content="${xmlEsc(desc)}" />
+  <meta name="twitter:image" content="${xmlEsc(img)}" />
+
+  <script type="application/ld+json">${JSON.stringify(ld)}</script>
+
+  <link rel="icon" href="project/assets/logo-icon.png" />
+  <link rel="stylesheet" href="project/colors_and_type.css" />
+  <link rel="stylesheet" href="project/ui_kits/landing_blog/landing.css" />
+  <link rel="stylesheet" href="project/ui_kits/landing_blog/post.css" />
+  <link rel="stylesheet" href="project/ui_kits/landing_blog/post-prod.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>window.POST_N = ${p.n};</script>
+  <script src="project/ui_kits/landing_blog/site-config.js"></script>
+  <script src="project/ui_kits/landing_blog/posts-data.js"></script>
+  <script src="project/ui_kits/landing_blog/covers.js"></script>
+  <script src="project/ui_kits/landing_blog/post-content.js"></script>
+  <script src="project/ui_kits/landing_blog/post-html.js"></script>
+  <script src="project/ui_kits/landing_blog/subscribe.js"></script>
+  <script src="project/ui_kits/landing_blog/post-app.js"></script>
+</body>
+</html>
+`;
+}
+
+function genPostPages(posts) {
+  // Limpia páginas viejas (post-<n>.html) antes de regenerar.
+  for (const f of fs.readdirSync(ROOT)) {
+    if (/^post-\d+\.html$/.test(f)) fs.unlinkSync(path.join(ROOT, f));
+  }
+  for (const p of posts) {
+    fs.writeFileSync(path.join(ROOT, `post-${p.n}.html`), genPostPage(p));
+  }
+  return posts.length;
+}
+
+// ----------------------------------------------------------------------------
 // Run
 // ----------------------------------------------------------------------------
 const posts = load();
@@ -269,10 +376,12 @@ fs.writeFileSync(OUT_DATA, genData(posts));
 fs.writeFileSync(OUT_HTML, genHtml(posts));
 fs.writeFileSync(OUT_MAP, genSitemap(posts));
 fs.writeFileSync(OUT_FEED, genFeed(posts));
+const pageCount = genPostPages(posts);
 console.log(`✅ Build OK — ${posts.length} posts`);
 console.log(`   → ${path.relative(ROOT, OUT_DATA)}`);
 console.log(`   → ${path.relative(ROOT, OUT_HTML)}`);
 console.log(`   → ${path.relative(ROOT, OUT_MAP)}`);
 console.log(`   → ${path.relative(ROOT, OUT_FEED)}`);
+console.log(`   → ${pageCount} páginas post-<n>.html`);
 const newest = posts[0];
 console.log(`   más reciente: n=${newest.n} · ${newest.title} · ${newest.date}`);

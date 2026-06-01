@@ -373,7 +373,8 @@
   }
 
   function postHref(post) {
-    return INTERNAL.has(post.n) ? POST_TPL + '?n=' + post.n : post.url;
+    // Página estática por artículo (post-<n>.html): URL canónica y compartible.
+    return INTERNAL.has(post.n) ? 'post-' + post.n + '.html' : post.url;
   }
 
   function postTarget(post) {
