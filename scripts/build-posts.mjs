@@ -243,7 +243,10 @@ function genFeed(posts) {
       '    </item>',
     ].filter(Boolean).join('\n');
   }).join('\n');
-  const now = new Date().toUTCString();
+  // Fecha de actualización estable: la del post más reciente (no la hora del build).
+  // Así feed.xml solo cambia cuando cambia el contenido — sin commits de ruido.
+  const latest = posts.reduce((a, p) => (p.date > a ? p.date : a), '1970-01-01');
+  const now = new Date(latest + 'T08:00:00Z').toUTCString();
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
