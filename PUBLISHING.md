@@ -77,9 +77,12 @@ Debajo del segundo `---`. Soporta:
 node scripts/build-posts.mjs
 ```
 
-Regenera `posts-data.js`, `post-html.js` y `sitemap.xml` desde **todos** los
-archivos de `content/posts/`. Esos tres archivos son **generados — no los edites
-a mano** (para corregir un post, edita su `.md` y vuelve a compilar).
+Regenera `posts-data.js`, `post-html.js`, `sitemap.xml` y `feed.xml` desde
+**todos** los archivos de `content/posts/`. Esos archivos son **generados — no los
+edites a mano** (para corregir un post, edita su `.md` y vuelve a compilar).
+
+> `feed.xml` es el RSS del blog: alimenta lectores de RSS y el **envío automático
+> del artículo por correo** (ver más abajo). Se actualiza solo en cada build.
 
 El build avisa si falta `n` o si hay un `n` duplicado.
 

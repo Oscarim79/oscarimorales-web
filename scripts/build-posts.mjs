@@ -28,6 +28,10 @@ const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DATA = path.join(ROOT, 'project', 'ui_kits', 'landing_blog', 'posts-data.js');
 const OUT_HTML = path.join(ROOT, 'project', 'ui_kits', 'landing_blog', 'post-html.js');
 const OUT_MAP  = path.join(ROOT, 'sitemap.xml');
+const OUT_FEED = path.join(ROOT, 'feed.xml');
+
+const SITE_TITLE = 'Oscar I. Morales · Secundum Fidem Meam';
+const SITE_DESC  = 'Ensayos y meditaciones para pensar el evangelio despacio.';
 
 // URL base del sitio publicado. Cámbiala aquí si migras a un dominio propio
 // (p. ej. "https://www.oscarimorales.com/blog").
@@ -211,6 +215,52 @@ function genSitemap(posts) {
          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + u.join('\n') + '\n</urlset>\n';
 }
 
+function xmlEsc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                  .replace(/"/g, '&quot;');
+}
+
+// Resumen para el RSS: usa el excerpt o el texto plano del cuerpo.
+function feedSummary(p) {
+  if (p.excerpt) return p.excerpt;
+  const text = p.html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  return text.length > 280 ? text.slice(0, 280).replace(/\s+\S*$/, '') + '…' : text;
+}
+
+function genFeed(posts) {
+  const items = posts.map(p => {
+    const link = `${SITE}/post.html?n=${p.n}`;
+    const pub = new Date(p.date + 'T08:00:00Z').toUTCString();
+    const cats = p.cats.map(c => `      <category>${xmlEsc(c)}</category>`).join('\n');
+    return [
+      '    <item>',
+      `      <title>${xmlEsc(p.title)}</title>`,
+      `      <link>${link}</link>`,
+      `      <guid isPermaLink="true">${link}</guid>`,
+      `      <pubDate>${pub}</pubDate>`,
+      cats,
+      `      <description>${xmlEsc(feedSummary(p))}</description>`,
+      '    </item>',
+    ].filter(Boolean).join('\n');
+  }).join('\n');
+  const now = new Date().toUTCString();
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    '  <channel>',
+    `    <title>${xmlEsc(SITE_TITLE)}</title>`,
+    `    <link>${SITE}/</link>`,
+    `    <description>${xmlEsc(SITE_DESC)}</description>`,
+    '    <language>es</language>',
+    `    <lastBuildDate>${now}</lastBuildDate>`,
+    `    <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />`,
+    items,
+    '  </channel>',
+    '</rss>',
+    '',
+  ].join('\n');
+}
+
 // ----------------------------------------------------------------------------
 // Run
 // ----------------------------------------------------------------------------
@@ -218,9 +268,11 @@ const posts = load();
 fs.writeFileSync(OUT_DATA, genData(posts));
 fs.writeFileSync(OUT_HTML, genHtml(posts));
 fs.writeFileSync(OUT_MAP, genSitemap(posts));
+fs.writeFileSync(OUT_FEED, genFeed(posts));
 console.log(`✅ Build OK — ${posts.length} posts`);
 console.log(`   → ${path.relative(ROOT, OUT_DATA)}`);
 console.log(`   → ${path.relative(ROOT, OUT_HTML)}`);
 console.log(`   → ${path.relative(ROOT, OUT_MAP)}`);
+console.log(`   → ${path.relative(ROOT, OUT_FEED)}`);
 const newest = posts[0];
 console.log(`   más reciente: n=${newest.n} · ${newest.title} · ${newest.date}`);
