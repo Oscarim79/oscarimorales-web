@@ -353,11 +353,13 @@
   text-decoration: none;
   display: inline-flex; align-items: center; gap: 10px;
   white-space: nowrap;
-  border-bottom: 1px solid rgba(245, 240, 232, 0.4);
-  padding-bottom: 4px;
-  transition: gap var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  background: var(--terracota-500);
+  padding: 11px 18px;
+  border-radius: 2px;
+  border: none;
+  transition: gap var(--transition-fast), background var(--transition-fast);
 }
-.stage__footrail-link:hover { gap: 16px; color: var(--terracota-300); border-bottom-color: var(--terracota-300); }
+.stage__footrail-link:hover { gap: 16px; background: var(--terracota-600); color: var(--crema-50); }
 
 /* ---------- Indicador de scroll ---------- */
 .stage__scrollhint {
