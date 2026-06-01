@@ -321,8 +321,10 @@
 </footer>
 
 <!-- Data + cover generator (must load before app.js) -->
+<script src="project/ui_kits/landing_blog/site-config.js"></script>
 <script src="project/ui_kits/landing_blog/posts-data.js"></script>
 <script src="project/ui_kits/landing_blog/covers.js"></script>
+<script src="project/ui_kits/landing_blog/subscribe.js"></script>
 
 <script>
 /* ============================================================================
@@ -749,21 +751,12 @@
   // Forms
   // --------------------------------------------------------------------------
   function initForms() {
-    var stageForm = document.getElementById('js-stage-form');
-    if (stageForm) {
-      stageForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Gracias. Te envío una lectura para empezar a tu correo.');
-        stageForm.reset();
+    if (typeof window.wireSubscribe === 'function') {
+      window.wireSubscribe(document.getElementById('js-stage-form'), {
+        success: '¡Gracias! Te envié un correo para confirmar y recibir tu lectura. Revísalo (y la carpeta de spam).'
       });
-    }
-
-    var newsForm = document.getElementById('js-news-form');
-    if (newsForm) {
-      newsForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Gracias por suscribirte.');
-        newsForm.reset();
+      window.wireSubscribe(document.getElementById('js-news-form'), {
+        success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
       });
     }
   }

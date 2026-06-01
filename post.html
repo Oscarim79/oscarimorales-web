@@ -177,10 +177,12 @@
 <body>
   <div id="app"></div>
 
+  <script src="project/ui_kits/landing_blog/site-config.js"></script>
   <script src="project/ui_kits/landing_blog/posts-data.js"></script>
   <script src="project/ui_kits/landing_blog/covers.js"></script>
   <script src="project/ui_kits/landing_blog/post-content.js"></script>
   <script src="project/ui_kits/landing_blog/post-html.js"></script>
+  <script src="project/ui_kits/landing_blog/subscribe.js"></script>
 
   <script>
   (function () {
@@ -784,11 +786,9 @@
 
       initProgress();
 
-      var newsForm = document.getElementById('js-news-form');
-      if (newsForm) {
-        newsForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          alert('Gracias por suscribirte.');
+      if (typeof window.wireSubscribe === 'function') {
+        window.wireSubscribe(document.getElementById('js-news-form'), {
+          success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
         });
       }
     }
