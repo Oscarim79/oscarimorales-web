@@ -11,14 +11,20 @@
 
 ## 📍 Dónde nos quedamos (al 2-jun-2026)
 El sitio está **publicado y funcionando** en GitHub Pages (rama `main`).
-Hoy se **activaron las suscripciones por correo**: la cuenta de Buttondown de Oscar
-ya fue aceptada (enlazada a me@oscarimorales.com, usuario **`oscarim`**) y se puso
-ese usuario en `project/ui_kits/landing_blog/site-config.js`. El cambio quedó
-commiteado y pusheado a la rama `claude/youthful-johnson-AJZq0`.
+Hoy las **suscripciones por correo quedaron funcionando de punta a punta**: la cuenta
+de Buttondown de Oscar (usuario **`oscarim`**, enlazada a me@oscarimorales.com) ya está
+configurada en `site-config.js`, el PR #1 se **mergeó a `main`** y se desplegó. Oscar
+probó suscribirse en vivo y vio la pantalla "You've successfully subscribed to Oscar
+Morales!" → **confirmado funcionando.** ✅
 
-**Próximo paso:** abrir PR / mergear esa rama a `main` para que las suscripciones
-queden activas en el sitio en vivo, y confirmar en el panel de Buttondown la
-configuración de doble opt-in, bienvenida con PDF y RSS-to-email (ver Pendiente #2).
+## ⏰ RECORDATORIO PARA HOY (pedido por Oscar el 2-jun): terminar ajustes de Buttondown
+Oscar pidió que se le recuerde **hoy** completar 3 ajustes en su **panel de Buttondown**
+(no es código; los hace él dentro de su cuenta). Guía: `SUBSCRIPTIONS.md`.
+- ☐ **Doble opt-in** (recomendado activarlo; hoy te suscribe directo sin confirmar correo).
+- ☐ **Email de bienvenida con su PDF** de regalo.
+- ☐ **RSS-to-email** → `https://oscarim79.github.io/oscarimorales-web/feed.xml`
+  (para que cada post nuevo se envíe solo por correo).
+Ofrecerle guiarlo paso a paso en cada uno si lo desea.
 
 ## ⏳ Pendientes
 
@@ -35,14 +41,12 @@ Acordado:
 - Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
   **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
 
-### 2. Buttondown (suscripciones por correo) — *parcialmente hecho*
-✅ Cuenta aceptada y usuario `oscarim` ya configurado en
-   `project/ui_kits/landing_blog/site-config.js` (los formularios salen de "modo seguro").
-Falta:
-- **Mergear** la rama `claude/youthful-johnson-AJZq0` a `main` (o esperar al próximo
-  build) para que se active en el sitio en vivo.
-- Confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con PDF**, y
-  **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
+### 2. Buttondown (suscripciones por correo) — *casi terminado*
+✅ Usuario `oscarim` configurado, PR #1 mergeado a `main`, desplegado y **probado en
+   vivo con éxito** (suscripción funcionando de punta a punta).
+Falta solo (en el panel de Buttondown, lo hace Oscar) — ver "RECORDATORIO PARA HOY" arriba:
+- **doble opt-in**, **bienvenida con PDF**, y
+- **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
   Guía: `SUBSCRIPTIONS.md`.
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
