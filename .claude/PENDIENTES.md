@@ -9,12 +9,16 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 1-jun-2026)
-El sitio está **publicado y funcionando** en GitHub Pages (rama `main`):
-51 posts importados, marca "Secundum Fidem" (sin "Meam"), compartir en redes con
-vista previa (imagen+título+#SecundumFidem y fb:app_id), footer con la bio de Oscar,
-responsive reforzado, build idempotente, y el skill `blog-oims` listo para escribir
-y publicar posts. La sesión de hoy cerró aquí.
+## 📍 Dónde nos quedamos (al 2-jun-2026)
+El sitio está **publicado y funcionando** en GitHub Pages (rama `main`).
+Hoy se **activaron las suscripciones por correo**: la cuenta de Buttondown de Oscar
+ya fue aceptada (enlazada a me@oscarimorales.com, usuario **`oscarim`**) y se puso
+ese usuario en `project/ui_kits/landing_blog/site-config.js`. El cambio quedó
+commiteado y pusheado a la rama `claude/youthful-johnson-AJZq0`.
+
+**Próximo paso:** abrir PR / mergear esa rama a `main` para que las suscripciones
+queden activas en el sitio en vivo, y confirmar en el panel de Buttondown la
+configuración de doble opt-in, bienvenida con PDF y RSS-to-email (ver Pendiente #2).
 
 ## ⏳ Pendientes
 
@@ -31,13 +35,15 @@ Acordado:
 - Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
   **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
 
-### 2. Buttondown (suscripciones por correo)
-La cuenta estaba **en verificación** (hasta 2 días hábiles desde el 1-jun-2026).
-Cuando esté lista:
-- Pedirle su **usuario de Buttondown** y ponerlo en
-  `project/ui_kits/landing_blog/site-config.js` (reemplazar `"TU_USUARIO_BUTTONDOWN"`).
-- Confirmar en Buttondown: **doble opt-in**, **bienvenida con PDF**, y **RSS-to-email**
-  a `https://oscarim79.github.io/oscarimorales-web/feed.xml`. Guía: `SUBSCRIPTIONS.md`.
+### 2. Buttondown (suscripciones por correo) — *parcialmente hecho*
+✅ Cuenta aceptada y usuario `oscarim` ya configurado en
+   `project/ui_kits/landing_blog/site-config.js` (los formularios salen de "modo seguro").
+Falta:
+- **Mergear** la rama `claude/youthful-johnson-AJZq0` a `main` (o esperar al próximo
+  build) para que se active en el sitio en vivo.
+- Confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con PDF**, y
+  **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
+  Guía: `SUBSCRIPTIONS.md`.
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de

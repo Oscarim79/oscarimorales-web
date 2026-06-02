@@ -8,5 +8,5 @@ window.SITE_CONFIG = {
   //
   // Mientras diga "TU_USUARIO_BUTTONDOWN", los formularios no envían a ningún
   // lado (modo seguro). Cámbialo por tu usuario real para activarlos.
-  buttondownUser: "TU_USUARIO_BUTTONDOWN",
+  buttondownUser: "oscarim",
 };
