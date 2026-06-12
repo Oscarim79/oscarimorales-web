@@ -21,8 +21,15 @@ YouTube hasta hacer clic), enlace en la nav y el footer. Los 5 videos están en
 "Ver más en YouTube" lleva a la búsqueda "Oscar Morales Iglesia Reforma Guatemala"
 (Oscar no tiene canal propio; los sermones están en el canal de Iglesia Reforma).
 
-**Próximo paso (acordado con Oscar):** lo de **Buttondown** (ver Pendiente #2):
-confirmar en su panel el doble opt-in, la bienvenida con PDF y el RSS-to-email.
+La sección Sermones **ya funciona verificada por Oscar** (hubo un Error 153 de
+YouTube por `referrerpolicy=no-referrer` en el iframe; se corrigió con `origin`,
+PR #4). Los títulos se leen solos de YouTube — no hace falta escribirlos.
+
+**Próximo paso (en curso):** **Buttondown**. Se le dieron a Oscar los 3 pasos del
+panel (doble opt-in, correo de bienvenida con la "lectura para empezar", y
+RSS-to-email con `feed.xml`). Falta que Oscar diga: (1) si el RSS-to-email está
+disponible en su plan gratis o es de pago, y (2) qué post quiere como lectura de
+bienvenida. El PDF de regalo sigue pendiente de elegir (ver `recursos/README.md`).
 
 Detalle menor de sermones: los títulos quedaron en `""` (el sitio intenta leerlos
 de YouTube solo; si no, muestra "Sermón · Ps. Oscar I. Morales"). Si Oscar pasa
