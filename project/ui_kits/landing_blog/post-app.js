@@ -476,7 +476,7 @@
         '<div class="footer__col"><h4>Redes</h4><ul>' +
           '<li><a href="https://www.facebook.com/oscarimoraless" target="_blank" rel="noopener">Facebook</a></li>' +
           '<li><a href="https://twitter.com/oscarimoraless" target="_blank" rel="noopener">X &middot; Twitter</a></li>' +
-          '<li><a href="https://www.instagram.com/oscarimorales" target="_blank" rel="noopener">Instagram</a></li>' +
+          '<li><a href="https://www.instagram.com/oscarimoraless" target="_blank" rel="noopener">Instagram</a></li>' +
           '<li><a href="mailto:me@oscarimorales.com">Correo</a></li>' +
         '</ul></div>' +
       '</div>' +
