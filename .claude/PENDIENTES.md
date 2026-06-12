@@ -25,11 +25,17 @@ La sección Sermones **ya funciona verificada por Oscar** (hubo un Error 153 de
 YouTube por `referrerpolicy=no-referrer` en el iframe; se corrigió con `origin`,
 PR #4). Los títulos se leen solos de YouTube — no hace falta escribirlos.
 
-**Próximo paso (en curso):** **Buttondown**. Se le dieron a Oscar los 3 pasos del
-panel (doble opt-in, correo de bienvenida con la "lectura para empezar", y
-RSS-to-email con `feed.xml`). Falta que Oscar diga: (1) si el RSS-to-email está
-disponible en su plan gratis o es de pago, y (2) qué post quiere como lectura de
-bienvenida. El PDF de regalo sigue pendiente de elegir (ver `recursos/README.md`).
+**Buttondown (en curso, plan GRATIS confirmado):**
+- ✅ PDF de regalo subido: `recursos/la-soberania-de-dios-aw-pink.pdf`
+  (A. W. Pink, *La soberanía de Dios*; digitalización libre 2007, sin copyright —
+  verificado). URL pública:
+  `https://oscarim79.github.io/oscarimorales-web/recursos/la-soberania-de-dios-aw-pink.pdf`
+- Falta que Oscar pegue el correo de bienvenida (texto ya entregado) en
+  **Settings → Subscribing → Welcome** y active el doble opt-in.
+- ⚠️ El **RSS-to-email es de pago** ($9/mes) → acordado el flujo asistido:
+  al publicar un post, dejarle a Oscar el correo redactado para que solo lo
+  pegue y envíe en Buttondown. **Pendiente:** agregar este paso al skill
+  `blog-oims` (al publicar, generar también el correo del boletín).
 
 Detalle menor de sermones: los títulos quedaron en `""` (el sitio intenta leerlos
 de YouTube solo; si no, muestra "Sermón · Ps. Oscar I. Morales"). Si Oscar pasa
