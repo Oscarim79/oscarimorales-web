@@ -821,7 +821,9 @@
           '<div class="sermons__frame">' +
             '<iframe src="' + src + '" title="' + esc(titleOf(s)) + '" ' +
               'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
-              'allowfullscreen referrerpolicy="no-referrer"></iframe>' +
+              // YouTube exige la cabecera Referer en embeds (si falta: Error 153).
+              // "origin" envía solo el dominio del sitio, nada más.
+              'allowfullscreen referrerpolicy="origin"></iframe>' +
           '</div>' +
           '<h3 class="sermons__player-title">' + esc(titleOf(s)) + '</h3>';
         return;
