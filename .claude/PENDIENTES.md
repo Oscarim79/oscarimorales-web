@@ -30,8 +30,14 @@ PR #4). Los títulos se leen solos de YouTube — no hace falta escribirlos.
   (A. W. Pink, *La soberanía de Dios*; digitalización libre 2007, sin copyright —
   verificado). URL pública:
   `https://oscarim79.github.io/oscarimorales-web/recursos/la-soberania-de-dios-aw-pink.pdf`
-- Falta que Oscar pegue el correo de bienvenida (texto ya entregado) en
-  **Settings → Subscribing → Welcome** y active el doble opt-in.
+- ⚠️ Personalizar el correo de bienvenida resultó ser **de pago** (Standard).
+  Solución gratis implementada: página **`bienvenida.html`** (on-brand, noindex)
+  que entrega el PDF; Oscar debe pegar su URL en Buttondown →
+  **Settings → Subscribing → After confirming**:
+  `https://oscarim79.github.io/oscarimorales-web/bienvenida.html`
+  y (recomendado) apagar el toggle "Welcome email" (no personalizable y
+  probablemente en inglés). Mensajes de éxito de los formularios ya ajustados
+  al nuevo flujo ("al confirmar se abre tu lectura").
 - ⚠️ El **RSS-to-email es de pago** ($9/mes) → acordado el flujo asistido:
   al publicar un post, dejarle a Oscar el correo redactado para que solo lo
   pegue y envíe en Buttondown. **Pendiente:** agregar este paso al skill

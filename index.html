@@ -902,10 +902,10 @@
   function initForms() {
     if (typeof window.wireSubscribe === 'function') {
       window.wireSubscribe(document.getElementById('js-stage-form'), {
-        success: '¡Gracias! Te envié un correo para confirmar y recibir tu lectura. Revísalo (y la carpeta de spam).'
+        success: '¡Gracias! Revisa tu correo (y la carpeta de spam) y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
       window.wireSubscribe(document.getElementById('js-news-form'), {
-        success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
+        success: '¡Gracias! Revisa tu correo y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
     }
   }
