@@ -202,6 +202,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  box-sizing: border-box;
   width: min(540px, 100%);
   padding: clamp(30px, 3vw, 44px) clamp(30px, 3.2vw, 48px);
   background: rgba(13, 27, 42, 0.52);
@@ -1560,6 +1561,9 @@ button {
   .sermons__sub { text-align: left; }
   .sermons__title { font-size: 38px; }
   .sermons__item { grid-template-columns: 112px 1fr; }
+  /* La cabecera del archivo se apila: el filtro ya no se sale de pantalla */
+  .archive__head { flex-direction: column; align-items: flex-start; }
+  .archive__filter-wrap { align-items: flex-start; }
 }
 
 /* ============================================================================
@@ -1820,7 +1824,16 @@ button {
   /* Nav: reducir espacios y permitir que envuelva como último recurso,
      para que nunca cause scroll horizontal en teléfonos pequeños. */
   .nav__inner { padding: 14px 20px; gap: 12px; flex-wrap: wrap; row-gap: 8px; }
-  .nav__links { gap: 16px; }
+  .nav__links { gap: 14px; }
   .nav__cta { padding: 9px 13px; }
   .nav__wordmark { font-size: 12px; letter-spacing: 0.05em; }
+
+  /* "Inicio" es redundante en teléfonos: el logo ya lleva al inicio. */
+  #js-nav-inicio { display: none; }
+
+  /* Archivo: que el texto pueda encogerse dentro del grid (evita el
+     desborde horizontal en teléfonos muy angostos). */
+  .archive__entry { gap: 16px; }
+  .archive__entry-body { min-width: 0; }
+  .archive__entry-title { overflow-wrap: break-word; }
 }

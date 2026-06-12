@@ -9,43 +9,26 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 12-jun-2026)
-El sitio está **publicado y funcionando** en GitHub Pages (rama `main`), ya **con
-las suscripciones de Buttondown activas** (la rama de Buttondown se mergeó a `main`).
+## 📍 Dónde nos quedamos (al 12-jun-2026, cierre de sesión)
+Sesión muy productiva. El sitio está **publicado y completo** en GitHub Pages:
 
-Hoy se agregó y **se publicó (PR #2 mergeado a `main`)** la **sección "Sermones"
-en la portada** ("Para ver y escuchar", entre el Archivo y la Suscripción): un
-video destacado + lista de 4 sermones más, con carga diferida (no carga nada de
-YouTube hasta hacer clic), enlace en la nav y el footer. Los 5 videos están en
-`project/ui_kits/landing_blog/site-config.js` (campo `sermons`). El botón
-"Ver más en YouTube" lleva a la búsqueda "Oscar Morales Iglesia Reforma Guatemala"
-(Oscar no tiene canal propio; los sermones están en el canal de Iglesia Reforma).
+1. **Sección "Sermones" en la portada** — publicada y verificada por Oscar
+   funcionando (video destacado + lista de 4, carga diferida, botón "Ver más
+   en YouTube" → búsqueda "Oscar Morales Iglesia Reforma Guatemala" porque los
+   sermones viven en el canal de Iglesia Reforma). Videos editables en
+   `site-config.js` → `sermons`. Los títulos se leen solos de YouTube.
+2. **Suscripciones (Buttondown, plan GRATIS) — CERRADO.** Flujo completo
+   funcionando y probado por Oscar de punta a punta: formulario sin popups →
+   correo de confirmación → redirect a `bienvenida.html` → PDF de regalo
+   (*La soberanía de Dios*, A. W. Pink, dominio público, en `recursos/`).
+   Todo documentado al día en `SUBSCRIPTIONS.md`.
+3. **Limpieza final:** reset global de `<button>` (botón del hero ilegible),
+   y responsive auditado de 320px a 1440px con CERO desborde horizontal
+   (se corrigió: panel del hero, filtro del Archivo, lista del Archivo en
+   teléfonos angostos, nav con el nuevo enlace "Sermones").
 
-La sección Sermones **ya funciona verificada por Oscar** (hubo un Error 153 de
-YouTube por `referrerpolicy=no-referrer` en el iframe; se corrigió con `origin`,
-PR #4). Los títulos se leen solos de YouTube — no hace falta escribirlos.
-
-**Buttondown (en curso, plan GRATIS confirmado):**
-- ✅ PDF de regalo subido: `recursos/la-soberania-de-dios-aw-pink.pdf`
-  (A. W. Pink, *La soberanía de Dios*; digitalización libre 2007, sin copyright —
-  verificado). URL pública:
-  `https://oscarim79.github.io/oscarimorales-web/recursos/la-soberania-de-dios-aw-pink.pdf`
-- ⚠️ Personalizar el correo de bienvenida resultó ser **de pago** (Standard).
-  Solución gratis implementada: página **`bienvenida.html`** (on-brand, noindex)
-  que entrega el PDF; Oscar debe pegar su URL en Buttondown →
-  **Settings → Subscribing → After confirming**:
-  `https://oscarim79.github.io/oscarimorales-web/bienvenida.html`
-  y (recomendado) apagar el toggle "Welcome email" (no personalizable y
-  probablemente en inglés). Mensajes de éxito de los formularios ya ajustados
-  al nuevo flujo ("al confirmar se abre tu lectura").
-- ⚠️ El **RSS-to-email es de pago** ($9/mes) → acordado el flujo asistido:
-  al publicar un post, dejarle a Oscar el correo redactado para que solo lo
-  pegue y envíe en Buttondown. **Pendiente:** agregar este paso al skill
-  `blog-oims` (al publicar, generar también el correo del boletín).
-
-Detalle menor de sermones: los títulos quedaron en `""` (el sitio intenta leerlos
-de YouTube solo; si no, muestra "Sermón · Ps. Oscar I. Morales"). Si Oscar pasa
-los títulos reales, escribirlos en `site-config.js` → `sermons[].title`.
+**Nada quedó a medias.** La próxima sesión puede arrancar directo con el
+Pendiente #1 (pack social) o el #2 (correo del boletín en el skill).
 
 ## ⏳ Pendientes
 
@@ -62,24 +45,28 @@ Acordado:
 - Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
   **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
 
-### 2. Buttondown (suscripciones por correo) — *casi listo*
-✅ Cuenta aceptada, usuario `oscarim` configurado y **mergeado a `main`** (ya activo).
-Falta solo confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con
-PDF**, y **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
-Guía: `SUBSCRIPTIONS.md`.
-
-### 2b. Sermones — títulos (opcional)
-Si Oscar pasa los títulos de los 5 sermones, escribirlos en `site-config.js`
-→ `sermons[].title` (hoy se leen de YouTube automáticamente como respaldo).
+### 2. Correo del boletín en el skill `blog-oims` (acordado con Oscar)
+El RSS-to-email de Buttondown es de pago, así que: **al publicar un post, el
+skill debe generar también el correo del boletín redactado** (asunto + cuerpo
+con una línea de contexto + enlace al post), para que Oscar solo lo pegue en
+Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #1.
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
+### 4. (Opcional) Títulos fijos de los sermones
+Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
+escribirlos en `site-config.js` → `sermons[].title`.
+
 ## ✅ Hecho (referencia rápida)
-- Sección "Sermones" en la portada (video destacado + lista, carga diferida,
-  nav + footer). Videos editables en `site-config.js`.
-- Suscripciones Buttondown activas en `main` (usuario `oscarim`).
+- **Sermones en la portada** (12-jun): sección "Para ver y escuchar", carga
+  diferida, fix Error 153 de YouTube (referrerpolicy origin), nav + footer.
+- **Buttondown completo en plan gratis** (12-jun): formularios sin popup
+  (fetch urlencoded), `bienvenida.html` + PDF de Pink en `recursos/`,
+  doble opt-in, welcome email apagado, `SUBSCRIPTIONS.md` al día.
+- **Calidad** (12-jun): reset de `<button>`; responsive 320–1440px sin
+  desborde; verificación con navegador automatizado.
 - Importación de 51 posts + tubería de publicación (build, GitHub Action).
 - Skill `blog-oims` (voz + estructura + publicar) con sus 3 referencias + banco de ideas.
 - Marca sin "Meam"; textos de portada; footer con bio.
