@@ -11,7 +11,6 @@
   var USER = (window.SITE_CONFIG && window.SITE_CONFIG.buttondownUser) || '';
   var CONFIGURED = USER && USER !== 'TU_USUARIO_BUTTONDOWN';
   var ACTION = 'https://buttondown.com/api/emails/embed-subscribe/' + encodeURIComponent(USER);
-  var POPUP = 'https://buttondown.com/' + encodeURIComponent(USER);
 
   function showMsg(form, text, ok) {
     var prev = form.parentNode.querySelector('.subscribe-msg');
@@ -33,18 +32,24 @@
     var name = form.querySelector('input[type="text"]');
 
     if (CONFIGURED) {
-      form.setAttribute('action', ACTION);
-      form.setAttribute('method', 'post');
-      form.setAttribute('target', 'popupwindow');
       if (email) email.setAttribute('name', 'email');
       if (name) name.setAttribute('name', 'metadata__nombre');
-      form.addEventListener('submit', function () {
-        // Abre la confirmación de Buttondown en una ventana emergente; el envío
-        // nativo del formulario va dirigido a esa ventana (no recarga la página).
-        window.open(POPUP, 'popupwindow');
-        showMsg(form, opts.success ||
-          '¡Gracias! Te envié un correo para confirmar tu suscripción. Revísalo (y la carpeta de spam).', true);
-        setTimeout(function () { try { form.reset(); } catch (e) {} }, 300);
+      form.addEventListener('submit', function (e) {
+        // Envío en segundo plano (sin popups ni salir de la página); el mensaje
+        // de éxito se muestra aquí mismo y la confirmación llega por correo.
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"], button:not([type])');
+        if (btn) btn.disabled = true;
+        fetch(ACTION, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+          .then(function () {
+            showMsg(form, opts.success ||
+              '¡Gracias! Te envié un correo para confirmar tu suscripción. Revísalo (y la carpeta de spam).', true);
+            try { form.reset(); } catch (err) {}
+          })
+          .catch(function () {
+            showMsg(form, 'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.', false);
+          })
+          .finally(function () { if (btn) btn.disabled = false; });
       });
     } else {
       form.addEventListener('submit', function (e) {
