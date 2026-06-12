@@ -7,7 +7,7 @@
   <meta name="description" content="Ensayos y meditaciones para pensar el evangelio despacio. El blog de Oscar I. Morales desde 2014." />
   <meta name="author" content="Oscar I. Morales" />
   <meta name="theme-color" content="#0D1B2A" />
-  <link rel="canonical" href="https://oscarim79.github.io/oscarimorales-web/" />
+  <link rel="canonical" href="https://oscarimorales.com/" />
   <link rel="alternate" type="application/rss+xml" title="Oscar I. Morales · Secundum Fidem" href="feed.xml" />
 
   <!-- Open Graph -->
@@ -17,8 +17,8 @@
   <meta property="og:description" content="Ensayos y meditaciones para pensar el evangelio despacio. El blog de Oscar I. Morales desde 2014." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
-  <meta property="og:url" content="https://oscarim79.github.io/oscarimorales-web/" />
-  <meta property="og:image" content="https://oscarim79.github.io/oscarimorales-web/project/assets/oscar-stage.png" />
+  <meta property="og:url" content="https://oscarimorales.com/" />
+  <meta property="og:image" content="https://oscarimorales.com/project/assets/oscar-stage.png" />
   <meta property="og:image:alt" content="Oscar I. Morales · Secundum Fidem" />
 
   <!-- Twitter -->
@@ -27,7 +27,7 @@
   <meta name="twitter:creator" content="@oscarimoraless" />
   <meta name="twitter:title" content="Oscar I. Morales · Secundum Fidem" />
   <meta name="twitter:description" content="Ensayos y meditaciones para pensar el evangelio despacio. El blog de Oscar I. Morales desde 2014." />
-  <meta name="twitter:image" content="https://oscarim79.github.io/oscarimorales-web/project/assets/oscar-stage.png" />
+  <meta name="twitter:image" content="https://oscarimorales.com/project/assets/oscar-stage.png" />
   <meta name="twitter:image:alt" content="Oscar I. Morales · Secundum Fidem" />
 
   <!-- Datos estructurados -->
@@ -37,12 +37,12 @@
     "@type": "Blog",
     "name": "Oscar I. Morales · Secundum Fidem",
     "description": "Ensayos y meditaciones para pensar el evangelio despacio. El blog de Oscar I. Morales desde 2014.",
-    "url": "https://oscarim79.github.io/oscarimorales-web/",
+    "url": "https://oscarimorales.com/",
     "inLanguage": "es",
     "author": {
       "@type": "Person",
       "name": "Oscar I. Morales",
-      "url": "https://oscarim79.github.io/oscarimorales-web/"
+      "url": "https://oscarimorales.com/"
     }
   }
   </script>
@@ -94,6 +94,7 @@
     <div class="nav__links">
       <button class="nav__link nav__link--active" id="js-nav-inicio">Inicio</button>
       <button class="nav__link" id="js-nav-blog">Blog</button>
+      <button class="nav__link" id="js-nav-sermones">Sermones</button>
       <button class="nav__cta" id="js-nav-suscribir">Suscribirme</button>
     </div>
   </div>
@@ -247,6 +248,30 @@
   </div>
 </section>
 
+<!-- ============================================================ SERMONES -->
+<section class="sermons" id="sermones">
+  <div class="wrap">
+    <div class="sermons__head">
+      <div>
+        <span class="sermons__eb">Para ver y escuchar</span>
+        <h2 class="sermons__title">La misma fe, <em>predicada</em>.</h2>
+      </div>
+      <p class="sermons__sub">
+        Algunos sermones, por si prefieres escuchar antes de leer.
+      </p>
+    </div>
+    <div class="sermons__layout">
+      <div class="sermons__player" id="js-sermon-player"></div>
+      <div class="sermons__side">
+        <span class="sermons__side-label">M&aacute;s sermones</span>
+        <div class="sermons__list" id="js-sermon-list"></div>
+        <a class="sermons__channel" id="js-sermon-channel" target="_blank"
+           rel="noopener noreferrer" hidden>Ver m&aacute;s en YouTube &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================ NEWSLETTER -->
 <section class="news" id="suscribir">
   <div class="wrap">
@@ -308,6 +333,7 @@
         <ul>
           <li><a href="#" id="js-footer-top">Inicio</a></li>
           <li><a href="#archivo" id="js-footer-blog">Blog &middot; Archivo</a></li>
+          <li><a href="#sermones" id="js-footer-sermones">Sermones</a></li>
           <li><a href="#suscribir" id="js-footer-suscribir">Suscribirme</a></li>
         </ul>
       </div>
@@ -316,7 +342,7 @@
         <ul>
           <li><a href="https://www.facebook.com/oscarimoraless" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://twitter.com/oscarimoraless" target="_blank" rel="noopener">X &middot; Twitter</a></li>
-          <li><a href="https://www.instagram.com/oscarimorales" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.instagram.com/oscarimoraless" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="mailto:me@oscarimorales.com">Correo</a></li>
         </ul>
       </div>
@@ -441,11 +467,13 @@
     wire('js-nav-top',       null);
     wire('js-nav-inicio',    null);
     wire('js-nav-blog',      'archivo');
+    wire('js-nav-sermones',  'sermones');
     wire('js-nav-suscribir', 'suscribir');
     wire('js-stage-link',    'empezar');
     wire('js-stage-empezar', 'empezar');
     wire('js-footer-top',    null);
     wire('js-footer-blog',   'archivo');
+    wire('js-footer-sermones', 'sermones');
     wire('js-footer-suscribir', 'suscribir');
     wire('js-door-1', 'populares');
     wire('js-door-2', 'suscribir');
@@ -757,15 +785,127 @@
   }
 
   // --------------------------------------------------------------------------
+  // Sermones (YouTube, carga diferida: solo miniaturas hasta hacer clic)
+  // --------------------------------------------------------------------------
+  function initSermons() {
+    var cfg     = window.SITE_CONFIG || {};
+    var sermons = cfg.sermons || [];
+    var player  = document.getElementById('js-sermon-player');
+    var listEl  = document.getElementById('js-sermon-list');
+    var section = document.getElementById('sermones');
+    if (!player || !listEl || !sermons.length) {
+      if (section) section.hidden = true;
+      return;
+    }
+
+    var FALLBACK_TITLE = 'Sermón · Ps. Oscar I. Morales';
+    var current = 0;
+    var playing = false;
+
+    function thumb(s, big) {
+      return 'https://i.ytimg.com/vi/' + s.id + '/' + (big ? 'maxresdefault' : 'hqdefault') + '.jpg';
+    }
+    function titleOf(s) { return s.title || s._title || FALLBACK_TITLE; }
+
+    var SVG_PLAY =
+      '<span class="sermons__play" aria-hidden="true">' +
+        '<svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>' +
+      '</span>';
+
+    function renderPlayer() {
+      var s = sermons[current];
+      if (playing) {
+        var src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(s.id) +
+                  '?autoplay=1&rel=0' + (s.start ? '&start=' + Number(s.start) : '');
+        player.innerHTML =
+          '<div class="sermons__frame">' +
+            '<iframe src="' + src + '" title="' + esc(titleOf(s)) + '" ' +
+              'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+              // YouTube exige la cabecera Referer en embeds (si falta: Error 153).
+              // "origin" envía solo el dominio del sitio, nada más.
+              'allowfullscreen referrerpolicy="origin"></iframe>' +
+          '</div>' +
+          '<h3 class="sermons__player-title">' + esc(titleOf(s)) + '</h3>';
+        return;
+      }
+      player.innerHTML =
+        '<button class="sermons__frame sermons__facade" aria-label="Reproducir: ' + esc(titleOf(s)) + '">' +
+          '<img src="' + esc(thumb(s, true)) + '" alt="" loading="lazy" referrerpolicy="no-referrer" />' +
+          '<span class="sermons__facade-scrim" aria-hidden="true"></span>' +
+          SVG_PLAY +
+        '</button>' +
+        '<h3 class="sermons__player-title">' + esc(titleOf(s)) + '</h3>';
+
+      // maxresdefault no existe en videos antiguos → degradar a hqdefault
+      var img = player.querySelector('img');
+      img.addEventListener('error', function() { img.src = thumb(s, false); });
+      img.addEventListener('load', function() {
+        if (img.naturalWidth < 200) img.src = thumb(s, false);
+      });
+      player.querySelector('.sermons__facade').addEventListener('click', function() {
+        playing = true;
+        renderPlayer();
+      });
+    }
+
+    function renderList() {
+      listEl.innerHTML = '';
+      sermons.forEach(function(s, idx) {
+        var btn = document.createElement('button');
+        btn.className = 'sermons__item' + (idx === current ? ' is-active' : '');
+        btn.innerHTML =
+          '<span class="sermons__item-media">' +
+            '<img src="' + esc(thumb(s, false)) + '" alt="" loading="lazy" referrerpolicy="no-referrer" />' +
+            SVG_PLAY +
+          '</span>' +
+          '<span class="sermons__item-title">' + esc(titleOf(s)) + '</span>';
+        btn.addEventListener('click', function() {
+          current = idx;
+          playing = true;
+          renderPlayer();
+          renderList();
+          player.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        listEl.appendChild(btn);
+      });
+    }
+
+    // Títulos: si no están escritos en site-config.js, intentar leerlos de
+    // YouTube (vía noembed, que permite CORS). Si falla, queda el genérico.
+    sermons.forEach(function(s) {
+      if (s.title) return;
+      fetch('https://noembed.com/embed?url=' +
+            encodeURIComponent('https://www.youtube.com/watch?v=' + s.id))
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          if (!d || !d.title) return;
+          s._title = d.title;
+          renderList();
+          if (!playing) renderPlayer();
+        })
+        .catch(function() { /* se queda el título genérico */ });
+    });
+
+    var channel = document.getElementById('js-sermon-channel');
+    if (channel && cfg.youtubeChannel) {
+      channel.href = cfg.youtubeChannel;
+      channel.hidden = false;
+    }
+
+    renderPlayer();
+    renderList();
+  }
+
+  // --------------------------------------------------------------------------
   // Forms
   // --------------------------------------------------------------------------
   function initForms() {
     if (typeof window.wireSubscribe === 'function') {
       window.wireSubscribe(document.getElementById('js-stage-form'), {
-        success: '¡Gracias! Te envié un correo para confirmar y recibir tu lectura. Revísalo (y la carpeta de spam).'
+        success: '¡Gracias! Revisa tu correo (y la carpeta de spam) y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
       window.wireSubscribe(document.getElementById('js-news-form'), {
-        success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
+        success: '¡Gracias! Revisa tu correo y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
     }
   }
@@ -813,6 +953,7 @@
     initSlider(posts.slice(0, 5));
     initPopular(popularPosts(posts));
     initArchive(posts);
+    initSermons();
     initForms();
     initFooter();
   }

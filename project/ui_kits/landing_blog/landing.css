@@ -18,6 +18,17 @@
 }
 .wrap--narrow { max-width: 880px; }
 
+/* Reset de <button>: sin él, el navegador pinta fondo blanco por defecto y
+   los botones "de texto" (p. ej. .stage__secondary) quedan ilegibles. */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* ============================================================================
    STAGE — Hero tipográfico al estilo Rottner
    ============================================================================ */
@@ -191,6 +202,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  box-sizing: border-box;
   width: min(540px, 100%);
   padding: clamp(30px, 3vw, 44px) clamp(30px, 3.2vw, 48px);
   background: rgba(13, 27, 42, 0.52);
@@ -1379,6 +1391,182 @@
 }
 
 /* ============================================================================
+   SERMONES (dark — tratamiento "sala de cine")
+   ============================================================================ */
+.sermons {
+  background: var(--noche-900);
+  color: var(--crema-100);
+  padding: 110px 0 120px;
+}
+.sermons__head {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 56px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(245, 240, 232, 0.14);
+}
+.sermons__eb {
+  font-family: var(--font-descriptor); font-weight: 800;
+  font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  color: var(--terracota-400);
+  display: flex; align-items: center; gap: 12px;
+}
+.sermons__eb::before {
+  content: ""; width: 28px; height: 1px; background: currentColor;
+}
+.sermons__title {
+  font-family: var(--font-serif); font-weight: 600;
+  font-size: 48px; line-height: 1.06; letter-spacing: -0.005em;
+  color: var(--crema-100);
+  margin: 10px 0 0;
+}
+.sermons__title em { font-style: italic; color: var(--terracota-300); }
+.sermons__sub {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 17px; color: var(--niebla-400);
+  margin: 0;
+  max-width: 30ch;
+  text-align: right;
+}
+
+.sermons__layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------- Reproductor destacado ---------- */
+.sermons__frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--noche-700);
+  overflow: hidden;
+  border: 0; padding: 0;
+}
+.sermons__frame iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.sermons__facade { cursor: pointer; }
+.sermons__facade img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 500ms cubic-bezier(.2,.6,.2,1);
+}
+.sermons__facade:hover img { transform: scale(1.03); }
+.sermons__facade-scrim {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(13,27,42,0.05), rgba(13,27,42,0.45));
+  transition: background var(--transition-fast);
+}
+.sermons__play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: var(--terracota-500);
+  color: var(--crema-50);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(13, 27, 42, 0.45);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.sermons__play svg { width: 32px; height: 32px; display: block; }
+.sermons__facade:hover .sermons__play {
+  background: var(--terracota-600);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.sermons__player-title {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 22px; line-height: 1.32;
+  color: var(--crema-100);
+  margin: 20px 0 0;
+  text-wrap: balance;
+}
+
+/* ---------- Lista lateral ---------- */
+.sermons__side {
+  display: flex; flex-direction: column; gap: 18px;
+}
+.sermons__side-label {
+  font-family: var(--font-descriptor); font-weight: 800;
+  font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  color: var(--niebla-400);
+}
+.sermons__list {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.sermons__item {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: none; border: 0; padding: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+.sermons__item-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--noche-700);
+}
+.sermons__item-media img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.sermons__item .sermons__play {
+  width: 32px; height: 32px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.sermons__item .sermons__play svg { width: 14px; height: 14px; }
+.sermons__item:hover .sermons__play { opacity: 1; }
+.sermons__item.is-active .sermons__item-media {
+  outline: 2px solid var(--terracota-400);
+  outline-offset: -2px;
+}
+.sermons__item-title {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 15px; line-height: 1.4;
+  color: var(--crema-100);
+  transition: color var(--transition-fast);
+}
+.sermons__item:hover .sermons__item-title { color: var(--terracota-300); }
+.sermons__item.is-active .sermons__item-title { color: var(--terracota-300); }
+
+.sermons__channel {
+  align-self: flex-start;
+  font-family: var(--font-descriptor); font-weight: 800;
+  font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  color: var(--crema-100);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245, 240, 232, 0.35);
+  padding-bottom: 3px;
+  margin-top: 6px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.sermons__channel:hover { color: var(--terracota-300); border-bottom-color: var(--terracota-300); }
+
+@media (max-width: 960px) {
+  .sermons__layout { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 760px) {
+  .sermons__head { flex-direction: column; align-items: flex-start; }
+  .sermons__sub { text-align: left; }
+  .sermons__title { font-size: 38px; }
+  .sermons__item { grid-template-columns: 112px 1fr; }
+  /* La cabecera del archivo se apila: el filtro ya no se sale de pantalla */
+  .archive__head { flex-direction: column; align-items: flex-start; }
+  .archive__filter-wrap { align-items: flex-start; }
+}
+
+/* ============================================================================
    NEWSLETTER (dark)
    ============================================================================ */
 .news {
@@ -1636,7 +1824,16 @@
   /* Nav: reducir espacios y permitir que envuelva como último recurso,
      para que nunca cause scroll horizontal en teléfonos pequeños. */
   .nav__inner { padding: 14px 20px; gap: 12px; flex-wrap: wrap; row-gap: 8px; }
-  .nav__links { gap: 16px; }
+  .nav__links { gap: 14px; }
   .nav__cta { padding: 9px 13px; }
   .nav__wordmark { font-size: 12px; letter-spacing: 0.05em; }
+
+  /* "Inicio" es redundante en teléfonos: el logo ya lleva al inicio. */
+  #js-nav-inicio { display: none; }
+
+  /* Archivo: que el texto pueda encogerse dentro del grid (evita el
+     desborde horizontal en teléfonos muy angostos). */
+  .archive__entry { gap: 16px; }
+  .archive__entry-body { min-width: 0; }
+  .archive__entry-title { overflow-wrap: break-word; }
 }

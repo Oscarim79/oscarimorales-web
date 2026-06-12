@@ -9,4 +9,28 @@ window.SITE_CONFIG = {
   // Mientras diga "TU_USUARIO_BUTTONDOWN", los formularios no envían a ningún
   // lado (modo seguro). Cámbialo por tu usuario real para activarlos.
   buttondownUser: "oscarim",
+
+  // --------------------------------------------------------------------------
+  // Sermones en YouTube (sección "Para ver y escuchar" de la portada).
+  //
+  // - id:    el código del video (lo que va después de "watch?v=" en el enlace).
+  // - start: segundo donde empieza el sermón (opcional; 0 = desde el inicio).
+  // - title: título a mostrar. Si lo dejas en "", el sitio intenta leerlo de
+  //          YouTube automáticamente; si no puede, muestra un texto genérico.
+  //          Para un texto fijo y seguro, escríbelo aquí a mano.
+  //
+  // El PRIMERO de la lista es el sermón destacado (el grande).
+  sermons: [
+    { id: "XwWc0xvbq8U", start: 340, title: "" },
+    { id: "z5C94eNDQ3I", start: 0,   title: "" },
+    { id: "0qKsGt0YeoA", start: 0,   title: "" },
+    { id: "1cvuDr7bSPI", start: 522, title: "" },
+    { id: "KQpqhTn-4YI", start: 0,   title: "" },
+  ],
+
+  // Adónde lleva el botón "Ver más en YouTube". Oscar no tiene canal propio:
+  // sus sermones están en el canal de Iglesia Reforma, así que el botón lleva
+  // a una búsqueda en YouTube de sus predicaciones. Si algún día hay canal
+  // propio (o playlist), basta con cambiar esta URL. "" = ocultar el botón.
+  youtubeChannel: "https://www.youtube.com/results?search_query=Oscar+Morales+Iglesia+Reforma+Guatemala",
 };

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oscarim79.github.io/oscarimorales-web/sitemap.xml
+Sitemap: https://oscarimorales.com/sitemap.xml

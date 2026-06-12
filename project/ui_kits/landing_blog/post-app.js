@@ -12,7 +12,7 @@
   // Imagen por defecto para compartir (posts con portada tipográfica automática,
   // que no tienen una imagen real con URL). Se usa en Open Graph / Twitter.
   var SITE_DEFAULT_IMAGE =
-    'https://oscarim79.github.io/oscarimorales-web/project/assets/oscar-stage.png';
+    'https://oscarimorales.com/project/assets/oscar-stage.png';
 
   // ------------------------------------------------------------------------
   // Helpers
@@ -476,7 +476,7 @@
         '<div class="footer__col"><h4>Redes</h4><ul>' +
           '<li><a href="https://www.facebook.com/oscarimoraless" target="_blank" rel="noopener">Facebook</a></li>' +
           '<li><a href="https://twitter.com/oscarimoraless" target="_blank" rel="noopener">X &middot; Twitter</a></li>' +
-          '<li><a href="https://www.instagram.com/oscarimorales" target="_blank" rel="noopener">Instagram</a></li>' +
+          '<li><a href="https://www.instagram.com/oscarimoraless" target="_blank" rel="noopener">Instagram</a></li>' +
           '<li><a href="mailto:me@oscarimorales.com">Correo</a></li>' +
         '</ul></div>' +
       '</div>' +
@@ -563,7 +563,7 @@
         '@type': 'Person',
         name: 'Oscar I. Morales',
         logo: { '@type': 'ImageObject',
-          url: 'https://oscarim79.github.io/oscarimorales-web/project/assets/logo-icon.png' }
+          url: 'https://oscarimorales.com/project/assets/logo-icon.png' }
       }
     };
     if (img) ld.image = img;
@@ -754,7 +754,7 @@
 
     if (typeof window.wireSubscribe === 'function') {
       window.wireSubscribe(document.getElementById('js-news-form'), {
-        success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
+        success: '¡Gracias! Revisa tu correo y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
     }
   }

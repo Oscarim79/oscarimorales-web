@@ -96,7 +96,7 @@ Para publicarlo:
 2. En **Source**, elige **Deploy from a branch**.
 3. Branch: **`main`**, carpeta: **`/ (root)`** → **Save**.
 4. A los pocos minutos estará en:
-   **https://oscarim79.github.io/oscarimorales-web/**
+   **https://oscarimorales.com/**
 
 > **Nota:** GitHub Pages en repositorios **privados** requiere un plan de pago
 > (GitHub Pro / Team). Si el repo es privado y estás en el plan gratuito,

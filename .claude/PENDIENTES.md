@@ -9,18 +9,33 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 2-jun-2026)
-El sitio está **publicado y funcionando** en GitHub Pages (rama `main`).
-Hoy se **activaron las suscripciones por correo**: la cuenta de Buttondown de Oscar
-ya fue aceptada (enlazada a me@oscarimorales.com, usuario **`oscarim`**) y se puso
-ese usuario en `project/ui_kits/landing_blog/site-config.js`. El cambio quedó
-commiteado y pusheado a la rama `claude/youthful-johnson-AJZq0`.
+## 📍 Dónde nos quedamos (al 12-jun-2026, sesión de migración de dominio)
+**EN CURSO: mover el sitio a oscarimorales.com (DNS en GoDaddy).** El lado
+del repositorio quedó LISTO en la rama `claude/kind-bell-obuis9`:
 
-**Próximo paso:** abrir PR / mergear esa rama a `main` para que las suscripciones
-queden activas en el sitio en vivo, y confirmar en el panel de Buttondown la
-configuración de doble opt-in, bienvenida con PDF y RSS-to-email (ver Pendiente #2).
+- `CNAME` con `oscarimorales.com`; URL base cambiada en `scripts/build-posts.mjs`,
+  `index.html`, `robots.txt`, `post-app.js` y docs; los 51 posts + sitemap +
+  feed regenerados. Cero URLs `oscarim79.github.io` restantes.
+- **Hallazgo clave:** las imágenes de los 51 posts viven en el WordPress viejo
+  (`oscarimorales.com/wp-content/uploads/`, 91 archivos). Se creó el Action de
+  un solo uso **"Rescatar imágenes de WordPress"** (`rescatar-imagenes.yml` +
+  `scripts/descargar-imagenes.sh` + lista `scripts/imagenes-wordpress.txt`) que
+  las descarga al repo en la MISMA ruta, para que nada se rompa al cambiar DNS.
+
+**Pasos que faltan (EN ORDEN, ver mensaje a Oscar de esta sesión):**
+1. Merge de la rama a `main`.
+2. Correr el Action "Rescatar imágenes de WordPress" (ANTES del DNS).
+3. GoDaddy: 4 registros A (185.199.108/109/110/111.153) + CNAME `www` →
+   `oscarim79.github.io`. **NO tocar MX/TXT** (correo me@oscarimorales.com).
+4. GitHub Settings → Pages: dominio `oscarimorales.com` + Enforce HTTPS.
+5. Buttondown: actualizar redirect de confirmación a
+   `https://oscarimorales.com/bienvenida.html`.
+6. Después: borrar `rescatar-imagenes.yml` y el script (un solo uso).
 
 ## ⏳ Pendientes
+
+### 0. (EN CURSO) Terminar migración a oscarimorales.com
+Ver "Dónde nos quedamos" arriba — faltan los pasos 1–6.
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
@@ -35,21 +50,28 @@ Acordado:
 - Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
   **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
 
-### 2. Buttondown (suscripciones por correo) — *parcialmente hecho*
-✅ Cuenta aceptada y usuario `oscarim` ya configurado en
-   `project/ui_kits/landing_blog/site-config.js` (los formularios salen de "modo seguro").
-Falta:
-- **Mergear** la rama `claude/youthful-johnson-AJZq0` a `main` (o esperar al próximo
-  build) para que se active en el sitio en vivo.
-- Confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con PDF**, y
-  **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
-  Guía: `SUBSCRIPTIONS.md`.
+### 2. Correo del boletín en el skill `blog-oims` (acordado con Oscar)
+El RSS-to-email de Buttondown es de pago, así que: **al publicar un post, el
+skill debe generar también el correo del boletín redactado** (asunto + cuerpo
+con una línea de contexto + enlace al post), para que Oscar solo lo pegue en
+Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #1.
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
+### 4. (Opcional) Títulos fijos de los sermones
+Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
+escribirlos en `site-config.js` → `sermons[].title`.
+
 ## ✅ Hecho (referencia rápida)
+- **Sermones en la portada** (12-jun): sección "Para ver y escuchar", carga
+  diferida, fix Error 153 de YouTube (referrerpolicy origin), nav + footer.
+- **Buttondown completo en plan gratis** (12-jun): formularios sin popup
+  (fetch urlencoded), `bienvenida.html` + PDF de Pink en `recursos/`,
+  doble opt-in, welcome email apagado, `SUBSCRIPTIONS.md` al día.
+- **Calidad** (12-jun): reset de `<button>`; responsive 320–1440px sin
+  desborde; verificación con navegador automatizado.
 - Importación de 51 posts + tubería de publicación (build, GitHub Action).
 - Skill `blog-oims` (voz + estructura + publicar) con sus 3 referencias + banco de ideas.
 - Marca sin "Meam"; textos de portada; footer con bio.

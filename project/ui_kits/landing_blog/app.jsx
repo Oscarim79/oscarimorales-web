@@ -618,7 +618,7 @@ const Footer = () => (
           <ul>
             <li><a href="https://www.facebook.com/oscarimoraless" target="_blank" rel="noopener">Facebook</a></li>
             <li><a href="https://twitter.com/oscarimoraless" target="_blank" rel="noopener">X · Twitter</a></li>
-            <li><a href="https://www.instagram.com/oscarimorales" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.instagram.com/oscarimoraless" target="_blank" rel="noopener">Instagram</a></li>
             <li><a href="mailto:me@oscarimorales.com">Correo</a></li>
           </ul>
         </div>

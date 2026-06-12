@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>¡Bienvenido! · Oscar I. Morales · Secundum Fidem</title>
+  <!-- Página de destino tras confirmar la suscripción (Buttondown → After confirming).
+       Entrega la "lectura para empezar". No debe indexarse. -->
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="icon" href="project/assets/logo-icon.png" />
+  <link rel="stylesheet" href="project/colors_and_type.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      background: var(--noche-900);
+      color: var(--crema-100);
+      font-family: var(--font-body);
+      line-height: 1.68;
+    }
+    .wrap {
+      width: 100%; max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+    .top {
+      padding: 28px 0;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .brand img { width: 36px; height: 36px; display: block; }
+    .brand-stack { display: flex; flex-direction: column; gap: 2px; }
+    .brand-name {
+      font-family: var(--font-descriptor); font-weight: 800;
+      font-size: 12px; text-transform: uppercase; letter-spacing: var(--tracking-widest);
+      color: var(--crema-100);
+    }
+    .brand-tag {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 12px; color: var(--dorado-400);
+    }
+    main { flex: 1; display: flex; align-items: center; padding: 48px 0 72px; }
+    .eb {
+      font-family: var(--font-descriptor); font-weight: 800;
+      font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+      color: var(--terracota-400);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .eb::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+    h1 {
+      font-family: var(--font-serif); font-weight: 600;
+      font-size: clamp(34px, 6vw, 52px); line-height: 1.06; letter-spacing: -0.005em;
+      color: var(--crema-50);
+      margin: 14px 0 18px;
+    }
+    h1 em { font-style: italic; color: var(--terracota-300); }
+    .lead {
+      font-size: 18px; color: var(--crema-100);
+      margin: 0 0 36px;
+      max-width: 52ch;
+    }
+    .gift {
+      border: 1px solid rgba(245, 240, 232, 0.16);
+      background: var(--noche-800);
+      padding: 28px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .gift-kicker {
+      font-family: var(--font-descriptor); font-weight: 800;
+      font-size: 10px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+      color: var(--dorado-400);
+      margin: 0;
+    }
+    .gift-title {
+      font-family: var(--font-serif); font-weight: 600;
+      font-size: 26px; line-height: 1.15;
+      color: var(--crema-50);
+      margin: 0;
+    }
+    .gift-author {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 15px; color: var(--niebla-400);
+      margin: 0 0 10px;
+    }
+    .gift-desc { font-size: 15px; color: var(--crema-100); margin: 0 0 20px; }
+    .btn {
+      align-self: flex-start;
+      font-family: var(--font-descriptor); font-weight: 800;
+      font-size: 12px; text-transform: uppercase; letter-spacing: var(--tracking-wider);
+      color: var(--crema-50);
+      background: var(--terracota-500);
+      padding: 14px 26px;
+      text-decoration: none;
+      transition: background var(--transition-fast);
+    }
+    .btn:hover { background: var(--terracota-600); }
+    .after {
+      margin-top: 28px;
+      font-size: 15px; color: var(--niebla-400);
+    }
+    .after a {
+      color: var(--crema-100);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(245, 240, 232, 0.35);
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .after a:hover { color: var(--terracota-300); border-bottom-color: var(--terracota-300); }
+    footer {
+      padding: 24px 0 32px;
+      font-family: var(--font-sans);
+      font-size: 12px; color: var(--niebla-400);
+    }
+  </style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="project/assets/logo-icon.png" alt="OM"
+           style="filter:brightness(0) saturate(100%) invert(60%) sepia(34%) saturate(454%) hue-rotate(338deg) brightness(91%) contrast(85%)" />
+      <span class="brand-stack">
+        <span class="brand-name">Oscar I. Morales</span>
+        <span class="brand-tag">Secundum Fidem</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <span class="eb">Suscripci&oacute;n confirmada</span>
+    <h1>Bienvenido. Aqu&iacute; est&aacute; tu <em>lectura para empezar</em>.</h1>
+    <p class="lead">
+      Gracias por suscribirte. Como te promet&iacute;, esta es la lectura que
+      escog&iacute; para comenzar &mdash; gu&aacute;rdala, es tuya.
+    </p>
+
+    <div class="gift">
+      <p class="gift-kicker">Tu regalo de bienvenida &middot; PDF</p>
+      <h2 class="gift-title">La soberan&iacute;a de Dios</h2>
+      <p class="gift-author">A. W. Pink</p>
+      <p class="gift-desc">
+        Un cl&aacute;sico breve y directo sobre la pregunta que sostiene todo lo
+        dem&aacute;s: &iquest;qui&eacute;n tiene realmente el control de lo que pasa
+        en el mundo &mdash; y en tu vida?
+      </p>
+      <a class="btn" href="recursos/la-soberania-de-dios-aw-pink.pdf" download>
+        Descargar el PDF &darr;
+      </a>
+    </div>
+
+    <p class="after">
+      Desde hoy te llegar&aacute; un correo cuando publique algo nuevo, con una
+      l&iacute;nea de contexto. Nada m&aacute;s. Mientras tanto, puedes empezar por
+      <a href="index.html#populares">los escritos m&aacute;s le&iacute;dos &rarr;</a>
+    </p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; Oscar I. Morales &middot; Secundum Fidem &middot; Guatemala</div>
+</footer>
+
+</body>
+</html>
