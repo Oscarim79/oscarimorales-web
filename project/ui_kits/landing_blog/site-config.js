@@ -28,7 +28,9 @@ window.SITE_CONFIG = {
     { id: "KQpqhTn-4YI", start: 0,   title: "" },
   ],
 
-  // Enlace a tu canal de YouTube (p. ej. "https://www.youtube.com/@tucanal").
-  // Si lo dejas en "", el botón "Ver más en YouTube" no se muestra.
-  youtubeChannel: "",
+  // Adónde lleva el botón "Ver más en YouTube". Oscar no tiene canal propio:
+  // sus sermones están en el canal de Iglesia Reforma, así que el botón lleva
+  // a una búsqueda en YouTube de sus predicaciones. Si algún día hay canal
+  // propio (o playlist), basta con cambiar esta URL. "" = ocultar el botón.
+  youtubeChannel: "https://www.youtube.com/results?search_query=Oscar+Morales+Iglesia+Reforma+Guatemala",
 };
