@@ -9,39 +9,28 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 12-jun-2026, sesión de migración de dominio)
-**EN CURSO: mover el sitio a oscarimorales.com (DNS en GoDaddy).** El lado
-del repositorio quedó LISTO en la rama `claude/kind-bell-obuis9`:
+## 📍 Dónde nos quedamos (al 12-jun-2026, cierre de la migración de dominio)
+**🎉 MIGRACIÓN COMPLETADA: el sitio vive en https://oscarimorales.com.**
+Verificado por Oscar desde su teléfono: portada e imágenes cargando.
 
-- `CNAME` con `oscarimorales.com`; URL base cambiada en `scripts/build-posts.mjs`,
-  `index.html`, `robots.txt`, `post-app.js` y docs; los 51 posts + sitemap +
-  feed regenerados. Cero URLs `oscarim79.github.io` restantes.
-- **Hallazgo clave:** las imágenes de los 51 posts viven en el WordPress viejo
-  (`oscarimorales.com/wp-content/uploads/`, 91 archivos). Se creó el Action de
-  un solo uso **"Rescatar imágenes de WordPress"** (`rescatar-imagenes.yml` +
-  `scripts/descargar-imagenes.sh` + lista `scripts/imagenes-wordpress.txt`) que
-  las descarga al repo en la MISMA ruta, para que nada se rompa al cambiar DNS.
+Lo que se hizo (12-jun, tarde):
+- `CNAME` + URL base `https://oscarimorales.com` en build, portada, robots,
+  post-app y docs; 51 posts + sitemap + feed regenerados.
+- **90 imágenes rescatadas del WordPress viejo** al repo (misma ruta
+  `wp-content/uploads/`) con un Action de un solo uso, YA BORRADO tras
+  cumplir su misión (junto con su script y la lista de URLs).
+- DNS en GoDaddy (lo hizo Oscar guiado): 4 registros A de GitHub, AAAA del
+  servidor viejo eliminado (¡estaba oculto y habría roto IPv6!), registro A
+  "old" eliminado, MX/TXT intactos (correo OK). Verificado con consultas
+  directas a los nameservers autoritativos hasta verlo estable.
+- GitHub Pages: dominio custom + certificado HTTPS emitido (hubo que hacer
+  Remove + re-add del dominio para forzarlo). Buttondown: redirect de
+  confirmación actualizado a `https://oscarimorales.com/bienvenida.html`.
 
-**Pasos que faltan (EN ORDEN):**
-1. ✅ Merge de la rama a `main` — HECHO (12-jun).
-2. ✅ Action "Rescatar imágenes" — HECHO: 90 imágenes commiteadas en
-   `wp-content/uploads/` (1 era una miniatura 404 que ya no existía; el
-   post 13 se apuntó a su imagen de portada). Corrió 2 veces: la 1ª falló
-   por ese 404, la 2ª en verde.
-3. ⏳ OSCAR — GoDaddy: editar el registro A `@` a `185.199.108.153` y
-   agregar 3 A más `@`: `.109.153`, `.110.153`, `.111.153`; CNAME `www` →
-   `oscarim79.github.io`. **NO tocar MX/TXT** (correo me@oscarimorales.com).
-4. ⏳ OSCAR — GitHub Settings → Pages: confirmar dominio `oscarimorales.com`
-   y al verificar DNS marcar Enforce HTTPS.
-5. ⏳ OSCAR — Buttondown: redirect de confirmación →
-   `https://oscarimorales.com/bienvenida.html`.
-6. ⏳ Después: borrar `rescatar-imagenes.yml` y `scripts/descargar-imagenes.sh`
-   (eran de un solo uso) y verificar el sitio en el dominio nuevo.
+**Nota:** la primera carga fue lenta (caché de la CDN en frío + imágenes
+originales de WordPress pesadas). Ver nuevo pendiente de optimización.
 
 ## ⏳ Pendientes
-
-### 0. (EN CURSO) Terminar migración a oscarimorales.com
-Ver "Dónde nos quedamos" arriba — faltan los pasos 1–6.
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
@@ -62,11 +51,17 @@ skill debe generar también el correo del boletín redactado** (asunto + cuerpo
 con una línea de contexto + enlace al post), para que Oscar solo lo pegue en
 Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #1.
 
-### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
+### 3. (Opcional, recomendado) Optimizar imágenes heredadas de WordPress
+Las 90 imágenes en `wp-content/uploads/` son los originales (algunos PNG de
+1500px, varios cientos de KB). Comprimirlas/redimensionarlas (p. ej. a WebP,
+ancho máx ~1200px) para que el blog cargue rápido incluso en primera visita.
+Oscar notó la lentitud en la primera carga tras la migración.
+
+### 4. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
-### 4. (Opcional) Títulos fijos de los sermones
+### 5. (Opcional) Títulos fijos de los sermones
 Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
