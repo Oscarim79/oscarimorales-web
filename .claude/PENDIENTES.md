@@ -22,15 +22,21 @@ del repositorio quedó LISTO en la rama `claude/kind-bell-obuis9`:
   `scripts/descargar-imagenes.sh` + lista `scripts/imagenes-wordpress.txt`) que
   las descarga al repo en la MISMA ruta, para que nada se rompa al cambiar DNS.
 
-**Pasos que faltan (EN ORDEN, ver mensaje a Oscar de esta sesión):**
-1. Merge de la rama a `main`.
-2. Correr el Action "Rescatar imágenes de WordPress" (ANTES del DNS).
-3. GoDaddy: 4 registros A (185.199.108/109/110/111.153) + CNAME `www` →
+**Pasos que faltan (EN ORDEN):**
+1. ✅ Merge de la rama a `main` — HECHO (12-jun).
+2. ✅ Action "Rescatar imágenes" — HECHO: 90 imágenes commiteadas en
+   `wp-content/uploads/` (1 era una miniatura 404 que ya no existía; el
+   post 13 se apuntó a su imagen de portada). Corrió 2 veces: la 1ª falló
+   por ese 404, la 2ª en verde.
+3. ⏳ OSCAR — GoDaddy: editar el registro A `@` a `185.199.108.153` y
+   agregar 3 A más `@`: `.109.153`, `.110.153`, `.111.153`; CNAME `www` →
    `oscarim79.github.io`. **NO tocar MX/TXT** (correo me@oscarimorales.com).
-4. GitHub Settings → Pages: dominio `oscarimorales.com` + Enforce HTTPS.
-5. Buttondown: actualizar redirect de confirmación a
+4. ⏳ OSCAR — GitHub Settings → Pages: confirmar dominio `oscarimorales.com`
+   y al verificar DNS marcar Enforce HTTPS.
+5. ⏳ OSCAR — Buttondown: redirect de confirmación →
    `https://oscarimorales.com/bienvenida.html`.
-6. Después: borrar `rescatar-imagenes.yml` y el script (un solo uso).
+6. ⏳ Después: borrar `rescatar-imagenes.yml` y `scripts/descargar-imagenes.sh`
+   (eran de un solo uso) y verificar el sitio en el dominio nuevo.
 
 ## ⏳ Pendientes
 
