@@ -9,16 +9,22 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 2-jun-2026)
-El sitio está **publicado y funcionando** en GitHub Pages (rama `main`).
-Hoy se **activaron las suscripciones por correo**: la cuenta de Buttondown de Oscar
-ya fue aceptada (enlazada a me@oscarimorales.com, usuario **`oscarim`**) y se puso
-ese usuario en `project/ui_kits/landing_blog/site-config.js`. El cambio quedó
-commiteado y pusheado a la rama `claude/youthful-johnson-AJZq0`.
+## 📍 Dónde nos quedamos (al 12-jun-2026)
+El sitio está **publicado y funcionando** en GitHub Pages (rama `main`), ya **con
+las suscripciones de Buttondown activas** (la rama de Buttondown se mergeó a `main`).
 
-**Próximo paso:** abrir PR / mergear esa rama a `main` para que las suscripciones
-queden activas en el sitio en vivo, y confirmar en el panel de Buttondown la
-configuración de doble opt-in, bienvenida con PDF y RSS-to-email (ver Pendiente #2).
+Hoy se agregó la **sección "Sermones" en la portada** ("Para ver y escuchar", entre
+el Archivo y la Suscripción): un video destacado + lista de 4 sermones más, con
+carga diferida (no carga nada de YouTube hasta hacer clic), enlace en la nav y el
+footer. Los 5 videos están en `project/ui_kits/landing_blog/site-config.js`
+(campo `sermons`). Quedó en la rama `claude/eloquent-meitner-sej213`.
+
+**Próximos pasos:**
+1. Mergear `claude/eloquent-meitner-sej213` a `main` para publicar la sección.
+2. Oscar puede escribir los **títulos** de cada sermón en `site-config.js` (campo
+   `title`; si quedan en `""` el sitio intenta leerlos de YouTube solo).
+3. Poner el enlace del **canal de YouTube** en `site-config.js` (campo
+   `youtubeChannel`) para que aparezca el botón "Ver más en YouTube".
 
 ## ⏳ Pendientes
 
@@ -35,21 +41,24 @@ Acordado:
 - Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
   **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
 
-### 2. Buttondown (suscripciones por correo) — *parcialmente hecho*
-✅ Cuenta aceptada y usuario `oscarim` ya configurado en
-   `project/ui_kits/landing_blog/site-config.js` (los formularios salen de "modo seguro").
-Falta:
-- **Mergear** la rama `claude/youthful-johnson-AJZq0` a `main` (o esperar al próximo
-  build) para que se active en el sitio en vivo.
-- Confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con PDF**, y
-  **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
-  Guía: `SUBSCRIPTIONS.md`.
+### 2. Buttondown (suscripciones por correo) — *casi listo*
+✅ Cuenta aceptada, usuario `oscarim` configurado y **mergeado a `main`** (ya activo).
+Falta solo confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida con
+PDF**, y **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
+Guía: `SUBSCRIPTIONS.md`.
+
+### 2b. Sermones — títulos y canal
+Cuando Oscar pase los títulos de los 5 sermones y el enlace de su canal, escribirlos
+en `site-config.js` (`sermons[].title` y `youtubeChannel`).
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
 ## ✅ Hecho (referencia rápida)
+- Sección "Sermones" en la portada (video destacado + lista, carga diferida,
+  nav + footer). Videos editables en `site-config.js`.
+- Suscripciones Buttondown activas en `main` (usuario `oscarim`).
 - Importación de 51 posts + tubería de publicación (build, GitHub Action).
 - Skill `blog-oims` (voz + estructura + publicar) con sus 3 referencias + banco de ideas.
 - Marca sin "Meam"; textos de portada; footer con bio.
