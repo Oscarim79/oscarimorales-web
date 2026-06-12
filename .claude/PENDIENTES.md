@@ -13,18 +13,20 @@
 El sitio está **publicado y funcionando** en GitHub Pages (rama `main`), ya **con
 las suscripciones de Buttondown activas** (la rama de Buttondown se mergeó a `main`).
 
-Hoy se agregó la **sección "Sermones" en la portada** ("Para ver y escuchar", entre
-el Archivo y la Suscripción): un video destacado + lista de 4 sermones más, con
-carga diferida (no carga nada de YouTube hasta hacer clic), enlace en la nav y el
-footer. Los 5 videos están en `project/ui_kits/landing_blog/site-config.js`
-(campo `sermons`). Quedó en la rama `claude/eloquent-meitner-sej213`.
+Hoy se agregó y **se publicó (PR #2 mergeado a `main`)** la **sección "Sermones"
+en la portada** ("Para ver y escuchar", entre el Archivo y la Suscripción): un
+video destacado + lista de 4 sermones más, con carga diferida (no carga nada de
+YouTube hasta hacer clic), enlace en la nav y el footer. Los 5 videos están en
+`project/ui_kits/landing_blog/site-config.js` (campo `sermons`). El botón
+"Ver más en YouTube" lleva a la búsqueda "Oscar Morales Iglesia Reforma Guatemala"
+(Oscar no tiene canal propio; los sermones están en el canal de Iglesia Reforma).
 
-**Próximos pasos:**
-1. Mergear `claude/eloquent-meitner-sej213` a `main` para publicar la sección.
-2. Oscar puede escribir los **títulos** de cada sermón en `site-config.js` (campo
-   `title`; si quedan en `""` el sitio intenta leerlos de YouTube solo).
-3. Poner el enlace del **canal de YouTube** en `site-config.js` (campo
-   `youtubeChannel`) para que aparezca el botón "Ver más en YouTube".
+**Próximo paso (acordado con Oscar):** lo de **Buttondown** (ver Pendiente #2):
+confirmar en su panel el doble opt-in, la bienvenida con PDF y el RSS-to-email.
+
+Detalle menor de sermones: los títulos quedaron en `""` (el sitio intenta leerlos
+de YouTube solo; si no, muestra "Sermón · Ps. Oscar I. Morales"). Si Oscar pasa
+los títulos reales, escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ⏳ Pendientes
 
@@ -47,9 +49,9 @@ Falta solo confirmar en el panel de Buttondown: **doble opt-in**, **bienvenida c
 PDF**, y **RSS-to-email** a `https://oscarim79.github.io/oscarimorales-web/feed.xml`.
 Guía: `SUBSCRIPTIONS.md`.
 
-### 2b. Sermones — títulos y canal
-Cuando Oscar pase los títulos de los 5 sermones y el enlace de su canal, escribirlos
-en `site-config.js` (`sermons[].title` y `youtubeChannel`).
+### 2b. Sermones — títulos (opcional)
+Si Oscar pasa los títulos de los 5 sermones, escribirlos en `site-config.js`
+→ `sermons[].title` (hoy se leen de YouTube automáticamente como respaldo).
 
 ### 3. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
