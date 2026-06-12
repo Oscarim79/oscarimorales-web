@@ -51,17 +51,32 @@ skill debe generar también el correo del boletín redactado** (asunto + cuerpo
 con una línea de contexto + enlace al post), para que Oscar solo lo pegue en
 Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #1.
 
-### 3. (Opcional, recomendado) Optimizar imágenes heredadas de WordPress
+### 3. Revisar compartir en Facebook (pedido por Oscar, 12-jun)
+En el Sharing Debugger de Facebook Developers, oscarimorales.com mostraba:
+- Advertencia: «La propiedad "og:image" debe proporcionarse de forma explícita».
+- La extracción en caché era VIEJA (29-dic-2022, era WordPress). Oscar debía
+  pulsar "Volver a extraer" tras la migración — verificar si lo hizo y si la
+  advertencia persiste con las etiquetas nuevas.
+Revisar: og:image/og:url de portada y posts contra lo que reporta el debugger,
+y repasar las opciones de la app de Facebook (fb:app_id ya está en el sitio).
+
+### 4. Revisar y mejorar la versión móvil (pedido por Oscar, 12-jun)
+Oscar la vio "muy apretada en algunas secciones" desde su teléfono el día de
+la migración. Parte pudo ser el certificado pendiente (imágenes bloqueadas),
+pero quiere una revisión a fondo: auditar la portada y los posts en viewport
+de teléfono real, aflojar espaciados/tipografía donde haga falta.
+
+### 5. (Opcional, recomendado) Optimizar imágenes heredadas de WordPress
 Las 90 imágenes en `wp-content/uploads/` son los originales (algunos PNG de
 1500px, varios cientos de KB). Comprimirlas/redimensionarlas (p. ej. a WebP,
 ancho máx ~1200px) para que el blog cargue rápido incluso en primera visita.
 Oscar notó la lentitud en la primera carga tras la migración.
 
-### 4. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
+### 6. (Opcional) Quitar "desde 2014" de los metadatos SEO de la portada
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
-### 5. (Opcional) Títulos fijos de los sermones
+### 7. (Opcional) Títulos fijos de los sermones
 Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
