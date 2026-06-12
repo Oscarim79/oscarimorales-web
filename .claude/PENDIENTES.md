@@ -21,8 +21,21 @@ YouTube hasta hacer clic), enlace en la nav y el footer. Los 5 videos están en
 "Ver más en YouTube" lleva a la búsqueda "Oscar Morales Iglesia Reforma Guatemala"
 (Oscar no tiene canal propio; los sermones están en el canal de Iglesia Reforma).
 
-**Próximo paso (acordado con Oscar):** lo de **Buttondown** (ver Pendiente #2):
-confirmar en su panel el doble opt-in, la bienvenida con PDF y el RSS-to-email.
+La sección Sermones **ya funciona verificada por Oscar** (hubo un Error 153 de
+YouTube por `referrerpolicy=no-referrer` en el iframe; se corrigió con `origin`,
+PR #4). Los títulos se leen solos de YouTube — no hace falta escribirlos.
+
+**Buttondown (en curso, plan GRATIS confirmado):**
+- ✅ PDF de regalo subido: `recursos/la-soberania-de-dios-aw-pink.pdf`
+  (A. W. Pink, *La soberanía de Dios*; digitalización libre 2007, sin copyright —
+  verificado). URL pública:
+  `https://oscarim79.github.io/oscarimorales-web/recursos/la-soberania-de-dios-aw-pink.pdf`
+- Falta que Oscar pegue el correo de bienvenida (texto ya entregado) en
+  **Settings → Subscribing → Welcome** y active el doble opt-in.
+- ⚠️ El **RSS-to-email es de pago** ($9/mes) → acordado el flujo asistido:
+  al publicar un post, dejarle a Oscar el correo redactado para que solo lo
+  pegue y envíe en Buttondown. **Pendiente:** agregar este paso al skill
+  `blog-oims` (al publicar, generar también el correo del boletín).
 
 Detalle menor de sermones: los títulos quedaron en `""` (el sitio intenta leerlos
 de YouTube solo; si no, muestra "Sermón · Ps. Oscar I. Morales"). Si Oscar pasa
