@@ -40,7 +40,11 @@
         e.preventDefault();
         var btn = form.querySelector('button[type="submit"], button:not([type])');
         if (btn) btn.disabled = true;
-        fetch(ACTION, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        // application/x-www-form-urlencoded: el mismo formato que el envío
+        // nativo de un <form>, que es lo que espera el endpoint de Buttondown.
+        var data = new URLSearchParams();
+        new FormData(form).forEach(function (v, k) { data.append(k, v); });
+        fetch(ACTION, { method: 'POST', body: data, mode: 'no-cors' })
           .then(function () {
             showMsg(form, opts.success ||
               '¡Gracias! Te envié un correo para confirmar tu suscripción. Revísalo (y la carpeta de spam).', true);
