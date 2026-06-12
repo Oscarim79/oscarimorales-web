@@ -754,7 +754,7 @@
 
     if (typeof window.wireSubscribe === 'function') {
       window.wireSubscribe(document.getElementById('js-news-form'), {
-        success: '¡Gracias! Confirma en el correo que te acabo de enviar para empezar a recibir los escritos.'
+        success: '¡Gracias! Revisa tu correo y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
     }
   }
