@@ -18,6 +18,17 @@
 }
 .wrap--narrow { max-width: 880px; }
 
+/* Reset de <button>: sin él, el navegador pinta fondo blanco por defecto y
+   los botones "de texto" (p. ej. .stage__secondary) quedan ilegibles. */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* ============================================================================
    STAGE — Hero tipográfico al estilo Rottner
    ============================================================================ */
