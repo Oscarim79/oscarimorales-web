@@ -1,0 +1,34 @@
+# Action de UN SOLO USO: descarga las imágenes del WordPress viejo y las
+# commitea al repositorio (ver scripts/descargar-imagenes.sh). Debe correrse
+# ANTES de apuntar el DNS de oscarimorales.com a GitHub Pages.
+# Se ejecuta a mano: pestaña Actions → "Rescatar imágenes de WordPress"
+# → Run workflow. Cuando las imágenes estén commiteadas, este archivo y el
+# script pueden borrarse.
+name: Rescatar imágenes de WordPress
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  rescatar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Descargar imágenes
+        run: bash scripts/descargar-imagenes.sh
+
+      - name: Commitear imágenes (si hay nuevas)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add wp-content/
+          if git diff --cached --quiet; then
+            echo "Sin imágenes nuevas — nada que commitear."
+          else
+            git commit -m "rescate: imágenes del WordPress viejo [skip ci]"
+            git push
+          fi

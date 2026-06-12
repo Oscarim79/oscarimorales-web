@@ -14,7 +14,7 @@ Buttondown manda el correo de CONFIRMACIÓN  (doble opt-in)
         │  (puede tardar unos minutos; cuentas gratis pasan por cola anti-spam)
         ▼
 La persona confirma → Buttondown la redirige a
-https://oscarim79.github.io/oscarimorales-web/bienvenida.html
+https://oscarimorales.com/bienvenida.html
         │
         ▼
 La página de bienvenida entrega el PDF de regalo:
@@ -42,7 +42,7 @@ Configuración en el panel de Buttondown (**Settings → Subscribing**):
 | Enviar boletines a mano (hasta 100 sus.) | ✅ | Emails → New email |
 
 > Cuando la lista crezca, el plan de $9/mes activa el RSS-to-email con el feed
-> `https://oscarim79.github.io/oscarimorales-web/feed.xml` y todo queda 100%
+> `https://oscarimorales.com/feed.xml` y todo queda 100%
 > automático sin tocar el sitio.
 
 ## Mejoras de marca en los correos (gratis)

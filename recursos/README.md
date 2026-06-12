@@ -4,7 +4,7 @@ Lo que pongas aquí se publica en GitHub Pages, p. ej.:
 
 ```
 recursos/sola-por-gracia.pdf
-→ https://oscarim79.github.io/oscarimorales-web/recursos/sola-por-gracia.pdf
+→ https://oscarimorales.com/recursos/sola-por-gracia.pdf
 ```
 
 Esa URL es la que enlazas en el **correo de bienvenida** de Buttondown

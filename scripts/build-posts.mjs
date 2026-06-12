@@ -33,9 +33,8 @@ const OUT_FEED = path.join(ROOT, 'feed.xml');
 const SITE_TITLE = 'Oscar I. Morales · Secundum Fidem';
 const SITE_DESC  = 'Ensayos y meditaciones para pensar el evangelio despacio.';
 
-// URL base del sitio publicado. Cámbiala aquí si migras a un dominio propio
-// (p. ej. "https://www.oscarimorales.com/blog").
-const SITE = 'https://oscarim79.github.io/oscarimorales-web';
+// URL base del sitio publicado (dominio propio vía GitHub Pages + CNAME).
+const SITE = 'https://oscarimorales.com';
 
 // ----------------------------------------------------------------------------
 // Frontmatter

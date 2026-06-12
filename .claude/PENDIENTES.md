@@ -9,28 +9,33 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 12-jun-2026, cierre de sesión)
-Sesión muy productiva. El sitio está **publicado y completo** en GitHub Pages:
+## 📍 Dónde nos quedamos (al 12-jun-2026, sesión de migración de dominio)
+**EN CURSO: mover el sitio a oscarimorales.com (DNS en GoDaddy).** El lado
+del repositorio quedó LISTO en la rama `claude/kind-bell-obuis9`:
 
-1. **Sección "Sermones" en la portada** — publicada y verificada por Oscar
-   funcionando (video destacado + lista de 4, carga diferida, botón "Ver más
-   en YouTube" → búsqueda "Oscar Morales Iglesia Reforma Guatemala" porque los
-   sermones viven en el canal de Iglesia Reforma). Videos editables en
-   `site-config.js` → `sermons`. Los títulos se leen solos de YouTube.
-2. **Suscripciones (Buttondown, plan GRATIS) — CERRADO.** Flujo completo
-   funcionando y probado por Oscar de punta a punta: formulario sin popups →
-   correo de confirmación → redirect a `bienvenida.html` → PDF de regalo
-   (*La soberanía de Dios*, A. W. Pink, dominio público, en `recursos/`).
-   Todo documentado al día en `SUBSCRIPTIONS.md`.
-3. **Limpieza final:** reset global de `<button>` (botón del hero ilegible),
-   y responsive auditado de 320px a 1440px con CERO desborde horizontal
-   (se corrigió: panel del hero, filtro del Archivo, lista del Archivo en
-   teléfonos angostos, nav con el nuevo enlace "Sermones").
+- `CNAME` con `oscarimorales.com`; URL base cambiada en `scripts/build-posts.mjs`,
+  `index.html`, `robots.txt`, `post-app.js` y docs; los 51 posts + sitemap +
+  feed regenerados. Cero URLs `oscarim79.github.io` restantes.
+- **Hallazgo clave:** las imágenes de los 51 posts viven en el WordPress viejo
+  (`oscarimorales.com/wp-content/uploads/`, 91 archivos). Se creó el Action de
+  un solo uso **"Rescatar imágenes de WordPress"** (`rescatar-imagenes.yml` +
+  `scripts/descargar-imagenes.sh` + lista `scripts/imagenes-wordpress.txt`) que
+  las descarga al repo en la MISMA ruta, para que nada se rompa al cambiar DNS.
 
-**Nada quedó a medias.** La próxima sesión puede arrancar directo con el
-Pendiente #1 (pack social) o el #2 (correo del boletín en el skill).
+**Pasos que faltan (EN ORDEN, ver mensaje a Oscar de esta sesión):**
+1. Merge de la rama a `main`.
+2. Correr el Action "Rescatar imágenes de WordPress" (ANTES del DNS).
+3. GoDaddy: 4 registros A (185.199.108/109/110/111.153) + CNAME `www` →
+   `oscarim79.github.io`. **NO tocar MX/TXT** (correo me@oscarimorales.com).
+4. GitHub Settings → Pages: dominio `oscarimorales.com` + Enforce HTTPS.
+5. Buttondown: actualizar redirect de confirmación a
+   `https://oscarimorales.com/bienvenida.html`.
+6. Después: borrar `rescatar-imagenes.yml` y el script (un solo uso).
 
 ## ⏳ Pendientes
+
+### 0. (EN CURSO) Terminar migración a oscarimorales.com
+Ver "Dónde nos quedamos" arriba — faltan los pasos 1–6.
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
