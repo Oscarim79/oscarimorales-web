@@ -404,3 +404,6 @@ Cerrar siempre con el estribillo de la idea principal.
 
 - `references/guia-estilos-sermon-refinada.md` — **LECTURA OBLIGATORIA antes de redactar el manuscrito.** Guía de estilos definitiva (197 manuscritos analizados): estructura del documento, 7 tipos de texto con estilos Word, encabezados, énfasis, voz, ajustes por género, estadísticas objetivo y especificaciones para `python-docx`.
 - `references/generos-y-estructura.md` — guía de géneros literarios y herramientas de estructura
+- `references/plantilla_sermon.docx` — plantilla Word con los estilos personalizados para generar el `.docx` final con `python-docx`. Rutas de respaldo:
+  - **Repo (backup):** `.claude/skills/sermon-oims/references/plantilla_sermon.docx`
+  - **Google Drive (laptop Oscar):** `G:\Mi unidad\IGLESIA CORAM DEO\Series - Sermones\ARCHIVOS MD - CLAUDE\plantilla_sermon.docx`
