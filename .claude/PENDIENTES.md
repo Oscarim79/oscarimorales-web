@@ -9,26 +9,26 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 12-jun-2026, cierre de la migración de dominio)
-**🎉 MIGRACIÓN COMPLETADA: el sitio vive en https://oscarimorales.com.**
-Verificado por Oscar desde su teléfono: portada e imágenes cargando.
+## 📍 Dónde nos quedamos (al 20-jul-2026, estreno completo de la skill blog-oims)
+**🎉 PRIMER POST PUBLICADO DE PUNTA A PUNTA CON LA SKILL:**
+**#52 "Querer no es poder"** → https://oscarimorales.com/post-52.html
+El texto vino de la skill de sermones, se preparó como propuesta editorial,
+Oscar eligió portada y dio el "publícalo". Verificado en vivo (post, portada
+y feed respondiendo 200).
 
-Lo que se hizo (12-jun, tarde):
-- `CNAME` + URL base `https://oscarimorales.com` en build, portada, robots,
-  post-app y docs; 51 posts + sitemap + feed regenerados.
-- **90 imágenes rescatadas del WordPress viejo** al repo (misma ruta
-  `wp-content/uploads/`) con un Action de un solo uso, YA BORRADO tras
-  cumplir su misión (junto con su script y la lista de URLs).
-- DNS en GoDaddy (lo hizo Oscar guiado): 4 registros A de GitHub, AAAA del
-  servidor viejo eliminado (¡estaba oculto y habría roto IPv6!), registro A
-  "old" eliminado, MX/TXT intactos (correo OK). Verificado con consultas
-  directas a los nameservers autoritativos hasta verlo estable.
-- GitHub Pages: dominio custom + certificado HTTPS emitido (hubo que hacer
-  Remove + re-add del dominio para forzarlo). Buttondown: redirect de
-  confirmación actualizado a `https://oscarimorales.com/bienvenida.html`.
-
-**Nota:** la primera carga fue lenta (caché de la CDN en frío + imágenes
-originales de WordPress pesadas). Ver nuevo pendiente de optimización.
+Lo que se hizo (20-jul):
+- **Portada generada con IA** vía el conector MCP de Hugging Face (activo en
+  Claude Code, usuario `omorales`): se probaron **FLUX.1 Krea** y **Z-Image
+  Turbo** con el mismo concepto; Oscar eligió la de Z-Image (cadena rota bajo
+  un rayo de luz). Guardada en `content/covers/052-querer-no-es-poder.webp`.
+- **Flujo automático de portadas grabado en la skill**
+  (`.claude/skills/blog-oims/SKILL.md`, sección "Portada con imagen generada"):
+  cada propuesta de post trae 2 candidatas (FLUX + Z-Image, con reintento si
+  el servidor falla), Oscar elige 1/2/auto, y la portada NUNCA bloquea la
+  publicación (respaldo: cover auto + prompt para Grok).
+- **OJO:** el correo del boletín NO sale solo (el RSS-to-email de Buttondown
+  es de pago — ver Pendiente #2). El correo del post #52 quedó redactado en
+  el chat del 20-jul para que Oscar lo pegue en Buttondown → Emails → New email.
 
 ## ⏳ Pendientes
 
@@ -81,6 +81,11 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Primer post con blog-oims + portadas IA** (20-jul): #52 "Querer no es poder"
+  publicado y verificado; flujo de portadas (HF: FLUX + Z-Image) grabado en la skill.
+- **Migración a oscarimorales.com** (12-jun): DNS en GoDaddy, HTTPS de GitHub
+  Pages, 90 imágenes rescatadas del WordPress viejo a `wp-content/uploads/`,
+  Buttondown apuntando a `bienvenida.html`. (Detalle completo en el historial git.)
 - **Sermones en la portada** (12-jun): sección "Para ver y escuchar", carga
   diferida, fix Error 153 de YouTube (referrerpolicy origin), nav + footer.
 - **Buttondown completo en plan gratis** (12-jun): formularios sin popup
