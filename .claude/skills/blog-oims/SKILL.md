@@ -298,6 +298,37 @@ arriba como referencia. Es el mismo Markdown que luego va al archivo del post.
 
 ---
 
+## Portada con imagen generada (flujo automático)
+
+Flujo validado el 2026-07-20 (post #052). Objetivo: Oscar no pierde tiempo buscando,
+editando ni formateando imágenes. **La portada NUNCA bloquea la publicación.**
+
+1. **Junto con la propuesta del post, genera 2 candidatas de portada** usando el
+   conector MCP de Hugging Face (debe estar activo en la sesión):
+   - **FLUX.1 Krea** → tool `gr1_flux_1_krea_dev_infer`, con `width: 1344`,
+     `height: 768`. Tiende a lo más fotorrealista y sutil.
+   - **Z-Image Turbo** → tool `gr2_z_image_turbo_generate`, con
+     `resolution: "1536x864 ( 16:9 )"`. Tiende a lo más dramático y legible en miniatura.
+2. **El prompt va EN INGLÉS** (~60 palabras), describiendo UN concepto visual sobrio
+   derivado del mensaje central del post — al estilo de las portadas históricas del
+   blog: fotográficas, formato ancho (~2:1), dramáticas pero sobrias, con luz
+   significativa. Termina SIEMPRE con `no people, no text` (nada de texto sobre la
+   imagen; nada de rostros).
+3. **Los servidores de HF son inestables**: si una llamada falla (p. ej. "MCP server
+   connection lost"), reintenta 1 vez antes de darla por perdida.
+4. Cada tool devuelve una URL temporal. **Descárgalas con `curl` DENTRO del repo** como
+   `content/covers/candidata-1-flux.webp` y `content/covers/candidata-2-zimage.webp`,
+   y muéstraselas a Oscar con enlaces markdown de ruta relativa. (Los enlaces a archivos
+   fuera del proyecto NO le abren; si aun así no puede verlas, indícale la carpeta
+   `content\covers` en el Explorador de Windows.)
+5. **Oscar elige: 1, 2 o "auto".** Renombra la elegida a
+   `content/covers/<NNN>-<slug>.webp`, borra la descartada, y en el frontmatter pon
+   `cover: "content/covers/<NNN>-<slug>.webp"`.
+6. **Si ambos modelos fallan** tras los reintentos: publica con `cover: "auto"` y
+   entrégale a Oscar un prompt listo para Grok, para reemplazar la portada después.
+
+---
+
 ## Publicación en el sitio (sin WordPress)
 
 Cuando Oscar aprueba el borrador, publícalo. El sitio es estático: "publicar" = crear un
@@ -336,7 +367,7 @@ El frontmatter va entre `---` y **cada valor es JSON válido**. Mapea los entreg
 | Extracto para redes | `excerpt` | Sin el hashtag. |
 | Verdad-ancla final | `quote` | La frase memorable del cierre (opcional). |
 | Destacar en portada | `featured` | `true` solo si Oscar lo pide. |
-| Portada | `cover` | `"auto"` (portada tipográfica on-brand) salvo imagen real. |
+| Portada | `cover` | Imagen generada `"content/covers/<NNN>-<slug>.webp"` (ver sección "Portada"), o `"auto"` (portada tipográfica on-brand), o ruta/URL de imagen real. |
 
 ```markdown
 ---

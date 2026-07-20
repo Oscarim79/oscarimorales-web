@@ -1,10 +1,11 @@
 // ============================================================================
 // posts-data.js — GENERADO por scripts/build-posts.mjs · NO editar a mano.
 // Fuente: content/posts/*. Para cambiar un post, edita su archivo y re-ejecuta el build.
-// 51 posts, del más reciente al más antiguo.
+// 52 posts, del más reciente al más antiguo.
 // ============================================================================
 
 window.POSTS = [
+  { n: 52, title: "Querer no es poder", date: "2026-07-20", cats: ["Caminar Cristiano"], url: "https://oscarimorales.com/post-52.html", image: "content/covers/052-querer-no-es-poder.webp", excerpt: "Prometiste, lloraste, volviste a caer… ¿y si esta guerra nunca se ganó a fuerza de voluntad? Querer no es poder — pero hay Alguien que ya pagó tu libertad.", quote: "La guerra contra el pecado no se gana a fuerza de voluntad: querer no es poder. La guerra se gana en Cristo." },
   { n: 51, title: "El Miedo y Romanos 8", date: "2021-03-02", cats: ["Caminar Cristiano","Meditaciones"], url: "https://oscarimorales.com/post-51.html", image: "https://oscarimorales.com/wp-content/uploads/2021/03/viurs.jpg", excerpt: "Cómo Romanos 8 reordena el miedo cuando la fe no logra hacerlo desaparecer por completo.", quote: "El miedo no nulifica nuestra fe — es una oportunidad, en la gracia de Dios, de quitar nuestra vista de este mundo y anclarla en el único que puede ofrecernos paz que sobrepasa todo entendimiento." },
   { n: 50, title: "La Pena de Muerte y la Biblia", date: "2021-02-26", cats: ["Cultura y Actualidad"], url: "https://oscarimorales.com/post-50.html", image: "https://oscarimorales.com/wp-content/uploads/2021/02/Vida.jpg", excerpt: "Qué enseña la Escritura sobre la pena capital, la justicia y el valor de la vida.", featured: true },
   { n: 49, title: "Requisitos Bíblicos para Ministros de Alabanza", date: "2021-02-23", cats: ["Alabanza","Iglesia","Ministerio"], url: "https://oscarimorales.com/post-49.html", image: "https://oscarimorales.com/wp-content/uploads/2019/10/Alabanza.jpg", excerpt: "El carácter y el llamado que la Biblia pide a quien dirige la adoración del pueblo.", featured: true },
