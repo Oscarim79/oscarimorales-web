@@ -30,7 +30,28 @@ Lo que se hizo (20-jul):
   es de pago — ver Pendiente #2). El correo del post #52 quedó redactado en
   el chat del 20-jul para que Oscar lo pegue en Buttondown → Emails → New email.
 
+**Cierre de la noche (20-jul):** Oscar añadió desde el móvil los "minutos de
+lectura" (en posts y en las tarjetas del inicio, commits 558348f y 946d5c3).
+Al compartir el post #52 detectó dos cosas nuevas → son los 2 pendientes ⭐
+de abajo. Post publicado y verificado; boletín pendiente de pegar en Buttondown.
+
 ## ⏳ Pendientes
+
+### ⭐ (NUEVO 20-jul) URLs con el nombre del post, no con número
+Al compartir, Oscar quiere que el enlace se lea como el título (p. ej.
+`oscarimorales.com/querer-no-es-poder`) y no `post-52.html`. Idea de
+implementación: que el build genere además una página por slug, y que
+`post-<n>.html` siga existiendo como redirección (regla: los permalinks
+viejos y el `n` NUNCA se rompen — ya se enviaron por correo y redes).
+Tocar `scripts/build-posts.mjs` + sitemap + feed + og:url.
+
+### ⭐ (NUEVO 20-jul) La portada no aparece en la vista previa al compartir
+Al compartir `post-52.html` solo sale el link, sin imagen. Diagnóstico ya
+hecho (20-jul, verificado con curl): el `og:image` SÍ está y es URL absoluta,
+pero apunta al `.webp` — WhatsApp/Facebook a menudo NO muestran webp en
+previews. Plan: guardar las portadas también en `.jpg` y usar esa en
+`og:image`/`twitter:image`, añadir `og:image:width`/`height`, y re-extraer
+la caché en el Sharing Debugger de Facebook (conecta con el pendiente #3).
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
