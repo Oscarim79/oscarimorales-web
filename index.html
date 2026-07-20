@@ -389,6 +389,10 @@
     '<circle cx="8" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
     '<path d="M2.6 14c0-3 2.4-5 5.4-5s5.4 2 5.4 5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>';
 
+  var SVG_CLOCK = '<svg class="slider__ico" viewBox="0 0 16 16" aria-hidden="true">' +
+    '<circle cx="8" cy="8" r="6.3" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
+    '<path d="M8 4.8V8l2.2 1.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>';
+
   // --------------------------------------------------------------------------
   // Helpers
   // --------------------------------------------------------------------------
@@ -554,6 +558,7 @@
           '<div class="slider__meta">' +
             '<span class="slider__metaitem">' + SVG_CAL + ' ' + esc(fmtDateLong(post.date)) + '</span>' +
             '<span class="slider__metaitem">' + SVG_USER + ' Oscar I. Morales</span>' +
+            (post.read ? '<span class="slider__metaitem">' + SVG_CLOCK + ' ' + post.read + ' min de lectura</span>' : '') +
           '</div>' +
           '<span class="slider__read">Leer ensayo completo &rarr;</span>' +
         '</div>';
@@ -697,6 +702,10 @@
           '<span class="popcard__author">Por Oscar I. Morales</span>' +
           '<span class="popcard__meta-sep">&middot;</span>' +
           '<span class="popcard__date-long">' + dy + ' ' + MONTHS[mo-1] + ', ' + yr + '</span>' +
+          (post.read
+            ? '<span class="popcard__meta-sep">&middot;</span>' +
+              '<span class="popcard__read">' + post.read + ' min de lectura</span>'
+            : '') +
         '</div>';
 
       var img = a.querySelector('img');
@@ -765,7 +774,9 @@
                 p.cats.map(function(c) { return '<span>' + esc(c) + '</span>'; }).join('') +
               '</div>' +
             '</div>' +
-            '<span class="archive__entry-date">' + dateStr + '</span>' +
+            '<span class="archive__entry-date">' + dateStr +
+              (p.read ? ' <span class="archive__entry-read">&middot; ' + p.read + ' min</span>' : '') +
+            '</span>' +
           '</a>';
         }).join('');
 

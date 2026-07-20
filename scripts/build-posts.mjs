@@ -135,6 +135,10 @@ function load() {
     if (meta.n == null) { console.error(`⚠️  ${f}: falta "n" en el frontmatter — omitido`); continue; }
     const isMd = /\.md$/i.test(f);
     const html = (isMd ? mdToHtml(body) : body).trim();
+    // Tiempo de lectura (~220 palabras/min) — mismo cálculo que post-app.js.
+    const words = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+                      .split(' ').filter(Boolean).length;
+    const read = words ? Math.max(1, Math.round(words / 220)) : 0;
     posts.push({
       n: Number(meta.n),
       title: String(meta.title || '').trim(),
@@ -144,6 +148,7 @@ function load() {
       quote: meta.quote || '',
       featured: meta.featured === true,
       cover: (meta.cover && meta.cover !== 'auto') ? String(meta.cover) : '',
+      read,
       html,
       file: f,
     });
@@ -167,6 +172,7 @@ function genData(posts) {
     const f = [`n: ${p.n}`, `title: ${JSON.stringify(p.title)}`, `date: ${JSON.stringify(p.date)}`,
                `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(`${SITE}/post-${p.n}.html`)}`];
     if (p.cover) f.push(`image: ${JSON.stringify(p.cover)}`);
+    if (p.read) f.push(`read: ${p.read}`);
     if (p.excerpt) f.push(`excerpt: ${JSON.stringify(p.excerpt)}`);
     if (p.quote) f.push(`quote: ${JSON.stringify(p.quote)}`);
     if (p.featured) f.push(`featured: true`);

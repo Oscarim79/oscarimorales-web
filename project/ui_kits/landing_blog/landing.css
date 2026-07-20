@@ -1164,6 +1164,7 @@ button {
 .popcard__cats { color: var(--dorado-400); }
 .popcard__author { color: var(--niebla-400); }
 .popcard__date-long { color: var(--niebla-400); }
+.popcard__read { color: var(--terracota-300); }
 
 /* ============================================================================
 
@@ -1389,6 +1390,7 @@ button {
   color: var(--niebla-600);
   white-space: nowrap;
 }
+.archive__entry-read { color: var(--terracota-500); }
 
 /* ============================================================================
    SERMONES (dark — tratamiento "sala de cine")
