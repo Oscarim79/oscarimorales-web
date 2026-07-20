@@ -221,6 +221,27 @@
   max-width: 720px;
 }
 
+/* Aviso de tiempo de lectura — antes del cuerpo del artículo */
+.prose__readtime {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 44px;
+  font-family: var(--font-descriptor);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--terracota-600);
+}
+.prose__readtime svg { flex: none; color: var(--terracota-500); }
+.prose__readtime::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--niebla-200);
+}
+
 /* Lead — primer párrafo con drop cap */
 .prose__lead {
   font-family: var(--font-serif);

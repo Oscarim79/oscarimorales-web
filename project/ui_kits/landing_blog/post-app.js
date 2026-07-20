@@ -196,9 +196,30 @@
     }
   }
 
-  function buildBody(post, blocks, html) {
+  // Aviso de tiempo de lectura — invita a leer mostrando lo que toma el escrito.
+  function buildReadTime(minutes) {
+    var box = el('div', 'prose__readtime');
+    box.innerHTML =
+      '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M17 8h1a3 3 0 0 1 0 6h-1"/>' +
+      '<path d="M3 8h14v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/>' +
+      '<line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/>' +
+      '<line x1="14" y1="2" x2="14" y2="4"/></svg>';
+    var label = minutes === 1
+      ? 'Lectura de 1 minuto'
+      : 'Lectura de unos ' + minutes + ' minutos';
+    box.appendChild(el('span', null, label));
+    return box;
+  }
+
+  function buildBody(post, blocks, html, readMinutes) {
     var article = el('article', 'prose');
     var wrap = el('div', 'wrap wrap--narrow');
+
+    if (readMinutes && ((blocks && blocks.length) || html)) {
+      wrap.appendChild(buildReadTime(readMinutes));
+    }
 
     if (blocks && blocks.length) {
       // Cuerpo curado a mano (bloques estructurados).
@@ -741,7 +762,7 @@
     var site = el('div', 'site site--post');
     site.appendChild(buildNav());
     site.appendChild(buildCover(post, readMinutes));
-    site.appendChild(buildBody(post, blocks, html));
+    site.appendChild(buildBody(post, blocks, html, readMinutes));
     site.appendChild(buildFooter(post, prev, next));
     site.appendChild(buildRelated(relatedPosts(post)));
     site.appendChild(buildNews());
