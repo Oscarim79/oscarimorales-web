@@ -51,6 +51,13 @@ quiera. No depende de mi PC ni de Projects.
 
 ---
 
+## Dónde veo las estadísticas del sitio
+
+En **dash.cloudflare.com** (mi cuenta de Cloudflare) → **Web Analytics**: visitantes,
+qué posts leen, de dónde vienen (Google, WhatsApp, Facebook…), países y dispositivos.
+Cuentan desde el 22-jul-2026 (no hay historial anterior). Sin cookies — el sitio no
+necesita banner de aviso.
+
 ## Cómo se publica (lo técnico, por si acaso)
 
 El sitio es **estático** (sin WordPress). Un post es un archivo en `content/posts/`:
