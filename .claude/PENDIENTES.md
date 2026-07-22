@@ -76,6 +76,10 @@ El RSS-to-email de Buttondown es de pago, así que: **al publicar un post, el
 skill debe generar también el correo del boletín redactado** (asunto + cuerpo
 con una línea de contexto + enlace al post), para que Oscar solo lo pegue en
 Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #1.
+**DECIDIDO (22-jul):** seguimos con este flujo asistido (gratis) mientras la
+lista sea pequeña; cuando crezca (~50-100 suscriptores), se activa el plan de
+$9/mes y el RSS-to-email con `feed.xml` — el sitio ya está listo, no hay que
+cambiar nada. Los correos de los posts #52 y #53 ya se le entregaron redactados.
 
 ### 3. Revisar compartir en Facebook (pedido por Oscar, 12-jun)
 En el Sharing Debugger de Facebook Developers, oscarimorales.com mostraba:
