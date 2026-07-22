@@ -11,8 +11,9 @@
 
   // Imagen por defecto para compartir (posts con portada tipográfica automática,
   // que no tienen una imagen real con URL). Se usa en Open Graph / Twitter.
+  // JPG ligero (1200×630, ~100 KB): WhatsApp no muestra imágenes pesadas ni webp.
   var SITE_DEFAULT_IMAGE =
-    'https://oscarimorales.com/project/assets/oscar-stage.png';
+    'https://oscarimorales.com/project/assets/og-default.jpg';
 
   // ------------------------------------------------------------------------
   // Helpers
@@ -65,7 +66,13 @@
   }
 
   // URL de la página (estática) de un post — para enlaces internos.
-  function postPage(n) { return 'post-' + n + '.html'; }
+  // Ahora es /<slug> (con el título); post-<n>.html queda como respaldo.
+  function postPage(n) {
+    for (var i = 0; i < POSTS.length; i++) {
+      if (POSTS[i].n === n) return POSTS[i].slug || ('post-' + n + '.html');
+    }
+    return 'post-' + n + '.html';
+  }
 
   // ------------------------------------------------------------------------
   // NAV (with reading-progress bar)

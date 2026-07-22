@@ -21,8 +21,13 @@ publicado ✅
 Ruta y nombre: `content/posts/<NNN>-<slug>.md`
 (p. ej. `content/posts/052-el-temor-de-dios.md`)
 
-- `<NNN>` = el número **`n`** con 3 dígitos. Es el **permalink** del post
-  (`post.html?n=52`) y **no debe cambiar nunca** una vez publicado.
+- `<NNN>` = el número **`n`** con 3 dígitos, el id estable del post.
+  **No debe cambiar nunca** una vez publicado.
+- `<slug>` = el título en minúsculas-con-guiones. **Es la URL pública del post**:
+  `https://oscarimorales.com/<slug>` (p. ej. `/el-temor-de-dios`). Por eso,
+  **no renombres el archivo después de publicar** — cambiaría la URL y rompería
+  los enlaces ya compartidos. (Los enlaces viejos `post-<n>.html` siguen
+  funcionando: el build los genera como redirecciones.)
 - Para un post nuevo, usa **el `n` más alto que exista + 1**.
 - Extensión: **`.md`** (cuerpo en Markdown, recomendado) o **`.html`** (cuerpo en HTML).
 
@@ -45,14 +50,14 @@ cover: "auto"
 
 | Campo      | Obligatorio | Notas |
 |------------|:-----------:|-------|
-| `n`        | ✅ | Número/permalink estable. El más alto existente + 1. |
+| `n`        | ✅ | Número estable del post. El más alto existente + 1. |
 | `title`    | ✅ | Título del artículo. |
 | `date`     | ✅ | `"AAAA-MM-DD"`. Ordena el blog (más reciente primero). |
 | `cats`     | ✅ | Lista de categorías. La primera se usa como sección. |
 | `excerpt`  | recomendado | Resumen para tarjetas, SEO y compartir. |
 | `quote`    | opcional | Cita destacada (se muestra en algunas tarjetas). |
 | `featured` | opcional | `true` para destacarlo en la portada. |
-| `cover`    | opcional | `"auto"` = portada tipográfica generada (on-brand). O una ruta/URL de imagen real. |
+| `cover`    | opcional | `"auto"` = portada tipográfica generada (on-brand). O una ruta/URL de imagen real — **siempre JPG de menos de 300 KB**: WhatsApp/Facebook no muestran la vista previa con `.webp` ni con imágenes pesadas. Si la portada es pesada, el build usa la versión ligera `content/covers/og/<NNN>.jpg` si existe. |
 
 ### Cuerpo (Markdown)
 

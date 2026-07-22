@@ -7,7 +7,7 @@
 //   - .html → el cuerpo ya es HTML (se usa tal cual)
 //
 // Frontmatter (cada valor es JSON válido):
-//   n:        52                 ← id estable y permalink (post.html?n=52). Obligatorio.
+//   n:        52                 ← id estable (nunca cambia una vez publicado). Obligatorio.
 //   title:    "Título"
 //   date:     "2026-06-01"
 //   cats:     ["Categoría A", "Categoría B"]
@@ -15,6 +15,14 @@
 //   quote:    "Cita destacada."                        (opcional)
 //   featured: true                                      (opcional)
 //   cover:    "auto"   o   "ruta/imagen.jpg"   o   "https://…"
+//             (para compartir en WhatsApp/Facebook usa SIEMPRE .jpg — webp/png
+//              pesado NO se muestran en la vista previa)
+//
+// URL de cada post: https://oscarimorales.com/<slug>  (el slug sale del nombre
+// del archivo sin el número: 052-querer-no-es-poder.md → /querer-no-es-poder).
+// GitHub Pages sirve <slug>.html cuando se pide /<slug> (sin extensión).
+// Los enlaces viejos post-<n>.html se generan como páginas de redirección —
+// los permalinks ya compartidos NUNCA se rompen.
 //
 // Uso:  node scripts/build-posts.mjs
 // ============================================================================
@@ -35,6 +43,10 @@ const SITE_DESC  = 'Ensayos y meditaciones para pensar el evangelio despacio.';
 
 // URL base del sitio publicado (dominio propio vía GitHub Pages + CNAME).
 const SITE = 'https://oscarimorales.com';
+
+// URL canónica y compartible de un post: /<slug>, sin extensión.
+// (GitHub Pages sirve <slug>.html automáticamente para esa ruta.)
+const postUrl = (p) => `${SITE}/${p.slug}`;
 
 // ----------------------------------------------------------------------------
 // Frontmatter
@@ -123,6 +135,30 @@ function mdToHtml(md) {
 }
 
 // ----------------------------------------------------------------------------
+// Slug — la parte "con nombre" de la URL, tomada del nombre del archivo.
+//   052-querer-no-es-poder.md  →  querer-no-es-poder
+// ----------------------------------------------------------------------------
+// Nombres que NO pueden usarse como slug (chocarían con archivos reales del sitio).
+const RESERVED_SLUGS = new Set([
+  'index', 'post', 'bienvenida', 'feed', 'sitemap', 'robots',
+  'content', 'project', 'recursos', 'scripts', 'chats', 'wp-content',
+]);
+
+function slugOf(filename) {
+  const s = filename.replace(/\.(md|html)$/i, '').replace(/^\d+[-_]*/, '').toLowerCase();
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(s)) {
+    console.error(`❌ ${filename}: el nombre no produce un slug válido ("${s}"). ` +
+                  `Usa solo minúsculas, números y guiones: NNN-titulo-del-post.md`);
+    process.exit(1);
+  }
+  if (RESERVED_SLUGS.has(s) || /^post-\d+$/.test(s)) {
+    console.error(`❌ ${filename}: el slug "${s}" está reservado — renombra el archivo.`);
+    process.exit(1);
+  }
+  return s;
+}
+
+// ----------------------------------------------------------------------------
 // Cargar posts
 // ----------------------------------------------------------------------------
 function load() {
@@ -141,6 +177,7 @@ function load() {
     const read = words ? Math.max(1, Math.round(words / 220)) : 0;
     posts.push({
       n: Number(meta.n),
+      slug: slugOf(f),
       title: String(meta.title || '').trim(),
       date: String(meta.date || '').slice(0, 10),
       cats: Array.isArray(meta.cats) ? meta.cats : (meta.cats ? [meta.cats] : []),
@@ -153,11 +190,14 @@ function load() {
       file: f,
     });
   }
-  // detectar n duplicados
+  // detectar n y slugs duplicados
   const seen = new Map();
+  const seenSlug = new Map();
   for (const p of posts) {
     if (seen.has(p.n)) { console.error(`❌ n=${p.n} duplicado: ${seen.get(p.n)} y ${p.file}`); process.exit(1); }
     seen.set(p.n, p.file);
+    if (seenSlug.has(p.slug)) { console.error(`❌ slug "${p.slug}" duplicado: ${seenSlug.get(p.slug)} y ${p.file}`); process.exit(1); }
+    seenSlug.set(p.slug, p.file);
   }
   // orden de visualización: más reciente primero (por fecha, desempata por n)
   posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.n - a.n));
@@ -169,8 +209,9 @@ function load() {
 // ----------------------------------------------------------------------------
 function genData(posts) {
   const lines = posts.map(p => {
-    const f = [`n: ${p.n}`, `title: ${JSON.stringify(p.title)}`, `date: ${JSON.stringify(p.date)}`,
-               `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(`${SITE}/post-${p.n}.html`)}`];
+    const f = [`n: ${p.n}`, `slug: ${JSON.stringify(p.slug)}`, `title: ${JSON.stringify(p.title)}`,
+               `date: ${JSON.stringify(p.date)}`,
+               `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(postUrl(p))}`];
     if (p.cover) f.push(`image: ${JSON.stringify(p.cover)}`);
     if (p.read) f.push(`read: ${p.read}`);
     if (p.excerpt) f.push(`excerpt: ${JSON.stringify(p.excerpt)}`);
@@ -213,7 +254,7 @@ function genSitemap(posts) {
   const byN = [...posts].sort((a, b) => a.n - b.n);
   const u = [`  <url>\n    <loc>${SITE}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`];
   for (const p of byN) {
-    u.push(`  <url>\n    <loc>${SITE}/post-${p.n}.html</loc>\n    <lastmod>${p.date}</lastmod>` +
+    u.push(`  <url>\n    <loc>${postUrl(p)}</loc>\n    <lastmod>${p.date}</lastmod>` +
            `\n    <changefreq>yearly</changefreq>\n    <priority>0.8</priority>\n  </url>`);
   }
   return '<?xml version="1.0" encoding="UTF-8"?>\n' +
@@ -234,14 +275,18 @@ function feedSummary(p) {
 
 function genFeed(posts) {
   const items = posts.map(p => {
-    const link = `${SITE}/post-${p.n}.html`;
+    const link = postUrl(p);
+    // El guid conserva la forma vieja (post-<n>.html) a propósito: es el
+    // identificador estable de cada item — si cambiara, los lectores RSS
+    // verían los 52 posts como "nuevos" otra vez.
+    const guid = `${SITE}/post-${p.n}.html`;
     const pub = new Date(p.date + 'T08:00:00Z').toUTCString();
     const cats = p.cats.map(c => `      <category>${xmlEsc(c)}</category>`).join('\n');
     return [
       '    <item>',
       `      <title>${xmlEsc(p.title)}</title>`,
       `      <link>${link}</link>`,
-      `      <guid isPermaLink="true">${link}</guid>`,
+      `      <guid isPermaLink="false">${guid}</guid>`,
       `      <pubDate>${pub}</pubDate>`,
       cats,
       `      <description>${xmlEsc(feedSummary(p))}</description>`,
@@ -270,15 +315,48 @@ function genFeed(posts) {
 }
 
 // ----------------------------------------------------------------------------
-// Páginas estáticas por artículo (post-<n>.html)
+// Páginas estáticas por artículo (<slug>.html + redirección post-<n>.html)
 // ----------------------------------------------------------------------------
-// Cada post se publica también como una página HTML propia con los metadatos
+// Cada post se publica como una página HTML propia con los metadatos
 // (título, descripción, imagen) ya "horneados" en el HTML. Así Facebook,
 // WhatsApp y X — que NO ejecutan JavaScript — muestran la vista previa correcta
 // (imagen + título del artículo). El cuerpo lo renderiza post-app.js leyendo
-// window.POST_N. Es la URL canónica y compartible de cada escrito.
+// window.POST_N. La URL canónica y compartible es https://…/<slug>.
 
-const DEFAULT_IMAGE = `${SITE}/project/assets/oscar-stage.png`;
+// Imagen por defecto al compartir: JPG de 1200×630 y ~100 KB. OJO: WhatsApp
+// ignora imágenes de más de ~600 KB y a menudo también los .webp — por eso
+// las portadas para compartir deben ser JPG ligeros.
+const DEFAULT_IMAGE_PATH = 'project/assets/og-default.jpg';
+const DEFAULT_IMAGE = `${SITE}/${DEFAULT_IMAGE_PATH}`;
+
+// Marca que identifica los archivos HTML generados por este script (permite
+// limpiarlos en cada build sin tocar index.html, bienvenida.html, etc.).
+const GEN_MARK = '<!-- Generado por scripts/build-posts.mjs — NO editar a mano -->';
+
+// Dimensiones de una imagen local (JPG o PNG) leyendo su cabecera.
+// Devuelve null si no se pueden determinar (URL externa, webp, etc.).
+function imgSize(relPath) {
+  try {
+    const buf = fs.readFileSync(path.join(ROOT, relPath));
+    // PNG: IHDR — ancho y alto en los bytes 16-23.
+    if (buf.length > 24 && buf[0] === 0x89 && buf[1] === 0x50) {
+      return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) };
+    }
+    // JPEG: buscar el marcador SOF (C0–C3, C5–C7, C9–CB, CD–CF).
+    if (buf.length > 4 && buf[0] === 0xFF && buf[1] === 0xD8) {
+      let i = 2;
+      while (i + 9 < buf.length && buf[i] === 0xFF) {
+        const marker = buf[i + 1];
+        const len = buf.readUInt16BE(i + 2);
+        if (marker >= 0xC0 && marker <= 0xCF && ![0xC4, 0xC8, 0xCC].includes(marker)) {
+          return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+        }
+        i += 2 + len;
+      }
+    }
+  } catch { /* sin dimensiones — no es grave */ }
+  return null;
+}
 
 // Descripción corta (excerpt o texto del cuerpo, recortada a ~175 caracteres).
 function metaDesc(p) {
@@ -290,17 +368,46 @@ function metaDesc(p) {
   return (sp > 40 ? cut.slice(0, sp) : cut).replace(/[\s,;:.]+$/, '') + '…';
 }
 
-// URL absoluta de la imagen de portada (o la imagen por defecto del sitio).
-function absImage(p) {
-  if (!p.cover) return DEFAULT_IMAGE;
-  return /^https?:\/\//.test(p.cover) ? p.cover : `${SITE}/${p.cover.replace(/^\//, '')}`;
+// Imagen para compartir (og:image / twitter:image): la portada del post o la
+// imagen por defecto. Reglas:
+//   1. Si existe content/covers/og/<NNN>.jpg, esa gana — es la versión ligera
+//      (< 280 KB) de portadas pesadas heredadas de WordPress. WhatsApp ignora
+//      imágenes de más de ~600 KB.
+//   2. Si la portada es .webp y existe un .jpg con el mismo nombre, se usa el
+//      .jpg (WhatsApp no muestra webp en la vista previa).
+// El sitio sigue mostrando la portada original; esto solo afecta al compartir.
+// Devuelve { url, path } — path solo para imágenes locales (para medirlas).
+function shareImage(p) {
+  if (!p.cover) return { url: DEFAULT_IMAGE, path: DEFAULT_IMAGE_PATH };
+  const ogVariant = `content/covers/og/${String(p.n).padStart(3, '0')}.jpg`;
+  if (fs.existsSync(path.join(ROOT, ogVariant))) {
+    return { url: `${SITE}/${ogVariant}`, path: ogVariant };
+  }
+  // URL del propio dominio → es un archivo del repo (se puede medir).
+  const cover = p.cover.startsWith(SITE + '/') ? p.cover.slice(SITE.length + 1) : p.cover;
+  if (/^https?:\/\//.test(cover)) return { url: cover, path: null };
+  let rel = cover.replace(/^\//, '');
+  if (/\.webp$/i.test(rel)) {
+    const jpg = rel.replace(/\.webp$/i, '.jpg');
+    if (fs.existsSync(path.join(ROOT, jpg))) {
+      rel = jpg;
+    } else {
+      console.error(`⚠️  ${p.file}: la portada es .webp y no hay ${jpg} — ` +
+                    `WhatsApp no mostrará la vista previa. Genera la versión .jpg.`);
+    }
+  }
+  return { url: `${SITE}/${rel}`, path: rel };
 }
 
 function genPostPage(p) {
-  const url = `${SITE}/post-${p.n}.html`;
+  const url = postUrl(p);
   const title = `${p.title} · Oscar I. Morales`;
   const desc = metaDesc(p);
-  const img = absImage(p);
+  const share = shareImage(p);
+  const img = share.url;
+  const dim = share.path ? imgSize(share.path) : null;
+  const imgType = /\.png(\?|$)/i.test(img) ? 'image/png'
+                : /\.webp(\?|$)/i.test(img) ? 'image/webp' : 'image/jpeg';
   const ld = {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
     headline: p.title, description: desc, datePublished: p.date, inLanguage: 'es',
@@ -313,6 +420,7 @@ function genPostPage(p) {
     image: img, keywords: p.cats.join(', ')
   };
   return `<!doctype html>
+${GEN_MARK}
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -333,6 +441,9 @@ function genPostPage(p) {
   <meta property="og:description" content="${xmlEsc(desc)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${xmlEsc(img)}" />
+  <meta property="og:image:secure_url" content="${xmlEsc(img)}" />
+  <meta property="og:image:type" content="${imgType}" />
+${dim ? `  <meta property="og:image:width" content="${dim.w}" />\n  <meta property="og:image:height" content="${dim.h}" />\n` : ''}\
   <meta property="og:image:alt" content="${xmlEsc(p.title + ' — Oscar I. Morales')}" />
   <meta property="article:published_time" content="${p.date}" />
   <meta property="article:author" content="Oscar I. Morales" />
@@ -370,13 +481,41 @@ ${p.cats[0] ? `  <meta property="article:section" content="${xmlEsc(p.cats[0])}"
 `;
 }
 
+// Página de redirección: los enlaces viejos (post-<n>.html), ya compartidos
+// por correo y redes, llevan al lector a la URL nueva con nombre.
+function genRedirectPage(p) {
+  const url = postUrl(p);
+  return `<!doctype html>
+${GEN_MARK}
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>${xmlEsc(p.title)} · Oscar I. Morales</title>
+  <link rel="canonical" href="${url}" />
+  <meta http-equiv="refresh" content="0; url=${url}" />
+  <meta name="robots" content="noindex" />
+  <script>location.replace(${JSON.stringify(url)});</script>
+</head>
+<body>
+  <p>Este escrito se mudó a <a href="${url}">${url}</a>.</p>
+</body>
+</html>
+`;
+}
+
 function genPostPages(posts) {
-  // Limpia páginas viejas (post-<n>.html) antes de regenerar.
+  // Limpia las páginas generadas en builds anteriores (se reconocen por la
+  // marca GEN_MARK o por el nombre post-<n>.html) antes de regenerar.
   for (const f of fs.readdirSync(ROOT)) {
-    if (/^post-\d+\.html$/.test(f)) fs.unlinkSync(path.join(ROOT, f));
+    if (!/\.html$/i.test(f)) continue;
+    const fp = path.join(ROOT, f);
+    if (/^post-\d+\.html$/.test(f)) { fs.unlinkSync(fp); continue; }
+    const head = fs.readFileSync(fp, 'utf8').slice(0, 300);
+    if (head.includes(GEN_MARK)) fs.unlinkSync(fp);
   }
   for (const p of posts) {
-    fs.writeFileSync(path.join(ROOT, `post-${p.n}.html`), genPostPage(p));
+    fs.writeFileSync(path.join(ROOT, `${p.slug}.html`), genPostPage(p));
+    fs.writeFileSync(path.join(ROOT, `post-${p.n}.html`), genRedirectPage(p));
   }
   return posts.length;
 }
@@ -395,6 +534,6 @@ console.log(`   → ${path.relative(ROOT, OUT_DATA)}`);
 console.log(`   → ${path.relative(ROOT, OUT_HTML)}`);
 console.log(`   → ${path.relative(ROOT, OUT_MAP)}`);
 console.log(`   → ${path.relative(ROOT, OUT_FEED)}`);
-console.log(`   → ${pageCount} páginas post-<n>.html`);
+console.log(`   → ${pageCount} páginas <slug>.html + ${pageCount} redirecciones post-<n>.html`);
 const newest = posts[0];
 console.log(`   más reciente: n=${newest.n} · ${newest.title} · ${newest.date}`);

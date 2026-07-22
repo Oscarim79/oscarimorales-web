@@ -9,7 +9,18 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 20-jul-2026, estreno completo de la skill blog-oims)
+## 📍 Dónde nos quedamos (al 22-jul-2026: URLs con nombre + vista previa arreglada)
+
+**Los 2 pendientes ⭐ del 20-jul quedaron resueltos** (ver "Hecho"):
+- Las URLs de los posts ahora son con el título: `oscarimorales.com/querer-no-es-poder`.
+  Los enlaces viejos `post-<n>.html` redirigen solos — nada compartido se rompió.
+- La vista previa al compartir (WhatsApp/Facebook) ahora sí trae imagen: portadas
+  en JPG ligero (WhatsApp ignora `.webp` y las imágenes de más de ~600 KB).
+- **Falta un paso manual de Oscar:** pasar por el Sharing Debugger de Facebook
+  (developers.facebook.com/tools/debug) y darle "Volver a extraer" a los enlaces
+  ya compartidos, para que Facebook/WhatsApp refresquen su caché (Pendiente #3).
+
+## 📜 Sesión anterior (20-jul-2026, estreno completo de la skill blog-oims)
 **🎉 PRIMER POST PUBLICADO DE PUNTA A PUNTA CON LA SKILL:**
 **#52 "Querer no es poder"** → https://oscarimorales.com/post-52.html
 El texto vino de la skill de sermones, se preparó como propuesta editorial,
@@ -36,22 +47,6 @@ Al compartir el post #52 detectó dos cosas nuevas → son los 2 pendientes ⭐
 de abajo. Post publicado y verificado; boletín pendiente de pegar en Buttondown.
 
 ## ⏳ Pendientes
-
-### ⭐ (NUEVO 20-jul) URLs con el nombre del post, no con número
-Al compartir, Oscar quiere que el enlace se lea como el título (p. ej.
-`oscarimorales.com/querer-no-es-poder`) y no `post-52.html`. Idea de
-implementación: que el build genere además una página por slug, y que
-`post-<n>.html` siga existiendo como redirección (regla: los permalinks
-viejos y el `n` NUNCA se rompen — ya se enviaron por correo y redes).
-Tocar `scripts/build-posts.mjs` + sitemap + feed + og:url.
-
-### ⭐ (NUEVO 20-jul) La portada no aparece en la vista previa al compartir
-Al compartir `post-52.html` solo sale el link, sin imagen. Diagnóstico ya
-hecho (20-jul, verificado con curl): el `og:image` SÍ está y es URL absoluta,
-pero apunta al `.webp` — WhatsApp/Facebook a menudo NO muestran webp en
-previews. Plan: guardar las portadas también en `.jpg` y usar esa en
-`og:image`/`twitter:image`, añadir `og:image:width`/`height`, y re-extraer
-la caché en el Sharing Debugger de Facebook (conecta con el pendiente #3).
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
@@ -102,6 +97,18 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **URLs con el título del post** (22-jul): cada post vive en
+  `oscarimorales.com/<slug>` (el slug sale del nombre del archivo en
+  `content/posts/`, p. ej. `052-querer-no-es-poder.md` → `/querer-no-es-poder`).
+  El build genera `<slug>.html` + redirección `post-<n>.html` (permalinks viejos
+  intactos); sitemap y feed usan la URL nueva (guid del RSS quedó estable a
+  propósito). REGLA NUEVA: no renombrar el archivo de un post publicado.
+- **Vista previa con imagen al compartir** (22-jul): `og:image` ahora siempre es
+  JPG ligero — `og-default.jpg` (1200×630, ~100 KB) reemplaza al `oscar-stage.png`
+  de 7.4 MB; portada del #52 convertida de webp a jpg; 27 portadas pesadas de la
+  era WordPress tienen versión ligera en `content/covers/og/<NNN>.jpg` (solo para
+  compartir; el sitio muestra las originales). Se añadieron og:image:width/height/
+  type. La skill blog-oims ahora exige portadas JPG < 300 KB.
 - **Primer post con blog-oims + portadas IA** (20-jul): #52 "Querer no es poder"
   publicado y verificado; flujo de portadas (HF: FLUX + Z-Image) grabado en la skill.
 - **Migración a oscarimorales.com** (12-jun): DNS en GoDaddy, HTTPS de GitHub

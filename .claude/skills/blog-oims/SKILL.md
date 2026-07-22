@@ -321,9 +321,15 @@ editando ni formateando imágenes. **La portada NUNCA bloquea la publicación.**
    y muéstraselas a Oscar con enlaces markdown de ruta relativa. (Los enlaces a archivos
    fuera del proyecto NO le abren; si aun así no puede verlas, indícale la carpeta
    `content\covers` en el Explorador de Windows.)
-5. **Oscar elige: 1, 2 o "auto".** Renombra la elegida a
-   `content/covers/<NNN>-<slug>.webp`, borra la descartada, y en el frontmatter pon
-   `cover: "content/covers/<NNN>-<slug>.webp"`.
+5. **Oscar elige: 1, 2 o "auto".** Convierte la elegida a **JPG** (obligatorio:
+   WhatsApp/Facebook NO muestran `.webp` en la vista previa, y debe pesar < 300 KB):
+   ```bash
+   python -c "from PIL import Image; Image.open('content/covers/candidata-2-zimage.webp').convert('RGB').save('content/covers/<NNN>-<slug>.jpg','JPEG',quality=85,optimize=True)"
+   ```
+   Borra las candidatas y en el frontmatter pon
+   `cover: "content/covers/<NNN>-<slug>.jpg"`.
+   (Si la conversión falla, publica igual con la `.webp` — el build avisará —
+   y deja pendiente generar la `.jpg`.)
 6. **Si ambos modelos fallan** tras los reintentos: publica con `cover: "auto"` y
    entrégale a Oscar un prompt listo para Grok, para reemplazar la portada después.
 
@@ -344,8 +350,8 @@ posts-data.js · post-html.js · sitemap.xml · feed.xml   ← se regeneran solo
 GitHub Pages publica · Buttondown envía el correo (vía feed RSS)
 ```
 
-### Paso 1 — Calcula `n` (número/permalink estable)
-`n` es el id permanente del post (`post.html?n=52`). **Nunca** se reutiliza ni se cambia.
+### Paso 1 — Calcula `n` (número estable)
+`n` es el id permanente del post. **Nunca** se reutiliza ni se cambia.
 ```bash
 ls content/posts/ | grep -oE '^[0-9]+' | sort -n | tail -1
 ```
@@ -355,6 +361,10 @@ ls content/posts/ | grep -oE '^[0-9]+' | sort -n | tail -1
 - `slug` = el título en **minúsculas, sin tildes ni ñ, con guiones**.
   Ej.: `"El Temor de Dios"` → `el-temor-de-dios`.
 - Archivo: `content/posts/<NNN>-<slug>.md`, con `<NNN>` = `n` a **3 dígitos** (`052`).
+- ⚠️ **El slug ES la URL pública del post**
+  (`https://oscarimorales.com/<slug>` — p. ej. `/el-temor-de-dios`).
+  Una vez publicado, **NO renombres el archivo**: cambiaría la URL y rompería
+  los enlaces ya compartidos.
 
 ### Paso 3 — Escribe el archivo (frontmatter + cuerpo)
 El frontmatter va entre `---` y **cada valor es JSON válido**. Mapea los entregables así:
@@ -367,7 +377,7 @@ El frontmatter va entre `---` y **cada valor es JSON válido**. Mapea los entreg
 | Extracto para redes | `excerpt` | Sin el hashtag. |
 | Verdad-ancla final | `quote` | La frase memorable del cierre (opcional). |
 | Destacar en portada | `featured` | `true` solo si Oscar lo pide. |
-| Portada | `cover` | Imagen generada `"content/covers/<NNN>-<slug>.webp"` (ver sección "Portada"), o `"auto"` (portada tipográfica on-brand), o ruta/URL de imagen real. |
+| Portada | `cover` | Imagen generada `"content/covers/<NNN>-<slug>.jpg"` (**siempre JPG < 300 KB** — ver sección "Portada"), o `"auto"` (portada tipográfica on-brand), o ruta/URL de imagen real. |
 
 ```markdown
 ---
