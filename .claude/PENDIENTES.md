@@ -111,6 +111,11 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Estadísticas de visitas** (22-jul): Cloudflare Web Analytics (gratis, sin
+  cookies — no requiere banner) en portada, posts, post.html y bienvenida; NO en
+  las redirecciones (evita doble conteo). Oscar ve los datos en
+  dash.cloudflare.com → Web Analytics (visitantes, páginas, referidos, países).
+  Los datos cuentan desde hoy — no hay historial hacia atrás.
 - **URLs con el título del post** (22-jul): cada post vive en
   `oscarimorales.com/<slug>` (el slug sale del nombre del archivo en
   `content/posts/`, p. ej. `052-querer-no-es-poder.md` → `/querer-no-es-poder`).
