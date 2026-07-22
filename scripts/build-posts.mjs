@@ -48,6 +48,11 @@ const SITE = 'https://oscarimorales.com';
 // (GitHub Pages sirve <slug>.html automáticamente para esa ruta.)
 const postUrl = (p) => `${SITE}/${p.slug}`;
 
+// Estadísticas de visitas (Cloudflare Web Analytics, sin cookies). El token es
+// público. Va en cada página de post; NO en las redirecciones post-<n>.html
+// (redirigen al instante y contarían la visita doble).
+const CF_ANALYTICS = `<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73dc84ac59be4c17b9332af5c55f5407"}'></script><!-- End Cloudflare Web Analytics -->`;
+
 // ----------------------------------------------------------------------------
 // Frontmatter
 // ----------------------------------------------------------------------------
@@ -478,6 +483,7 @@ ${p.cats[0] ? `  <meta property="article:section" content="${xmlEsc(p.cats[0])}"
   <script src="project/ui_kits/landing_blog/post-html.js"></script>
   <script src="project/ui_kits/landing_blog/subscribe.js"></script>
   <script src="project/ui_kits/landing_blog/post-app.js"></script>
+  ${CF_ANALYTICS}
 </body>
 </html>
 `;
