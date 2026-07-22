@@ -16,6 +16,8 @@ description: >
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
+> v5 — 2026-07-22 · URLs con slug (no renombrar posts publicados) + portadas siempre JPG < 300 KB
+
 ## Quién es Oscar (y qué hace este blog)
 
 Oscar I. Morales es pastor, consejero bíblico y autor. Su blog se llama **"Secundum
