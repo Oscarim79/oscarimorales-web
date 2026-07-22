@@ -170,7 +170,9 @@ function load() {
     const { meta, body } = parseFrontmatter(raw);
     if (meta.n == null) { console.error(`⚠️  ${f}: falta "n" en el frontmatter — omitido`); continue; }
     const isMd = /\.md$/i.test(f);
-    const html = (isMd ? mdToHtml(body) : body).trim();
+    // Normalizar saltos de línea también en los .html: evita que el build de
+    // Windows y el de GitHub (Linux) generen post-html.js distinto.
+    const html = (isMd ? mdToHtml(body) : body.replace(/\r\n/g, '\n')).trim();
     // Tiempo de lectura (~220 palabras/min) — mismo cálculo que post-app.js.
     const words = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
                       .split(' ').filter(Boolean).length;
