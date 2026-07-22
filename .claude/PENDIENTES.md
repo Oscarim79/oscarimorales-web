@@ -9,13 +9,23 @@
 
 ---
 
-## 📍 Dónde nos quedamos (al 22-jul-2026: URLs con nombre + vista previa arreglada)
+## 📍 Dónde nos quedamos (al 22-jul-2026: post #53 + URLs con nombre + preview arreglada)
 
-**Los 2 pendientes ⭐ del 20-jul quedaron resueltos** (ver "Hecho"):
-- Las URLs de los posts ahora son con el título: `oscarimorales.com/querer-no-es-poder`.
-  Los enlaces viejos `post-<n>.html` redirigen solos — nada compartido se rompió.
-- La vista previa al compartir (WhatsApp/Facebook) ahora sí trae imagen: portadas
-  en JPG ligero (WhatsApp ignora `.webp` y las imágenes de más de ~600 KB).
+**Se publicó el post #53** con la skill blog-oims v5 (2º estreno completo del flujo):
+**"¿Qué Dice la Biblia sobre la Cremación?"** →
+https://oscarimorales.com/que-dice-la-biblia-sobre-la-cremacion
+Nació de una pregunta que le hicieron a Oscar en el trabajo. Portada IA (Z-Image,
+semilla sembrada, 1 Co 15) ya en JPG ligero. Regla de voz nueva grabada en sesión:
+**evitar la etiqueta "reformado/Reforma" en los posts** (las verdades, confesiones
+y catecismos se citan; el rótulo se evita para no espantar lectores) — PENDIENTE
+pasarla al SKILL.md en la próxima edición de la skill.
+- **Boletín de Buttondown:** el correo del post #53 quedó redactado en el chat del
+  22-jul; Oscar debe pegarlo en Buttondown → Emails → New email.
+
+**También hoy (22-jul):** los 2 pendientes ⭐ del 20-jul quedaron resueltos (ver "Hecho"):
+- URLs con el título: `oscarimorales.com/<slug>`; los `post-<n>.html` viejos redirigen.
+- Vista previa al compartir con imagen: portadas JPG ligeras + og:image completo.
+- La skill blog-oims v5 quedó empaquetada y Oscar la subió a claude.ai.
 - **Falta un paso manual de Oscar:** pasar por el Sharing Debugger de Facebook
   (developers.facebook.com/tools/debug) y darle "Volver a extraer" a los enlaces
   ya compartidos, para que Facebook/WhatsApp refresquen su caché (Pendiente #3).
