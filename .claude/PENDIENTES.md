@@ -44,6 +44,8 @@
    sermon-oims/blog-oims en su próxima edición.)
 4. Al editar la skill: grabar la regla de voz "sin etiquetas reformado/Reforma".
 5. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" en el sitio que las liste.
+6. ⭐ **Idea nueva para la PRÓXIMA SESIÓN:** posts de sermones + publicación
+   programada (ver Pendiente 0 abajo — Oscar la dejó grabada al cierre del 23-jul).
 
 **Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
 
@@ -95,6 +97,25 @@ Al compartir el post #52 detectó dos cosas nuevas → son los 2 pendientes ⭐
 de abajo. Post publicado y verificado; boletín pendiente de pegar en Buttondown.
 
 ## ⏳ Pendientes
+
+### 0. ⭐ IDEA NUEVA (grabada 23-jul, para arrancar la próxima sesión): posts de sermones + publicación programada
+Oscar quiere que **todos los sermones que escriba de aquí en adelante se
+conviertan en posts del blog**, y poder **dejarlos programados con fecha
+futura** para tener contenido consistente por lo menos los siguientes meses.
+Qué explorar/decidir en la próxima sesión:
+- **Publicación programada:** el sitio se compila con GitHub Action; se puede
+  añadir un cron (p. ej. una corrida diaria) que publique automáticamente los
+  posts cuyo `date:` ya llegó y mantenga ocultos los de fecha futura. Así los
+  posts se dejan escritos por adelantado y salen solos en su día.
+- **Cola de contenido:** con las skills sermon-oims + blog-oims, convertir cada
+  sermón nuevo en su post (la skill de sermones ya propone el borrador de blog)
+  y asignar fechas escalonadas (p. ej. 1 por semana) para llenar el calendario
+  de varios meses.
+- **Encadena con lo ya construido:** cada post programado idealmente sale con
+  su Guía de Estudio (`guia:` en el frontmatter), su correo del boletín
+  (Pendiente #2) y, cuando exista, su pack social (Pendiente #1).
+- Ojo con el feed/boletín: definir que el RSS y el sitemap solo incluyan posts
+  ya publicados (no los futuros en cola).
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
