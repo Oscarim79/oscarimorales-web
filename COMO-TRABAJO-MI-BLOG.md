@@ -68,6 +68,14 @@ content/posts/052-mi-post.md   →  node scripts/build-posts.mjs  →  git push 
 
 Más detalle para humanos: `PUBLISHING.md`. El skill hace estos pasos por mí.
 
+**Guía de Estudio descargable (desde jul-2026):** si un post nace de un sermón,
+puede llevar su Guía de Estudio en PDF. La plantilla está en `recursos/guias/src/`
+(se llena con el contenido del sermón y se imprime a PDF); el PDF se guarda en
+`recursos/guias/` y el post lleva `guia: "recursos/guias/guia-<nombre>.pdf"` en su
+encabezado. Con eso, la página muestra sola la tarjeta de descarga (pide el correo
+y desbloquea el PDF) y la tarjeta del inicio y el archivo lucen la insignia
+"Guía de Estudio". Estreno: post #52.
+
 ---
 
 ## Pendiente: correo (Buttondown)

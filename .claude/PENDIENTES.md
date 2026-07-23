@@ -9,31 +9,41 @@
 
 ---
 
-## 📍 Dónde nos quedamos (23-jul-2026)
+## 📍 Dónde nos quedamos (cierre 23-jul-2026)
 
-**Hoy se estrenó la Guía de Estudio descargable** (el pendiente ⭐ del 22-jul),
-con el sermón de Romanos 7 (post #52 "Querer no es poder"):
-- **PDF de marca de 1 página** en `recursos/guias/guia-querer-no-es-poder.pdf`
-  (Playfair/Spectral, terracota, logo). La fuente HTML editable quedó en
-  `recursos/guias/src/` — es la plantilla para las guías de próximos sermones
-  (se imprime a PDF con Chrome headless; make-pdf no soporta marca propia).
+**Día completo: se estrenó la Guía de Estudio descargable** (el pendiente ⭐ del
+22-jul) con el sermón de Romanos 7 (post #52 "Querer no es poder"), afinada en
+3 versiones con Oscar y verificada en vivo:
+- **PDF de marca de 2 páginas** en `recursos/guias/guia-querer-no-es-poder.pdf`
+  (Playfair/Spectral, terracota, logo). Contenido final: título con Mayúsculas
+  En Cada Palabra, "Antes de empezar" (es parte de una serie + leer el texto
+  primero), **el pasaje completo en NTV** (con el crédito de Tyndale, requisito
+  de la traducción), idea central, "El recorrido del pasaje" (las 3 imágenes del
+  sermón), 3 aplicaciones y 3 preguntas difíciles con respuestas.
+- **Plantilla reutilizable:** la fuente HTML editable vive en
+  `recursos/guias/src/` y se imprime a PDF con Chrome headless (make-pdf de
+  gstack NO soporta marca propia — no usarlo para esto).
 - **Campo `guia:` en el frontmatter** → el build valida que el PDF exista y la
   página del post muestra la tarjeta "Llévate la Guía de Estudio de este sermón".
-- **A cambio del correo:** la tarjeta pide el correo (Buttondown, con etiqueta
-  `guia-<slug>` para saber de dónde vino el suscriptor) y al enviarlo revela el
-  botón de descarga ahí mismo; el navegador recuerda el desbloqueo (localStorage)
-  y en visitas futuras muestra la descarga directa.
-- Verificado EN VIVO: posts-data con `guia:` y el PDF respondiendo 200.
+- **A cambio del correo:** la tarjeta pide el correo (Buttondown, etiqueta
+  `guia-<slug>` para saber de dónde vino cada suscriptor) y revela la descarga
+  ahí mismo; el navegador recuerda el desbloqueo (localStorage).
+- **Insignia "Guía de Estudio"** en las tarjetas del home y en el archivo
+  (automática para todo post con `guia:`), y el cajón de suscripción ahora
+  menciona "guías de estudio descargables de los sermones". Decisión: NO se puso
+  anuncio en el home (envejece mal); el anuncio va en el boletín y redes.
 
 **Próximos pasos, en orden:**
 1. Oscar: pegar el correo del boletín #53 en Buttondown (quedó redactado en el
-   chat del 22-jul, pasos incluidos).
+   chat del 22-jul, pasos incluidos). Al redactar el del próximo sermón,
+   anunciar ahí las guías de estudio (y en Facebook/WhatsApp).
 2. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (Pendiente #3).
 3. Para el próximo sermón: generar su guía con la plantilla de
    `recursos/guias/src/`, guardar el PDF en `recursos/guias/` y poner `guia:`
    en el frontmatter del post. (Idealmente grabar este flujo en las skills
    sermon-oims/blog-oims en su próxima edición.)
 4. Al editar la skill: grabar la regla de voz "sin etiquetas reformado/Reforma".
+5. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" en el sitio que las liste.
 
 **Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
 
