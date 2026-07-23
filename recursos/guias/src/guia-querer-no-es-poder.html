@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Guía de Estudio — La guerra que no puedes ganar</title>
+<title>Guía de Estudio — La Guerra Que No Puedes Ganar</title>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap");
@@ -24,25 +24,20 @@
     --rule: rgba(13, 27, 42, 0.14);
   }
 
-  @page { size: letter; margin: 0; }
+  @page { size: letter; margin: 0.75in 0.9in 0.6in; }
+  @page :first { margin-top: 0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   body {
     font-family: "Spectral", Georgia, serif;
     font-size: 10.1pt;
-    line-height: 1.5;
+    line-height: 1.52;
     color: var(--noche);
     background: #fff;
   }
 
-  .page {
-    padding: 0.85in 0.9in 0.4in;
-    position: relative;
-  }
-  .page--first { padding-top: 0; }
-
-  /* Banda superior de marca */
+  /* Banda superior de marca (solo primera página) */
   .band {
     height: 6px;
     background: var(--terracota);
@@ -51,7 +46,7 @@
   .band + .head { margin-top: 0.38in; }
 
   /* Encabezado */
-  .head { text-align: center; margin-bottom: 20px; }
+  .head { text-align: center; margin-bottom: 18px; }
   .head__eyebrow {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
@@ -90,12 +85,45 @@
     margin: 16px auto 0;
   }
 
+  /* Antes de empezar */
+  .prep {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--terracota);
+    background: #fff;
+    padding: 12px 18px 11px;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+  }
+  .prep__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.4pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 7px;
+  }
+  .prep ol { list-style: none; }
+  .prep li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 5px;
+  }
+  .prep li:last-child { margin-bottom: 0; }
+  .prep__n {
+    position: absolute; left: 0; top: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--terracota-700);
+  }
+
   /* Idea central */
   .idea {
     background: var(--crema-100);
     border-left: 3px solid var(--dorado);
     padding: 14px 22px 13px;
     margin-bottom: 6px;
+    page-break-inside: avoid;
   }
   .idea__lbl {
     font-family: "Montserrat", sans-serif;
@@ -120,10 +148,10 @@
     font-size: 11pt;
     color: var(--terracota-700);
   }
-  .idea-nota { margin: 11px 2px 0; }
 
   /* Secciones */
-  .sec { margin-top: 19px; }
+  .sec { margin-top: 18px; }
+  .sec--keep { page-break-inside: avoid; }
   .sec__title {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
@@ -144,12 +172,37 @@
     margin-bottom: 3px;
   }
 
+  /* Recorrido del pasaje — las tres imágenes del sermón */
+  .rec { margin-bottom: 11px; page-break-inside: avoid; }
+  .rec__t {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: 11pt;
+    margin-bottom: 3px;
+  }
+  .rec__t .rn { color: var(--terracota); }
+  .rec__t .vv {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.2pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-left: 6px;
+  }
+  .rec__coda {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--terracota-700);
+  }
+
   /* Aplicaciones */
   .apl { list-style: none; }
   .apl li {
     position: relative;
     padding-left: 34px;
     margin-bottom: 10px;
+    page-break-inside: avoid;
   }
   .apl__num {
     position: absolute; left: 0; top: 1px;
@@ -179,12 +232,13 @@
 
   /* Pie */
   .foot {
-    margin-top: 14px;
+    margin-top: 16px;
     padding-top: 11px;
     border-top: 1px solid var(--rule);
     display: flex;
     align-items: center;
     gap: 12px;
+    page-break-inside: avoid;
   }
   .foot img { width: 30px; height: 30px; }
   .foot__stack { flex: 1; }
@@ -215,81 +269,123 @@
 </head>
 <body>
 
-<div class="page page--first">
-  <div class="band"></div>
+<div class="band"></div>
 
-  <header class="head">
-    <div class="head__eyebrow">Secundum Fidem · Guía de Estudio</div>
-    <h1 class="head__title">La guerra que no puedes ganar</h1>
-    <div class="head__pass">Romanos 7:14–20</div>
-    <div class="head__serie">Serie «¿Por qué hago lo que no quiero hacer?» — Parte III · Ps. Oscar I. Morales</div>
-    <div class="head__rule"></div>
-  </header>
+<header class="head">
+  <div class="head__eyebrow">Secundum Fidem · Guía de Estudio</div>
+  <h1 class="head__title">La Guerra Que No Puedes Ganar</h1>
+  <div class="head__pass">Romanos 7:14–20</div>
+  <div class="head__serie">Serie «¿Por qué hago lo que no quiero hacer?» — Parte III · Ps. Oscar I. Morales</div>
+  <div class="head__rule"></div>
+</header>
 
-  <section class="idea">
-    <div class="idea__lbl">Idea central</div>
-    <p class="idea__text">«La guerra contra el pecado no se gana a fuerza de voluntad: <strong>querer no es poder</strong>»</p>
-    <p class="idea__coda">— y el desenlace: «Solo en Cristo podemos tener la victoria».</p>
-  </section>
-  <p class="idea-nota">Con tres imágenes — <em>esclavo vendido, guerra interior, cadenas que aprietan
-  por dentro</em> — Pablo demuestra que el problema no es la ley ni el entorno, sino el pecado que
-  habita en nosotros. El pasaje termina sin salida a propósito: para que dejemos de preguntar
-  <em>QUÉ</em> nos libertará y preguntemos <em>QUIÉN</em>.</p>
+<section class="prep">
+  <div class="prep__lbl">Antes de empezar</div>
+  <ol>
+    <li><span class="prep__n">1.</span>Este estudio es parte de una <b>serie de
+    predicaciones</b> — no es un tema solitario. Lo que aquí se ve continúa lo estudiado
+    en las partes anteriores de «¿Por qué hago lo que no quiero hacer?».</li>
+    <li><span class="prep__n">2.</span><b>Lean primero el texto: Romanos 7:14-20</b>
+    (si están en grupo, mejor en voz alta). Esta guía acompaña al pasaje; no lo reemplaza.</li>
+  </ol>
+</section>
 
-  <section class="sec">
-    <h2 class="sec__title"><small>Para vivirlo</small>Tres aplicaciones para la vida</h2>
-    <ul class="apl">
-      <li><span class="apl__num">1</span><b>Deja de esconder tu guerra.</b>
-        El v. 15 es la experiencia normal del creyente; la iglesia es hospital de pecadores,
-        no museo de santos. Quien peca no cae <em>de</em> la gracia: cae <em>a</em> la gracia.</li>
-      <li><span class="apl__num">2</span><b>Pelea desde la victoria, no hacia la victoria.</b>
-        Las disciplinas no eran el problema; el orden sí. Usadas para ganarte a Dios son cadenas;
-        entendido el evangelio, son tus armas. Y no es pasividad — John Owen: «mata el pecado
-        o él te matará».</li>
-      <li><span class="apl__num">3</span><b>Cuando caigas, corre <em>a</em> Cristo, no <em>de</em> Cristo.</b>
-        Romanos 8:1 no dice «no habrá condenación si te portas bien»; dice que para los que
-        están en Cristo Jesús, ya no existe.</li>
-    </ul>
-  </section>
+<section class="idea">
+  <div class="idea__lbl">Idea central</div>
+  <p class="idea__text">«La guerra contra el pecado no se gana a fuerza de voluntad: <strong>querer no es poder</strong>»</p>
+  <p class="idea__coda">— y el desenlace: «Solo en Cristo podemos tener la victoria».</p>
+</section>
 
-  <section class="sec">
-    <h2 class="sec__title"><small>Para conversarlo</small>Tres preguntas difíciles — con sus respuestas</h2>
+<section class="sec">
+  <h2 class="sec__title"><small>Para entenderlo</small>El recorrido del pasaje: tres imágenes, un diagnóstico</h2>
 
-    <div class="preg">
-      <p class="preg__q"><span class="qmark">1.</span> «¿De verdad Pablo habla de sí mismo, siendo apóstol?»</p>
-      <p class="preg__a">Sí. El cambio al tiempo presente en el v. 14, y que ama la ley de Dios
-      (v. 22) — algo imposible para el no regenerado <span class="ref">(Ro 8:7)</span> — muestran
-      que describe su propia lucha; es la misma guerra de <span class="ref">Gálatas 5:17</span>.
-      El que está muerto no llora su pecado.</p>
-    </div>
+  <div class="rec">
+    <p class="rec__t"><span class="rn">I.</span> La esclavitud <span class="vv">v. 14</span></p>
+    <p>Pablo se describe <em>«vendido como esclavo del pecado»</em>. Sus lectores en Roma
+    entendían la imagen sin explicación: un esclavo podía odiar sus cadenas, portarse mejor,
+    trabajar más, prometerle al amo que cambiaría… y nada cambiaba su condición, porque un
+    esclavo no se compra a sí mismo. Su libertad no dependía de sus ganas: dependía de quién
+    fuera su amo. El moralismo es exactamente eso — intentar comprar tu propia libertad con
+    más reglas, más resoluciones, más promesas con lágrimas… y las mismas cadenas.</p>
+  </div>
 
-    <div class="preg">
-      <p class="preg__q"><span class="qmark">2.</span> «Eso de “no soy yo, sino el pecado”… ¿no es una excusa?»</p>
-      <p class="preg__a">No. Pablo no se excusa: se lamenta (v. 24). La distinción entre la
-      identidad nueva y el pecado remanente no rebaja la responsabilidad — la agrava
-      <span class="ref">(Ro 6:1-2; 1 Jn 1:8-10)</span>.</p>
-    </div>
+  <div class="rec">
+    <p class="rec__t"><span class="rn">II.</span> La guerra interior <span class="vv">vv. 15–17</span></p>
+    <p>«No entiendo lo que me pasa, pues no hago lo que quiero, sino lo que aborrezco.»
+    La lucha con tu pecado no niega que eres hijo de Dios: la <b>confirma</b>. Antes de
+    Cristo no había guerra — había ocupación total, había paz con el pecado. El conflicto
+    empezó el día que llegó la resistencia: el Espíritu de Dios peleando dentro de ti
+    (Gá 5:17). Tu tristeza por tu pecado demuestra que amas lo que Dios ama. El cristiano
+    es, a la vez, justo y pecador — declarado justo en Cristo, y todavía en guerra con la
+    carne hasta que Él vuelva.</p>
+  </div>
 
-    <div class="preg">
-      <p class="preg__q"><span class="qmark">3.</span> «Si sigo cayendo, ¿puedo perder la salvación?»</p>
-      <p class="preg__a">Tu salvación no depende de que tú te agarres de Él, sino de que Él te
-      agarra a ti <span class="ref">(Ro 8:1; Jn 10:28-29; Fil 1:6)</span>. La señal de alarma no
-      es la caída del que lucha, sino la paz del que ya no lucha <span class="ref">(1 Jn 3:9)</span>.</p>
-    </div>
-  </section>
+  <div class="rec">
+    <p class="rec__t"><span class="rn">III.</span> Las cadenas que aprietan por dentro <span class="vv">vv. 18–20</span></p>
+    <p>«En mi naturaleza pecaminosa no existe nada bueno.» No dice «tengo áreas débiles»:
+    dice <em>nada</em>. Por eso cambiar de ciudad, de amigos o de reglas nunca alcanza —
+    la cadena se va contigo, porque el pecado que la sostiene vive dentro de ti. Y una
+    cadena que aprieta por dentro no se rompe apretando los dientes. La voluntad está
+    presente; el poder no. <b>Querer no es poder.</b></p>
+  </div>
 
-  <footer class="foot">
-    <img src="file:///D:/Proyectos/oscarimorales-web/project/assets/logo-icon.png" alt="">
-    <div class="foot__stack">
-      <div class="foot__name">Oscar I. Morales</div>
-      <div class="foot__tag">Secundum Fidem</div>
-    </div>
-    <div class="foot__url">
-      Lee el escrito de este sermón:<br>
-      <b>oscarimorales.com/querer-no-es-poder</b>
-    </div>
-  </footer>
-</div>
+  <p class="rec__coda">El pasaje termina sin salida a propósito: para que dejemos de
+  preguntar <b>QUÉ</b> nos libertará… y preguntemos <b>QUIÉN</b> (vv. 24-25).</p>
+</section>
+
+<section class="sec sec--keep">
+  <h2 class="sec__title"><small>Para vivirlo</small>Tres aplicaciones para la vida</h2>
+  <ul class="apl">
+    <li><span class="apl__num">1</span><b>Deja de esconder tu guerra.</b>
+      El v. 15 es la experiencia normal del creyente; la iglesia es hospital de pecadores,
+      no museo de santos. Quien peca no cae <em>de</em> la gracia: cae <em>a</em> la gracia.</li>
+    <li><span class="apl__num">2</span><b>Pelea desde la victoria, no hacia la victoria.</b>
+      Las disciplinas no eran el problema; el orden sí. Usadas para ganarte a Dios son cadenas;
+      entendido el evangelio, son tus armas. Y no es pasividad — John Owen: «mata el pecado
+      o él te matará».</li>
+    <li><span class="apl__num">3</span><b>Cuando caigas, corre <em>a</em> Cristo, no <em>de</em> Cristo.</b>
+      Romanos 8:1 no dice «no habrá condenación si te portas bien»; dice que para los que
+      están en Cristo Jesús, ya no existe.</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2 class="sec__title"><small>Para conversarlo</small>Tres preguntas difíciles — con sus respuestas</h2>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">1.</span> «¿De verdad Pablo habla de sí mismo, siendo apóstol?»</p>
+    <p class="preg__a">Sí. El cambio al tiempo presente en el v. 14, y que ama la ley de Dios
+    (v. 22) — algo imposible para el no regenerado <span class="ref">(Ro 8:7)</span> — muestran
+    que describe su propia lucha; es la misma guerra de <span class="ref">Gálatas 5:17</span>.
+    El que está muerto no llora su pecado.</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">2.</span> «Eso de “no soy yo, sino el pecado”… ¿no es una excusa?»</p>
+    <p class="preg__a">No. Pablo no se excusa: se lamenta (v. 24). La distinción entre la
+    identidad nueva y el pecado remanente no rebaja la responsabilidad — la agrava
+    <span class="ref">(Ro 6:1-2; 1 Jn 1:8-10)</span>.</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">3.</span> «Si sigo cayendo, ¿puedo perder la salvación?»</p>
+    <p class="preg__a">Tu salvación no depende de que tú te agarres de Él, sino de que Él te
+    agarra a ti <span class="ref">(Ro 8:1; Jn 10:28-29; Fil 1:6)</span>. La señal de alarma no
+    es la caída del que lucha, sino la paz del que ya no lucha <span class="ref">(1 Jn 3:9)</span>.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <img src="file:///D:/Proyectos/oscarimorales-web/project/assets/logo-icon.png" alt="">
+  <div class="foot__stack">
+    <div class="foot__name">Oscar I. Morales</div>
+    <div class="foot__tag">Secundum Fidem</div>
+  </div>
+  <div class="foot__url">
+    Lee el escrito de este sermón:<br>
+    <b>oscarimorales.com/querer-no-es-poder</b>
+  </div>
+</footer>
 
 </body>
 </html>

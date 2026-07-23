@@ -306,9 +306,9 @@
     body.appendChild(el('span', 'guia__eyebrow', 'Descargable · Para estudiar y compartir'));
     body.appendChild(el('h2', 'guia__title', 'Llévate la Guía de Estudio de este sermón'));
     body.appendChild(el('p', 'guia__text',
-      'Una página con la idea central, tres aplicaciones para la vida y las tres ' +
-      'preguntas difíciles del pasaje — con sus respuestas. Lista para imprimir, ' +
-      'repasar en la semana o conversar en tu grupo de estudio.'));
+      'La idea central, el recorrido del pasaje en sus tres imágenes, aplicaciones ' +
+      'para la vida y las preguntas difíciles — con sus respuestas. Lista para ' +
+      'imprimir, repasar en la semana o conversar en tu grupo de estudio.'));
 
     if (guiaUnlocked()) {
       body.appendChild(buildGuiaDownload(post, ''));
