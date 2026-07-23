@@ -291,6 +291,7 @@
         <ul class="news__list">
           <li>Una lectura escogida, apenas te suscribes.</li>
           <li>Aviso de cada nuevo ensayo o meditaci&oacute;n.</li>
+          <li>Gu&iacute;as de estudio descargables de los sermones.</li>
           <li>Acceso anticipado a la serie de libros que viene.</li>
         </ul>
       </div>
@@ -694,6 +695,9 @@
         '<div class="popcard__media">' +
           '<img src="' + esc(src) + '" alt="' + esc(post.title) + '" ' +
             'referrerpolicy="no-referrer" loading="eager" />' +
+          (post.guia
+            ? '<span class="popcard__guia">Gu&iacute;a de Estudio</span>'
+            : '') +
           '<div class="popcard__date" aria-hidden="true">' +
             '<span class="popcard__date-m">' + MONTHS_SHORT[mo-1].toUpperCase() + '</span>' +
             '<span class="popcard__date-d">' + dy + '</span>' +
@@ -776,6 +780,7 @@
               '<h4 class="archive__entry-title">' + esc(p.title) + '</h4>' +
               '<div class="archive__entry-cats">' +
                 p.cats.map(function(c) { return '<span>' + esc(c) + '</span>'; }).join('') +
+                (p.guia ? '<span class="archive__entry-guia">Gu&iacute;a de Estudio</span>' : '') +
               '</div>' +
             '</div>' +
             '<span class="archive__entry-date">' + dateStr +

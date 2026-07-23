@@ -553,7 +553,7 @@
           '<div class="news__field"><label for="news-email">TU CORREO</label>' +
             '<input id="news-email" type="email" placeholder="tucorreo@ejemplo.com" required /></div>' +
           '<button type="submit" class="news__submit">Recibir avisos →</button>' +
-          '<p class="news__fine">Sin publicidad. Sin compartir tu correo. Sólo nuevos escritos.</p>' +
+          '<p class="news__fine">Sin publicidad. Sin compartir tu correo. Nuevos escritos y guías de estudio.</p>' +
         '</form>' +
       '</div></div>';
     return section;
