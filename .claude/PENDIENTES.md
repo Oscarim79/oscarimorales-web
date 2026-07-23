@@ -9,23 +9,30 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 22-jul-2026)
+## 📍 Dónde nos quedamos (23-jul-2026)
 
-**Día completo — 5 cosas quedaron en producción y verificadas:**
-1. URLs con el título del post (`/que-dice-la-biblia-sobre-la-cremacion`); los
-   enlaces viejos redirigen solos.
-2. Vista previa de WhatsApp/Facebook arreglada (portadas JPG ligeras + og completo).
-3. Skill blog-oims v5 empaquetada y subida por Oscar a claude.ai.
-4. **Post #53 publicado**: "¿Qué Dice la Biblia sobre la Cremación?".
-5. **Estadísticas instaladas**: Cloudflare Web Analytics (Oscar las ve en
-   dash.cloudflare.com → Web Analytics; cuentan desde hoy).
+**Hoy se estrenó la Guía de Estudio descargable** (el pendiente ⭐ del 22-jul),
+con el sermón de Romanos 7 (post #52 "Querer no es poder"):
+- **PDF de marca de 1 página** en `recursos/guias/guia-querer-no-es-poder.pdf`
+  (Playfair/Spectral, terracota, logo). La fuente HTML editable quedó en
+  `recursos/guias/src/` — es la plantilla para las guías de próximos sermones
+  (se imprime a PDF con Chrome headless; make-pdf no soporta marca propia).
+- **Campo `guia:` en el frontmatter** → el build valida que el PDF exista y la
+  página del post muestra la tarjeta "Llévate la Guía de Estudio de este sermón".
+- **A cambio del correo:** la tarjeta pide el correo (Buttondown, con etiqueta
+  `guia-<slug>` para saber de dónde vino el suscriptor) y al enviarlo revela el
+  botón de descarga ahí mismo; el navegador recuerda el desbloqueo (localStorage)
+  y en visitas futuras muestra la descarga directa.
+- Verificado EN VIVO: posts-data con `guia:` y el PDF respondiendo 200.
 
 **Próximos pasos, en orden:**
 1. Oscar: pegar el correo del boletín #53 en Buttondown (quedó redactado en el
    chat del 22-jul, pasos incluidos).
 2. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (Pendiente #3).
-3. Próxima sesión: guía de estudio descargable por sermón (pendiente ⭐ de abajo,
-   diseño ya decidido) — idealmente estrenarla con el próximo sermón.
+3. Para el próximo sermón: generar su guía con la plantilla de
+   `recursos/guias/src/`, guardar el PDF en `recursos/guias/` y poner `guia:`
+   en el frontmatter del post. (Idealmente grabar este flujo en las skills
+   sermon-oims/blog-oims en su próxima edición.)
 4. Al editar la skill: grabar la regla de voz "sin etiquetas reformado/Reforma".
 
 **Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
@@ -78,26 +85,6 @@ Al compartir el post #52 detectó dos cosas nuevas → son los 2 pendientes ⭐
 de abajo. Post publicado y verificado; boletín pendiente de pegar en Buttondown.
 
 ## ⏳ Pendientes
-
-### ⭐ (NUEVO 22-jul) Guía de estudio de cada sermón como descargable en el post
-Decidido con Oscar (22-jul). Cada sermón nuevo trae su Guía de Estudio (la genera
-`sermon-oims`); cuando el post del sermón se publique en el blog, la guía va como
-**PDF descargable** en esa página. Diseño acordado:
-- **Versión "bonita" (integrada):** campo `guia:` en el frontmatter del post +
-  tarjeta de descarga elegante que el build renderiza en la página del post.
-- **A cambio del correo** (idea inicial de Oscar — confirmar el mecanismo exacto
-  al implementar): en un sitio estático sin backend, lo per-post factible es que
-  la tarjeta pida el correo (embed de Buttondown, como los formularios actuales)
-  y al completarse revele el enlace del PDF. OJO: el redirect "after confirming"
-  de Buttondown es global (bienvenida.html), no por post — evaluar si basta el
-  reveal del lado del cliente o si conviene descarga directa al final.
-- **PDF con plantilla de marca** (terracota/tipografía del sitio) vía
-  `gstack-make-pdf`, guardado en `recursos/guias/guia-<slug>.pdf`.
-- **Flujo en las skills:** `sermon-oims` entrega la guía lista; `blog-oims`
-  publica el PDF junto al post SOLO cuando Oscar ya revisó todo el texto
-  (protocolo editorial de siempre: nada se publica sin su confirmación).
-- Recordar: las descargas de PDF no se ven en Cloudflare Analytics (solo páginas).
-- Estrenarlo idealmente con el próximo sermón.
 
 ### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
 Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
@@ -152,6 +139,12 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Guía de Estudio descargable** (23-jul): estrenada con el post #52 (Romanos 7).
+  Campo `guia:` en el frontmatter → tarjeta en el post que pide el correo
+  (Buttondown, tag `guia-<slug>`) y revela el PDF; desbloqueo recordado en el
+  navegador. PDF de marca en `recursos/guias/` (plantilla HTML en
+  `recursos/guias/src/`, se imprime con Chrome headless). El build valida que
+  el PDF exista. Las descargas del PDF NO se ven en Cloudflare Analytics.
 - **Estadísticas de visitas** (22-jul): Cloudflare Web Analytics (gratis, sin
   cookies — no requiere banner) en portada, posts, post.html y bienvenida; NO en
   las redirecciones (evita doble conteo). Oscar ve los datos en
