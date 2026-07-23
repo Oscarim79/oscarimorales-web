@@ -268,6 +268,88 @@
   }
 
   // ------------------------------------------------------------------------
+  // GUÍA DE ESTUDIO — tarjeta de descarga (posts que vienen de un sermón)
+  // El PDF se revela a cambio del correo (Buttondown); si el lector ya lo
+  // desbloqueó antes en este navegador, la descarga aparece directa.
+  // ------------------------------------------------------------------------
+  var GUIA_KEY = 'guia-unlocked';
+
+  function guiaUnlocked() {
+    try { return localStorage.getItem(GUIA_KEY) === '1'; } catch (e) { return false; }
+  }
+
+  function buildGuiaDownload(post, note) {
+    var box = el('div', 'guia__done');
+    var a = el('a', 'guia__btn', 'Descargar la guía (PDF) ↓');
+    a.href = post.guia;
+    a.setAttribute('download', '');
+    box.appendChild(a);
+    if (note) box.appendChild(el('p', 'guia__fine', note));
+    return box;
+  }
+
+  function buildGuiaCard(post) {
+    var section = el('section', 'guia');
+    var wrap = el('div', 'wrap wrap--narrow');
+    var card = el('div', 'guia__card');
+
+    var icon = el('div', 'guia__icon');
+    icon.innerHTML =
+      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>' +
+      '<path d="M14 2v6h6"/><line x1="8" y1="13" x2="16" y2="13"/>' +
+      '<line x1="8" y1="17" x2="13" y2="17"/></svg>';
+    card.appendChild(icon);
+
+    var body = el('div', 'guia__body');
+    body.appendChild(el('span', 'guia__eyebrow', 'Descargable · Para estudiar y compartir'));
+    body.appendChild(el('h2', 'guia__title', 'Llévate la Guía de Estudio de este sermón'));
+    body.appendChild(el('p', 'guia__text',
+      'Una página con la idea central, tres aplicaciones para la vida y las tres ' +
+      'preguntas difíciles del pasaje — con sus respuestas. Lista para imprimir, ' +
+      'repasar en la semana o conversar en tu grupo de estudio.'));
+
+    if (guiaUnlocked()) {
+      body.appendChild(buildGuiaDownload(post, ''));
+    } else {
+      var form = el('form', 'guia__form');
+      var input = el('input');
+      input.type = 'email';
+      input.placeholder = 'tucorreo@ejemplo.com';
+      input.required = true;
+      input.setAttribute('aria-label', 'Tu correo');
+      var btn = el('button', 'guia__submit', 'Quiero la guía →');
+      btn.type = 'submit';
+      form.appendChild(input);
+      form.appendChild(btn);
+      body.appendChild(form);
+      body.appendChild(el('p', 'guia__fine',
+        'Déjame tu correo y la guía se desbloquea aquí mismo. De paso te aviso ' +
+        'cuando publico algo nuevo — sin publicidad, y te vas cuando quieras.'));
+
+      if (typeof window.wireSubscribe === 'function') {
+        window.wireSubscribe(form, {
+          tag: 'guia-' + (post.slug || post.n),
+          onSuccess: function () {
+            try { localStorage.setItem(GUIA_KEY, '1'); } catch (e) {}
+            var fine = body.querySelector('.guia__fine');
+            if (fine) fine.remove();
+            form.replaceWith(buildGuiaDownload(post,
+              '¡Gracias! La descarga quedó desbloqueada. Te envié también un ' +
+              'correo para confirmar la suscripción (revisa el spam si no llega).'));
+          }
+        });
+      }
+    }
+
+    card.appendChild(body);
+    wrap.appendChild(card);
+    section.appendChild(wrap);
+    return section;
+  }
+
+  // ------------------------------------------------------------------------
   // ARTICLE FOOTER (share + tags + signature + prev/next)
   // ------------------------------------------------------------------------
   function buildFooter(post, prev, next) {
@@ -770,6 +852,7 @@
     site.appendChild(buildNav());
     site.appendChild(buildCover(post, readMinutes));
     site.appendChild(buildBody(post, blocks, html, readMinutes));
+    if (post.guia) site.appendChild(buildGuiaCard(post));
     site.appendChild(buildFooter(post, prev, next));
     site.appendChild(buildRelated(relatedPosts(post)));
     site.appendChild(buildNews());

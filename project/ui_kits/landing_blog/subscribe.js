@@ -24,7 +24,10 @@
     form.parentNode.insertBefore(p, form.nextSibling);
   }
 
-  // form: el <form>; opts.success: mensaje tras enviar.
+  // form: el <form>; opts.success: mensaje tras enviar;
+  // opts.tag: etiqueta de Buttondown para saber de dónde vino el suscriptor;
+  // opts.onSuccess: si se da, se llama tras enviar EN VEZ de mostrar el mensaje
+  // (lo usa la tarjeta de la Guía de Estudio para revelar la descarga).
   window.wireSubscribe = function (form, opts) {
     if (!form) return;
     opts = opts || {};
@@ -34,6 +37,11 @@
     if (CONFIGURED) {
       if (email) email.setAttribute('name', 'email');
       if (name) name.setAttribute('name', 'metadata__nombre');
+      if (opts.tag) {
+        var tag = document.createElement('input');
+        tag.type = 'hidden'; tag.name = 'tag'; tag.value = opts.tag;
+        form.appendChild(tag);
+      }
       form.addEventListener('submit', function (e) {
         // Envío en segundo plano (sin popups ni salir de la página); el mensaje
         // de éxito se muestra aquí mismo y la confirmación llega por correo.
@@ -46,8 +54,12 @@
         new FormData(form).forEach(function (v, k) { data.append(k, v); });
         fetch(ACTION, { method: 'POST', body: data, mode: 'no-cors' })
           .then(function () {
-            showMsg(form, opts.success ||
-              '¡Gracias! Te envié un correo para confirmar tu suscripción. Revísalo (y la carpeta de spam).', true);
+            if (typeof opts.onSuccess === 'function') {
+              opts.onSuccess();
+            } else {
+              showMsg(form, opts.success ||
+                '¡Gracias! Te envié un correo para confirmar tu suscripción. Revísalo (y la carpeta de spam).', true);
+            }
             try { form.reset(); } catch (err) {}
           })
           .catch(function () {

@@ -7,6 +7,7 @@ excerpt: "Prometiste, lloraste, volviste a caer… ¿y si esta guerra nunca se g
 quote: "La guerra contra el pecado no se gana a fuerza de voluntad: querer no es poder. La guerra se gana en Cristo."
 featured: false
 cover: "content/covers/052-querer-no-es-poder.jpg"
+guia: "recursos/guias/guia-querer-no-es-poder.pdf"
 ---
 
 Tenía quince años y ya conocía de memoria el camino al altar. Cada domingo, cuando empezaba la música, yo pasaba al frente, lloraba y prometía lo mismo de la semana anterior: «Esta vez sí, Señor. Esta semana sí voy a ganar esta guerra». Y lo decía en serio. Oraba todos los días. Leía mi Biblia. Ayunaba. Dejé la música que me dijeron que dejara. Hice todo lo que se me ocurrió… y el jueves — a veces el martes — ya había vuelto a caer en lo mismo que había llorado el domingo.

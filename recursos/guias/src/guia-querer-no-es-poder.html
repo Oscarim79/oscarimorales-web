@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de Estudio — La guerra que no puedes ganar</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+  /* ---- Marca Oscar I. Morales · Secundum Fidem ---- */
+  :root {
+    --noche:      #0D1B2A;
+    --noche-900:  #060D17;
+    --terracota:  #C47E5A;
+    --terracota-600: #B06E4D;
+    --terracota-700: #9C5F40;
+    --crema-50:   #FBF8F3;
+    --crema-100:  #F5F0E8;
+    --crema-200:  #ECE4D5;
+    --dorado:     #B89A6A;
+    --dorado-700: #8E7549;
+    --niebla-700: #5F6D7C;
+    --rule: rgba(13, 27, 42, 0.14);
+  }
+
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 10.1pt;
+    line-height: 1.5;
+    color: var(--noche);
+    background: #fff;
+  }
+
+  .page {
+    padding: 0.85in 0.9in 0.4in;
+    position: relative;
+  }
+  .page--first { padding-top: 0; }
+
+  /* Banda superior de marca */
+  .band {
+    height: 6px;
+    background: var(--terracota);
+    margin: 0 -0.9in;
+  }
+  .band + .head { margin-top: 0.38in; }
+
+  /* Encabezado */
+  .head { text-align: center; margin-bottom: 20px; }
+  .head__eyebrow {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 14px;
+  }
+  .head__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 25pt;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .head__pass {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 12.5pt;
+    color: var(--terracota-700);
+    margin-bottom: 8px;
+  }
+  .head__serie {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--niebla-700);
+  }
+  .head__rule {
+    width: 56px; height: 1px;
+    background: var(--dorado);
+    margin: 16px auto 0;
+  }
+
+  /* Idea central */
+  .idea {
+    background: var(--crema-100);
+    border-left: 3px solid var(--dorado);
+    padding: 14px 22px 13px;
+    margin-bottom: 6px;
+  }
+  .idea__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.6pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 8px;
+  }
+  .idea__text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 13pt;
+    line-height: 1.42;
+    margin-bottom: 7px;
+  }
+  .idea__text strong { font-style: normal; font-weight: 600; }
+  .idea__coda {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--terracota-700);
+  }
+  .idea-nota { margin: 11px 2px 0; }
+
+  /* Secciones */
+  .sec { margin-top: 19px; }
+  .sec__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 11pt;
+    letter-spacing: -0.01em;
+    color: var(--noche);
+    border-left: 3px solid var(--terracota);
+    padding-left: 12px;
+    margin-bottom: 11px;
+  }
+  .sec__title small {
+    display: block;
+    font-size: 7.2pt;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 3px;
+  }
+
+  /* Aplicaciones */
+  .apl { list-style: none; }
+  .apl li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+  }
+  .apl__num {
+    position: absolute; left: 0; top: 1px;
+    width: 22px; height: 22px;
+    border: 1.4px solid var(--terracota);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: var(--terracota-700);
+  }
+  .apl b { font-weight: 600; }
+
+  /* Preguntas */
+  .preg { margin-bottom: 11px; page-break-inside: avoid; }
+  .preg__q {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 11.5pt;
+    margin-bottom: 5px;
+  }
+  .preg__q .qmark { color: var(--terracota); font-style: normal; }
+  .preg__a { color: var(--noche); }
+  .preg__a .ref { color: var(--dorado-700); }
+
+  /* Pie */
+  .foot {
+    margin-top: 14px;
+    padding-top: 11px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .foot img { width: 30px; height: 30px; }
+  .foot__stack { flex: 1; }
+  .foot__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .foot__tag {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 8.6pt;
+    color: var(--dorado-700);
+  }
+  .foot__url {
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.06em;
+    color: var(--niebla-700);
+    line-height: 1.7;
+  }
+  .foot__url b { color: var(--terracota-700); }
+</style>
+</head>
+<body>
+
+<div class="page page--first">
+  <div class="band"></div>
+
+  <header class="head">
+    <div class="head__eyebrow">Secundum Fidem · Guía de Estudio</div>
+    <h1 class="head__title">La guerra que no puedes ganar</h1>
+    <div class="head__pass">Romanos 7:14–20</div>
+    <div class="head__serie">Serie «¿Por qué hago lo que no quiero hacer?» — Parte III · Ps. Oscar I. Morales</div>
+    <div class="head__rule"></div>
+  </header>
+
+  <section class="idea">
+    <div class="idea__lbl">Idea central</div>
+    <p class="idea__text">«La guerra contra el pecado no se gana a fuerza de voluntad: <strong>querer no es poder</strong>»</p>
+    <p class="idea__coda">— y el desenlace: «Solo en Cristo podemos tener la victoria».</p>
+  </section>
+  <p class="idea-nota">Con tres imágenes — <em>esclavo vendido, guerra interior, cadenas que aprietan
+  por dentro</em> — Pablo demuestra que el problema no es la ley ni el entorno, sino el pecado que
+  habita en nosotros. El pasaje termina sin salida a propósito: para que dejemos de preguntar
+  <em>QUÉ</em> nos libertará y preguntemos <em>QUIÉN</em>.</p>
+
+  <section class="sec">
+    <h2 class="sec__title"><small>Para vivirlo</small>Tres aplicaciones para la vida</h2>
+    <ul class="apl">
+      <li><span class="apl__num">1</span><b>Deja de esconder tu guerra.</b>
+        El v. 15 es la experiencia normal del creyente; la iglesia es hospital de pecadores,
+        no museo de santos. Quien peca no cae <em>de</em> la gracia: cae <em>a</em> la gracia.</li>
+      <li><span class="apl__num">2</span><b>Pelea desde la victoria, no hacia la victoria.</b>
+        Las disciplinas no eran el problema; el orden sí. Usadas para ganarte a Dios son cadenas;
+        entendido el evangelio, son tus armas. Y no es pasividad — John Owen: «mata el pecado
+        o él te matará».</li>
+      <li><span class="apl__num">3</span><b>Cuando caigas, corre <em>a</em> Cristo, no <em>de</em> Cristo.</b>
+        Romanos 8:1 no dice «no habrá condenación si te portas bien»; dice que para los que
+        están en Cristo Jesús, ya no existe.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__title"><small>Para conversarlo</small>Tres preguntas difíciles — con sus respuestas</h2>
+
+    <div class="preg">
+      <p class="preg__q"><span class="qmark">1.</span> «¿De verdad Pablo habla de sí mismo, siendo apóstol?»</p>
+      <p class="preg__a">Sí. El cambio al tiempo presente en el v. 14, y que ama la ley de Dios
+      (v. 22) — algo imposible para el no regenerado <span class="ref">(Ro 8:7)</span> — muestran
+      que describe su propia lucha; es la misma guerra de <span class="ref">Gálatas 5:17</span>.
+      El que está muerto no llora su pecado.</p>
+    </div>
+
+    <div class="preg">
+      <p class="preg__q"><span class="qmark">2.</span> «Eso de “no soy yo, sino el pecado”… ¿no es una excusa?»</p>
+      <p class="preg__a">No. Pablo no se excusa: se lamenta (v. 24). La distinción entre la
+      identidad nueva y el pecado remanente no rebaja la responsabilidad — la agrava
+      <span class="ref">(Ro 6:1-2; 1 Jn 1:8-10)</span>.</p>
+    </div>
+
+    <div class="preg">
+      <p class="preg__q"><span class="qmark">3.</span> «Si sigo cayendo, ¿puedo perder la salvación?»</p>
+      <p class="preg__a">Tu salvación no depende de que tú te agarres de Él, sino de que Él te
+      agarra a ti <span class="ref">(Ro 8:1; Jn 10:28-29; Fil 1:6)</span>. La señal de alarma no
+      es la caída del que lucha, sino la paz del que ya no lucha <span class="ref">(1 Jn 3:9)</span>.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <img src="file:///D:/Proyectos/oscarimorales-web/project/assets/logo-icon.png" alt="">
+    <div class="foot__stack">
+      <div class="foot__name">Oscar I. Morales</div>
+      <div class="foot__tag">Secundum Fidem</div>
+    </div>
+    <div class="foot__url">
+      Lee el escrito de este sermón:<br>
+      <b>oscarimorales.com/querer-no-es-poder</b>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

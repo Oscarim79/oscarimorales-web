@@ -17,6 +17,9 @@
 //   cover:    "auto"   o   "ruta/imagen.jpg"   o   "https://…"
 //             (para compartir en WhatsApp/Facebook usa SIEMPRE .jpg — webp/png
 //              pesado NO se muestran en la vista previa)
+//   guia:     "recursos/guias/guia-<slug>.pdf"          (opcional)
+//             Guía de Estudio del sermón: el post muestra una tarjeta de
+//             descarga que pide el correo (Buttondown) y revela el PDF.
 //
 // URL de cada post: https://oscarimorales.com/<slug>  (el slug sale del nombre
 // del archivo sin el número: 052-querer-no-es-poder.md → /querer-no-es-poder).
@@ -192,10 +195,17 @@ function load() {
       quote: meta.quote || '',
       featured: meta.featured === true,
       cover: (meta.cover && meta.cover !== 'auto') ? String(meta.cover) : '',
+      guia: meta.guia ? String(meta.guia) : '',
       read,
       html,
       file: f,
     });
+    // La guía debe existir en el repo — si no, el enlace del post saldría roto.
+    const last = posts[posts.length - 1];
+    if (last.guia && !fs.existsSync(path.join(ROOT, last.guia))) {
+      console.error(`❌ ${f}: la guía "${last.guia}" no existe en el repo.`);
+      process.exit(1);
+    }
   }
   // detectar n y slugs duplicados
   const seen = new Map();
@@ -220,6 +230,7 @@ function genData(posts) {
                `date: ${JSON.stringify(p.date)}`,
                `cats: ${JSON.stringify(p.cats)}`, `url: ${JSON.stringify(postUrl(p))}`];
     if (p.cover) f.push(`image: ${JSON.stringify(p.cover)}`);
+    if (p.guia) f.push(`guia: ${JSON.stringify(p.guia)}`);
     if (p.read) f.push(`read: ${p.read}`);
     if (p.excerpt) f.push(`excerpt: ${JSON.stringify(p.excerpt)}`);
     if (p.quote) f.push(`quote: ${JSON.stringify(p.quote)}`);
