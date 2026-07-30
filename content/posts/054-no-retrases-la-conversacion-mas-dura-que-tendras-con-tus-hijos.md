@@ -19,7 +19,7 @@ Hoy en la tarde llegó del colegio, dejó la mochila y lo primero que dijo fue: 
 
 ## LO QUE ME DIJO
 
-Me contó que unos amigos del colegio, con engaño, le mostraron imágenes pornográficas. Que se sintió mal. Que sabía que eso no agrada a Dios. Y luego dijo algo que todavía me pesa en el pecho: que eso denigra a las mujeres, como su hermanita y como su mamá.
+Me contó —con su mamá a su lado— que unos amigos del colegio, con engaño, le mostraron imágenes pornográficas. Que se sintió mal. Que sabía que eso no agrada a Dios. Y luego dijo algo que todavía me pesa en el pecho: que eso denigra a las mujeres, como su hermanita y como su mamá.
 
 Once años.
 
@@ -28,6 +28,8 @@ Once años.
 Yo me quedé callado más tiempo del que suelo. Porque en esa frase entendí que la conversación de aquella mañana no había caído al vacío. No lo blindó —nada lo blinda—, pero le dio un **marco**. Cuando la imagen llegó, él ya tenía dónde ponerla. Ya sabía cómo se llamaba lo que estaba viendo y por qué le dolía.
 
 Y sobre todo: ya sabía a quién contárselo.
+
+Y antes de seguir tengo que decir algo, porque sería injusto contar esta historia en singular. La conversación fue conmigo, pero su mamá estaba ahí, presente, como ha estado en todo lo que la hizo posible. Quiero decirlo con todas sus letras: **sin el rol de una madre cristocéntrica, nada de esto es posible.** Mi esposa no aparece en la escena del desayuno, pero está detrás de cada línea de esta historia: es la que ora por nuestros hijos y con ellos, la que siembra la Palabra en lo cotidiano, la que ha hecho de nuestro hogar un lugar donde Cristo no es visita, sino centro. Un hijo corre a confesar donde ha visto la gracia en los dos rostros que lo crían. El primer altar se sostiene entre dos.
 
 ## SI YO NO HABLO, HABLA EL MUNDO
 
