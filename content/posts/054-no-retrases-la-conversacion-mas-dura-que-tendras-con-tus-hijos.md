@@ -6,7 +6,7 @@ cats: ["Familia", "Caminar Cristiano"]
 excerpt: "Llegó del colegio, dejó la mochila y me dijo: Papi, te tengo que contar algo. Si nosotros no hablamos primero, el mundo hablará por nosotros."
 quote: "No podemos blindar a nuestros hijos del mundo quebrantado; podemos ser los primeros en decirles la verdad y los últimos en soltarles la mano."
 featured: false
-cover: "auto"
+cover: "content/covers/054-no-retrases-la-conversacion-mas-dura-que-tendras-con-tus-hijos.jpg"
 ---
 
 Hace unos meses salimos solos, él y yo. Una de esas salidas de papá e hijo donde uno paga un desayuno y en realidad está comprando tiempo sin interrupciones.
