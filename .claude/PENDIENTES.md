@@ -9,7 +9,22 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 23-jul-2026)
+## 📍 Dónde nos quedamos (cierre 10-ago-2026)
+
+**Sesión corta:** Oscar pidió una estructura rápida de sermón para **Filipenses
+1:1-2** (skill sermon-oims, solo el bosquejo — sin proceso completo ni Words).
+Se entregó en el chat: puntos **Siervos / Santos / Saludo**, estribillo *"En
+Cristo eres siervo y santo, y vives de gracia y paz"*, conexión AT (Éx 19:6 y
+la bendición aarónica de Nm 6:24-26). Si Oscar retoma este pasaje, ofrecer el
+proceso completo (hoja de preparación, manuscrito, mapa, guía y post). Parece
+el posible inicio de una **serie en Filipenses** — preguntar el título de la
+serie cuando la confirme.
+
+**Los próximos pasos siguen siendo los del 23-jul** (ver sección siguiente):
+boletín #53 en Buttondown, "Volver a extraer" en el Sharing Debugger, y el
+flujo de guía de estudio para el próximo sermón.
+
+## 📜 Detalle del 23-jul (estreno de la Guía de Estudio)
 
 **Día completo: se estrenó la Guía de Estudio descargable** (el pendiente ⭐ del
 22-jul) con el sermón de Romanos 7 (post #52 "Querer no es poder"), afinada en
