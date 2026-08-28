@@ -1,0 +1,47 @@
+name: fetch-assets
+
+# Puente de descarga para sesiones remotas de Claude Code:
+# los entornos remotos tienen la red restringida y no pueden bajar
+# imágenes generadas (p. ej. portadas desde hf.space). Este workflow
+# las descarga desde el runner de GitHub y las commitea a la rama.
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: 'Una línea por archivo: "URL RUTA_DESTINO"'
+        required: true
+        type: string
+      branch:
+        description: 'Rama donde commitear los archivos'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Descargar archivos
+        env:
+          SPEC: ${{ inputs.spec }}
+        run: |
+          while IFS=' ' read -r url dest; do
+            [ -z "$url" ] && continue
+            mkdir -p "$(dirname "$dest")"
+            curl -fsSL --retry 3 -o "$dest" "$url"
+            ls -la "$dest"
+          done <<< "$SPEC"
+
+      - name: Commitear a la rama
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "fetch-assets: archivos descargados por el puente" || echo "nada que commitear"
+          git push
