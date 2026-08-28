@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de Estudio — Dichosos los Hambrientos</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+  /* ---- Marca Oscar I. Morales · Secundum Fidem ---- */
+  :root {
+    --noche:      #0D1B2A;
+    --noche-900:  #060D17;
+    --terracota:  #C47E5A;
+    --terracota-600: #B06E4D;
+    --terracota-700: #9C5F40;
+    --crema-50:   #FBF8F3;
+    --crema-100:  #F5F0E8;
+    --crema-200:  #ECE4D5;
+    --dorado:     #B89A6A;
+    --dorado-700: #8E7549;
+    --niebla-700: #5F6D7C;
+    --rule: rgba(13, 27, 42, 0.14);
+  }
+
+  @page { size: letter; margin: 0.75in 0.9in 0.6in; }
+  @page :first { margin-top: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 10.1pt;
+    line-height: 1.52;
+    color: var(--noche);
+    background: #fff;
+  }
+
+  /* Banda superior de marca (solo primera página) */
+  .band {
+    height: 6px;
+    background: var(--terracota);
+    margin: 0 -0.9in;
+  }
+  .band + .head { margin-top: 0.38in; }
+
+  /* Encabezado */
+  .head { text-align: center; margin-bottom: 18px; }
+  .head__eyebrow {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 14px;
+  }
+  .head__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 25pt;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .head__pass {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 12.5pt;
+    color: var(--terracota-700);
+    margin-bottom: 8px;
+  }
+  .head__serie {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--niebla-700);
+  }
+  .head__rule {
+    width: 56px; height: 1px;
+    background: var(--dorado);
+    margin: 16px auto 0;
+  }
+
+  /* Antes de empezar */
+  .prep {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--terracota);
+    background: #fff;
+    padding: 12px 18px 11px;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+  }
+  .prep__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.4pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 7px;
+  }
+  .prep ol { list-style: none; }
+  .prep li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 5px;
+  }
+  .prep li:last-child { margin-bottom: 0; }
+  .prep__n {
+    position: absolute; left: 0; top: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--terracota-700);
+  }
+
+  /* El texto a estudiar */
+  .texto {
+    background: var(--crema-50);
+    border: 1px solid var(--rule);
+    padding: 13px 20px 10px;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+  }
+  .texto__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.4pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 7px;
+  }
+  .texto p {
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .texto sup {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 6.4pt;
+    color: var(--terracota-600);
+    margin-right: 1px;
+  }
+  .texto__cred {
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-size: 7.4pt;
+    color: var(--niebla-700);
+    margin-top: 8px;
+  }
+
+  /* Idea central */
+  .idea {
+    background: var(--crema-100);
+    border-left: 3px solid var(--dorado);
+    padding: 14px 22px 13px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+  .idea__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.6pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 8px;
+  }
+  .idea__text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 13pt;
+    line-height: 1.42;
+    margin-bottom: 7px;
+  }
+  .idea__text strong { font-style: normal; font-weight: 600; }
+  .idea__coda {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--terracota-700);
+  }
+
+  /* Secciones */
+  .sec { margin-top: 18px; }
+  .sec--keep { page-break-inside: avoid; }
+  .sec__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 11pt;
+    letter-spacing: -0.01em;
+    color: var(--noche);
+    border-left: 3px solid var(--terracota);
+    padding-left: 12px;
+    margin-bottom: 11px;
+  }
+  .sec__title small {
+    display: block;
+    font-size: 7.2pt;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 3px;
+  }
+
+  /* Recorrido del pasaje — las tres frases del versículo */
+  .rec { margin-bottom: 11px; page-break-inside: avoid; }
+  .rec__t {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: 11pt;
+    margin-bottom: 3px;
+  }
+  .rec__t .rn { color: var(--terracota); }
+  .rec__t .vv {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.2pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-left: 6px;
+  }
+  .rec__coda {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--terracota-700);
+  }
+
+  /* Aplicaciones */
+  .apl { list-style: none; }
+  .apl li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+  .apl__num {
+    position: absolute; left: 0; top: 1px;
+    width: 22px; height: 22px;
+    border: 1.4px solid var(--terracota);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: var(--terracota-700);
+  }
+  .apl b { font-weight: 600; }
+
+  /* Preguntas */
+  .preg { margin-bottom: 11px; page-break-inside: avoid; }
+  .preg__q {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 11.5pt;
+    margin-bottom: 5px;
+  }
+  .preg__q .qmark { color: var(--terracota); font-style: normal; }
+  .preg__a { color: var(--noche); }
+  .preg__a .ref { color: var(--dorado-700); }
+
+  /* Pie */
+  .foot {
+    margin-top: 16px;
+    padding-top: 11px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    page-break-inside: avoid;
+  }
+  .foot img { width: 30px; height: 30px; }
+  .foot__stack { flex: 1; }
+  .foot__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .foot__tag {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 8.6pt;
+    color: var(--dorado-700);
+  }
+  .foot__url {
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.06em;
+    color: var(--niebla-700);
+    line-height: 1.7;
+  }
+  .foot__url b { color: var(--terracota-700); }
+</style>
+</head>
+<body>
+
+<div class="band"></div>
+
+<header class="head">
+  <div class="head__eyebrow">Guía de Estudio</div>
+  <h1 class="head__title">Dichosos los Hambrientos</h1>
+  <div class="head__pass">Mateo 5:6 · NTV</div>
+  <div class="head__serie">Serie «Bienaventuranzas» — Parte IV</div>
+  <div class="head__rule"></div>
+</header>
+
+<section class="prep">
+  <div class="prep__lbl">Antes de empezar</div>
+  <ol>
+    <li><span class="prep__n">1.</span>Este estudio es parte de una <b>serie de
+    predicaciones</b> sobre las bienaventuranzas (Mateo 5:3-10) — no es un tema solitario.
+    Las tres anteriores (pobres en espíritu, los que lloran, los humildes) son la escalera
+    que prepara esta cuarta.</li>
+    <li><span class="prep__n">2.</span><b>Lean primero el texto</b> — si están en grupo,
+    mejor en voz alta. Al predicar este sermón se leyó <b>Mateo 5:1-6</b>, para ver la
+    escalera completa; abajo tienen el versículo de este estudio en la <b>Nueva Traducción
+    Viviente (NTV)</b>, por si no la tienen a la mano. Esta guía acompaña al pasaje;
+    no lo reemplaza.</li>
+  </ol>
+</section>
+
+<section class="texto">
+  <div class="texto__lbl">El texto · Mateo 5:6 (NTV)</div>
+  <p><sup>6</sup>Dios bendice a los que tienen hambre y sed de justicia, porque serán
+  saciados.</p>
+  <p class="texto__cred">Texto bíblico: Nueva Traducción Viviente, © Tyndale House Foundation. Usado con permiso.</p>
+</section>
+
+<section class="idea">
+  <div class="idea__lbl">Idea central</div>
+  <p class="idea__text">«<strong>Dios sacia al que admite su hambre</strong>, no al que presume su llenura»</p>
+  <p class="idea__coda">— y el desenlace: «¿Y cómo lo sacia? Solo en Cristo».</p>
+</section>
+
+<section class="sec">
+  <h2 class="sec__title"><small>Para entenderlo</small>El recorrido del versículo: tres frases, un banquete</h2>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">I.</span> El hambre <span class="vv">v. 6a</span></p>
+    <p>«Bienaventurados» quiere decir <em>florecientes</em> — y Jesús declara florecientes
+    a los necesitados, no a los logrados. Sus oyentes eran campesinos de Galilea: para
+    ellos, hambre y sed no eran antojos sino cuestión de subsistencia. Esa es la paradoja
+    del reino: la puerta no es el logro; es la <b>necesidad reconocida</b>. Nuestra cultura
+    hace exactamente lo contrario — nos preguntan «¿cómo estás?» y contestamos «bien,
+    bendecido» aunque el alma ruja por dentro. Pero el fariseo que presumía su llenura se
+    fue vacío, y el publicano que solo pidió misericordia bajó a su casa justificado
+    (Lc 18:13-14). El hambre no es la enemiga: un muerto no tiene apetito — el hambre es
+    señal de vida.</p>
+  </div>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">II.</span> La justicia <span class="vv">v. 6b</span></p>
+    <p>Jesús no bendice cualquier hambre: le pone nombre al apetito. Justicia es estar
+    <b>bien con Dios</b>, <b>vivir en obediencia</b> como Cristo, y <b>anhelar que el mundo
+    sea como debe ser</b> — la causa de la viuda, del huérfano, del pobre. Esa justicia se
+    RECIBE y se VIVE, en ese orden: no se gana con obras, pero el justificado no puede
+    vivir sin ellas. Y aquí está el diagnóstico que duele: nuestro problema no es la falta
+    de hambre — es el <em>menú</em>. «¿Por qué gastan dinero en lo que no es pan?»
+    (Is 55:2). El paladar se entrena con lo que come (Heb 5:12-14) — también el del alma.</p>
+  </div>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">III.</span> La saciedad <span class="vv">v. 6c</span></p>
+    <p>«Serán saciados» es <b>pasivo divino</b>: Dios mismo se encarga — nadie se sacia a
+    sí mismo. Y el verbo que Jesús usa (<em>chortazō</em>) habla de banquete, no de
+    probadita: es el mismo de la multiplicación de los panes, donde «todos comieron hasta
+    quedar satisfechos» (Mt 14:20; Sal 107:9). La promesa vive en dos tiempos: el YA — el
+    que viene a Cristo no tendrá hambre de salvación nunca más (Jn 6:35) — y el TODAVÍA NO
+    — la tierra nueva donde mora la justicia (2 P 3:13) y la cena de las bodas del Cordero
+    (Ap 19:9).</p>
+  </div>
+
+  <p class="rec__coda">El versículo promete el QUÉ: Dios saciará. El CÓMO tiene nombre
+  propio: el único Justo murió diciendo «Tengo sed» (Jn 19:28) para saciarnos con una
+  justicia que no es nuestra (2 Co 5:21). <b>Solo en Cristo.</b></p>
+</section>
+
+<section class="sec sec--keep">
+  <h2 class="sec__title"><small>Para vivirlo</small>Tres aplicaciones para la vida</h2>
+  <ul class="apl">
+    <li><span class="apl__num">1</span><b>Examina tus apetitos.</b>
+      Identifica tus «refrigeradoras de medianoche» — los lugares a los que corres cuando
+      el alma te ruge (pantallas, compras, aprobación, control, trabajo) — y nómbralos
+      delante de Dios. Deja de pedirle a la comida de este mundo lo que solo Dios puede
+      dar (Is 55:2).</li>
+    <li><span class="apl__num">2</span><b>El paladar se entrena: el apetito se cultiva comiendo.</b>
+      No esperes «sentir» hambre de Dios para buscarlo — el hambre espiritual crece al
+      comer (Heb 5:12-14): un tiempo diario en la Palabra, oración aunque cueste, la
+      reunión de la iglesia, Su mesa. El que come de Cristo quiere más de Cristo.</li>
+    <li><span class="apl__num">3</span><b>Descansa: la saciedad es promesa de Dios, no tu proyecto.</b>
+      «Serán saciados» — Él se encarga. Vive la hermosa paradoja del ya y el todavía no:
+      saciado en Cristo y hambriento de más de Él, esperando el banquete final (2 P 3:13;
+      Ap 19:9). A esta mesa se llega de una sola manera: con las manos vacías (2 Co 5:21).</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2 class="sec__title"><small>Para conversarlo</small>Tres preguntas difíciles — con sus respuestas</h2>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">1.</span> «Si Dios promete saciar, ¿por qué yo, que soy creyente, sigo sintiéndome vacío?»</p>
+    <p class="preg__a">Porque la promesa tiene un YA y un TODAVÍA NO. Ya: perdón real, paz
+    con Dios, Su Espíritu <span class="ref">(Jn 6:35)</span>. Todavía no: la saciedad plena
+    llega en la tierra nueva y en el banquete del Cordero <span class="ref">(2 P 3:13;
+    Ap 19:9)</span>. Mientras tanto, el creyente vive saciado Y hambriento a la vez
+    <span class="ref">(Fil 3:12-14; Sal 42:1-2)</span> — esa hambre de más de Dios no es
+    fracaso: es señal de vida. Distinto es el vacío por descuido: si llevas semanas sin
+    comer (sin Palabra, sin oración, sin iglesia), no te sorprendas de sentirte débil.
+    ¿Tu vacío es anhelo santo… o desnutrición espiritual?</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">2.</span> «¿Esta bienaventuranza no enseña salvación por obras — que debo producir hambre y justicia para que Dios me acepte?»</p>
+    <p class="preg__a">No. Las bienaventuranzas no son requisitos de admisión sino el
+    retrato del carácter que la gracia crea. La escalera empieza en «pobres en espíritu»:
+    los que se declaran en quiebra. Nota que Jesús bendice el HAMBRE de justicia, no la
+    posesión — el dichoso es precisamente el que sabe que NO la tiene. Y la justicia que
+    sacia es regalada, no ganada <span class="ref">(2 Co 5:21; Ef 2:8-9; Ro 4:5)</span>.
+    Eso sí: la justicia que se recibe y la que se vive vienen juntas — en ese orden
+    <span class="ref">(Ef 2:10)</span>.</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">3.</span> «¿Y si no siento esa hambre de Dios? ¿Cómo se consigue un apetito que no tengo?»</p>
+    <p class="preg__a">Gracias por la honestidad — es mejor que fingir llenura. El apetito
+    espiritual no se fabrica a fuerza de voluntad; lo crea el Espíritu en el nuevo
+    nacimiento <span class="ref">(Jn 3:3-8; Ez 36:26-27)</span>. Pero eso no te deja
+    pasivo: (1) pide el hambre — el deseo de desear a Dios ya es obra Suya en ti
+    <span class="ref">(Fil 2:13)</span>; (2) ponte donde se sirve la comida — la fe viene
+    por el oír <span class="ref">(Ro 10:17; Heb 5:14)</span>; y (3) no midas el hambre por
+    emociones: el que se preocupa por no tener hambre de Dios… ya está empezando a tenerla.
+    El muerto no extraña la comida.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <img src="../../../project/assets/logo-icon.png" alt="">
+  <div class="foot__stack">
+    <div class="foot__name">Oscar I. Morales</div>
+    <div class="foot__tag">Secundum Fidem</div>
+  </div>
+  <div class="foot__url">
+    Lee el escrito de este sermón:<br>
+    <b>oscarimorales.com/el-hambre-de-medianoche</b>
+  </div>
+</footer>
+
+</body>
+</html>
