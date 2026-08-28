@@ -6,7 +6,7 @@ cats: ["Meditaciones"]
 excerpt: "Esa hambre de medianoche que no sabe de qué es… sí tiene nombre. Y el paladar del alma, igual que el de la boca, se entrena. Una meditación desde Mateo 5:6."
 quote: "Dios sacia al que admite su hambre, no al que presume su llenura."
 featured: false
-cover: "auto"
+cover: "content/covers/055-el-hambre-de-medianoche.jpg"
 guia: "recursos/guias/guia-el-hambre-de-medianoche.pdf"
 ---
 
