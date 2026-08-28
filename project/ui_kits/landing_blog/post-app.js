@@ -366,18 +366,28 @@
     share.appendChild(el('span', 'afoot__share-lbl', 'Compartir este escrito'));
     var row = el('div', 'afoot__share-row');
 
-    var wa = el('a', 'afoot__share-btn', 'WhatsApp');
-    wa.href = 'https://wa.me/?text=' + shareText + '%20' + shareUrl;
-    var fb = el('a', 'afoot__share-btn', 'Facebook');
+    // Botones, no <a>: los bloqueadores de anuncios (uBlock, Brave, AdGuard…)
+    // ocultan los enlaces con href directo a wa.me / facebook.com/sharer
+    // (listas "anti-widgets sociales"); el destino se arma hasta el clic.
+    function shareBtn(label, buildUrl) {
+      var b = el('button', 'afoot__share-btn', label);
+      b.type = 'button';
+      b.addEventListener('click', function () {
+        window.open(buildUrl(), '_blank', 'noopener');
+      });
+      return b;
+    }
+    row.appendChild(shareBtn('WhatsApp', function () {
+      return 'https://wa.me/?text=' + shareText + '%20' + shareUrl;
+    }));
     // Facebook ignora el texto prellenado (política suya); solo respeta el hashtag.
-    fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl +
-              '&hashtag=%23SecundumFidem&quote=' + shareText;
-    var tw = el('a', 'afoot__share-btn', 'X');
-    tw.href = 'https://x.com/intent/post?text=' + shareText + '&url=' + shareUrl;
-    [wa, fb, tw].forEach(function (a) {
-      a.target = '_blank'; a.rel = 'noopener noreferrer';
-      row.appendChild(a);
-    });
+    row.appendChild(shareBtn('Facebook', function () {
+      return 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl +
+             '&hashtag=%23SecundumFidem&quote=' + shareText;
+    }));
+    row.appendChild(shareBtn('X', function () {
+      return 'https://x.com/intent/post?text=' + shareText + '&url=' + shareUrl;
+    }));
 
     var copyBtn = el('button', 'afoot__share-btn afoot__share-btn--copy', 'Copiar enlace');
     copyBtn.type = 'button';
@@ -706,9 +716,28 @@
     bar.setAttribute('aria-label', 'Compartir la frase seleccionada');
     var copyBtn = el('button', 'selshare__btn selshare__btn--copy', 'Copiar');
     copyBtn.type = 'button';
-    var waBtn = el('a', 'selshare__btn', 'WhatsApp');
-    var xBtn  = el('a', 'selshare__btn', 'X');
-    var fbBtn = el('a', 'selshare__btn', 'Facebook');
+    // Botones, no <a>: igual que en el pie del artículo, los bloqueadores de
+    // anuncios ocultan enlaces directos a wa.me / facebook.com/sharer.
+    function selBtn(label, buildUrl) {
+      var b = el('button', 'selshare__btn', label);
+      b.type = 'button';
+      b.addEventListener('click', function () {
+        if (!current) return;
+        window.open(buildUrl(quoted(current)), '_blank', 'noopener');
+      });
+      return b;
+    }
+    var waBtn = selBtn('WhatsApp', function (t) {
+      return 'https://wa.me/?text=' + encodeURIComponent(t + ' ' + url);
+    });
+    var xBtn = selBtn('X', function (t) {
+      return 'https://x.com/intent/post?text=' + encodeURIComponent(t) +
+             '&url=' + encodeURIComponent(url);
+    });
+    var fbBtn = selBtn('Facebook', function (t) {
+      return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) +
+             '&hashtag=%23SecundumFidem&quote=' + encodeURIComponent(t);
+    });
     [copyBtn, waBtn, xBtn, fbBtn].forEach(function (b) { bar.appendChild(b); });
     document.body.appendChild(bar);
 
@@ -743,15 +772,6 @@
       var text = selText();
       if (!text) { hide(); return; }
       current = text;
-      var t = quoted(text);
-      waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(t + ' ' + url);
-      xBtn.href  = 'https://x.com/intent/post?text=' + encodeURIComponent(t) +
-                   '&url=' + encodeURIComponent(url);
-      fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) +
-                   '&hashtag=%23SecundumFidem&quote=' + encodeURIComponent(t);
-      [waBtn, xBtn, fbBtn].forEach(function (a) {
-        a.target = '_blank'; a.rel = 'noopener noreferrer';
-      });
       if (place(window.getSelection())) bar.classList.add('selshare--on');
     }
 

@@ -36,7 +36,21 @@ Primera publicación completa desde una **sesión remota** (claude.ai/code):
 - Nota: el post #54 («No Retrases la Conversación…», 30-jul) se publicó en una
   sesión que no actualizó esta bitácora — queda registrado aquí.
 
+**Sesión de la tarde (28-ago) — botones de compartir "invisibles":** Oscar
+reportó que en el post #55 solo veía los botones X y Copiar enlace. Los de
+WhatsApp/Facebook existen desde junio; los ocultaba el **bloqueador de
+anuncios de su navegador** (las listas "anti-widgets sociales" esconden los
+`<a>` con href directo a `wa.me` y `facebook.com/sharer`; el de X sobrevivía
+por usar la URL nueva `x.com/intent/post`). Arreglo en `post-app.js`: los
+botones ahora son `<button>` y arman la URL hasta el momento del clic
+(inmune a esos filtros), tanto en el pie del artículo como en la barrita de
+selección. Verificado en Chromium simulando los filtros. **Quedó en la rama
+`claude/share-posts-facebook-whatsapp-ijeejw` — falta merge a main para que
+llegue al sitio.**
+
 **Próximos pasos, en orden:**
+0. Merge a main de la rama `claude/share-posts-facebook-whatsapp-ijeejw`
+   (botones de compartir a prueba de bloqueadores) para que llegue al sitio.
 1. Oscar: pegar el correo del boletín #55 en Buttondown → Emails → New email
    (redactado en el chat del 28-ago; anuncia también la Guía de Estudio).
 2. ⭐ NUEVO — dejar las sesiones remotas 100% automáticas: editar el entorno de
