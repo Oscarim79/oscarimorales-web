@@ -9,7 +9,55 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 23-jul-2026)
+## 📍 Dónde nos quedamos (cierre 28-ago-2026)
+
+**Se publicó el post #55 «El hambre de medianoche»** (Mateo 5:6, serie
+Bienaventuranzas Parte IV) → https://oscarimorales.com/el-hambre-de-medianoche
+Primera publicación completa desde una **sesión remota** (claude.ai/code):
+
+- **El texto salió del "Paquete del predicador"** en Drive (regenerado el 21-ago
+  desde el manuscrito FINAL del sermón): la sección "Propuesta de entrada de
+  blog" ya venía lista; Oscar eligió el título principal. Categoría
+  Meditaciones, n=55, fecha 28-ago.
+- **Guía de Estudio #2** con la plantilla de `recursos/guias/src/` →
+  `recursos/guias/guia-el-hambre-de-medianoche.pdf` + `guia:` en el frontmatter.
+  Truco para sesiones remotas: las fuentes de marca se instalan desde npm
+  (`@fontsource/playfair-display`, `spectral`, `montserrat`) porque Google
+  Fonts está bloqueado; el PDF se imprime con el Chromium preinstalado.
+- **Portada**: Z-Image generó 2 candidatas, pero la red del entorno remoto
+  (política "Trusted") NO deja descargar de hf.space. Solución que funcionó:
+  Oscar subió la elegida ("la refri") a Drive
+  (`OSCARIMORALES - MARCA/POSTS-REDES/Refrigerador.webp`) y se bajó por el
+  conector MCP de Drive (base64) → JPG 55 KB. **Semillas Z-Image guardadas por
+  si hay que regenerar idéntico: refri=577837, mesa=335629.**
+- **Push a main a las 12:00 en punto** vía trigger programado (Oscar pidió
+  publicar a mediodía). El correo del boletín #55 quedó redactado en el chat
+  del 28-ago.
+- Nota: el post #54 («No Retrases la Conversación…», 30-jul) se publicó en una
+  sesión que no actualizó esta bitácora — queda registrado aquí.
+
+**Próximos pasos, en orden:**
+1. Oscar: pegar el correo del boletín #55 en Buttondown → Emails → New email
+   (redactado en el chat del 28-ago; anuncia también la Guía de Estudio).
+2. ⭐ NUEVO — dejar las sesiones remotas 100% automáticas: editar el entorno de
+   nube (claude.ai/code → selector ☁ → Nube → engranaje) y poner Network access
+   **Custom** con dominios `*.hf.space`, `huggingface.co`, `oscarimorales.com`,
+   `fonts.googleapis.com`, `fonts.gstatic.com` + casilla "Also include default
+   list of common package managers". Oscar lo intentó el 28-ago y el campo
+   "Allowed domains" no le aparecía — reintentar con calma (guía:
+   code.claude.com/docs/en/cloud-environments). Mientras tanto, el puente que
+   SÍ funciona: **subir el archivo a Drive** y bajarlo por el conector.
+   (Además `.github/workflows/fetch-assets.yml` ya está en el repo: al llegar a
+   main se puede disparar a mano en GitHub → Actions para bajar URLs a una rama.)
+3. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (pendiente desde jun).
+4. Al editar las skills sermon-oims/blog-oims: grabar el flujo remoto (portada
+   vía Drive, fuentes npm para la guía), el flujo de guías (ya validado 2
+   veces) y la regla de voz "sin etiquetas reformado/Reforma" (pendiente de jul).
+5. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" del sitio que las liste.
+
+**Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
+
+## 📜 Detalle del 23-jul (estreno de la Guía de Estudio)
 
 **Día completo: se estrenó la Guía de Estudio descargable** (el pendiente ⭐ del
 22-jul) con el sermón de Romanos 7 (post #52 "Querer no es poder"), afinada en
@@ -33,19 +81,8 @@
   menciona "guías de estudio descargables de los sermones". Decisión: NO se puso
   anuncio en el home (envejece mal); el anuncio va en el boletín y redes.
 
-**Próximos pasos, en orden:**
-1. Oscar: pegar el correo del boletín #53 en Buttondown (quedó redactado en el
-   chat del 22-jul, pasos incluidos). Al redactar el del próximo sermón,
-   anunciar ahí las guías de estudio (y en Facebook/WhatsApp).
-2. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (Pendiente #3).
-3. Para el próximo sermón: generar su guía con la plantilla de
-   `recursos/guias/src/`, guardar el PDF en `recursos/guias/` y poner `guia:`
-   en el frontmatter del post. (Idealmente grabar este flujo en las skills
-   sermon-oims/blog-oims en su próxima edición.)
-4. Al editar la skill: grabar la regla de voz "sin etiquetas reformado/Reforma".
-5. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" en el sitio que las liste.
-
-**Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
+*(Los próximos pasos de este cierre quedaron completados o absorbidos en el
+cierre del 28-ago, arriba.)*
 
 ## 📜 Detalle del 22-jul (post #53 + URLs con nombre + preview arreglada)
 
@@ -149,6 +186,11 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Post #55 «El hambre de medianoche»** (28-ago): del paquete del predicador
+  (Mateo 5:6), con Guía de Estudio #2 y portada de la refri vía Drive; publicado
+  a las 12:00 desde sesión remota con push programado.
+- **Post #54 «No Retrases la Conversación Más Dura…»** (30-jul): publicado con
+  portada propia (papá e hijo al horizonte).
 - **Guía de Estudio descargable** (23-jul): estrenada con el post #52 (Romanos 7).
   Campo `guia:` en el frontmatter → tarjeta en el post que pide el correo
   (Buttondown, tag `guia-<slug>`) y revela el PDF; desbloqueo recordado en el
