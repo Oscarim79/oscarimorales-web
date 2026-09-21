@@ -6,7 +6,7 @@ cats: ["Caminar Cristiano", "Meditaciones"]
 excerpt: "Te pueden poner apodos, sacarte del chat y dejarte fuera del proyecto. Jesús dice que eso no te saca de nada: te mete en la fila de los profetas. Una meditación desde Mateo 5:10-12."
 quote: "Si el mundo te da la cruz, el Rey te da la corona."
 featured: false
-cover: "auto"
+cover: "content/covers/056-los-apodos-de-los-profetas.jpg"
 guia: "recursos/guias/guia-los-apodos-de-los-profetas.pdf"
 ---
 
