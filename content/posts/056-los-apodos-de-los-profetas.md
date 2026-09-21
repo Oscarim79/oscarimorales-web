@@ -24,6 +24,8 @@ Si somos sinceros, esa es la aritmética que nos duele. Obedecí… y perdí. Di
 
 Por eso me sorprende tanto la manera en que Jesús cierra las bienaventuranzas. Después de bendecir a los pobres en espíritu, a los que lloran, a los limpios de corazón, a los que procuran la paz… el último peldaño es este: “Bienaventurados los que son perseguidos por causa de la justicia, porque de ellos es el reino de los cielos” (Mateo 5:10). Es la única bienaventuranza que Jesús repite dos veces, como un padre que repite lo que sabe que no queremos oír. Es, probablemente, el peldaño más incómodo de la escalera. Y no dice “si acaso los persiguen”. Dice “cuando”.
 
+Cuando prediqué este texto, lo resumí en una sola frase, y quiero que te la lleves desde ahora: **si el mundo te da la cruz, el Rey te da la corona.** La cruz es lo que el mundo da al que se parece a Jesús: la burla, el acoso, la mentira. La corona es lo que el Rey da: un reino que ya es tuyo y una recompensa que nadie te puede tocar.
+
 ## LA JUSTICIA TIENE NOMBRE
 
 Ojo con la palabra. En español, “justicia” nos suena a tribunales, a jueces y a sentencias. Pero Jesús no está hablando de reclamar derechos en una corte. La justicia de esta bienaventuranza es la misma de los siete peldaños anteriores: el carácter que Dios espera de sus hijos, el carácter de Cristo formado en nosotros. No nos persiguen por litigar. Nos persiguen por parecernos a Jesús.
@@ -50,7 +52,7 @@ Pedro — el más valiente de los doce — negó a Jesús tres veces. Y no fue a
 
 Toda, en realidad. Porque la octava bienaventuranza, antes de ser el retrato del cristiano fiel, es la biografía de Jesús. ¿A quién le dijeron todo género de mal, mintiendo? A Él, con testigos falsos incluidos. ¿A quién insultaron? A Él, mientras los que pasaban frente a la cruz meneaban la cabeza. El único trono que el mundo le dio fue una cruz, y la única corona que le puso fue una de espinas. ¿Y el gozo imposible del versículo 12? También lo vivió Él primero: “por el gozo puesto delante de él soportó la cruz, menospreciando la vergüenza” (Hebreos 12:2).
 
-El Insultado no devolvió insultos; el Perseguido no se bajó de la cruz. Y cuando el mundo gritó “crucifícale”, el Padre respondió al tercer día levantándolo de la tumba. La última palabra sobre ti no la tiene el que te calumnia: la tiene el que resucita muertos. El Rey rechazado ganó el reino para los rechazados.
+El Insultado no devolvió insultos; el Perseguido no se bajó de la cruz. Y cuando el mundo gritó “crucifícale”, el Padre respondió al tercer día levantándolo de la tumba. La última palabra sobre ti no la tiene el que te calumnia: la tiene el que resucita muertos. El Rey rechazado ganó el reino para los rechazados. Por eso la frase se sostiene: al Rey el mundo le dio la cruz, y Él, en vez de quedarse con la corona, la reparte entre los suyos. Si el mundo te da la cruz, el Rey te da la corona.
 
 Por eso el evangelio no es accesorio en esta bienaventuranza — es su única puerta de entrada. Nadie salta de gozo bajo la mentira a fuerza de voluntad. Pero unidos al Rey rechazado, aquellos mismos apóstoles salieron azotados del concilio “gozosos de haber sido tenidos por dignos de padecer afrenta por su Nombre” (Hechos 5:41). No fue carácter: fue gracia asombrosa.
 
@@ -58,7 +60,7 @@ Por eso el evangelio no es accesorio en esta bienaventuranza — es su única pu
 
 Setecientos años antes, Dios ya se lo había dicho a su pueblo por Isaías: no teman ni se desalienten por los insultos de la gente, porque esa gente desaparecerá como ropa comida por la polilla — pero mi salvación y mi justicia permanecerán para siempre (Isaías 51:7-8). El apodo que te pusieron no va a durar. El chat del que te dejaron fuera no va a durar. La polilla se lo come todo… menos el reino.
 
-No sé qué te está costando seguir a Jesús en estos días: una sobremesa, un contrato, un grupo de amigos, el cariño de alguien de tu propia mesa. Solo sé lo que Jesús responde a la pregunta de Julio en la madrugada: te sirvió de más de lo que imaginás. Del grupo te pueden sacar. Del chat te pueden sacar. Del reino, no te puede sacar nadie… y en la fila donde te pusieron, vas en muy buena compañía.
+No sé qué te está costando seguir a Jesús en estos días: una sobremesa, un contrato, un grupo de amigos, el cariño de alguien de tu propia mesa. Solo sé lo que Jesús responde a la pregunta de Julio en la madrugada: te sirvió de más de lo que imaginás. Del grupo te pueden sacar. Del chat te pueden sacar. Del reino, no te puede sacar nadie… y en la fila donde te pusieron, vas en muy buena compañía. Repítelo esta semana cada vez que te cueste: si el mundo te da la cruz, el Rey te da la corona.
 
 > “Dios bendice a los que son perseguidos por hacer lo correcto, porque el reino del cielo les pertenece. Dios los bendice a ustedes cuando la gente les hace burla y los persigue y miente acerca de ustedes y dicen toda clase de cosas malas en su contra porque son mis seguidores. ¡Alégrense! ¡Estén contentos, porque les espera una gran recompensa en el cielo! Recuerden que a los antiguos profetas los persiguieron de la misma manera.” — Mateo 5:10-12 (NTV)
 
