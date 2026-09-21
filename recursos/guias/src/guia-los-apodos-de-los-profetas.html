@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de Estudio — Dichosos los Perseguidos</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+  /* ---- Marca Oscar I. Morales · Secundum Fidem ---- */
+  :root {
+    --noche:      #0D1B2A;
+    --noche-900:  #060D17;
+    --terracota:  #C47E5A;
+    --terracota-600: #B06E4D;
+    --terracota-700: #9C5F40;
+    --crema-50:   #FBF8F3;
+    --crema-100:  #F5F0E8;
+    --crema-200:  #ECE4D5;
+    --dorado:     #B89A6A;
+    --dorado-700: #8E7549;
+    --niebla-700: #5F6D7C;
+    --rule: rgba(13, 27, 42, 0.14);
+  }
+
+  @page { size: letter; margin: 0.75in 0.9in 0.6in; }
+  @page :first { margin-top: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 10.1pt;
+    line-height: 1.52;
+    color: var(--noche);
+    background: #fff;
+  }
+
+  /* Banda superior de marca (solo primera página) */
+  .band {
+    height: 6px;
+    background: var(--terracota);
+    margin: 0 -0.9in;
+  }
+  .band + .head { margin-top: 0.38in; }
+
+  /* Encabezado */
+  .head { text-align: center; margin-bottom: 18px; }
+  .head__eyebrow {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 14px;
+  }
+  .head__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 25pt;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .head__pass {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 12.5pt;
+    color: var(--terracota-700);
+    margin-bottom: 8px;
+  }
+  .head__serie {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--niebla-700);
+  }
+  .head__rule {
+    width: 56px; height: 1px;
+    background: var(--dorado);
+    margin: 16px auto 0;
+  }
+
+  /* Antes de empezar */
+  .prep {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--terracota);
+    background: #fff;
+    padding: 12px 18px 11px;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+  }
+  .prep__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.4pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 7px;
+  }
+  .prep ol { list-style: none; }
+  .prep li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 5px;
+  }
+  .prep li:last-child { margin-bottom: 0; }
+  .prep__n {
+    position: absolute; left: 0; top: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--terracota-700);
+  }
+
+  /* El texto a estudiar */
+  .texto {
+    background: var(--crema-50);
+    border: 1px solid var(--rule);
+    padding: 13px 20px 10px;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+  }
+  .texto__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.4pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 7px;
+  }
+  .texto p {
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .texto sup {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 6.4pt;
+    color: var(--terracota-600);
+    margin-right: 1px;
+  }
+  .texto__cred {
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-size: 7.4pt;
+    color: var(--niebla-700);
+    margin-top: 8px;
+  }
+
+  /* Idea central */
+  .idea {
+    background: var(--crema-100);
+    border-left: 3px solid var(--dorado);
+    padding: 14px 22px 13px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+  .idea__lbl {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 7.6pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-bottom: 8px;
+  }
+  .idea__text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 13pt;
+    line-height: 1.42;
+    margin-bottom: 7px;
+  }
+  .idea__text strong { font-style: normal; font-weight: 600; }
+  .idea__coda {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--terracota-700);
+  }
+
+  /* Secciones */
+  .sec { margin-top: 18px; }
+  .sec--keep { page-break-inside: avoid; }
+  .sec__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 11pt;
+    letter-spacing: -0.01em;
+    color: var(--noche);
+    border-left: 3px solid var(--terracota);
+    padding-left: 12px;
+    margin-bottom: 11px;
+  }
+  .sec__title small {
+    display: block;
+    font-size: 7.2pt;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracota-600);
+    margin-bottom: 3px;
+  }
+
+  /* Recorrido del pasaje — las tres frases del versículo */
+  .rec { margin-bottom: 11px; page-break-inside: avoid; }
+  .rec__t {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: 11pt;
+    margin-bottom: 3px;
+  }
+  .rec__t .rn { color: var(--terracota); }
+  .rec__t .vv {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.2pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dorado-700);
+    margin-left: 6px;
+  }
+  .rec__coda {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--terracota-700);
+  }
+
+  /* Aplicaciones */
+  .apl { list-style: none; }
+  .apl li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+  .apl__num {
+    position: absolute; left: 0; top: 1px;
+    width: 22px; height: 22px;
+    border: 1.4px solid var(--terracota);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: var(--terracota-700);
+  }
+  .apl b { font-weight: 600; }
+
+  /* Preguntas */
+  .preg { margin-bottom: 11px; page-break-inside: avoid; }
+  .preg__q {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 11.5pt;
+    margin-bottom: 5px;
+  }
+  .preg__q .qmark { color: var(--terracota); font-style: normal; }
+  .preg__a { color: var(--noche); }
+  .preg__a .ref { color: var(--dorado-700); }
+
+  /* Pie */
+  .foot {
+    margin-top: 16px;
+    padding-top: 11px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    page-break-inside: avoid;
+  }
+  .foot img { width: 30px; height: 30px; }
+  .foot__stack { flex: 1; }
+  .foot__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .foot__tag {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 8.6pt;
+    color: var(--dorado-700);
+  }
+  .foot__url {
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 7.6pt;
+    letter-spacing: 0.06em;
+    color: var(--niebla-700);
+    line-height: 1.7;
+  }
+  .foot__url b { color: var(--terracota-700); }
+</style>
+</head>
+<body>
+
+<div class="band"></div>
+
+<header class="head">
+  <div class="head__eyebrow">Guía de Estudio</div>
+  <h1 class="head__title">Dichosos los Perseguidos</h1>
+  <div class="head__pass">Mateo 5:10-12 · NTV</div>
+  <div class="head__serie">Serie «Bienaventuranzas» — Parte VIII</div>
+  <div class="head__rule"></div>
+</header>
+
+<section class="prep">
+  <div class="prep__lbl">Antes de empezar</div>
+  <ol>
+    <li><span class="prep__n">1.</span>Este estudio cierra una <b>serie de predicaciones</b>
+    sobre las bienaventuranzas (Mateo 5:3-12). Los siete peldaños anteriores describen el
+    carácter del ciudadano del reino; este último describe la <b>reacción del mundo</b> a ese
+    carácter. Por eso conviene tener la escalera completa a la vista.</li>
+    <li><span class="prep__n">2.</span><b>Lean primero el texto</b> — si están en grupo,
+    mejor en voz alta, y si pueden, que lo lean dos personas (una el v.10, otra los vv.11-12).
+    Abajo lo tienen en la <b>Nueva Traducción Viviente (NTV)</b>. Esta guía acompaña al
+    pasaje; no lo reemplaza.</li>
+  </ol>
+</section>
+
+<section class="texto">
+  <div class="texto__lbl">El texto · Mateo 5:10-12 (NTV)</div>
+  <p><sup>10</sup>Dios bendice a los que son perseguidos por hacer lo correcto, porque el
+  reino del cielo les pertenece. <sup>11</sup>Dios los bendice a ustedes cuando la gente
+  les hace burla y los persigue y miente acerca de ustedes y dicen toda clase de cosas
+  malas en su contra porque son mis seguidores. <sup>12</sup>¡Alégrense! ¡Estén contentos,
+  porque les espera una gran recompensa en el cielo! Recuerden que a los antiguos profetas
+  los persiguieron de la misma manera.</p>
+  <p class="texto__cred">Texto bíblico: Nueva Traducción Viviente, © Tyndale House Foundation. Usado con permiso.</p>
+</section>
+
+<section class="idea">
+  <div class="idea__lbl">Idea central</div>
+  <p class="idea__text">«<strong>Si el mundo te da la cruz</strong>, el Rey te da la corona»</p>
+  <p class="idea__coda">— y el fundamento: «El Rey rechazado ganó el reino para los rechazados».</p>
+</section>
+
+<section class="sec">
+  <h2 class="sec__title"><small>Para entenderlo</small>El recorrido del pasaje: tres C</h2>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">I.</span> El costo <span class="vv">vv. 10a, 11a</span></p>
+    <p>Jesús no esconde el precio de seguirle. La persecución no es un peldaño que uno
+    escoge subir: es <b>la sombra que proyectan los otros siete</b>. En el v.11 pasa de
+    «los que» a «ustedes» y lo hace personal, en tres golpes: la burla («les hace burla»),
+    el acoso («los persigue» — la palabra significa <em>dar caza</em>) y la mentira
+    («miente acerca de ustedes»). Y noten lo que NO dice: no dice «si acaso les pasa».
+    Dice «cuando» (Jn 15:18-19; 2 Ti 3:12). Entre nosotros la persecución casi nunca se
+    viste de cárcel: se viste de oficina, de familia y de sobremesa — el chat donde te
+    dejan fuera, el apodo, el contrato que se pierde por no firmar lo torcido. En otras
+    partes del mundo, hoy mismo, sí se viste de cárcel y de sangre. Cuando te cueste, no
+    es que algo salió mal en tu fe: es que algo salió bien.</p>
+  </div>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">II.</span> La causa <span class="vv">vv. 10b, 11b</span></p>
+    <p>Jesús no bendice toda persecución. Hay una causa: «por hacer lo correcto» — la
+    justicia — y en el v.11, «porque son mis seguidores». Esa justicia no es la de los
+    tribunales: es la misma de los siete peldaños anteriores, <b>el carácter de Cristo
+    formado en nosotros</b>. Por eso no es para el que sufre por necio, grosero o
+    entrometido (1 P 4:14-16). Y aquí está el giro más grande del texto: donde el v.10
+    decía «justicia», el v.11 dice «Mí». Jesús puso su nombre exactamente donde estaba
+    la justicia. Lo que el mundo no tolera no es una idea: es el señorío de Jesús sobre
+    tu tiempo, tu trabajo, tu lengua, tu billetera. Cuando Saulo cazaba cristianos, Jesús
+    le preguntó «¿por qué ME persigues?» (Hch 9:4). La pregunta no es si te rechazan,
+    sino <b>por quién</b>.</p>
+  </div>
+
+  <div class="rec">
+    <p class="rec__t"><span class="rn">III.</span> La corona <span class="vv">vv. 10c, 12</span></p>
+    <p>Jesús da la corona en dos tiempos. <b>La promesa</b>: «el reino del cielo les
+    pertenece» — en presente, igual que en el v.3; los peldaños de en medio miran al
+    futuro, el primero y el último dicen «ya». El reino no se gana con currículum: se
+    recibe por herencia, y los hijos no la pierden por tener cicatrices. <b>La orden</b>:
+    Jesús no dice «aguanten» sino «¡alégrense!» (Lc 6:23: «salten de gozo»), y da dos
+    razones. Primera: la recompensa es grande y está donde nadie la toca; setecientos años
+    antes Dios ya lo había dicho: los insultos de la gente desaparecen como ropa comida por
+    la polilla, pero su justicia permanece para siempre (Is 51:7-8). Segunda: «a los
+    antiguos profetas los persiguieron de la misma manera» — Jesús te pone en una fila. A
+    Elías lo llamaron «perturbador de Israel» (1 R 18:17); a Jeremías lo metieron en el
+    cepo (Jer 20:2); a Zacarías lo apedrearon (2 Cr 24:21). El aplauso unánime es la
+    credencial del falso profeta (Lc 6:26).</p>
+  </div>
+
+  <p class="rec__coda">Pero nadie salta de gozo bajo la calumnia a fuerza de voluntad. La
+  octava bienaventuranza es, antes que nada, la biografía de Jesús: calumniado con
+  testigos falsos, apodado «Beelzebú» (Mt 10:25), el último de la fila de los profetas
+  (Mt 23:37). El único trono que el mundo le dio fue una cruz, y la única corona, una de
+  espinas — y «por el gozo puesto delante de Él soportó la cruz» (Heb 12:2). Unidos a Él,
+  los apóstoles salieron azotados y «gozosos» (Hch 5:41). <b>Solo en Cristo.</b></p>
+</section>
+
+<section class="sec sec--keep">
+  <h2 class="sec__title"><small>Para vivirlo</small>Tres aplicaciones para la vida</h2>
+  <ul class="apl">
+    <li><span class="apl__num">1</span><b>Deja de sorprenderte — y deja de esconderte.</b>
+      Jesús dijo «cuando», no «si». Revisa dónde te camuflas — el chat, el almuerzo, la
+      sobremesa — y da un paso visible de fidelidad esta semana, sin estridencia y sin
+      disfraz. No salgas a buscar la persecución: la fidelidad la trae sola (Mt 5:11;
+      2 Ti 3:12).</li>
+    <li><span class="apl__num">2</span><b>Examina la causa de tus roces.</b>
+      Antes de llamarlo persecución, pregúntate: ¿me rechazan por parecerme a Cristo o por
+      necio, grosero o entrometido? Arrepiéntete de lo segundo; no te avergüences jamás de
+      lo primero (1 P 4:15-16). La pregunta no es si te rechazan, sino por quién.</li>
+    <li><span class="apl__num">3</span><b>No solo aguantes: alégrate, y responde como el Insultado.</b>
+      Recuerda las dos razones de Jesús: tu recompensa es grande y estás en la fila de los
+      profetas. Ora esta semana, por nombre, por quien te ha burlado o calumniado; tu modelo
+      es Cristo, que «no respondía cuando lo insultaban» (1 P 2:23). La polilla se come el
+      insulto; la justicia de Dios permanece (Is 51:7-8).</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2 class="sec__title"><small>Para conversarlo</small>Tres preguntas difíciles — con sus respuestas</h2>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">1.</span> «¿Cómo me va a pedir Jesús que me ALEGRE cuando me calumnian? ¿No es eso negar el dolor?»</p>
+    <p class="preg__a">No. El texto no niega el dolor: lo nombra con crudeza (burla, caza,
+    mentira), y Jesús mismo lloró. El gozo del v.12 no es anestesia sino perspectiva: brota
+    de dos realidades que el dolor no anula — la recompensa y la compañía de los profetas.
+    Pablo lo vivía «entristecidos, pero siempre gozosos» <span class="ref">(2 Co 6:10)</span>
+    y Santiago lo manda igual <span class="ref">(Stg 1:2-4)</span>. Y no es fuerza de
+    voluntad: Jesús soportó la cruz «por el gozo puesto delante de Él»
+    <span class="ref">(Heb 12:2)</span>, y los apóstoles salieron azotados y gozosos
+    <span class="ref">(Hch 5:41)</span> porque el Espíritu de gloria reposaba sobre ellos
+    <span class="ref">(1 P 4:14)</span>. Se puede llorar y alegrarse al mismo tiempo; lo
+    que no se puede es amargarse y alegrarse a la vez.</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">2.</span> «¿“Recompensa” no suena a salvación por obras? ¿Dios nos paga por sufrir?»</p>
+    <p class="preg__a">El reino no se gana: el v.10 dice que YA les pertenece a los
+    perseguidos, como en el v.3 ya es de los pobres en espíritu — herencia, no salario. La
+    recompensa es real y grande, pero es de gracia: el Padre premia lo que Él mismo obró en
+    nosotros <span class="ref">(Fil 2:13)</span>, como el dueño que paga el día completo a
+    los de la última hora <span class="ref">(Mt 20:1-16)</span>. Calvino lo resumía así: no
+    se llama salario por mérito nuestro, sino por la generosidad de Dios. El creyente no
+    sufre PARA ganar, sino PORQUE ya ganó — y Dios no olvida lo hecho por su nombre
+    <span class="ref">(Heb 6:10; Ro 8:17-18)</span>.</p>
+  </div>
+
+  <div class="preg">
+    <p class="preg__q"><span class="qmark">3.</span> «Aquí nadie va preso por su fe. ¿Esto aplica a mí o solo a los mártires? ¿Y no fomenta un complejo de víctima?»</p>
+    <p class="preg__a">Aplica: la lista del propio Jesús empieza por burla, hostigamiento y
+    calumnia — persecución verbal y social, no cárcel — y Pablo la hace normal para «todos
+    los que quieren vivir piadosamente en Cristo Jesús» <span class="ref">(2 Ti 3:12)</span>.
+    Al mismo tiempo, hay hermanos que hoy sí enfrentan cárcel y sangre: recuérdalos
+    <span class="ref">(Heb 13:3)</span>; ni minimices tu costo ni lo conviertas en el
+    centro del universo. Y el texto desarma el victimismo con tres filtros: ¿la acusación
+    es falsa o cierta? <span class="ref">(v.11; 1 P 4:15)</span>; ¿la causa es Cristo o mi
+    carácter?; ¿mi reacción busca lástima o glorifica a Dios? <span class="ref">(1 P 4:16;
+    2:23)</span>. La bienaventuranza no forma víctimas profesionales: forma testigos
+    serenos y gozosos que no necesitan defenderse, porque su causa ya está en mejores manos.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <img src="../../../project/assets/logo-icon.png" alt="">
+  <div class="foot__stack">
+    <div class="foot__name">Oscar I. Morales</div>
+    <div class="foot__tag">Secundum Fidem</div>
+  </div>
+  <div class="foot__url">
+    Lee el escrito de este sermón:<br>
+    <b>oscarimorales.com/los-apodos-de-los-profetas</b>
+  </div>
+</footer>
+
+</body>
+</html>
