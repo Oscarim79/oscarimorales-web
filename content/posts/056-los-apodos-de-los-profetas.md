@@ -40,9 +40,11 @@ Julio pensaba que “el santurrón” lo sacaba del grupo. Jesús dice que el ap
 
 ## SI SOY HONESTO
 
-Y aquí tengo que confesar algo. Todo esto suena glorioso un domingo por la mañana… hasta el lunes a las ocho. A mí no me persiguen todos los días, y sospecho que no siempre es porque vivo rodeado de gente buena. A veces es porque me escondo. Bajo la voz. Cambio de tema. Llamo prudencia a mi cobardía. Y las veces que sí me ha tocado perder por Cristo, no salté de gozo: me amargué.
+Y aquí hay que ser honestos. Todo esto suena glorioso un domingo por la mañana… hasta el lunes a las ocho. A muchos de nosotros el mundo no nos persigue todos los días, y no siempre es porque vivamos rodeados de gente buena. A veces es porque nos escondemos. Bajamos la voz. Cambiamos de tema. Llamamos prudencia a nuestra cobardía.
 
-Pedro — el más valiente de los doce — negó a Jesús tres veces. Y no fue ante un tribunal: fue ante una muchacha, junto a una fogata. Si el mejor de ellos se quebró por una burla, ¿qué esperanza tenemos nosotros?
+Lo mío es otra cosa, y tengo que confesarlo. Lo que a mí me cuesta — y donde sé que he pecado — es el versículo 12. Cuando han mentido sobre mí, cuando han levantado falsos de mi persona, no salté de gozo. Ni cerca. Lo que quise fue tenerlos enfrente para confrontarlos… y, si soy honesto del todo, para golpearlos. Jesús dice «regocíjense», y mi corazón dice «que me los pongan enfrente».
+
+Pedro — el más valiente de los doce — negó a Jesús tres veces. Y no fue ante un tribunal: fue ante una muchacha, junto a una fogata. Unos nos escondemos; otros queremos devolver el golpe. Ninguno salta de gozo. Si el mejor de ellos se quebró por una burla, ¿qué esperanza tenemos nosotros?
 
 ## EL QUE SALTÓ DE GOZO HACIA UNA CRUZ
 
