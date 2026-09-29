@@ -6,7 +6,7 @@ cats: ["Familia", "Caminar Cristiano"]
 excerpt: "Sus preguntas ya no son las de antes y su cuerpo está por cambiar. Lo que más nos importa a Regina y a mí no es tener todas las respuestas, sino que Alex siga contándonos todo."
 quote: "Mi hijo ya no es un niño, pero sigue siendo un hijo, y tiene un Salvador que también tuvo doce años."
 featured: false
-cover: "auto"
+cover: "content/covers/057-mi-hijo-ya-no-es-un-nino-pastorear-a-un-preadolescente-sin-perderlo.jpg"
 ---
 
 Hay un ritual que casi todos los papás conocemos: un marco de puerta, un lápiz y una raya nueva cada cierto tiempo. Cada marca dice lo mismo, sin palabras: *ya creció otro poco*.
