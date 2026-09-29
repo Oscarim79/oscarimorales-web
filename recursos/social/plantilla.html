@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+  Plantilla de tarjetas para redes — Secundum Fidem · Oscar I. Morales
+  NO se abre a mano: la rellena scripts/social-cards.mjs (reemplaza los {{MARCADORES}}).
+  Dos formatos en el mismo archivo, según <body class="post"> o <body class="historia">:
+    · post      1080×1080  → publicación cuadrada del feed (Instagram / Facebook)
+    · historia  1080×1920  → Historia de Instagram (arriba y abajo quedan libres a propósito:
+                             Instagram los tapa con sus botones; el sticker de enlace va en el
+                             espacio vacío debajo de «Nuevo en el blog»)
+  Para cambiar el diseño edita SOLO este archivo (colores, tamaños, degradados).
+-->
+<html lang="es"><head><meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+:root{--noche:#0D1B2A;--terra:#C47E5A;--terra-300:#DFAA94;--terra-200:#ECC8B7;--crema:#F5F0E8;--papel:#FBF8F2;--q:{{Q_SIZE}}px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--noche)}
+.tarjeta{position:relative;overflow:hidden;background:var(--noche)}
+.bg{position:absolute;left:0;object-fit:cover;object-position:47% 50%}
+.shade{position:absolute;inset:0}
+header{position:absolute;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:20px}
+.brand img{height:70px;width:auto;display:block}
+.brand b{display:block;font:800 22px/1 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--crema);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.brand i{display:block;margin-top:8px;font:italic 400 26px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.num{font:italic 400 44px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.quote{position:absolute;left:64px;right:64px}
+.q{font:italic 400 var(--q)/1.14 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.4)}
+.q em{color:var(--terra-300)}
+.rule{width:76px;height:4px;background:var(--terra);margin:36px 0 24px}
+.foot{font:700 22px/1 'Montserrat',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--terra-200)}
+
+/* ───────── POST del feed · 1080×1080 ───────── */
+body.post .tarjeta{width:1080px;height:1080px}
+body.post .bg{top:-100px;width:1080px;height:1080px}
+body.post .shade{background:linear-gradient(180deg,rgba(13,27,42,.86) 0%,rgba(13,27,42,.62) 9%,rgba(13,27,42,.14) 24%,rgba(13,27,42,.18) 46%,rgba(13,27,42,.82) 66%,rgba(13,27,42,1) 90.7%,rgba(13,27,42,1) 100%)}
+body.post header{top:54px}
+body.post .quote{bottom:76px}
+
+/* ───────── HISTORIA · 1080×1920 ───────── */
+body.historia .tarjeta{width:1080px;height:1920px}
+body.historia .bg{top:0;width:1080px;height:1240px}
+body.historia .shade{background:linear-gradient(180deg,rgba(13,27,42,.84) 0px,rgba(13,27,42,.5) 200px,rgba(13,27,42,.1) 430px,rgba(13,27,42,.14) 760px,rgba(13,27,42,.84) 1020px,rgba(13,27,42,1) 1190px,rgba(13,27,42,1) 1920px)}
+body.historia header{top:250px}
+body.historia .quote{top:1110px}
+</style></head>
+<body class="{{FORMATO}}"><div class="tarjeta">
+  <img class="bg" src="{{COVER}}">
+  <div class="shade"></div>
+  <header>
+    <div class="brand"><img src="{{ICON}}"><div><b>OSCAR I. MORALES</b><i>Secundum Fidem</i></div></div>
+    <div class="num">{{NUM}}</div>
+  </header>
+  <div class="quote">
+    <p class="q">{{FRASE}}</p>
+    <div class="rule"></div>
+    <div class="foot">Nuevo en el blog · {{SITIO}}</div>
+  </div>
+</div></body></html>

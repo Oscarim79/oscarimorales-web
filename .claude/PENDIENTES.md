@@ -42,6 +42,15 @@ esperanza). ~1,480 palabras; sin Guía de Estudio (no viene de un sermón).
   arregló pidiendo luz sin sombras proyectadas.
 - **Citas** en RVR1960, verificadas palabra por palabra con WebSearch (curl a
   los sitios bíblicos está bloqueado en el entorno remoto).
+- **Pack social listo (a pedido de Oscar tras publicar el #57)**: tarjetas de Instagram con la marca —
+  publicación cuadrada 1080×1080 e Historia vertical 1080×1920 (foto de la portada, frase en Playfair,
+  «Nuevo en el blog · oscarimorales.com»)— más caption y correo del boletín. Diseño APROBADO por Oscar.
+  Todo en `recursos/social/` (`plantilla.html`, `README.md`, y la carpeta del #57 con `post.jpg`,
+  `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md`). Generador:
+  `node scripts/social-cards.mjs <n> --frase "Renglón 1|Renglón 2|*énfasis*"` (instala las tipografías
+  solo; regenera las del #57 pixel a pixel). Skill blog-oims **v6** con las secciones «Pack social» y
+  «Cómo mostrarle archivos a Oscar». Instagram NO permite links clicables en el caption → link en la
+  bio + sticker de enlace en la Historia. Se agregó `.gitignore` (`vista-previa/`, `node_modules/`).
 - **#56 «Los apodos de los profetas»** (Mt 5:10-12, publicado el 21-sep, con
   Guía de Estudio #3 `recursos/guias/guia-los-apodos-de-los-profetas.pdf` y
   portada cruz + corona de espinas) tampoco se había anotado aquí — queda
@@ -50,8 +59,9 @@ esperanza). ~1,480 palabras; sin Guía de Estudio (no viene de un sermón).
 **Próximos pasos, en orden:**
 1. Oscar: abrir el enlace del #57 y comprobar que carga; compartirlo después
    (si se comparte antes de que cargue, Facebook puede cachear un error).
-2. Oscar: pegar el correo del boletín #57 en Buttondown → Emails → New email
-   (redactado en el chat del 29-sep) y confirmar si el del #56 ya se envió.
+2. Oscar: pegar el correo del boletín #57 en Buttondown → Emails → New email (el texto está en
+   `recursos/social/057-…/boletin.md`) y confirmar si el del #56 ya se envió. Y publicar en Instagram:
+   post (`post.jpg` + `caption.txt` + link en la bio) e Historia (`historia.jpg` + sticker de enlace).
 3. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (pendiente desde jun).
 4. Entorno de nube (claude.ai/code → ☁ → Nube → engranaje): Network access
    **Custom** con `oscarimorales.com`, `fonts.googleapis.com`, `fonts.gstatic.com`
@@ -60,21 +70,15 @@ esperanza). ~1,480 palabras; sin Guía de Estudio (no viene de un sermón).
    de la herramienta) → basta `cp` al repo, sin hf.space ni Drive. Sí serviría
    para verificar la publicación en vivo desde la sesión. (Oscar no pudo poner
    "Allowed domains" el 28-ago; reintentar con calma.)
-5. Al editar las skills blog-oims/sermon-oims, grabar lo aprendido:
-   - Portada: copiar el .webp del resultado del MCP (no descargar de hf.space);
-     aclarar la excepción "niño de espaldas"; la IA a veces inventa números
-     deformes en reglas/carteles (avisar a Oscar).
-   - Revisión con Oscar: **NO le abren** los enlaces relativos a archivos ni las
-     capturas larguísimas (≈14,000 px). Lo que funcionó: `SendUserFile` con un
-     **PDF de lectura** (página 110×195 mm, letra 14.4 pt, portada + texto;
-     markdown-it + Chromium/Playwright global + fuentes de npm). Para ver el
-     sitio: servidor local + Playwright + fuentes npm interceptando Google Fonts.
-   - Verificar SIEMPRE las citas bíblicas (WebSearch) y no dar por hecha la
-     salvación del hijo en frases doctrinales.
-   - Regla de voz «sin etiquetas reformado/Reforma» (pendiente de jul) y el
-     flujo de guías.
-   - Si el Bash falla con "auto mode classifier gave no verdict": es transitorio;
-     reintentar UNA vez y seguir con otra cosa.
+5. Skills: **blog-oims ya quedó en v6** (29-sep) con el pack social, el correo del boletín, portadas
+   desde el resultado del MCP, SendUserFile/PDF de lectura, verificación de citas y la regla
+   «sin reformado/Reforma». Falta: (a) si Oscar usa blog-oims desde claude.ai, volver a subirla: el repo
+   guarda solo la carpeta `.claude/skills/blog-oims/`, no el `.skill` empaquetado (se comprime esa
+   carpeta, o pedirle a Claude que la empaquete); OJO: `scripts/social-cards.mjs` y `recursos/social/`
+   viven en el repo, no dentro de la skill; (b) sermon-oims: grabar el flujo remoto de las guías (fuentes
+   npm para el PDF) y el flujo de guías (validado 3 veces); (c) opcional: guardar en `scripts/` el
+   generador del PDF de lectura (hoy solo está la receta en la skill). Si el Bash falla con «auto mode
+   classifier gave no verdict» es transitorio: reintentar UNA vez y seguir con otra cosa.
 6. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" del sitio que las liste.
 7. Ideas que siguen la línea de Alex: «Pantallas, Identidad y un Muchacho de
    Doce» y «Cuando tu Hijo Empieza a Preguntar lo que Tú También Te Preguntas»
@@ -187,18 +191,14 @@ de abajo. Post publicado y verificado; boletín pendiente de pegar en Buttondown
 
 ## ⏳ Pendientes
 
-### 1. (PRIORITARIO) Pack social para redes — "Nivel 1"
-Agregar al skill `blog-oims` que, **al publicar un post**, genere automáticamente:
-- **Tarjetas de cita** (imagen con extracto del post + firma + #SecundumFidem),
-  en **1080×1080** (IG/FB) y **1200×675** (X).
-- **Captions listos para pegar** en IG, FB y X.
-
-Acordado:
-- Antes de automatizar, **mostrarle primero un DISEÑO de la tarjeta** para aprobar.
-- Implementación: generar las imágenes en el build con un rasterizador WASM
-  (tipo `@resvg/resvg-js`), que corre en el GitHub Action sin dependencias nativas.
-- Publicar **automático** a IG/X NO es viable sin backend/API de pago → enfoque
-  **asistido** (el skill genera el pack; Oscar publica, o usa Meta Business Suite/Buffer).
+### 1. ✅ Pack social para redes — "Nivel 1" (HECHO 29-sep-2026)
+Tarjetas de Instagram (publicación 1080×1080 + Historia 1080×1920) y captions, con la marca. Plantilla
+`recursos/social/plantilla.html`, generador `scripts/social-cards.mjs`, guía `recursos/social/README.md`;
+la skill blog-oims v6 lo entrega después de publicar cada post. Ejemplo aprobado: #57.
+Decisiones: Facebook y X NO llevan tarjeta propia (la vista previa sale del `og:image`/`twitter:card` de la
+portada; solo se escribe el texto). El enlace en Instagram va en la bio + sticker de Historia. Se descartó
+el rasterizador WASM en el build: el enfoque es **asistido** (el skill genera el pack; Oscar publica).
+Abierto y opcional: versión 4:5 (1080×1350), carrusel de varias tarjetas, tarjeta para X (1200×675).
 
 ### 2. Correo del boletín en el skill `blog-oims` (acordado con Oscar)
 El RSS-to-email de Buttondown es de pago, así que: **al publicar un post, el
@@ -209,6 +209,8 @@ Buttondown (Emails → New email) y lo envíe. Encaja natural con el Pendiente #
 lista sea pequeña; cuando crezca (~50-100 suscriptores), se activa el plan de
 $9/mes y el RSS-to-email con `feed.xml` — el sitio ya está listo, no hay que
 cambiar nada. Los correos de los posts #52 y #53 ya se le entregaron redactados.
+**HECHO 29-sep:** la skill v6 incluye el correo del boletín dentro del pack social; el del #57 quedó
+guardado en `recursos/social/057-…/boletin.md`.
 
 ### 3. Revisar compartir en Facebook (pedido por Oscar, 12-jun)
 En el Sharing Debugger de Facebook Developers, oscarimorales.com mostraba:
@@ -240,6 +242,7 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Pack social** (29-sep): plantilla + generador + skill v6; tarjetas de Instagram del #57 aprobadas por Oscar.
 - **Post #57 «Mi Hijo Ya No es un Niño…»** (29-sep): del banco de ideas; Lc 2:52
   y las 4 «marcas»; portada FLUX (niño midiéndose); publicado con push a main
   tras la aprobación de Oscar. Detalle arriba.

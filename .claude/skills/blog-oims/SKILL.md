@@ -11,12 +11,16 @@ description: >
   produce un borrador completo en la voz y estructura reales de Oscar, más título,
   categoría y extracto. Tras la confirmación de Oscar, lo publica en el sitio estático:
   crea el archivo en content/posts/, compila y hace push (reemplaza por completo
-  WordPress).
+  WordPress). También prepara el pack social de cada post: tarjetas de Instagram
+  (publicación cuadrada e Historia vertical), textos para Instagram, Facebook y X, y el correo del boletín;
+  úsalo cuando Oscar pida un post, una historia o una tarjeta para redes.
 ---
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v5 — 2026-07-22 · URLs con slug (no renombrar posts publicados) + portadas siempre JPG < 300 KB
+> v6 — 2026-09-29 · Pack social (tarjetas de Instagram: post + historia, y captions) · cómo mostrarle archivos a Oscar ·
+> citas bíblicas verificadas · portadas: copiar la imagen del resultado del MCP
+> (v5 — 2026-07-22 · URLs con slug (no renombrar posts publicados) + portadas siempre JPG < 300 KB)
 
 ## Quién es Oscar (y qué hace este blog)
 
@@ -123,6 +127,10 @@ evento externo. (Como en "El Miedo y Romanos 8" o "El Teléfono y Nuestra Identi
 - Para personas públicas, eventos recientes, declaraciones o testimonios de fe, **verifica
   los hechos**. No inventes citas ni atribuyas frases. Cuando cites a una figura real,
   parafrasea con cuidado y solo afirma lo que la fuente confirma.
+- **Citas bíblicas: verifícalas SIEMPRE palabra por palabra** con WebSearch (p. ej. «Lucas 2:52 Reina
+  Valera 1960 …»; las páginas bíblicas suelen estar bloqueadas para `curl` en sesiones remotas). Cita solo
+  lo que el texto dice, con la versión (RVR1960 o NTV), y no des por hecha la salvación de nadie —ni la de
+  los hijos de Oscar— en frases doctrinales.
 - Trae a la mesa: qué pasó, qué dijo la persona/obra, por qué resonó culturalmente, y
   cuál es la tensión espiritual debajo. Eso alimenta la sección de diagnóstico del corazón.
 - Si la búsqueda no devuelve nada confiable, dilo con honestidad y escribe sobre el tema
@@ -210,6 +218,8 @@ el evangelio no es accesorio · poner la mira · el cuidado del alma · Secundum
 - No regaña desde arriba; acompaña desde al lado.
 - No usa la palabra prohibida (ver restricción de marca).
 - No usa anglicismos innecesarios ni jerga corporativa.
+- No usa las etiquetas «reformado/Reforma» para presentarse ni para presentar sus posturas: cita las
+  confesiones y los catecismos, pero evita el rótulo para no espantar a los lectores.
 
 ---
 
@@ -229,6 +239,9 @@ un destino en el frontmatter al publicar (ver tabla en "Publicación"):
 4. **Extracto para redes (Secundum Fidem)** — 1–2 frases que enganchen, con el espíritu
    del blog. Puede incluir el hashtag **#SecundumFidem** que Oscar usa en sus redes.
    → `excerpt` (para el `.md`, usa la versión sin hashtag; el hashtag es para redes).
+5. **Pack social** (después de publicar, o cuando Oscar lo pida) — tarjetas de Instagram (publicación
+   cuadrada + Historia vertical), los textos para Instagram, Facebook y X, y el correo del boletín.
+   Ver la sección «Pack social».
 
 ---
 
@@ -316,13 +329,17 @@ editando ni formateando imágenes. **La portada NUNCA bloquea la publicación.**
    blog: fotográficas, formato ancho (~2:1), dramáticas pero sobrias, con luz
    significativa. Termina SIEMPRE con `no people, no text` (nada de texto sobre la
    imagen; nada de rostros).
+   *Excepción:* si Oscar pide una persona (p. ej. un niño midiéndose en una regla), que salga siempre de
+   espaldas o en sombra, **sin rostro**; avísale de que la IA suele inventar números o letras deformes en
+   reglas, carteles o libros, y si una sombra se confunde con un brazo, regenera pidiendo luz sin sombras proyectadas.
 3. **Los servidores de HF son inestables**: si una llamada falla (p. ej. "MCP server
    connection lost"), reintenta 1 vez antes de darla por perdida.
-4. Cada tool devuelve una URL temporal. **Descárgalas con `curl` DENTRO del repo** como
-   `content/covers/candidata-1-flux.webp` y `content/covers/candidata-2-zimage.webp`,
-   y muéstraselas a Oscar con enlaces markdown de ruta relativa. (Los enlaces a archivos
-   fuera del proyecto NO le abren; si aun así no puede verlas, indícale la carpeta
-   `content\covers` en el Explorador de Windows.)
+4. Cada tool devuelve una URL temporal **y, en su salida, la ruta de la imagen ya guardada en disco**
+   (`[Image: source: …/tool-results/mcp-HuggingFace-blob-….webp]`). **Cópiala con `cp` DENTRO del repo** como
+   `content/covers/candidata-1-flux.webp` y `content/covers/candidata-2-zimage.webp` (en sesiones remotas
+   `curl` a hf.space está bloqueado; en tu PC, si no hay ruta local, usa `curl` con la URL). Muéstraselas a
+   Oscar con **`SendUserFile`** (ver «Cómo mostrarle archivos a Oscar») y añade la URL de Hugging Face como
+   respaldo (es temporal). Los enlaces markdown de ruta relativa NO le abren.
 5. **Oscar elige: 1, 2 o "auto".** Convierte la elegida a **JPG** (obligatorio:
    WhatsApp/Facebook NO muestran `.webp` en la vista previa, y debe pesar < 300 KB):
    ```bash
@@ -437,6 +454,57 @@ correo vía el feed RSS. (Config de correo: `SUBSCRIPTIONS.md`.)
 
 ---
 
+## Pack social (Instagram · Facebook · X) y correo del boletín
+
+Se entrega **después de publicar** un post (y cuando Oscar lo pida). Diseño aprobado el 2026-09-29 con
+el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
+
+1. **Elige la frase de la tarjeta:** la línea más contundente del post (el gancho o la frase-ancla), de
+   ~12 palabras o menos, partida en 2–3 renglones con `|`; las palabras clave del final entre `*…*`
+   (salen en terracota). No inventes frases: sale del post.
+2. **Genera las tarjetas:** `node scripts/social-cards.mjs <n> --frase "Renglón 1|Renglón 2|*énfasis*"`
+   → `recursos/social/<NNN>-<slug>/post.jpg` (1080×1080, feed de IG/FB) y `historia.jpg` (1080×1920,
+   Historia de IG). El post debe tener portada de imagen (es el fondo). Las tipografías de marca se
+   instalan solas desde npm si faltan. **MIRA las imágenes (Read) antes de enviarlas**: texto dentro del
+   diseño, sin costuras, cabecera legible.
+3. **Escribe el caption de Instagram** y guárdalo como `caption.txt` en esa carpeta: primera línea =
+   gancho (Instagram corta a ~125 caracteres); 3–4 párrafos cortos en la voz de Oscar; cita bíblica
+   exacta; cierre «Léelo completo: link en mi bio.» + invitación a guardar y compartir; 4–5 hashtags con
+   **#SecundumFidem** siempre. Sin emojis salvo que Oscar los pida.
+4. **El enlace:** Instagram NO vuelve clicable un enlace en el texto de una publicación. Explícale las
+   dos vías: link en la bio (Editar perfil → Enlaces; título = título del post) y Historia con sticker
+   «Enlace» en el espacio vacío bajo «Nuevo en el blog». No pegues la URL en el caption.
+5. **Facebook y X** (si los quiere): solo texto, sin tarjeta propia (la vista previa sale de la portada).
+   Facebook: el mismo texto **con la URL completa**. X: ≤ 280 caracteres con el enlace y `#SecundumFidem`,
+   basado en el `excerpt`.
+6. **Correo del boletín** (el RSS-to-email de Buttondown es de pago, así que Oscar lo pega a mano en
+   Buttondown → Emails → New email): **asunto** corto + **vista previa** (una frase) + cuerpo de ~100 palabras
+   en primera persona (el gancho del post, una línea de qué texto bíblico o tema toca, el enlace en negrita
+   `**[Leer «Título»](URL)**`, y un cierre invitando a compartir) firmado «Oscar / Secundum Fidem».
+   Guárdalo como `boletin.md` en la carpeta del post. Cuando el post tenga Guía de Estudio, anúnciala ahí.
+7. **Entrega:** las 2 imágenes con `SendUserFile` (`display: "render"`) y el caption y el correo en bloques
+   de texto (para copiarlos). Recuérdale abrir el enlace del post y comprobar que carga antes de publicar en
+   redes, y activar la etiqueta de IA si Instagram la ofrece (la portada es generada con IA).
+8. **Guarda** la carpeta completa (`post.jpg`, `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md`) en el repo.
+
+---
+
+## Cómo mostrarle archivos a Oscar (lo que sí le abre)
+
+Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el post #57:
+- **No le abren** los enlaces markdown de ruta relativa a archivos, ni las capturas larguísimas
+  (≈14,000 px de alto: en el celular quedan diminutas o no se ven).
+- **Sí le abre `SendUserFile`** (tarjeta de archivo; con `display: "render"` se ve dentro de la app). Úsalo
+  para imágenes, PDFs y cualquier entregable.
+- Para que **lea un texto largo** (un borrador), mándale un **PDF de lectura**: página de ~110×195 mm, letra
+  grande (~14 pt), portada arriba y la etiqueta «Propuesta · sin publicar». Se genera con markdown-it +
+  Chromium/Playwright y las tipografías de marca de npm (o pega el texto en el chat). Para mostrar cómo se
+  verá el sitio: servidor local + Playwright, capturando por pantallas (no una sola imagen enorme).
+- Lo que no deba publicarse (vistas previas, PDFs de lectura) va en `vista-previa/`, que el `.gitignore`
+  del repo ignora, para que `git add -A` no lo suba.
+
+---
+
 ## Notas Finales para el Modelo
 
 - Escribe SIEMPRE en español, en la voz de Oscar (primera persona cuando aplique).
@@ -447,3 +515,4 @@ correo vía el feed RSS. (Config de correo: `SUBSCRIPTIONS.md`.)
   acote — y deja claro que es tu propuesta, ajustable.
 - Recursos de referencia: `references/voz-y-marco.md`, `references/ejemplos-de-posts.md`
   y `references/banco-de-ideas.md` (≈70 títulos por frente/categoría, para Modo A).
+- Pack social: `recursos/social/README.md`, `recursos/social/plantilla.html` y `scripts/social-cards.mjs`.

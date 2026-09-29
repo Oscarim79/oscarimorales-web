@@ -1,0 +1,4 @@
+# Vistas previas y entregables de trabajo (PDF de lectura, capturas, tarjetas de prueba): no se publican
+vista-previa/
+# Dependencias que una sesión pueda instalar en la raíz (p. ej. tipografías de marca): no se suben
+node_modules/
