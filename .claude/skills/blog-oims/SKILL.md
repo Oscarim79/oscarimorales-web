@@ -476,7 +476,8 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
    «Enlace» en el espacio vacío bajo «Nuevo en el blog». No pegues la URL en el caption.
 5. **Facebook y X** (si los quiere): solo texto, sin tarjeta propia (la vista previa sale de la portada).
    Facebook: el mismo texto **con la URL completa**. X: ≤ 280 caracteres con el enlace y `#SecundumFidem`,
-   basado en el `excerpt`.
+   basado en el `excerpt`. X cuenta cada enlace como 23 caracteres: cuéntalo con un script, no a ojo.
+   Guárdalos como `facebook.txt` y `x.txt` en la carpeta del post.
 6. **Correo del boletín** (el RSS-to-email de Buttondown es de pago, así que Oscar lo pega a mano en
    Buttondown → Emails → New email): **asunto** corto + **vista previa** (una frase) + cuerpo de ~100 palabras
    en primera persona (el gancho del post, una línea de qué texto bíblico o tema toca, el enlace en negrita
@@ -485,7 +486,7 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 7. **Entrega:** las 2 imágenes con `SendUserFile` (`display: "render"`) y el caption y el correo en bloques
    de texto (para copiarlos). Recuérdale abrir el enlace del post y comprobar que carga antes de publicar en
    redes, y activar la etiqueta de IA si Instagram la ofrece (la portada es generada con IA).
-8. **Guarda** la carpeta completa (`post.jpg`, `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md`) en el repo.
+8. **Guarda** la carpeta completa (`post.jpg`, `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md` y, si los pidió, `x.txt` / `facebook.txt`) en el repo.
 
 ---
 

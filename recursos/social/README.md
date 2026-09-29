@@ -9,6 +9,7 @@ Oscar el 29-sep-2026 con el post #57.
 | `historia.jpg` | 1080×1920 | **Historia** de Instagram (con espacio libre para el sticker de enlace) |
 | `caption.txt` | — | Texto de la publicación, listo para copiar y pegar |
 | `boletin.md` | — | Correo del boletín (asunto + cuerpo) para pegar en Buttondown → Emails → New email |
+| `x.txt` | — | Post para X (Twitter): texto + enlace, dentro de los 280 caracteres |
 | `frase.txt` | — | La frase grande de la tarjeta (para poder regenerar idéntico) |
 
 Cada post tiene su carpeta: `recursos/social/<NNN>-<slug>/`. La plantilla del diseño es
