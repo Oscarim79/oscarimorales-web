@@ -9,7 +9,80 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 28-ago-2026)
+## 📍 Dónde nos quedamos (cierre 29-sep-2026)
+
+**Se publicó el post #57 «Mi Hijo Ya No es un Niño: Pastorear a un Preadolescente
+Sin Perderlo»** (Familia · Caminar Cristiano, 7 min) →
+https://oscarimorales.com/mi-hijo-ya-no-es-un-nino-pastorear-a-un-preadolescente-sin-perderlo
+Continuación natural del #54: Alex llega a los 12, sus preguntas cambian, su
+atención se mueve, hay que hablarle claro de los cambios del cuerpo y lograr que
+siga contándoles todo. Título tomado del banco de ideas (Modo A, sección III).
+Columna del texto: Lucas 2:41-52 — las 4 «marcas» de Lc 2:52 (sabiduría,
+estatura, gracia con Dios, gracia con los hombres) — y el pivote «El que también
+tuvo doce» (Heb 4:15-16). Enlaza al #54 y NO repite su marco (creación-caída-
+esperanza). ~1,480 palabras; sin Guía de Estudio (no viene de un sermón).
+
+- **Publicado hoy** tras el «Listo, publícalo» de Oscar: push directo a `main`
+  (avance rápido desde la rama de trabajo). La Action "Compilar blog" (#21) y
+  "pages build and deployment" (#70) terminaron en verde y el bot subió
+  `<slug>.html`, `post-57.html`, feed y sitemap. Desde el entorno remoto NO se
+  puede abrir oscarimorales.com (HTTP 000), así que la comprobación en vivo la
+  hace Oscar.
+- **Portada** (FLUX.1 Krea, 1344×768 → JPG 108 KB, semilla **1053508593**): niño
+  de espaldas midiéndose junto a una regla dibujada en el marco de una puerta.
+  Prompt exacto: "Photograph of a twelve-year-old boy seen from behind, standing
+  straight beside a weathered white wooden doorframe with a vertical measuring
+  ruler printed along its edge, elbow bent and one hand resting flat on top of
+  his head to measure his height, soft warm golden light from behind the camera,
+  evenly lit wall with no cast shadows, quiet intimate mood, film photography,
+  35mm lens, shallow depth of field, face not visible". (El commit 67c1954 anota
+  por error el prompt de otra variante; este es el bueno.) Oscar pidió un niño
+  en la portada: excepción a "no people" — siempre de espaldas o en sombra, sin
+  rostro. La 1ª versión tenía una sombra que parecía un segundo brazo; se
+  arregló pidiendo luz sin sombras proyectadas.
+- **Citas** en RVR1960, verificadas palabra por palabra con WebSearch (curl a
+  los sitios bíblicos está bloqueado en el entorno remoto).
+- **#56 «Los apodos de los profetas»** (Mt 5:10-12, publicado el 21-sep, con
+  Guía de Estudio #3 `recursos/guias/guia-los-apodos-de-los-profetas.pdf` y
+  portada cruz + corona de espinas) tampoco se había anotado aquí — queda
+  registrado. No consta si su correo del boletín se envió: preguntar a Oscar.
+
+**Próximos pasos, en orden:**
+1. Oscar: abrir el enlace del #57 y comprobar que carga; compartirlo después
+   (si se comparte antes de que cargue, Facebook puede cachear un error).
+2. Oscar: pegar el correo del boletín #57 en Buttondown → Emails → New email
+   (redactado en el chat del 29-sep) y confirmar si el del #56 ya se envió.
+3. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (pendiente desde jun).
+4. Entorno de nube (claude.ai/code → ☁ → Nube → engranaje): Network access
+   **Custom** con `oscarimorales.com`, `fonts.googleapis.com`, `fonts.gstatic.com`
+   (+ casilla de gestores de paquetes). YA NO hace falta para las portadas: el
+   conector de Hugging Face deja la imagen en disco (la ruta sale en el resultado
+   de la herramienta) → basta `cp` al repo, sin hf.space ni Drive. Sí serviría
+   para verificar la publicación en vivo desde la sesión. (Oscar no pudo poner
+   "Allowed domains" el 28-ago; reintentar con calma.)
+5. Al editar las skills blog-oims/sermon-oims, grabar lo aprendido:
+   - Portada: copiar el .webp del resultado del MCP (no descargar de hf.space);
+     aclarar la excepción "niño de espaldas"; la IA a veces inventa números
+     deformes en reglas/carteles (avisar a Oscar).
+   - Revisión con Oscar: **NO le abren** los enlaces relativos a archivos ni las
+     capturas larguísimas (≈14,000 px). Lo que funcionó: `SendUserFile` con un
+     **PDF de lectura** (página 110×195 mm, letra 14.4 pt, portada + texto;
+     markdown-it + Chromium/Playwright global + fuentes de npm). Para ver el
+     sitio: servidor local + Playwright + fuentes npm interceptando Google Fonts.
+   - Verificar SIEMPRE las citas bíblicas (WebSearch) y no dar por hecha la
+     salvación del hijo en frases doctrinales.
+   - Regla de voz «sin etiquetas reformado/Reforma» (pendiente de jul) y el
+     flujo de guías.
+   - Si el Bash falla con "auto mode classifier gave no verdict": es transitorio;
+     reintentar UNA vez y seguir con otra cosa.
+6. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" del sitio que las liste.
+7. Ideas que siguen la línea de Alex: «Pantallas, Identidad y un Muchacho de
+   Doce» y «Cuando tu Hijo Empieza a Preguntar lo que Tú También Te Preguntas»
+   (banco de ideas, sección III).
+
+**Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
+
+## 📜 Detalle del 28-ago (post #55, primera publicación desde sesión remota)
 
 **Se publicó el post #55 «El hambre de medianoche»** (Mateo 5:6, serie
 Bienaventuranzas Parte IV) → https://oscarimorales.com/el-hambre-de-medianoche
@@ -36,26 +109,7 @@ Primera publicación completa desde una **sesión remota** (claude.ai/code):
 - Nota: el post #54 («No Retrases la Conversación…», 30-jul) se publicó en una
   sesión que no actualizó esta bitácora — queda registrado aquí.
 
-**Próximos pasos, en orden:**
-1. Oscar: pegar el correo del boletín #55 en Buttondown → Emails → New email
-   (redactado en el chat del 28-ago; anuncia también la Guía de Estudio).
-2. ⭐ NUEVO — dejar las sesiones remotas 100% automáticas: editar el entorno de
-   nube (claude.ai/code → selector ☁ → Nube → engranaje) y poner Network access
-   **Custom** con dominios `*.hf.space`, `huggingface.co`, `oscarimorales.com`,
-   `fonts.googleapis.com`, `fonts.gstatic.com` + casilla "Also include default
-   list of common package managers". Oscar lo intentó el 28-ago y el campo
-   "Allowed domains" no le aparecía — reintentar con calma (guía:
-   code.claude.com/docs/en/cloud-environments). Mientras tanto, el puente que
-   SÍ funciona: **subir el archivo a Drive** y bajarlo por el conector.
-   (Además `.github/workflows/fetch-assets.yml` ya está en el repo: al llegar a
-   main se puede disparar a mano en GitHub → Actions para bajar URLs a una rama.)
-3. Oscar: Sharing Debugger de Facebook → "Volver a extraer" (pendiente desde jun).
-4. Al editar las skills sermon-oims/blog-oims: grabar el flujo remoto (portada
-   vía Drive, fuentes npm para la guía), el flujo de guías (ya validado 2
-   veces) y la regla de voz "sin etiquetas reformado/Reforma" (pendiente de jul).
-5. (Futuro, con 3-4 guías acumuladas) Sección "Recursos" del sitio que las liste.
-
-**Cómo retomar:** abrir Claude Code en este repo y decir "¿en qué nos quedamos?".
+*(Los próximos pasos de ese cierre quedaron absorbidos en el cierre del 29-sep, arriba.)*
 
 ## 📜 Detalle del 23-jul (estreno de la Guía de Estudio)
 
@@ -186,6 +240,11 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Post #57 «Mi Hijo Ya No es un Niño…»** (29-sep): del banco de ideas; Lc 2:52
+  y las 4 «marcas»; portada FLUX (niño midiéndose); publicado con push a main
+  tras la aprobación de Oscar. Detalle arriba.
+- **Post #56 «Los apodos de los profetas»** (21-sep): Mt 5:10-12; Guía de
+  Estudio #3; portada cruz + corona de espinas.
 - **Post #55 «El hambre de medianoche»** (28-ago): del paquete del predicador
   (Mateo 5:6), con Guía de Estudio #2 y portada de la refri vía Drive; publicado
   a las 12:00 desde sesión remota con push programado.
