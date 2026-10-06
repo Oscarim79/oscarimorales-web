@@ -45,8 +45,9 @@ NIÑO NOS ES NACIDO / QUÉ CAMBIA.
   @fontsource); sigue pendiente guardarlo en `scripts/` (ver paso 5c).
 - **Pack social del #58 ENTREGADO** en `recursos/social/058-mas-abuelos-que-ninos/`
   (post.jpg, historia.jpg, frase «Son los columpios vacíos|los que cuentan|*la
-  historia.*», caption.txt, facebook.txt, x.txt 248/280, boletin.md). **El envío del
-  correo en Buttondown está pendiente de Oscar** hasta que él confirme.
+  historia.*», caption.txt, facebook.txt, x.txt 248/280, boletin.md). **Correo del
+  boletín #58 ENVIADO por Oscar el 6-oct** (confirmado en el chat). Redes: Oscar las
+  programa para las 6 pm (Meta Business Suite / x.com).
 - **REGLA NUEVA (pedida por Oscar hoy) → skill blog-oims v7:** después de cada
   publicación, el pack social y las instrucciones para enviar el correo del boletín
   se entregan SOLOS, sin que Oscar lo pida (Paso 6 de «Publicación» en el SKILL.md).
@@ -56,9 +57,8 @@ NIÑO NOS ES NACIDO / QUÉ CAMBIA.
 **Próximos pasos, en orden:**
 1. Oscar: abrir https://oscarimorales.com/mas-abuelos-que-ninos y comprobar que
    carga (y la portada) antes de compartir.
-2. Oscar: enviar el correo del #58 en Buttondown (`recursos/social/058-…/boletin.md`),
-   publicar en Instagram (post + Historia con sticker de enlace; link en la bio),
-   Facebook y X. Confirmar aquí cuando esté enviado.
+2. Oscar: publicar en Instagram (post + Historia con sticker de enlace; link en la
+   bio), Facebook y X (programado para las 6 pm del 6-oct). El correo del #58 YA se envió.
 3. Pendiente nuevo #8: automatizar redes (Oscar lo dejó en espera; ver abajo).
 4. Pendientes heredados del 29-sep (abajo): boletín y redes del #57, confirmar si el
    boletín del #56 se envió, Sharing Debugger de Facebook, red del entorno de nube,
