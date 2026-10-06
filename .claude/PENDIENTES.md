@@ -9,6 +9,25 @@
 
 ---
 
+## 🔄 En curso (6-oct-2026): propuesta del post #58 «Más Abuelos que Niños»
+
+Oscar pidió un post (Modo B, Cultura y Actualidad) sobre la noticia de que hay más
+personas de 65+ que niños de 5 o menos en el mundo (Oficina del Censo de EE. UU.,
+informe «An Aging World: 2025», 31-ago-2026: 852 millones de 65+, 10.5 %; cruce entre
+2020 y 2025; 2060 → ~2 mil millones, 1 de cada 5). Ángulo: la idea egoísta de que
+«muchos hijos» es malo vs. los hijos como herencia de Jehová (Gn 1:28; Sal 127:3-5;
+Sal 128:3-4; Mr 10:14-16; Is 9:6; Is 54:1; Pr 17:6 — todas verificadas en RVR1960).
+- **Borrador entregado** (sin publicar): `vista-previa/058-borrador.md` + PDF de
+  lectura `vista-previa/058-propuesta-mas-abuelos-que-ninos.pdf` (carpeta ignorada
+  por git). ~1,550 palabras (~8 min). Generador del PDF: receta de la skill
+  (markdown-it + playwright-core + @fontsource en el scratchpad).
+- **Portadas candidatas** en `content/covers/candidata-1-flux.webp` (olivos en
+  macetas alrededor de la mesa, FLUX semilla 963729750) y `candidata-2-zimage.webp`
+  (columpio vacío al amanecer, Z-Image semilla 31679). Falta que Oscar elija.
+- **Siguiente:** Oscar revisa (entrada, pivote, cierre, longitud) → elige título y
+  portada → «publícalo» → n=58, slug del título, build, push a `main`, pack social.
+  Si se publica, borrar las candidatas y mover este bloque a «Dónde nos quedamos».
+
 ## 📍 Dónde nos quedamos (cierre 29-sep-2026)
 
 **Se publicó el post #57 «Mi Hijo Ya No es un Niño: Pastorear a un Preadolescente
