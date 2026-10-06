@@ -1,8 +1,9 @@
-**Asunto:** Más abuelos que niños
+ASUNTO (va en el campo «Subject»): Más abuelos que niños
 
-**Vista previa:** Por primera vez en la historia hay más abuelos que niños en el mundo. La cifra habla del corazón, no de las matemáticas.
+VISTA PREVIA (opcional; va en el campo «Description» del panel de ajustes, NO en el texto):
+Por primera vez en la historia hay más abuelos que niños en el mundo. La cifra habla del corazón, no de las matemáticas.
 
----
+================ CUERPO DEL CORREO (pega desde aquí hasta el final) ================
 
 Hola,
 

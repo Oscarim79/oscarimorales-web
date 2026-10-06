@@ -453,9 +453,15 @@ pida**, en la misma respuesta de «publicado»:
 2. Entrégale el correo del boletín listo para copiar y, debajo, las **instrucciones para
    enviarlo** (bloque fijo, cópialo tal cual):
    - Abre Buttondown → **Emails** → **New email**.
-   - Pega el **asunto** en «Subject» y el **cuerpo** en el editor (acepta Markdown; el
-     enlace en negrita queda como botón de texto).
-   - Pega la **vista previa** en «Preview text» (si no aparece, está en los ajustes del correo).
+   - Pega el **asunto** en «Subject» y SOLO el **cuerpo** (desde «Hola,») en el editor
+     (acepta Markdown; el enlace en negrita queda como botón de texto). Las líneas de
+     asunto y vista previa NUNCA van dentro del texto: el 6-oct Oscar las pegó en el
+     cuerpo y salían como primer párrafo. Por eso `boletin.md` separa con una línea
+     «CUERPO DEL CORREO (pega desde aquí)».
+   - La **vista previa** (preheader: la línea gris que se ve en la bandeja junto al
+     asunto) es OPCIONAL: va en el campo «Description» del panel de ajustes del correo
+     (botón de tres puntos junto a «Preview»). Si no lo encuentra, que la omita:
+     Buttondown usa las primeras líneas del correo.
    - «Send to: all subscribers» → **Send**. Buttondown manda primero una prueba si pulsas
      «Send test»; úsala si cambiaste el formato.
    - Antes de enviar, abre el enlace del post en el navegador y comprueba que carga.
