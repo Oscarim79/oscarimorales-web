@@ -459,9 +459,11 @@ pida**, en la misma respuesta de «publicado»:
      cuerpo y salían como primer párrafo. Por eso `boletin.md` separa con una línea
      «CUERPO DEL CORREO (pega desde aquí)».
    - La **vista previa** (preheader: la línea gris que se ve en la bandeja junto al
-     asunto) es OPCIONAL: va en el campo «Description» del panel de ajustes del correo
-     (botón de tres puntos junto a «Preview»). Si no lo encuentra, que la omita:
-     Buttondown usa las primeras líneas del correo.
+     asunto) es OPCIONAL. En el editor de Buttondown de Oscar NO está en el menú de
+     tres puntos (ahí solo hay History, Delete, Send draft, Markdown mode, Sync
+     scroll, Help; comprobado el 6-oct). Si aparece un campo «Description» en la
+     pantalla de Publish, va ahí; si no, que la omita: Buttondown usa las primeras
+     líneas del correo. Para una prueba a su propia bandeja: tres puntos → Send draft.
    - «Send to: all subscribers» → **Send**. Buttondown manda primero una prueba si pulsas
      «Send test»; úsala si cambiaste el formato.
    - Antes de enviar, abre el enlace del post en el navegador y comprueba que carga.
