@@ -291,6 +291,23 @@ Oscar notó la lentitud en la primera carga tras la migración.
 Solo si Oscar lo pide. Está en las metaetiquetas `description`/`og`/`twitter` de
 `index.html` (texto no visible, solo para buscadores/al compartir).
 
+### 8. Automatizar la publicación en redes (pedido por Oscar, 6-oct)
+Oscar quiere que, tras publicar un post, las redes salgan solas a una hora (p. ej. 6 pm).
+Hoy NO se puede desde la sesión: no hay conector de Instagram/Facebook/X (ListConnectors
+vacío). Opciones evaluadas:
+- **Hoy, sin montar nada:** Meta Business Suite (gratis, oficial) programa publicación e
+  Historia en Instagram + Facebook a la hora elegida; X se programa desde x.com (web).
+- **Camino A (poco código):** conector **Zapier** (en el directorio de claude.ai; no
+  instalado) → Zap «Instagram for Business: Publish Photo» + Facebook Page + X. Limita:
+  no publica Historias; plan gratis con pocas tareas/mes.
+- **Camino B (propio):** script `scripts/social-publish.mjs` con la Graph API de Meta
+  (requiere cuenta de Instagram Profesional vinculada a una Página de Facebook, app de
+  Meta y token de larga duración guardado como secreto del entorno de nube) + API de X
+  (app de desarrollador, nivel gratis permite publicar). Soporta post + Historia. Se
+  dispararía con un Routine a la hora que Oscar diga. Es un proyecto de 1 sesión más la
+  configuración que solo Oscar puede hacer en Meta/X.
+Decisión pendiente de Oscar: A, B o seguir manual.
+
 ### 7. (Opcional) Títulos fijos de los sermones
 Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
