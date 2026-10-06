@@ -18,7 +18,8 @@ description: >
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v6 — 2026-09-29 · Pack social (tarjetas de Instagram: post + historia, y captions) · cómo mostrarle archivos a Oscar ·
+> v7 — 2026-10-06 · Tras publicar, el pack social + las instrucciones del correo salen SOLOS (sin que Oscar lo pida)
+> (v6 — 2026-09-29 · Pack social (tarjetas de Instagram: post + historia, y captions) · cómo mostrarle archivos a Oscar ·
 > citas bíblicas verificadas · portadas: copiar la imagen del resultado del MCP
 > (v5 — 2026-07-22 · URLs con slug (no renombrar posts publicados) + portadas siempre JPG < 300 KB)
 
@@ -239,7 +240,7 @@ un destino en el frontmatter al publicar (ver tabla en "Publicación"):
 4. **Extracto para redes (Secundum Fidem)** — 1–2 frases que enganchen, con el espíritu
    del blog. Puede incluir el hashtag **#SecundumFidem** que Oscar usa en sus redes.
    → `excerpt` (para el `.md`, usa la versión sin hashtag; el hashtag es para redes).
-5. **Pack social** (después de publicar, o cuando Oscar lo pida) — tarjetas de Instagram (publicación
+5. **Pack social** (AUTOMÁTICO después de publicar; también cuando Oscar lo pida) — tarjetas de Instagram (publicación
    cuadrada + Historia vertical), los textos para Instagram, Facebook y X, y el correo del boletín.
    Ver la sección «Pack social».
 
@@ -441,8 +442,27 @@ como el más reciente (o donde corresponda por fecha).
 - **Solo el archivo:** si solo commiteas el `.md` a `main`, el **GitHub Action** compila
   y commitea los generados solo (útil desde el GitHub móvil).
 
-Tras publicar: **GitHub Pages** sirve el sitio y **Buttondown** envía el artículo por
-correo vía el feed RSS. (Config de correo: `SUBSCRIPTIONS.md`.)
+Tras publicar: **GitHub Pages** sirve el sitio. **Buttondown NO envía nada solo** (el
+RSS-to-email es de pago; config en `SUBSCRIPTIONS.md`): el correo lo manda Oscar a mano.
+
+### Paso 6 — Pack social + correo (AUTOMÁTICO, pedido por Oscar el 2026-10-06)
+En cuanto el push a `main` esté hecho y las Actions en verde, **sin esperar a que Oscar lo
+pida**, en la misma respuesta de «publicado»:
+1. Genera el pack social completo (sección «Pack social» abajo): tarjetas, `caption.txt`,
+   `facebook.txt`, `x.txt` y `boletin.md`, y entrégale las imágenes con `SendUserFile`.
+2. Entrégale el correo del boletín listo para copiar y, debajo, las **instrucciones para
+   enviarlo** (bloque fijo, cópialo tal cual):
+   - Abre Buttondown → **Emails** → **New email**.
+   - Pega el **asunto** en «Subject» y el **cuerpo** en el editor (acepta Markdown; el
+     enlace en negrita queda como botón de texto).
+   - Pega la **vista previa** en «Preview text» (si no aparece, está en los ajustes del correo).
+   - «Send to: all subscribers» → **Send**. Buttondown manda primero una prueba si pulsas
+     «Send test»; úsala si cambiaste el formato.
+   - Antes de enviar, abre el enlace del post en el navegador y comprueba que carga.
+3. Recuérdale el orden: (1) comprobar el enlace, (2) enviar el correo, (3) Instagram (post +
+   Historia con sticker de enlace; link en la bio), (4) Facebook y X.
+4. Anota en la bitácora que el pack del post quedó entregado y que el envío del correo está
+   **pendiente de Oscar** hasta que él confirme.
 
 ### Reglas de publicación
 - **No cambies el `n`** de un post ya publicado: rompe su permalink y el correo enviado.
@@ -456,7 +476,8 @@ correo vía el feed RSS. (Config de correo: `SUBSCRIPTIONS.md`.)
 
 ## Pack social (Instagram · Facebook · X) y correo del boletín
 
-Se entrega **después de publicar** un post (y cuando Oscar lo pida). Diseño aprobado el 2026-09-29 con
+Se entrega **automáticamente después de publicar** un post (Paso 6 de «Publicación»; no hace falta que Oscar
+lo pida) y también cuando él lo pida suelto. Diseño aprobado el 2026-09-29 con
 el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 
 1. **Elige la frase de la tarjeta:** la línea más contundente del post (el gancho o la frase-ancla), de
@@ -474,7 +495,7 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 4. **El enlace:** Instagram NO vuelve clicable un enlace en el texto de una publicación. Explícale las
    dos vías: link en la bio (Editar perfil → Enlaces; título = título del post) y Historia con sticker
    «Enlace» en el espacio vacío bajo «Nuevo en el blog». No pegues la URL en el caption.
-5. **Facebook y X** (si los quiere): solo texto, sin tarjeta propia (la vista previa sale de la portada).
+5. **Facebook y X** (siempre, desde v7): solo texto, sin tarjeta propia (la vista previa sale de la portada).
    Facebook: el mismo texto **con la URL completa**. X: ≤ 280 caracteres con el enlace y `#SecundumFidem`,
    basado en el `excerpt`. X cuenta cada enlace como 23 caracteres: cuéntalo con un script, no a ojo.
    Guárdalos como `facebook.txt` y `x.txt` en la carpeta del post.
@@ -486,7 +507,7 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 7. **Entrega:** las 2 imágenes con `SendUserFile` (`display: "render"`) y el caption y el correo en bloques
    de texto (para copiarlos). Recuérdale abrir el enlace del post y comprobar que carga antes de publicar en
    redes, y activar la etiqueta de IA si Instagram la ofrece (la portada es generada con IA).
-8. **Guarda** la carpeta completa (`post.jpg`, `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md` y, si los pidió, `x.txt` / `facebook.txt`) en el repo.
+8. **Guarda** la carpeta completa (`post.jpg`, `historia.jpg`, `frase.txt`, `caption.txt`, `boletin.md`, `x.txt` y `facebook.txt`) en el repo.
 
 ---
 
