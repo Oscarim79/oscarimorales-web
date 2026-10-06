@@ -59,7 +59,8 @@ NIÑO NOS ES NACIDO / QUÉ CAMBIA.
 2. Oscar: enviar el correo del #58 en Buttondown (`recursos/social/058-…/boletin.md`),
    publicar en Instagram (post + Historia con sticker de enlace; link en la bio),
    Facebook y X. Confirmar aquí cuando esté enviado.
-3. Pendientes heredados del 29-sep (abajo): boletín y redes del #57, confirmar si el
+3. Pendiente nuevo #8: automatizar redes (Oscar lo dejó en espera; ver abajo).
+4. Pendientes heredados del 29-sep (abajo): boletín y redes del #57, confirmar si el
    boletín del #56 se envió, Sharing Debugger de Facebook, red del entorno de nube,
    empaquetar la skill, guardar el generador del PDF de lectura en `scripts/`.
 
@@ -306,7 +307,8 @@ vacío). Opciones evaluadas:
   (app de desarrollador, nivel gratis permite publicar). Soporta post + Historia. Se
   dispararía con un Routine a la hora que Oscar diga. Es un proyecto de 1 sesión más la
   configuración que solo Oscar puede hacer en Meta/X.
-Decisión pendiente de Oscar: A, B o seguir manual.
+Oscar (6-oct): «dejémoslo como tema pendiente». Mientras tanto, programar a mano en
+Meta Business Suite y x.com. Retomar cuando él lo pida (recomendación: camino B).
 
 ### 7. (Opcional) Títulos fijos de los sermones
 Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
