@@ -9,26 +9,54 @@
 
 ---
 
-## 🔄 En curso (6-oct-2026): propuesta del post #58 «Más Abuelos que Niños»
+## 📍 Dónde nos quedamos (cierre 6-oct-2026)
 
-Oscar pidió un post (Modo B, Cultura y Actualidad) sobre la noticia de que hay más
-personas de 65+ que niños de 5 o menos en el mundo (Oficina del Censo de EE. UU.,
-informe «An Aging World: 2025», 31-ago-2026: 852 millones de 65+, 10.5 %; cruce entre
-2020 y 2025; 2060 → ~2 mil millones, 1 de cada 5). Ángulo: la idea egoísta de que
-«muchos hijos» es malo vs. los hijos como herencia de Jehová (Gn 1:28; Sal 127:3-5;
-Sal 128:3-4; Mr 10:14-16; Is 9:6; Is 54:1; Pr 17:6 — todas verificadas en RVR1960).
-- **Borrador entregado** (sin publicar): `vista-previa/058-borrador.md` + PDF de
-  lectura `vista-previa/058-propuesta-mas-abuelos-que-ninos.pdf` (carpeta ignorada
-  por git). ~1,550 palabras (~8 min). Generador del PDF: receta de la skill
-  (markdown-it + playwright-core + @fontsource en el scratchpad).
-- **Portadas candidatas** en `content/covers/candidata-1-flux.webp` (olivos en
-  macetas alrededor de la mesa, FLUX semilla 963729750) y `candidata-2-zimage.webp`
-  (columpio vacío al amanecer, Z-Image semilla 31679). Falta que Oscar elija.
-- **Siguiente:** Oscar revisa (entrada, pivote, cierre, longitud) → elige título y
-  portada → «publícalo» → n=58, slug del título, build, push a `main`, pack social.
-  Si se publica, borrar las candidatas y mover este bloque a «Dónde nos quedamos».
+**Se publicó el post #58 «Más Abuelos que Niños»** (Cultura y Actualidad · Familia,
+~1,900 palabras, ~9 min) → https://oscarimorales.com/mas-abuelos-que-ninos
+Modo B: reacción a la noticia de la Oficina del Censo de EE. UU. (informe «An Aging
+World: 2025», 31-ago-2026): por primera vez hay más personas de 65+ (852 millones,
+10.5 %) que niños de 5 o menos; cruce entre 2020 y 2025; 2060 → 1 de cada 5.
+Columna: Gn 1:28 · Sal 127:3-5 · Sal 128:3-4 · Mr 10:14-16 · Is 9:6 · Is 54:1 ·
+Pr 17:6 (todas verificadas palabra por palabra en RVR1960). Encabezados: NO ES
+CULPA DE LOS ABUELOS / LA ALJABA Y LA MESA / LA ALJABA QUE QUISIMOS LLENAR / UN
+NIÑO NOS ES NACIDO / QUÉ CAMBIA.
+- **Contexto personal que Oscar dio y quedó en el post** (no inventar en futuros
+  posts, citar tal cual): Regina y él hubieran querido **al menos dos hijos más**;
+  nunca fue tema de dinero; se conocieron ya grandes y él le propuso matrimonio
+  rápido; **seis años intentando** antes de Alex; **una pérdida después de Alex**
+  (un hijo al que no llegaron a conocer, les duele hasta hoy); luego Sofi; con la
+  enfermedad ya no pueden tener más. El dolor NO es por cuándo se casó. Oscar
+  también quiso nombrar la culpa de papás y congregaciones que, por «sabiduría»,
+  enseñan a cuidarse y esperar: «nunca vamos a estar listos».
+- **Publicado hoy** tras el «Listo, publícalo» de Oscar: push directo a `main`
+  (avance rápido desde la rama `claude/charming-bardeen-x2c221`). Desde el entorno
+  remoto NO se puede abrir oscarimorales.com, así que la comprobación en vivo la
+  hace Oscar.
+- **Portada** (Z-Image Turbo 1536×864, semilla **31679** → JPG 197 KB): columpio
+  vacío de madera colgado de un árbol en un parque al amanecer, con neblina. Prompt:
+  "Cinematic photograph of a single empty wooden swing hanging by old ropes from a
+  large tree in a deserted park at golden dawn, low morning mist over the grass,
+  warm sunlight breaking through branches, long soft shadows, melancholic yet
+  hopeful atmosphere, wide composition, dramatic but sober lighting, film grain,
+  35mm lens, no people, no text". La descartada (FLUX, semilla 963729750): olivos
+  en macetas alrededor de una mesa (Sal 128:3).
+- **PDF de lectura** para revisar desde el celular: funcionó bien (4 versiones).
+  Generador en el scratchpad de la sesión (markdown-it + playwright-core +
+  @fontsource); sigue pendiente guardarlo en `scripts/` (ver paso 5c).
+- **Pack social del #58: PENDIENTE** (tarjetas, caption, boletín). Frase candidata
+  para la tarjeta: «Un mundo con menos niños|no es un mundo más libre;|*es un mundo
+  que olvidó.*» o «Son los columpios vacíos|los que cuentan|*la historia.*».
 
-## 📍 Dónde nos quedamos (cierre 29-sep-2026)
+**Próximos pasos, en orden:**
+1. Oscar: abrir https://oscarimorales.com/mas-abuelos-que-ninos y comprobar que
+   carga (y la portada) antes de compartir.
+2. Pack social del #58 (pedirlo en la próxima sesión): `node scripts/social-cards.mjs 58
+   --frase "..."` + caption + boletín en `recursos/social/058-mas-abuelos-que-ninos/`.
+3. Pendientes heredados del 29-sep (abajo): boletín y redes del #57, confirmar si el
+   boletín del #56 se envió, Sharing Debugger de Facebook, red del entorno de nube,
+   empaquetar la skill, guardar el generador del PDF de lectura en `scripts/`.
+
+## 📜 Detalle del 29-sep (post #57 + pack social)
 
 **Se publicó el post #57 «Mi Hijo Ya No es un Niño: Pastorear a un Preadolescente
 Sin Perderlo»** (Familia · Caminar Cristiano, 7 min) →
@@ -262,6 +290,9 @@ escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
 - **Pack social** (29-sep): plantilla + generador + skill v6; tarjetas de Instagram del #57 aprobadas por Oscar.
+- **Post #58 «Más Abuelos que Niños»** (6-oct): reacción a la noticia del Censo
+  de EE. UU.; Sal 127/128, Mr 10; portada columpio vacío (Z-Image); publicado con
+  push a main. Pack social pendiente.
 - **Post #57 «Mi Hijo Ya No es un Niño…»** (29-sep): del banco de ideas; Lc 2:52
   y las 4 «marcas»; portada FLUX (niño midiéndose); publicado con push a main
   tras la aprobación de Oscar. Detalle arriba.
