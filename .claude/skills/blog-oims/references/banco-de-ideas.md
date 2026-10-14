@@ -4,8 +4,9 @@
 con conclusiones prácticas.*
 
 Listado de títulos propuestos, balanceado para cubrir todas las categorías y los tres
-frentes actuales de Oscar: **cultura**, **la plantación que reinicia**, y **la crianza
-junto a Regina** de Alex (12) y Sofi (7).
+frentes actuales de Oscar: **cultura**, **la iglesia local y el púlpito** (es miembro de
+pacto de una congregación donde eventualmente predica; **aún no está replantando**), y
+**la crianza junto a Regina** de Alex (12) y Sofi (7).
 
 > Cómo usar este banco: cada título es una **propuesta**, no un encargo cerrado. Cuando
 > uno resuene, conviértelo en un borrador completo en la voz de Oscar (entrada que
@@ -40,12 +41,16 @@ junto a Regina** de Alex (12) y Sofi (7).
 
 ---
 
-## II. Empezar de Nuevo — El Plantador
-*Los retos de iniciar desde cero «otra vez»: la fragilidad, los límites, la fe en lo
-pequeño. La Subversión Pacífica en acción.*
+## II. La Iglesia Local — El Predicador
+*La iglesia por encima del evento, la fragilidad, los límites, la fe en lo pequeño y la
+tentación de medir por aplausos. La Subversión Pacífica en acción.*
+
+> ⚠ Oscar **aún no está replantando** (corregido el 2026-10-14). Los títulos marcados con
+> ⏸ dan por hecho una plantación propia: quedan **en espera** hasta que él diga que empezó.
+> Los demás sirven tal cual, escritos desde un miembro de pacto que a veces predica.
 
 **Ministerio**
-- Plantar de Nuevo: Lo que Aprendí del Primer Intento que No Quiero Repetir
+- ⏸ Plantar de Nuevo: Lo que Aprendí del Primer Intento que No Quiero Repetir
 - El Ministerio de los Comienzos Pequeños
 - Construir Sobre Cimientos, No Sobre Aplausos
 - Cuando Dios te Pide Soltar lo que Construiste
@@ -61,7 +66,7 @@ pequeño. La Subversión Pacífica en acción.*
 
 **Alabanza**
 - Adorar en lo Oculto: Cantarle a Dios Cuando Nadie Mira el Conteo
-- La Alabanza del Plantador: Cuando el Salón Está Casi Vacío
+- ⏸ La Alabanza del Plantador: Cuando el Salón Está Casi Vacío
 
 ---
 
@@ -138,9 +143,14 @@ calidez, no con frialdad de debate.*
 
 ---
 
-## VI. Ministerio de Alabanza — El Director
+## VI. Ministerio de Música para la Iglesia — El Director
 *Su terreno de toda la vida. Lo más buscado sobre dirigir adoración, escrito por alguien
 que dirigió equipos casi toda su vida.*
+
+> Al redactar cualquiera de estos títulos, nombra el servicio como **«ministerio de música
+> para la iglesia»**, no «ministerio de alabanza» (preferencia de Oscar, 2026-10-14). Ya
+> publicado sobre el tema: #49 (requisitos bíblicos) y #59 «La Alfombra Roja y el Aposento
+> Alto» (el espectáculo en la música cristiana): no repetir sus ángulos.
 
 **Alabanza — El Corazón del Adorador**
 - Adorar Cuando Nadie Aplaude: El Líder de Alabanza y su Ego

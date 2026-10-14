@@ -6,19 +6,19 @@ description: >
   un post, artículo o entrada para su blog; reaccionar a un video, sermón, película,
   noticia, canción o contenido cultural desde una perspectiva pastoral; "interpretar la
   cultura a la luz de la Palabra"; escribir sobre un tema que le está resonando en el
-  corazón; o cualquier solicitud de contenido escrito para publicar. El skill toma una de
-  tres entradas (idea desde cero, reacción a contenido externo, o tema que resuena) y
-  produce un borrador completo en la voz y estructura reales de Oscar, más título,
-  categoría y extracto. Tras la confirmación de Oscar, lo publica en el sitio estático:
-  crea el archivo en content/posts/, compila y hace push (reemplaza por completo
-  WordPress). También prepara el pack social de cada post: tarjetas de Instagram
+  corazón; o cualquier solicitud de contenido escrito para publicar. Produce un borrador
+  completo en la voz y estructura reales de Oscar, más título, categoría y extracto. Tras
+  la confirmación de Oscar, lo publica en el sitio estático: crea el archivo en
+  content/posts/, compila y hace push. También prepara el pack social de cada post: tarjetas de Instagram
   (publicación cuadrada e Historia vertical), textos para Instagram, Facebook y X, y el correo del boletín;
   úsalo cuando Oscar pida un post, una historia o una tarjeta para redes.
 ---
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v7 — 2026-10-06 · Tras publicar, el pack social + las instrucciones del correo salen SOLOS (sin que Oscar lo pida)
+> v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
+> con datos confirmados · portada de respaldo con Canva si Hugging Face no tiene cuota · Playwright de gstack para las tarjetas
+> (v7 — 2026-10-06 · Tras publicar, el pack social + las instrucciones del correo salen SOLOS (sin que Oscar lo pida))
 > (v6 — 2026-09-29 · Pack social (tarjetas de Instagram: post + historia, y captions) · cómo mostrarle archivos a Oscar ·
 > citas bíblicas verificadas · portadas: copiar la imagen del resultado del MCP
 > (v5 — 2026-07-22 · URLs con slug (no renombrar posts publicados) + portadas siempre JPG < 300 KB)
@@ -33,9 +33,12 @@ pequeños — eso es histórico, no actual.)*
 
 **Sus tres frentes hoy** (úsalos para anclar ejemplos y elegir ángulos):
 
-- **Replantación de iglesia.** Oscar está **empezando de nuevo "otra vez"** una plantación
-  — con la fragilidad, los comienzos pequeños, la fe en lo lento y la tentación de medir
-  por aplausos. Es su Subversión Pacífica en acción.
+- **La iglesia local y el púlpito.** Hoy Oscar es **un miembro de pacto más** de una
+  congregación en la que **eventualmente sirve predicando**. **Aún NO está replantando**
+  una iglesia (lo corrigió él mismo el 2026-10-14): nunca escribas que lo está haciendo.
+  Los ángulos siguen vivos: la iglesia por encima del evento, la fe en lo lento y lo
+  pequeño, y la tentación de medir el ministerio por aplausos (vistas, asistencia,
+  comentarios). Es su Subversión Pacífica en acción.
 - **El Primer Altar (familia).** Criar en equipo con Regina a un **preadolescente (Alex)**
   y a una **niña (Sofi)** — dos edades, dos mundos, bajo el mismo techo.
 - **Vivir sostenido por la gracia.** Oscar vive con **fibromialgia y espondilitis
@@ -221,6 +224,12 @@ el evangelio no es accesorio · poner la mira · el cuidado del alma · Secundum
 - No usa anglicismos innecesarios ni jerga corporativa.
 - No usa las etiquetas «reformado/Reforma» para presentarse ni para presentar sus posturas: cita las
   confesiones y los catecismos, pero evita el rótulo para no espantar a los lectores.
+- No llama «ministerio de alabanza» al servicio de los músicos: dice **«ministerio de música para la
+  iglesia»**. «Alabanza» como acto de adorar sí se usa, y la categoría «Alabanza» del blog se queda igual.
+- No inventa datos personales para la vulnerabilidad (sección «Si soy honesto»): usa solo lo que Oscar ha
+  contado (bitácora `.claude/PENDIENTES.md` y posts anteriores). Si el post pide un dato nuevo, propónlo
+  y **márcalo en la entrega para que Oscar lo confirme** (así se corrigieron en el #59 la replantación y
+  la edad en que soñaba con «sonar como ellos»).
 
 ---
 
@@ -350,8 +359,17 @@ editando ni formateando imágenes. **La portada NUNCA bloquea la publicación.**
    `cover: "content/covers/<NNN>-<slug>.jpg"`.
    (Si la conversión falla, publica igual con la `.webp` — el build avisará —
    y deja pendiente generar la `.jpg`.)
-6. **Si ambos modelos fallan** tras los reintentos: publica con `cover: "auto"` y
-   entrégale a Oscar un prompt listo para Grok, para reemplazar la portada después.
+6. **Si ambos modelos fallan** (p. ej. «ZeroGPU quota exceeded»: la cuota gratuita del día se agotó y
+   se renueva en ~24 h), usa **Canva** antes de rendirte (validado el 2026-10-14 con el #59):
+   - `generate-image` con el mismo prompt y `aspectRatio: "LANDSCAPE_16_9"` → espera con
+     `get-generate-image-job`. Canva solo deja bajar una **miniatura**, pero sirve para que Oscar elija.
+   - Con la elegida: `create-design` (formato «Presentation (16:9)») → `read-design` con
+     `open_transaction` → borra los elementos que Canva haya inventado e `insert_fill` del `MEDIA` id a
+     1920×1080 → ponle título «Portada post NN — …» → muéstrale la vista previa y, **con su visto bueno**,
+     `commit` → `export-design` en JPG → descárgalo y conviértelo con el paso 5.
+   - Figma también genera imágenes, pero **cobra créditos de IA**: pregúntale a Oscar antes.
+   - Solo si todo falla: publica con `cover: "auto"` y entrégale a Oscar un prompt listo para Grok, para
+     reemplazar la portada después. (Ojo: sin portada de imagen no salen las tarjetas de Instagram.)
 
 ---
 
@@ -367,7 +385,7 @@ content/posts/052-mi-post.md   ← creas ESTE archivo
 posts-data.js · post-html.js · sitemap.xml · feed.xml   ← se regeneran solos
         │  git add -A && git commit && git push
         ▼
-GitHub Pages publica · Buttondown envía el correo (vía feed RSS)
+GitHub Pages publica · el correo de Buttondown lo envía Oscar a mano (Paso 6)
 ```
 
 ### Paso 1 — Calcula `n` (número estable)
@@ -495,7 +513,8 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
    → `recursos/social/<NNN>-<slug>/post.jpg` (1080×1080, feed de IG/FB) y `historia.jpg` (1080×1920,
    Historia de IG). El post debe tener portada de imagen (es el fondo). Las tipografías de marca se
    instalan solas desde npm si faltan. **MIRA las imágenes (Read) antes de enviarlas**: texto dentro del
-   diseño, sin costuras, cabecera legible.
+   diseño, sin costuras, cabecera legible. En la PC de Oscar no hay Playwright global; usa el que trae
+   gstack: `NODE_PATH="C:/Users/me/.claude/skills/gstack/node_modules" node scripts/social-cards.mjs …`.
 3. **Escribe el caption de Instagram** y guárdalo como `caption.txt` en esa carpeta: primera línea =
    gancho (Instagram corta a ~125 caracteres); 3–4 párrafos cortos en la voz de Oscar; cita bíblica
    exacta; cierre «Léelo completo: link en mi bio.» + invitación a guardar y compartir; 4–5 hashtags con
