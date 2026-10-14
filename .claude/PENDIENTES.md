@@ -9,7 +9,7 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 14-oct-2026)
+## 📍 Dónde nos quedamos (cierre 14-oct-2026; actualizado el mismo día)
 
 **Se publicó el post #59 «La Alfombra Roja y el Aposento Alto»** (Alabanza ·
 Cultura y Actualidad · Iglesia, ~1,930 palabras, ~10 min; Oscar decidió no acortarlo)
@@ -42,11 +42,13 @@ Enlaza al #49 (requisitos bíblicos).
   (frase «No tienes que llegar|a otro nivel.|*Cristo ya bajó al tuyo.*», X 234/280).
   En esta PC no hay Playwright global: las tarjetas salieron con
   `NODE_PATH="C:/Users/me/.claude/skills/gstack/node_modules" node scripts/social-cards.mjs …`.
-- **Correo del boletín #59: PENDIENTE de Oscar** (está en `boletin.md`).
+- **Correo del boletín #59 ENVIADO por Oscar el 14-oct** (confirmado en el chat).
+  En una sesión posterior se le volvieron a entregar los textos (IG, FB, X y correo)
+  tal como están en la carpeta del pack, sin cambios.
 
 **Próximos pasos, en orden:**
-1. Oscar: enviar el correo del #59 en Buttondown y publicar en Instagram (post +
-   Historia con sticker de enlace; link en la bio), Facebook y X.
+1. Oscar: publicar el #59 en Instagram (post + Historia con sticker de enlace; link
+   en la bio), Facebook y X. ✅ El correo del boletín ya se envió (14-oct).
 2. ✅ Skill blog-oims **v8** corregida el mismo 14-oct (aún no replanta, reglas de voz,
    portada con Canva, Playwright de gstack; descripción recortada a 954 caracteres porque
    la v7 tenía 1,094 y claude.ai rechaza > 1024 → probablemente la v7 nunca se subió).
@@ -364,6 +366,9 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Post #59 «La Alfombra Roja y el Aposento Alto»** (14-oct): reacción a los Dove
+  Awards 2026; Col 3:16, 1 Cr 25, Mt 26:30; portada vía Canva; publicado con push a
+  main; pack social entregado; **correo del boletín enviado por Oscar el 14-oct**.
 - **Pack social** (29-sep): plantilla + generador + skill v6; tarjetas de Instagram del #57 aprobadas por Oscar.
 - **Post #58 «Más Abuelos que Niños»** (6-oct): reacción a la noticia del Censo
   de EE. UU.; Sal 127/128, Mr 10; portada columpio vacío (Z-Image); publicado con
