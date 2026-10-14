@@ -9,7 +9,54 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 6-oct-2026)
+## 📍 Dónde nos quedamos (cierre 14-oct-2026)
+
+**Se publicó el post #59 «La Alfombra Roja y el Aposento Alto»** (Alabanza ·
+Cultura y Actualidad · Iglesia, ~1,930 palabras, ~10 min; Oscar decidió no acortarlo)
+→ https://oscarimorales.com/la-alfombra-roja-y-el-aposento-alto — **verificado en vivo
+con curl** (página, portada, texto en post-html.js, og:image y feed).
+Modo B: reacción a los Dove Awards 2026 (57.ª edición, Nashville, Bridgestone Arena,
+lema «Together For One» de Col 3:14). Tesis: el mapa de «éxito» del espectáculo que
+se les vende a los músicos jóvenes, y cómo ese show llegó a los templos (si falta el
+baterista se cae todo; nadie se atreve a subir solo con una guitarra). Columna: Jn 5:44 ·
+Col 3:16 · 1 Cr 25:7-8 · Sal 40:3 · Hch 16:25 · Mt 6:1 · Mt 26:30 · Heb 2:12 ·
+Fil 2:7, 9 · Jn 3:30 · Sal 115:1 (todas verificadas en RVR1960). Encabezados: OTRO
+NIVEL / LA ALFOMBRA LLEGÓ AL TEMPLO / LO QUE LA BIBLIA LLAMA MÚSICA / ¿Y LOS QUE
+CANTAN PARA LOS DE AFUERA? / SI SOY HONESTO / EL HIMNO DEL APOSENTO ALTO / ¿QUÉ CAMBIA?
+Enlaza al #49 (requisitos bíblicos).
+- **Datos personales que Oscar dio (citar tal cual, no inventar):** sirvió en el
+  ministerio de música para la iglesia y **a los quince años soñaba con verse y sonar
+  «como ellos»**; como pastor se vio tentado a medir por vistas/asistencia/comentarios.
+  **Oscar AÚN NO está replantando**: es miembro de pacto de una congregación donde
+  eventualmente predica. ⚠ La skill blog-oims (SKILL.md, «Replantación de iglesia») y
+  `references/banco-de-ideas.md` dicen lo contrario → corregirlas (pendiente abajo).
+- **Preferencias de voz nuevas:** decir «ministerio de música para la iglesia», no
+  «ministerio de alabanza». Dejó abierta la puerta a un post futuro sobre las veces
+  que ese mundo se ha apartado de la ortodoxia («eso queda para otro día»).
+- **Portada:** Hugging Face sin cuota gratuita todo el día (ZeroGPU agotado) → se
+  generó con **Canva** (generate-image, 16:9). Canva solo deja bajar miniaturas, así
+  que se colocó la imagen en un diseño («Portada post 59 — …», en el Canva de Oscar),
+  se exportó a JPG 1680×945 y se convirtió a 1536×864 / 89 KB. La alternativa del
+  aposento alto quedó también guardada en su Canva. Figma también genera imágenes pero
+  cobra créditos: preguntar antes.
+- **Pack social ENTREGADO** en `recursos/social/059-la-alfombra-roja-y-el-aposento-alto/`
+  (frase «No tienes que llegar|a otro nivel.|*Cristo ya bajó al tuyo.*», X 234/280).
+  En esta PC no hay Playwright global: las tarjetas salieron con
+  `NODE_PATH="C:/Users/me/.claude/skills/gstack/node_modules" node scripts/social-cards.mjs …`.
+- **Correo del boletín #59: PENDIENTE de Oscar** (está en `boletin.md`).
+
+**Próximos pasos, en orden:**
+1. Oscar: enviar el correo del #59 en Buttondown y publicar en Instagram (post +
+   Historia con sticker de enlace; link en la bio), Facebook y X.
+2. Corregir la skill blog-oims (Oscar aún no replanta) y re-empaquetarla con
+   `actualizar-skill-oims`.
+3. Pendientes heredados (abajo): automatizar redes (en espera), boletín/redes del #57,
+   confirmar boletín del #56, Sharing Debugger de Facebook, guardar el generador del
+   PDF de lectura en `scripts/`.
+4. Hay un `git stash` con una versión vieja de esta bitácora (30-jul) que ya estaba
+   incluida en GitHub: se puede borrar (`git stash drop`).
+
+## 📜 Detalle del 6-oct (post #58)
 
 **Se publicó el post #58 «Más Abuelos que Niños»** (Cultura y Actualidad · Familia,
 ~1,900 palabras, ~9 min) → https://oscarimorales.com/mas-abuelos-que-ninos
@@ -54,7 +101,7 @@ NIÑO NOS ES NACIDO / QUÉ CAMBIA.
   Recordatorio de cómo funciona Buttondown: NO manda nada automático (plan gratis);
   Oscar pega el correo en Emails → New email y lo envía.
 
-**Próximos pasos, en orden:**
+**Próximos pasos de ese día (6-oct):**
 1. Oscar: abrir https://oscarimorales.com/mas-abuelos-que-ninos y comprobar que
    carga (y la portada) antes de compartir.
 2. Oscar: publicar en Instagram (post + Historia con sticker de enlace; link en la
