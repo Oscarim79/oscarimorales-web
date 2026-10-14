@@ -28,8 +28,7 @@ Enlaza al #49 (requisitos bíblicos).
   ministerio de música para la iglesia y **a los quince años soñaba con verse y sonar
   «como ellos»**; como pastor se vio tentado a medir por vistas/asistencia/comentarios.
   **Oscar AÚN NO está replantando**: es miembro de pacto de una congregación donde
-  eventualmente predica. ⚠ La skill blog-oims (SKILL.md, «Replantación de iglesia») y
-  `references/banco-de-ideas.md` dicen lo contrario → corregirlas (pendiente abajo).
+  eventualmente predica. (Ya corregido en la skill blog-oims v8.)
 - **Preferencias de voz nuevas:** decir «ministerio de música para la iglesia», no
   «ministerio de alabanza». Dejó abierta la puerta a un post futuro sobre las veces
   que ese mundo se ha apartado de la ortodoxia («eso queda para otro día»).
@@ -48,8 +47,11 @@ Enlaza al #49 (requisitos bíblicos).
 **Próximos pasos, en orden:**
 1. Oscar: enviar el correo del #59 en Buttondown y publicar en Instagram (post +
    Historia con sticker de enlace; link en la bio), Facebook y X.
-2. Corregir la skill blog-oims (Oscar aún no replanta) y re-empaquetarla con
-   `actualizar-skill-oims`.
+2. ✅ Skill blog-oims **v8** corregida el mismo 14-oct (aún no replanta, reglas de voz,
+   portada con Canva, Playwright de gstack; descripción recortada a 954 caracteres porque
+   la v7 tenía 1,094 y claude.ai rechaza > 1024 → probablemente la v7 nunca se subió).
+   **Oscar: subir `blog-oims-v8.zip` del escritorio** en claude.ai → Configuración →
+   Capacidades → Skills (reemplazar blog-oims).
 3. Pendientes heredados (abajo): automatizar redes (en espera), boletín/redes del #57,
    confirmar boletín del #56, Sharing Debugger de Facebook, guardar el generador del
    PDF de lectura en `scripts/`.
