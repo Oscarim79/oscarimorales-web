@@ -9,7 +9,55 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 14-oct-2026; actualizado el mismo día)
+## 📍 Dónde nos quedamos (cierre 15-oct-2026)
+
+**Se publicó el post #60 «Amar no es callar la verdad»** (Apologética · Cultura y
+Actualidad · Alabanza, ~1,480 palabras, ~7 min) → https://oscarimorales.com/amar-no-es-callar-la-verdad
+Publicado el 15-oct hacia las 6:15 p. m. (hora de Guatemala) desde una **sesión en la nube**
+(push a `main` desde la rama `ccr-c79895c7-7mtr1q`), a pedido de Oscar desde el celular.
+- **Origen:** Modo B. Reacción al comentario viral firmado por la cuenta de Tercer Cielo en
+  defensa de Saraí Rivera («la Trinidad tardó siglos…», Nicea 325 / Constantinopla 381).
+  Responde línea por línea: Práxeas/Tertuliano (~213) y Sabelio (~220) antes de Nicea;
+  Constantinopla 381 condenó a los sabelianos; la IPUI y la «unicidad»; Jn 17:3, 17:24;
+  Mt 3:16-17; Gá 4:4-6; 1 Co 13:6; Ef 4:15; 1 P 3:15; Stg 3:1; Hch 17:11; 2 Co 13:14.
+  Encabezados: «SERÍA BUENO ESTUDIAR LA HISTORIA» / «LA TRINIDAD TARDÓ SIGLOS» /
+  «PODEMOS DEBATIR INTERPRETACIONES BÍBLICAS» / «¿DESDE CUÁNDO PENSAR DIFERENTE...?» /
+  «EL AMOR Y EL RESPETO» / SI SOY HONESTO / EL AMOR MÁS ANTIGUO / ¿QUÉ HACEMOS?
+  Enlaza al #59 (deja cerrada la promesa de hablar de cuando ese mundo se aparta de la ortodoxia).
+- **El borrador se trabajó el 15-oct en la sesión «Deconstruyendo post del grupo» (en la PC
+  de Oscar)**: 3 rondas; se quedó la **versión corta**; Oscar cambió el párrafo «Acepto la
+  invitación…» por «Así que veamos todo lo que Tercer Cielo dijo y démosles respuestas.».
+  Esa sesión dejó el post en una rama LOCAL `post-060` y una tarea programada de la app
+  **«publicar-post-60-blog»** para las 7 p. m., pero la PC no estaba conectada; por eso se
+  publicó desde la nube con el mismo texto, número (60), slug y textos del pack.
+- **Preferencia de voz nueva (pedida por Oscar):** tratar al lector de **«ustedes»**
+  («Les debo una aclaración honesta», «Piénsenlo despacio», «Quiten a una…»). Pasarla a la
+  skill blog-oims en la próxima edición (también en caption/boletín: «Léanlo», «compártanlo»).
+- **Datos personales usados (citar tal cual):** al leer el comentario «me enojé. Mucho»;
+  nunca había publicado algo que pareciera ir «en contra» de alguien con nombre y apellido.
+- **Portada:** el Jordán con el cielo abierto y la paloma (Canva, diseño `DAHYGGWw9BY`,
+  imagen `MAHYBFoft1A`). **En la nube Canva NO deja bajar la imagen**: `export-download.canva.com`
+  y `media.canva.com` dan 403 en el proxy y el conector solo entrega miniaturas de ~600 px
+  (los borradores de Canva usan una versión reducida: no sirve armarla por partes). Solución:
+  **Oscar la descargó en el celular y la adjuntó en el chat** (1920×1080) → JPG 1536×864 / 196 KB.
+- **Pack social ENTREGADO** en `recursos/social/060-amar-no-es-callar-la-verdad/` (frase
+  «Amar no es|*callar la verdad.*», X 206/280). En la nube, `social-cards.mjs` funcionó con el
+  Playwright global (instaló las tipografías de npm solo).
+
+**Próximos pasos, en orden:**
+1. Oscar: abrir https://oscarimorales.com/amar-no-es-callar-la-verdad y comprobar que carga
+   (desde la nube no se puede abrir el sitio), luego enviar el correo del boletín (`boletin.md`)
+   y publicar en Instagram (post + Historia con sticker de enlace; link en la bio), Facebook y X.
+2. **En la PC de Oscar (cuando la encienda):** la tarea «publicar-post-60-blog» debería ver que
+   el post ya está en GitHub y detenerse; si no, el merge choca en la portada (binaria) y aborta
+   sin publicar. Lo más limpio: borrarla en «Programadas» y borrar la rama local `post-060`.
+   Además, la `.claude/PENDIENTES.md` de esa PC tiene notas SIN SUBIR de las rondas del #60
+   (fuentes verificadas, casos que se dejaron fuera): antes de `git pull`, guardarlas
+   (`git stash`), traer `main` y fusionar a mano lo que falte en esta bitácora.
+3. Skill blog-oims: añadir el trato de «ustedes» y la nota de la portada de Canva en la nube.
+4. Siguen los pendientes del #59 (redes, subir `blog-oims-v8.zip`) y los heredados (abajo).
+
+## 📜 Detalle del 14-oct (post #59)
 
 **Se publicó el post #59 «La Alfombra Roja y el Aposento Alto»** (Alabanza ·
 Cultura y Actualidad · Iglesia, ~1,930 palabras, ~10 min; Oscar decidió no acortarlo)
@@ -366,6 +414,9 @@ Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
 ## ✅ Hecho (referencia rápida)
+- **Post #60 «Amar no es callar la verdad»** (15-oct): respuesta al comentario viral de
+  Tercer Cielo sobre la Trinidad; publicado desde la nube con la portada del Jordán (Canva,
+  adjuntada por Oscar); pack social entregado; correo del boletín pendiente de Oscar.
 - **Post #59 «La Alfombra Roja y el Aposento Alto»** (14-oct): reacción a los Dove
   Awards 2026; Col 3:16, 1 Cr 25, Mt 26:30; portada vía Canva; publicado con push a
   main; pack social entregado; **correo del boletín enviado por Oscar el 14-oct**.
