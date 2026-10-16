@@ -57,6 +57,100 @@ Publicado el 15-oct hacia las 6:15 p. m. (hora de Guatemala) desde una **sesión
 3. Skill blog-oims: añadir el trato de «ustedes» y la nota de la portada de Canva en la nube.
 4. Siguen los pendientes del #59 (redes, subir `blog-oims-v8.zip`) y los heredados (abajo).
 
+- **16-oct (PC de Oscar):** se hizo `git pull`, se fusionaron a mano estas notas de la PC
+  (sección de abajo) y se borró la rama local `post-060`. La tarea «publicar-post-60-blog» se
+  disparó, pero Oscar avisó que ya estaba publicado y no se hizo nada más (verificado con curl: 200 y en el feed).
+
+## 🗂 Notas de trabajo del post #60 (14/15-oct, en la PC; ya publicado — solo referencia)
+
+- **⏰ PROGRAMADO para hoy 15-oct a las 7:00 p. m.** (pedido por Oscar). Todo está listo en
+  la rama LOCAL `post-060` (no está en GitHub): commit db12f5e = post
+  `content/posts/060-amar-no-es-callar-la-verdad.md` (n=60, fecha 2026-10-15, cats
+  Apologética · Cultura y Actualidad · Alabanza, quote «Amar no es callar la verdad.»),
+  portada `content/covers/060-amar-no-es-callar-la-verdad.jpg` y archivos generados (build
+  OK, 60 posts); commit 6b28358 = pack social en `recursos/social/060-amar-no-es-callar-la-verdad/`
+  (tarjetas revisadas, caption/facebook/x/boletín con trato de «ustedes»; X 206/280).
+  La tarea programada de la app **«publicar-post-60-blog»** (Auto mode; corre solo si la app
+  está abierta, si no, al abrirla) fusiona post-060 en main, compila, hace push, verifica con
+  curl y anota aquí el resultado. URL final: https://oscarimorales.com/amar-no-es-callar-la-verdad
+  Después de publicar: Oscar envía el correo (boletin.md) y publica en redes.
+- **15-oct, tercera ronda — SE QUEDA LA VERSIÓN CORTA**
+  (`vista-previa/borrador-060-v2-corto-amar-no-es-callar-la-verdad.md`, ~1,476 palabras,
+  ~7 min). El largo queda solo como referencia. Cambios: el párrafo «Acepto la
+  invitación…» se reemplazó por la frase de Oscar «Así que veamos todo lo que Tercer Cielo
+  dijo y démosles respuestas.»; **trato al lector siempre de «ustedes»** («Les debo una
+  aclaración honesta», «Piénsenlo despacio», «Quiten a una de las tres personas»).
+- **15-oct, segunda ronda:** Oscar pidió dejar solo «tampoco me extrañaría que lo fuera»
+  (sin nombrar casos; los dos casos verificados quedan abajo por si se usan) y, por ende,
+  quitar la frase que remitía al audio de 2015. Pidió un **2.º borrador con ~1,000 palabras
+  menos** → `vista-previa/borrador-060-v2-corto-amar-no-es-callar-la-verdad.md` (~1,510
+  palabras, ~8 min; el largo quedó en ~2,440). En el corto, el cierre es «Amar no es callar
+  la verdad…» y el quote propuesto es «Amar no es callar la verdad.». **Portada elegida: la
+  2, el Jordán con el cielo abierto y la paloma** (Canva MEDIA `MAHYBFoft1A`).
+  Diseño en Canva «Portada post 60 — Amar no es callar la verdad» (`DAHYGGWw9BY`)
+  **guardado el 15-oct con el visto bueno de Oscar** y exportado a JPG 1920×1080 (346 KB) →
+  convertido a 1536×864 / 150 KB: **`vista-previa/portada-060-amar-no-es-callar-la-verdad.jpg`**.
+  Al publicar: copiarla a `content/covers/060-<slug>.jpg` y ponerla en `cover`.
+- **Cambios del 15-oct (Oscar):** (1) no recibió la captura: la vio compartida en el perfil
+  de un amigo y luego muchas veces más (viral); (2) ya no dice «fui a estudiar la historia»:
+  la estudia desde hace años, es de sus temas favoritos y cree que todo pastor está obligado
+  a estudiar historia, ortodoxia y credos; (3) se quitó el párrafo que explicaba Mt 3:16-17
+  (la cita queda); (4) se quitó el párrafo «Y a Saraí…»; (5) la frase de «otras ocasiones»
+  ahora nombra dos casos verificados: el audio de 2015 de Juan Carlos Rodríguez («el trabajo
+  de un músico no es enseñar teología ni ser maestro») y la defensa de «Yo te extrañaré» en
+  abr-2025 (comparada con El Rey León / El libro de la vida). Ahora ~2,575 palabras.
+- **Título cambiado el 15-oct** a petición de Oscar (tema: confundir el amor con omitir la
+  verdad, que es lo que hizo el grupo). Antes: «La Trinidad no nació en Nicea» (queda como
+  alterno). La frase «Amar no es callar la verdad» se añadió también en «EL AMOR Y EL
+  RESPETO». Slug propuesto al publicar: `amar-no-es-callar-la-verdad`.
+
+**Borrador listo, SIN publicar** → `vista-previa/borrador-060-amar-no-es-callar-la-verdad.md`
+(~2,360 palabras, ~12 min). Modo B: responde **línea por línea** al comentario de la
+cuenta oficial de **Tercer Cielo** en Instagram defendiendo a **Saraí Rivera** (señalada
+desde jul-2025 por congregarse en la UPCI, unicitaria; ella no ha aclarado su postura).
+Oscar pidió desarmar «la irresponsabilidad» de un grupo famoso hablando de doctrina e
+historia sin fundamento. Hilo: Stg 3:1 (la plataforma enseña). Encabezados = cada frase
+del comentario: SERÍA BUENO ESTUDIAR LA HISTORIA (Práxeas/Tertuliano c. 213, Sabelio
+c. 220, el canon 1 de Constantinopla 381 condena a los sabelianos) / LA TRINIDAD TARDÓ
+SIGLOS (mapa ≠ montañas; Arrio; «Luz de Luz»; Didajé; Ignacio; Mt 3:16-17; Atanasio 367)
+/ PODEMOS DEBATIR (Jn 17:3, 5) / ¿DESDE CUÁNDO PENSAR DIFERENTE? (Jn 4:23-24; la UPCI
+exige bautismo «en el nombre de Jesús» + lenguas para salvación; Hch 17:11) / EL AMOR Y
+EL RESPETO (1 Co 13:6, Ef 4:15, Jud 3, 2 Ti 2:24-25) / SI SOY HONESTO / EL AMOR MÁS
+ANTIGUO (1 Jn 4:8, Jn 17:24, Gá 4:4-6, Heb 9:14) / ¿QUÉ HACEMOS?. Citas verificadas en
+RVR1960. Se omitieron los insultos a propósito (la voz del blog), no la firmeza.
+- **Confirmado por Oscar:** el «Me enojé. Mucho» se queda. **Dato personal nuevo (citar
+  tal cual):** es la primera vez que escribe algo que parezca ir «en contra» de alguien
+  con nombre y apellido; ya está en SI SOY HONESTO.
+- **NO publicar sin verificar el comentario:** la cuenta sí es la oficial (la web
+  tercercielooficial.com enlaza a instagram.com/tercercielooficial, y la captura trae la
+  insignia azul), pero el comentario solo lo tenemos en captura. Oscar no tiene el video
+  (le llegó la captura). Lo que sí se comprobó el 14-oct (~3:30 p. m.): la foto de perfil
+  de la captura coincide con la actual de @tercercielooficial (2 mill. de seguidores), y
+  **Willsong MEMES** (405 mil en IG) publicó esa misma captura etiquetándolos
+  (instagram.com/willsongmemes/p/DefKiDrMUKZ, «@tercercielooficial afirmando que son
+  herejes», 811 me gusta, 157 comentarios) más un meme (…/p/DefL7KqsSpD). Tercer Cielo
+  no ha publicado ningún desmentido en su perfil (no se pudieron ver sus historias).
+  Falta: ver el video original o un desmentido en los comentarios (sin sesión de
+  Instagram no se leen). Evidencias guardadas en `vista-previa/evidencia-060-*.jpg`.
+- **Ajuste del 14-oct (tarde), pedido por Oscar:** tras la cita, el post ahora aclara que
+  Oscar no vio el comentario con sus propios ojos, que la captura se volvió viral (una
+  página con +400 mil seguidores la publicó etiquetando al grupo, sin desmentido) y que
+  «no me extrañaría que lo fuera, por otras ocasiones en que ellos ya se han apartado de
+  la ortodoxia cristiana». ⚠ Esa última frase está por confirmar: no se halló ningún caso
+  documentado de desvío doctrinal (solo polémicas de otro tipo); Oscar debe nombrar el
+  caso o suavizarla. También se cambiaron a «el comentario» las frases que daban la
+  autoría por hecha, y se añadió en ¿QUÉ HACEMOS?: «si ese comentario no es suyo, que lo
+  digan: con gusto corregiré este post». Ahora ~2,500 palabras.
+- **Borrador enviado por correo** a me@oscarimorales.com (14-oct, 2:53 p. m., desde la
+  cuenta del trabajo), con las 2 portadas.
+- **Pendiente de Oscar:** leer el borrador y decidir si se recorta a ~1,800 palabras;
+  título (alternos en el borrador); portada 1 o 2.
+- **Orden de salida: resuelto.** El #59 ya salió completo el 14-oct (correo y redes,
+  confirmado por Oscar el 15-oct). El #60 sale cuando Oscar lo apruebe.
+- **Portada:** HF sin cuota → 2 candidatas en Canva (miniaturas en `vista-previa/`):
+  1 «mapa y montañas» (MEDIA `MAHYBBGVRsw`) · 2 «el Jordán y la paloma» (`MAHYBFoft1A`).
+  Con la elegida: seguir el flujo Canva de la skill (diseño 16:9 → export JPG).
+
 ## 📜 Detalle del 14-oct (post #59)
 
 **Se publicó el post #59 «La Alfombra Roja y el Aposento Alto»** (Alabanza ·
