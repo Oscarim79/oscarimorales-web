@@ -57,6 +57,8 @@ Publicado el 15-oct hacia las 6:15 p. m. (hora de Guatemala) desde una **sesión
 3. Skill blog-oims: añadir el trato de «ustedes» y la nota de la portada de Canva en la nube.
 4. Siguen los pendientes del #59 (redes, subir `blog-oims-v8.zip`) y los heredados (abajo).
 
+- **16-oct: Oscar confirmó que ya envió el correo del boletín #60 y publicó en redes** (paso 1 HECHO).
+  La tarea «publicar-post-60-blog» quedó desactivada (de una sola vez, ya no corre).
 - **16-oct (PC de Oscar):** se hizo `git pull`, se fusionaron a mano estas notas de la PC
   (sección de abajo) y se borró la rama local `post-060`. La tarea «publicar-post-60-blog» se
   disparó, pero Oscar avisó que ya estaba publicado y no se hizo nada más (verificado con curl: 200 y en el feed).
