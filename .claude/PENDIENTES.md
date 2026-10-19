@@ -543,7 +543,19 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
 4. WhatsApp (crear Canal «Secundum Fidem») + Facebook dos veces por post (día 1 y día 3-4).
 5. Rescatar el archivo: compartir un post viejo por semana («Del archivo»).
 6. Boletín: una Guía de Estudio por serie como gancho.
-Medir cada mes: lectores reales (sin China/Singapur), visitas de Google, post top, fuente top.
+7. Calendario de temporada (añadido 19-oct): Halloween/31-oct (#29), serie de Navidad
+   (#30-#35, 6 posts) en nov-dic, «Este año quiero buscar a Dios» (#18) en enero,
+   San Valentín (#36) y Cuaresma (#37) en febrero. Re-compartirlos cada año y pedir a
+   Google que los vuelva a revisar ~1 mes antes de cada fecha.
+8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
+   de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
+   en español, con enlaces al archivo y a los últimos posts. Y `feed/` (el RSS viejo de
+   WordPress) da 404: los lectores de RSS suscritos al feed viejo ya no reciben avisos.
+9. Enlaces dentro del texto (añadido 19-oct): cada post nuevo enlaza 1-2 posts viejos
+   relacionados (como el #60 al #59). Pasarlo a la skill blog-oims. Meta: de 1.15 a 1.4
+   páginas por visita.
+Medir cada mes: lectores reales (sin China/Singapur), visitas de Google, post top, fuente
+top, páginas por visita y suscriptores nuevos del boletín (Buttondown).
 
 ## ✅ Hecho (referencia rápida)
 - **Search Console + redirecciones de WordPress** (19-oct): propiedad de dominio verificada,
