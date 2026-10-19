@@ -25,7 +25,8 @@
 // del archivo sin el número: 052-querer-no-es-poder.md → /querer-no-es-poder).
 // GitHub Pages sirve <slug>.html cuando se pide /<slug> (sin extensión).
 // Los enlaces viejos post-<n>.html se generan como páginas de redirección —
-// los permalinks ya compartidos NUNCA se rompen.
+// los permalinks ya compartidos NUNCA se rompen. Lo mismo con las direcciones
+// de la época de WordPress (posts n ≤ 51): /AAAA/MM/DD/<slug>/ → /<slug>.
 //
 // Uso:  node scripts/build-posts.mjs
 // ============================================================================
@@ -502,7 +503,10 @@ ${p.cats[0] ? `  <meta property="article:section" content="${xmlEsc(p.cats[0])}"
 
 // Página de redirección: los enlaces viejos (post-<n>.html), ya compartidos
 // por correo y redes, llevan al lector a la URL nueva con nombre.
-function genRedirectPage(p) {
+// noindex=false en las direcciones de WordPress: Google las tiene indexadas
+// desde hace años y debe trasladar ese posicionamiento a la URL nueva (el
+// canonical + refresh inmediato lo hacen; un noindex se lo contradiría).
+function genRedirectPage(p, noindex = true) {
   const url = postUrl(p);
   return `<!doctype html>
 ${GEN_MARK}
@@ -511,8 +515,7 @@ ${GEN_MARK}
   <meta charset="utf-8" />
   <title>${xmlEsc(p.title)} · Oscar I. Morales</title>
   <link rel="canonical" href="${url}" />
-  <meta http-equiv="refresh" content="0; url=${url}" />
-  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="0; url=${url}" />${noindex ? '\n  <meta name="robots" content="noindex" />' : ''}
   <script>location.replace(${JSON.stringify(url)});</script>
 </head>
 <body>
@@ -522,21 +525,48 @@ ${GEN_MARK}
 `;
 }
 
+// Direcciones de la época de WordPress (hasta el post n=51, mar-2021): cada
+// post vivía en /AAAA/MM/DD/<slug>/ con su fecha de publicación. Google y años
+// de enlaces en redes apuntan ahí, así que se publica una redirección en
+// AAAA/MM/DD/<slug>/index.html. (Verificado contra el Internet Archive: las 49
+// direcciones archivadas coinciden en slug y fecha con content/posts/.)
+const LAST_WP_N = 51;
+const wpDir = (p) => path.join(ROOT, ...p.date.split('-'), p.slug);
+
+// Borra los index.html generados dentro de las carpetas de año (AAAA/…) y las
+// carpetas que queden vacías. Nunca toca un archivo sin la marca GEN_MARK.
+function cleanGeneratedDir(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fp = path.join(dir, e.name);
+    if (e.isDirectory()) cleanGeneratedDir(fp);
+    else if (/\.html$/i.test(e.name) &&
+             fs.readFileSync(fp, 'utf8').slice(0, 300).includes(GEN_MARK)) fs.unlinkSync(fp);
+  }
+  if (fs.readdirSync(dir).length === 0) fs.rmdirSync(dir);
+}
+
 function genPostPages(posts) {
   // Limpia las páginas generadas en builds anteriores (se reconocen por la
   // marca GEN_MARK o por el nombre post-<n>.html) antes de regenerar.
   for (const f of fs.readdirSync(ROOT)) {
-    if (!/\.html$/i.test(f)) continue;
     const fp = path.join(ROOT, f);
+    if (/^\d{4}$/.test(f) && fs.statSync(fp).isDirectory()) { cleanGeneratedDir(fp); continue; }
+    if (!/\.html$/i.test(f)) continue;
     if (/^post-\d+\.html$/.test(f)) { fs.unlinkSync(fp); continue; }
     const head = fs.readFileSync(fp, 'utf8').slice(0, 300);
     if (head.includes(GEN_MARK)) fs.unlinkSync(fp);
   }
+  let wp = 0;
   for (const p of posts) {
     fs.writeFileSync(path.join(ROOT, `${p.slug}.html`), genPostPage(p));
     fs.writeFileSync(path.join(ROOT, `post-${p.n}.html`), genRedirectPage(p));
+    if (p.n <= LAST_WP_N && /^\d{4}-\d{2}-\d{2}$/.test(p.date)) {
+      fs.mkdirSync(wpDir(p), { recursive: true });
+      fs.writeFileSync(path.join(wpDir(p), 'index.html'), genRedirectPage(p, false));
+      wp++;
+    }
   }
-  return posts.length;
+  return { pages: posts.length, wp };
 }
 
 // ----------------------------------------------------------------------------
@@ -547,12 +577,13 @@ fs.writeFileSync(OUT_DATA, genData(posts));
 fs.writeFileSync(OUT_HTML, genHtml(posts));
 fs.writeFileSync(OUT_MAP, genSitemap(posts));
 fs.writeFileSync(OUT_FEED, genFeed(posts));
-const pageCount = genPostPages(posts);
+const { pages: pageCount, wp: wpCount } = genPostPages(posts);
 console.log(`✅ Build OK — ${posts.length} posts`);
 console.log(`   → ${path.relative(ROOT, OUT_DATA)}`);
 console.log(`   → ${path.relative(ROOT, OUT_HTML)}`);
 console.log(`   → ${path.relative(ROOT, OUT_MAP)}`);
 console.log(`   → ${path.relative(ROOT, OUT_FEED)}`);
 console.log(`   → ${pageCount} páginas <slug>.html + ${pageCount} redirecciones post-<n>.html`);
+console.log(`   → ${wpCount} redirecciones de WordPress (AAAA/MM/DD/<slug>/)`);
 const newest = posts[0];
 console.log(`   más reciente: n=${newest.n} · ${newest.title} · ${newest.date}`);
