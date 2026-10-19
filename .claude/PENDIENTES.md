@@ -9,7 +9,33 @@
 
 ---
 
-## 📍 Dónde nos quedamos (cierre 15-oct-2026)
+## 📍 Dónde nos quedamos (19-oct-2026)
+
+**Estadísticas + Google Search Console + direcciones viejas de WordPress arregladas.**
+- **Cloudflare (últimos 30 días, 19-sep a 18-oct):** ~1,020 visitas / 1,170 páginas vistas;
+  primer mes (22-jul a 20-ago) ~290. China + Singapur (~250) y navegador "Unknown" = robots
+  → lectores reales ~770. 75 % celular. Fuentes: directo/WhatsApp 450, Facebook ~270,
+  Instagram 70, X 60; **Google ni aparece entre las 5 primeras**. Top: #60 (300 visitas en
+  4 días), portada 170, #57 110, #59 80, cremación (#53) 50. ~1.15 páginas por visita.
+- **Causa principal de que Google no trajera lectores:** las direcciones de WordPress
+  (`/AAAA/MM/DD/<slug>/`, las que Google y las redes conocían) daban **404** desde la
+  migración. Arreglado en `scripts/build-posts.mjs` (commit e00f2f8): el build genera
+  `AAAA/MM/DD/<slug>/index.html` para los posts n ≤ 51 (redirección con canonical, SIN
+  noindex). Las 49 direcciones del Internet Archive coinciden en slug y fecha.
+- **Google Search Console ACTIVADO** con me@oscarimorales.com, propiedad de dominio
+  `oscarimorales.com` (se verificó sola con el TXT `google-site-verification` que ya estaba
+  en el DNS de GoDaddy — NO borrarlo). Sitemap `https://oscarimorales.com/sitemap.xml`
+  enviado: «Correcto», 61 páginas. Hay otro sitemap viejo `http://ftp.oscarimorales.com/sitemap.xml`
+  (enviado 25-ago, «No se ha podido obtener») — inofensivo, se puede quitar.
+- **Estrategia de visitas propuesta a Oscar** (ver pendiente 9).
+
+**Próximos pasos:**
+1. 20-oct o después: leer en Search Console → Rendimiento (qué búsquedas traen gente) y
+   Páginas (cuántas dan 404). Pedir a Google que vuelva a rastrear 5-10 posts viejos
+   fuertes («Inspección de URLs» → «Solicitar indexación»).
+2. En ~4 semanas: comparar en Cloudflare cuántas visitas llegan de Google.
+
+## 📜 Detalle del 15/16-oct (post #60)
 
 **Se publicó el post #60 «Amar no es callar la verdad»** (Apologética · Cultura y
 Actualidad · Alabanza, ~1,480 palabras, ~7 min) → https://oscarimorales.com/amar-no-es-callar-la-verdad
@@ -509,7 +535,19 @@ Meta Business Suite y x.com. Retomar cuando él lo pida (recomendación: camino 
 Hoy se leen de YouTube automáticamente (funciona). Si Oscar quiere blindarlos,
 escribirlos en `site-config.js` → `sermons[].title`.
 
+### 9. Estrategia para mantener y aumentar las visitas (propuesta 19-oct)
+Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Google >100/mes.
+1. Que Google te encuentre — Search Console (HECHO 19-oct) + redirecciones WP (HECHO 19-oct).
+2. Títulos que respondan preguntas («¿Qué dice la Biblia sobre…?»): 1 de cada 3-4 posts.
+3. Un post por semana, día fijo, y mejor en series (el #60 → #59 subió las lecturas del #59).
+4. WhatsApp (crear Canal «Secundum Fidem») + Facebook dos veces por post (día 1 y día 3-4).
+5. Rescatar el archivo: compartir un post viejo por semana («Del archivo»).
+6. Boletín: una Guía de Estudio por serie como gancho.
+Medir cada mes: lectores reales (sin China/Singapur), visitas de Google, post top, fuente top.
+
 ## ✅ Hecho (referencia rápida)
+- **Search Console + redirecciones de WordPress** (19-oct): propiedad de dominio verificada,
+  sitemap enviado (61 páginas); 51 redirecciones `/AAAA/MM/DD/<slug>/` → `/<slug>`.
 - **Post #60 «Amar no es callar la verdad»** (15-oct): respuesta al comentario viral de
   Tercer Cielo sobre la Trinidad; publicado desde la nube con la portada del Jordán (Canva,
   adjuntada por Oscar); pack social entregado; correo del boletín pendiente de Oscar.

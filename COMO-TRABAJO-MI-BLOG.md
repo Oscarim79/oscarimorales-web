@@ -58,6 +58,11 @@ qué posts leen, de dónde vienen (Google, WhatsApp, Facebook…), países y dis
 Cuentan desde el 22-jul-2026 (no hay historial anterior). Sin cookies — el sitio no
 necesita banner de aviso.
 
+Lo que pasa **en Google** (qué buscan las personas cuando me encuentran, qué posts muestra
+Google y si hay páginas con error) está en **search.google.com/search-console**, con mi
+cuenta me@oscarimorales.com (activado el 19-oct-2026). Funciona gracias a un registro
+`google-site-verification` en el DNS de GoDaddy: **no borrarlo**.
+
 ## Cómo se publica (lo técnico, por si acaso)
 
 El sitio es **estático** (sin WordPress). Un post es un archivo en `content/posts/`:
