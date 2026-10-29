@@ -9,7 +9,23 @@
 
 ---
 
-## 📍 Dónde nos quedamos (19-oct-2026)
+## 📍 Dónde nos quedamos (29-oct-2026)
+
+**Se publicó el post #61 «Salmo 91 a medianoche»** (Cultura y Actualidad · Caminar Cristiano),
+reacción a la nota de Christian Today sobre las cifras 2026 de YouVersion (Salmo 91 = búsqueda
+n.º 1; «ansiedad», «esperanza», «sanidad» entre las más comunes). Secciones: NO ES FALTA DE FE /
+SI SOY HONESTO / NO LES FALLEMOS COMO HERMANOS / A LOS QUE PREDICAMOS / LAS SENDAS ANTIGUAS
+(5 disciplinas) / EL EVANGELIO NO DEPENDE DE TU RACHA / ¿QUÉ HACEMOS?
+- **Dato personal confirmado por Oscar (29-oct):** NUNCA ha sufrido de ansiedad; sí de
+  **desesperación** por el dolor (fibromialgia, espondilitis anquilosante y **síndrome de dolor
+  crónico**). Cuando se queda sin fuerzas: lee la Palabra, escucha un sermón y lo acompaña con
+  playlists de canciones que le recuerdan el evangelio. No volver a escribir que tuvo ansiedad.
+- Portada: Hugging Face sin cuota → Canva (diseño «Portada post 61» en su Canva). Eligió la 1
+  (noche azul).
+- **Pack social entregado** (`recursos/social/061-salmo-91-a-medianoche/`). **Envío del correo
+  de Buttondown y publicación en redes: PENDIENTE DE OSCAR** hasta que confirme.
+
+## 📜 Detalle del 19-oct-2026
 
 **Estadísticas + Google Search Console + direcciones viejas de WordPress arregladas.**
 - **Cloudflare (últimos 30 días, 19-sep a 18-oct):** ~1,020 visitas / 1,170 páginas vistas;
