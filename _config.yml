@@ -1,0 +1,26 @@
+# Qué NO se publica en oscarimorales.com.
+# GitHub Pages publica todo el repositorio menos lo que esté en esta lista.
+# Las carpetas que empiezan con punto (.claude, .github...) ya quedan fuera solas.
+# Si agregas una carpeta interna nueva, añádela aquí. Los .md nunca se publican.
+exclude:
+  - "*.md"
+  - chats
+  - scripts
+  - content/posts
+  - recursos/social
+  - recursos/guias/src
+  - project/app.jsx
+  - project/assets/oscar-portrait.jpeg
+  - project/preview
+  - project/scraps
+  - project/screenshots
+  - project/slides
+  - project/uploads
+  - project/ui_kits/sitio_personal
+  - project/ui_kits/landing_blog/app.jsx
+  - project/ui_kits/landing_blog/design-canvas.jsx
+  - project/ui_kits/landing_blog/index.html
+  - project/ui_kits/landing_blog/min*.html
+  - project/ui_kits/landing_blog/post.html
+  - project/ui_kits/landing_blog/post.jsx
+  - project/ui_kits/landing_blog/tweaks-panel.jsx

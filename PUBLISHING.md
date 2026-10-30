@@ -115,6 +115,11 @@ git add -A && git commit -m "Nuevo post: El Temor de Dios" && git push
 En los tres casos, **GitHub Pages publica** el sitio y **Buttondown envía** el
 artículo por correo (vía el feed RSS).
 
+> 🔒 **Qué se publica:** todo el repositorio, menos lo que esté en `_config.yml`.
+> Los archivos `.md` y las carpetas internas no salen en el sitio. Si creas una
+> carpeta interna nueva, agrégala a esa lista. El repositorio sigue siendo público
+> en GitHub, así que allí esos archivos todavía se pueden leer.
+
 > ⚙️ Para que el Action pueda commitear: en GitHub → **Settings → Actions →
 > General → Workflow permissions** debe estar en **"Read and write permissions"**
 > (se configura una sola vez).

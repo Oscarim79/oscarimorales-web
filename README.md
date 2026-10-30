@@ -30,7 +30,7 @@ en el navegador o servir como archivos estáticos.
 .
 ├── index.html                  ← Landing (producción, vanilla JS)
 ├── post.html                   ← Página de artículo (producción, vanilla JS)
-├── .nojekyll                   ← Sirve el sitio tal cual en GitHub Pages
+├── _config.yml                 ← Lista de lo que NO se publica en el sitio
 ├── HANDOFF.md                  ← Instrucciones originales del export de Claude Design
 └── project/                    ← Handoff de Claude Design (sistema + prototipos)
     ├── colors_and_type.css     ← Tokens de marca: paleta, tipografía, espaciado
@@ -88,7 +88,8 @@ python3 -m http.server 8000
 ## 🌐 GitHub Pages
 
 El repositorio ya está **listo para Pages** (`index.html` en la raíz +
-`.nojekyll` + rutas relativas que funcionan bajo el subpath del proyecto).
+`_config.yml` + rutas relativas que funcionan bajo el subpath del proyecto).
+Lo que aparece en `_config.yml` se queda en el repositorio, pero no sale en el sitio.
 
 Para publicarlo:
 
