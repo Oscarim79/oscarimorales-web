@@ -1,0 +1,18 @@
+{
+  "post": 62,
+  "proposito": "Que quien lo vea deje de vivir el 31 de octubre con miedo: tiene libertad de conciencia y Cristo no pierde autoridad ese día.",
+  "para_quien": "Padres y creyentes que sienten miedo o culpa ante Halloween.",
+  "que_debe_quedar": "Paz, no una clase de historia.",
+  "voz": "JBFqnCBsd6RMkjVDRZzb",
+  "escenas": [
+    { "id": "gancho", "texto": "Hay creyentes que viven el {31|treinta y uno} de octubre como si esa noche el mundo cambiara de dueño." },
+    { "id": "miedo", "texto": "Un niño colorea una bruja en el colegio, y llega a casa con cara de haber cometido algo irreparable. ¿Qué le estamos enseñando? Que el diablo es fuerte y Cristo es frágil." },
+    { "id": "pregunta", "texto": "La pregunta de fondo no es qué hacer con {Halloween|Jalouín}, sino a quién le tenemos miedo." },
+    { "id": "conciencia", "texto": "Pablo dice: Cada uno esté plenamente convencido en su propia mente. Solo Dios es Señor de la conciencia. Y entre creyentes hay tres caminos." },
+    { "id": "erres", "texto": "Rechazar: apartarte por completo. Recibir: participar con tus vecinos. Redimir: llenar el día de otra cosa. Y ninguno de los tres cambia el evangelio." },
+    { "id": "limite", "texto": "Libertad no significa que todo vale: lo oculto no es tema de conciencia. Pero un niño disfrazado de bombero no ha hecho un pacto con nadie." },
+    { "id": "velas", "texto": "Es que es una fiesta pagana. Tal vez. Pero mira tu semana. El martes es de Marte. El jueves, de Júpiter. Enero viene de Jano. Tu anillo de bodas, probablemente, de Roma. Las velas del pastel, según se cuenta, de ofrendas griegas. Y nadie pide perdón por eso el lunes. El origen de algo no decide lo que significa hoy." },
+    { "id": "cristo", "texto": "Cristo no pierde autoridad esa noche. En la cruz despojó a los principados y a las potestades. Y mayor es el que está en vosotros, que el que está en el mundo." },
+    { "id": "cierre", "texto": "Si tu hijo llega con una bruja de papel, no hagas un drama. Recuérdale quién es Jesús. El {31|treinta y uno} de octubre no les pertenece a las brujas ni a los dulces: es de Cristo, como todos los demás días." }
+  ]
+}

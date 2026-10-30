@@ -1,0 +1,440 @@
+<!doctype html>
+<!--
+  Escenas del video corto del post 62 — Secundum Fidem · Oscar I. Morales
+  NO se abre a mano: lo maneja scripts/reel-render.mjs, que inyecta TIEMPOS, MAPA y FIN
+  y llama a seek(t) una vez por cuadro. Todo depende solo de t, para que cada cuadro salga igual siempre.
+-->
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;src:url(../_comun/fuentes/playfair-display-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;src:url(../_comun/fuentes/playfair-display-latin-700-italic.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:700;src:url(../_comun/fuentes/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:800;src:url(../_comun/fuentes/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{--noche:#0D1B2A;--terra:#C47E5A;--terra-300:#DFAA94;--terra-200:#ECC8B7;--crema:#F5F0E8;--papel:#FBF8F2;--tinta:#3B2A1E}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--noche)}
+.capa{position:absolute;inset:0;overflow:hidden}
+#mapa{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+#mapa img{position:absolute;display:block}
+.pin{position:absolute;left:0;top:0;width:0;height:0}
+.pin svg{position:absolute;left:-34px;top:-92px;width:68px;height:92px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.4))}
+.pin i{position:absolute;left:-60px;top:-60px;width:120px;height:120px;border-radius:50%;border:5px solid var(--noche)}
+.rotulo{position:absolute;left:0;top:0;white-space:nowrap;font:800 50px/1 'Montserrat',sans-serif;letter-spacing:.09em;color:var(--noche);text-shadow:0 0 16px rgba(245,240,232,.95),0 0 5px rgba(245,240,232,.95)}
+.rotulo.c{transform-origin:50% 50%}
+.carta{position:absolute;left:70px;right:70px;top:250px;padding:44px 40px 46px;text-align:center;background:rgba(13,27,42,.9);border:2px solid var(--terra);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.42)}
+.carta u{display:block;text-decoration:none;font:800 30px/1.2 'Montserrat',sans-serif;letter-spacing:.2em;color:var(--terra-200)}
+.carta b{display:block;margin-top:16px;font:italic 400 112px/1.08 'Playfair Display',serif;color:var(--papel)}
+.carta b.enorme{font-size:190px;line-height:1}
+.carta b.medio{font-size:84px;line-height:1.14}
+.carta s{display:block;margin-top:20px;text-decoration:none;font:700 36px/1.25 'Montserrat',sans-serif;color:var(--terra-300)}
+#sub{position:absolute;left:60px;right:60px;top:1395px;text-align:center}
+#sub span.bloque{display:inline;padding:10px 20px;background:rgba(13,27,42,.84);border-radius:12px;-webkit-box-decoration-break:clone;box-decoration-break:clone;font:800 56px/1.5 'Montserrat',sans-serif;color:var(--crema)}
+#sub em{font-style:normal;color:#F0B48F}
+#titulo{position:absolute;left:0;right:0;top:290px;text-align:center;font:italic 700 138px/1.04 'Playfair Display',serif;color:var(--papel);text-shadow:0 6px 34px rgba(0,0,0,.8)}
+#puerta{position:absolute;left:0;top:0;transform-origin:0 0}
+#destello{position:absolute;inset:0;background:radial-gradient(circle at 735px 500px,#FFE7B0 0,rgba(255,196,110,.82) 22%,rgba(196,126,90,.28) 52%,transparent 74%)}
+#sombra{position:absolute;inset:0}
+#marca{position:absolute;left:64px;right:64px;top:250px;display:flex;justify-content:space-between;align-items:center}
+#marca div.b{display:flex;align-items:center;gap:20px}
+#marca img{height:70px;width:auto;display:block}
+#marca b{display:block;font:800 22px/1 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--crema);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#marca i{display:block;margin-top:8px;font:italic 400 26px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#fuerte{position:absolute;left:64px;right:64px;top:1060px;font:italic 700 118px/1.1 'Playfair Display',serif;color:var(--papel);text-shadow:0 4px 30px rgba(0,0,0,.65)}
+#cita{position:absolute;left:64px;right:64px;top:1030px;font:italic 400 76px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+#cita span.cr{color:var(--terra-300)}
+#pie{position:absolute;left:64px;right:64px;top:1500px}
+#pie hr{border:0;width:76px;height:4px;background:var(--terra);margin-bottom:24px}
+#pie p{font:700 24px/1.3 'Montserrat',sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--terra-200)}
+#mascara,#pila{position:absolute;left:0;top:0;transform-origin:50% 50%}
+canvas{position:absolute;left:0;top:0}
+</style></head><body>
+
+<div class="capa" id="c-mapa">
+  <div id="mapa"><img id="fondo" src="../_comun/mapa-europa.jpg"></div>
+  <svg id="arcos" width="1080" height="1920" style="position:absolute;left:0;top:0"></svg>
+  <div id="rotulos"></div>
+</div>
+
+<div class="capa" id="c-oscura">
+  <img id="puerta" src="../../../content/covers/062-el-31-de-octubre-sin-miedo.jpg">
+  <div id="sombra"></div>
+  <div id="destello"></div>
+  <svg id="calabaza" width="520" height="470" viewBox="0 0 520 470" style="position:absolute;left:120px;top:880px;overflow:visible">
+    <defs>
+      <radialGradient id="cuerpo" cx="42%" cy="38%" r="72%"><stop offset="0" stop-color="#D98A3F"/><stop offset=".6" stop-color="#B45F27"/><stop offset="1" stop-color="#5E2C13"/></radialGradient>
+      <radialGradient id="luz" cx="50%" cy="60%" r="60%"><stop offset="0" stop-color="#FFF0B5"/><stop offset=".6" stop-color="#F7B84B"/><stop offset="1" stop-color="#C96A1E"/></radialGradient>
+      <radialGradient id="halo"><stop offset="0" stop-color="#F7B84B" stop-opacity=".5"/><stop offset="1" stop-color="#F7B84B" stop-opacity="0"/></radialGradient>
+    </defs>
+    <ellipse id="haloc" cx="260" cy="270" rx="360" ry="290" fill="url(#halo)"/>
+    <path d="M246 88c-4-30 8-58 36-74l26 18c-24 12-32 34-28 58z" fill="#4C5A32" stroke="#232B16" stroke-width="5"/>
+    <g fill="url(#cuerpo)" stroke="#3A1A0A" stroke-width="5">
+      <ellipse cx="108" cy="262" rx="92" ry="164"/><ellipse cx="412" cy="262" rx="92" ry="164"/>
+      <ellipse cx="176" cy="258" rx="96" ry="182"/><ellipse cx="344" cy="258" rx="96" ry="182"/>
+      <ellipse cx="260" cy="256" rx="96" ry="190"/>
+    </g>
+    <g id="cara" fill="url(#luz)" stroke="#3A1A0A" stroke-width="4">
+      <path d="M128 228l54-76 54 76z"/><path d="M284 228l54-76 54 76z"/><path d="M232 288l28-40 28 40z"/>
+      <path d="M92 306c50 22 96 26 124 24l10 34 34-30 34 30 10-34c28 2 74-2 124-24-20 70-92 116-168 116S112 376 92 306z"/>
+    </g>
+  </svg>
+  <div id="titulo">¿Fiesta<br>pagana?</div>
+  <svg id="hilo" width="1080" height="400" viewBox="0 0 1080 400" style="position:absolute;left:0;top:640px;overflow:visible">
+    <path id="hilop" pathLength="1" d="M-30 210C120 60 250 60 260 180s-150 150-160 40 180-160 300-60 40 220-60 170 40-260 200-250 190 130 90 210-210 10-130-90 260-120 330-30 80 200-40 200-130-120-10-190 200-60 400 60" fill="none" stroke="#DFAA94" stroke-width="9" stroke-linecap="round" style="filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))"/>
+  </svg>
+  <div id="marca"><div class="b"><img src="../../social/assets/icono-crema.png"><div><b>OSCAR I. MORALES</b><i>Secundum Fidem</i></div></div></div>
+  <div id="fuerte">Eso lo hizo<br><span style="color:var(--terra-300)">Cristo.</span></div>
+  <div id="cita"></div>
+  <div id="pie"><hr><p>El post completo en oscarimorales.com</p></div>
+</div>
+
+<div class="capa" id="c-monedas">
+  <canvas id="monedas" width="1080" height="1920"></canvas>
+  <svg id="mascara" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <defs>
+      <linearGradient id="hueso" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5ECD9"/><stop offset=".55" stop-color="#E2CFAE"/><stop offset="1" stop-color="#A9825E"/></linearGradient>
+    </defs>
+    <g id="careta">
+      <path d="M0-360C190-360 300-250 300-70c0 130-50 240-120 330-50 66-110 110-180 110S-130 326-180 260c-70-90-120-200-120-330C-300-250-190-360 0-360z" fill="url(#hueso)" stroke="#3B2A1E" stroke-width="8"/>
+      <path d="M-226-92c30-62 124-70 176-6-6 54-58 80-114 72-44-6-70-30-62-66z" fill="#0D1B2A"/>
+      <path d="M226-92c-30-62-124-70-176-6 6 54 58 80 114 72 44-6 70-30 62-66z" fill="#0D1B2A"/>
+      <path d="M-14 26L0-14l14 40c14 20-44 20-28 0z" fill="#7A5236"/>
+      <path d="M-168 96c100 62 236 62 336 0-14 100-84 176-168 176S-154 196-168 96z" fill="#0D1B2A"/>
+      <path d="M-122 124l14 42m34-24l10 46m38-40l4 52m40-52l-4 52m44-58l-10 46m46-64l-14 42" stroke="#E2CFAE" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M-250-150c60-70 130-60 190-34M250-150c-60-70-130-60-190-34" stroke="#3B2A1E" stroke-width="9" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <svg id="pila" width="1080" height="1920" viewBox="0 0 1080 1920"><g id="pilag"></g></svg>
+</div>
+
+<canvas id="brasas" width="1080" height="1920"></canvas>
+<div class="capa" id="cartas"></div>
+<div id="sub"></div>
+
+<script>
+const T = window.TIEMPOS, M = window.MAPA, FIN = window.FIN;
+const $ = id => document.getElementById(id);
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const pr = (t, a, d) => cl((t - a) / d);
+const sm = x => x * x * (3 - 2 * x);
+const eo = x => 1 - Math.pow(1 - x, 3);
+const rebote = x => { const c = 1.70158; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const azar = (i, s = 1) => { const v = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return v - Math.floor(v); };
+
+const E = Object.fromEntries(T.escenas.map(e => [e.id, e]));
+const W = (id, inicio, n = 0) => {
+  const l = T.palabras.filter(p => p.escena === id && p.texto.startsWith(inicio));
+  if (!l[n]) throw new Error(`No encuentro «${inicio}» en ${id}`);
+  return l[n].ini;
+};
+
+// ── cámara sobre el mapa ─────────────────────────────────────────────────────
+const L = M.lugares;
+const VISTA = [2350, 2900]; // la vista general: más lejos de esto, el mapa no alcanza a llenar la pantalla
+const NORTE = [2100, 2950];
+const tEsa = W('roma', 'Esa'), tRoma = W('roma', 'Roma');
+const CAM = [
+  [0, VISTA, .345],
+  [tEsa - .1, VISTA, .36],
+  [tRoma + .1, L.roma, .9],
+  [E.norte.ini - .25, L.roma, .95],
+  [E.norte.ini + .85, NORTE, .42],
+  [E.irlanda.ini - .1, NORTE, .44],
+  [E.irlanda.ini + 1.0, L.irlanda, .98],
+  [E.wittenberg.ini - .15, L.irlanda, 1.04],
+  [E.wittenberg.ini + 1.1, L.wittenberg, .86],
+  [FIN, L.wittenberg, .94],
+];
+function camara(t) {
+  let i = 0;
+  while (i < CAM.length - 2 && t > CAM[i + 1][0]) i++;
+  const [ta, a, za] = CAM[i], [tb, b, zb] = CAM[i + 1];
+  const k = sm(pr(t, ta, tb - ta));
+  return { x: a[0] + (b[0] - a[0]) * k, y: a[1] + (b[1] - a[1]) * k, z: za * Math.pow(zb / za, k) };
+}
+const CY = 860;
+const pantalla = (c, p) => [540 + (p[0] - c.x) * c.z, CY + (p[1] - c.y) * c.z];
+
+// ── zonas, pines y rótulos ───────────────────────────────────────────────────
+const zonas = {};
+for (const [id, z] of Object.entries(M.zonas)) {
+  const img = new Image();
+  img.src = `../_comun/zona-${id}.png`;
+  img.style.cssText = `left:${z.x}px;top:${z.y}px;width:${z.lado}px;height:${z.lado}px;opacity:0`;
+  $('mapa').appendChild(img);
+  zonas[id] = img;
+}
+function crearPin(color) {
+  const d = document.createElement('div');
+  d.className = 'pin';
+  d.innerHTML = `<i></i><svg viewBox="0 0 68 92"><path d="M34 2C16 2 3 16 3 33c0 22 31 57 31 57s31-35 31-57C65 16 52 2 34 2z" fill="${color}" stroke="#0D1B2A" stroke-width="4"/><circle cx="34" cy="33" r="12" fill="#F5F0E8"/></svg>`;
+  $('rotulos').appendChild(d);
+  return d;
+}
+function crearRotulo(texto, inclinado) {
+  const d = document.createElement('div');
+  d.className = 'rotulo';
+  d.textContent = texto;
+  d.dataset.g = inclinado || 0;
+  $('rotulos').appendChild(d);
+  return d;
+}
+const PINES = [
+  { el: crearPin('#C47E5A'), l: L.roma, t: tRoma },
+  { el: crearPin('#2F7A68'), l: L.irlanda, t: E.irlanda.ini + .35 },
+  { el: crearPin('#C47E5A'), l: L.wittenberg, t: E.wittenberg.ini + .75 },
+];
+const ROTULOS = [
+  { el: crearRotulo('ROMA', -3), l: L.roma, dx: 0, dy: 62, t: tRoma + .1, fin: E.norte.ini + .6 },
+  { el: crearRotulo('INGLATERRA', -4), l: L.inglaterra, dx: -30, dy: 150, t: W('norte', 'Inglaterra'), fin: E.irlanda.ini + .5 },
+  { el: crearRotulo('ALEMANIA', -4), l: L.alemania, dx: 40, dy: 10, t: W('norte', 'Alemania'), fin: E.irlanda.ini + .5 },
+  { el: crearRotulo('IRLANDA', -3), l: L.irlanda, dx: 0, dy: 70, t: E.irlanda.ini + .35, fin: E.wittenberg.ini + .4 },
+  { el: crearRotulo('¿SAMHAIN?', -3), l: L.irlanda, dx: 0, dy: 138, t: W('irlanda', 'Samhain'), fin: E.wittenberg.ini + .4 },
+  { el: crearRotulo('WITTENBERG', -3), l: L.wittenberg, dx: 0, dy: 62, t: W('wittenberg', 'Wittenberg') - .2, fin: 1e3 },
+];
+const ARCOS = [
+  { de: L.roma, a: L.inglaterra, t: W('norte', 'Inglaterra') - .15, curva: -.26 },
+  { de: L.roma, a: L.alemania, t: W('norte', 'Alemania') - .15, curva: .2 },
+];
+function arcos(t, c, opacidad) {
+  let html = '';
+  for (const a of ARCOS) {
+    const k = eo(pr(t, a.t, .8));
+    if (!k) continue;
+    const [x0, y0] = pantalla(c, a.de), [x1, y1] = pantalla(c, a.a);
+    const mx = (x0 + x1) / 2 - (y1 - y0) * a.curva, my = (y0 + y1) / 2 + (x1 - x0) * a.curva;
+    const pts = [];
+    for (let i = 0; i <= 40; i++) {
+      const u = k * i / 40;
+      pts.push([(1 - u) * (1 - u) * x0 + 2 * (1 - u) * u * mx + u * u * x1, (1 - u) * (1 - u) * y0 + 2 * (1 - u) * u * my + u * u * y1]);
+    }
+    const [px, py] = pts[pts.length - 1];
+    html += `<polyline points="${pts.map(p => p.map(v => v.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#7A3E22" stroke-width="7" stroke-dasharray="18 13" stroke-linecap="round"/><circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="12" fill="#7A3E22"/>`;
+  }
+  $('arcos').innerHTML = html;
+  $('arcos').style.opacity = opacidad;
+}
+
+// ── cartas ───────────────────────────────────────────────────────────────────
+function carta(ceja, grande, nota, a, b, clase = '', notaDesde = 0) {
+  const d = document.createElement('div');
+  d.className = 'carta';
+  d.innerHTML = `<u>${ceja}</u><b class="${clase}">${grande}</b>${nota ? `<s>${nota}</s>` : ''}`;
+  d.style.opacity = 0;
+  $('cartas').appendChild(d);
+  return { el: d, a, b, nota: d.querySelector('s'), notaDesde };
+}
+const CARTAS = [
+  carta('HALLOWEEN VIENE DE', 'All Hallows’ Eve', 'la víspera de Todos los Santos', E.roma.ini + .05, tEsa - .1, 'medio', W('roma', 'víspera')),
+  carta('LA FIESTA SE FIJÓ EN ROMA', '609', '13 de mayo', W('roma', '609') - .35, E.norte.ini - .1, 'enorme'),
+  carta('HACIA EL AÑO', '800', 'ya se guardaba el 1 de noviembre', E.norte.ini + .1, E.norte.fin + .1, 'enorme'),
+  carta('EN IRLANDA', '20 de abril', 'según el historiador Ronald Hutton', W('irlanda', 'Según'), W('irlanda', 'Otros') - .1),
+  carta('OTROS HISTORIADORES', '¿Alguna conexión?', 'no lo sabemos del todo', W('irlanda', 'Otros'), E.irlanda.fin + .15, 'medio', W('irlanda', 'no')),
+  carta('VÍSPERA DE TODOS LOS SANTOS', '1517', 'Lutero, en Wittenberg', E.wittenberg.ini + .05, W('wittenberg', 'negocio') - .3, 'enorme', W('wittenberg', 'Lutero')),
+  carta('LAS INDULGENCIAS', 'Un negocio sostenido por el miedo', '', W('wittenberg', 'negocio') - .1, E.wittenberg.fin + .3, 'medio'),
+];
+
+// ── monedas ──────────────────────────────────────────────────────────────────
+const tMonedas = W('wittenberg', 'negocio') - .45;
+const MONEDAS = [];
+for (let fila = 0, n = 0; fila < 9; fila++) {
+  const ancho = 11 - fila;
+  for (let i = 0; i < ancho; i++, n++) {
+    MONEDAS.push({
+      n, x: 540 + (i - (ancho - 1) / 2) * 74 + (azar(n, 2) - .5) * 26,
+      y: 1320 - fila * 42 + (azar(n, 3) - .5) * 12,
+      ini: tMonedas + azar(n, 5) * 1.1 + fila * .46,
+      giro: 5 + azar(n, 7) * 9, x0: (azar(n, 9) - .5) * 200,
+    });
+  }
+}
+MONEDAS.sort((a, b) => b.y - a.y);
+const ctxM = $('monedas').getContext('2d');
+function moneda(ctx, x, y, r, aplast, luz = 1) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(1, aplast);
+  const g = ctx.createRadialGradient(-r * .35, -r * .35, r * .1, 0, 0, r);
+  g.addColorStop(0, `rgba(250,226,150,${luz})`); g.addColorStop(.7, `rgba(214,163,72,${luz})`); g.addColorStop(1, `rgba(134,88,32,${luz})`);
+  ctx.fillStyle = g;
+  ctx.strokeStyle = 'rgba(70,42,14,.9)'; ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  ctx.strokeStyle = 'rgba(112,72,26,.85)'; ctx.lineWidth = r * .13;
+  ctx.beginPath(); ctx.moveTo(0, -r * .55); ctx.lineTo(0, r * .55); ctx.moveTo(-r * .38, -r * .12); ctx.lineTo(r * .38, -r * .12); ctx.stroke();
+  ctx.restore();
+}
+function monedas(t) {
+  ctxM.clearRect(0, 0, 1080, 1920);
+  if (t < tMonedas || t > E.mascara.ini + 1) return;
+  const g = ctxM.createRadialGradient(540, 1180, 60, 540, 1100, 900);
+  g.addColorStop(0, 'rgba(226,158,86,.42)'); g.addColorStop(.55, 'rgba(120,70,40,.14)'); g.addColorStop(1, 'rgba(13,27,42,0)');
+  ctxM.fillStyle = g; ctxM.fillRect(0, 0, 1080, 1920);
+  for (const c of MONEDAS) {
+    const k = pr(t, c.ini, .62);
+    if (!k) continue;
+    const y = -80 + (c.y + 80) * k * k;
+    const x = c.x + c.x0 * (1 - k);
+    const asentada = k >= 1;
+    const aplast = asentada ? .34 : Math.max(.16, Math.abs(Math.cos(t * c.giro + c.n)));
+    moneda(ctxM, x, y, 42, aplast);
+  }
+}
+
+// ── pila de la escena de la máscara ──────────────────────────────────────────
+(function () {
+  let html = '';
+  for (let i = 0; i < 9; i++) {
+    const y = 40 - i * 26, x = (azar(i, 11) - .5) * 14;
+    html += `<ellipse cx="${x}" cy="${y + 12}" rx="118" ry="38" fill="#86581F" stroke="#3B2410" stroke-width="4"/><ellipse cx="${x}" cy="${y}" rx="118" ry="38" fill="#D6A348" stroke="#3B2410" stroke-width="4"/><path d="M${x - 46} ${y}h92M${x} ${y - 16}v32" stroke="#8A5E22" stroke-width="7" fill="none"/>`;
+  }
+  $('pilag').innerHTML = html;
+})();
+
+// ── brasas ───────────────────────────────────────────────────────────────────
+const ctxB = $('brasas').getContext('2d');
+function brasas(t, fuerza) {
+  ctxB.clearRect(0, 0, 1080, 1920);
+  if (!fuerza) return;
+  for (let i = 0; i < 46; i++) {
+    const v = 45 + azar(i, 21) * 90, f = (t * v / 2100 + azar(i, 23)) % 1;
+    const y = 1900 - f * 1950, x = azar(i, 25) * 1080 + Math.sin(t * .9 + i) * 34;
+    const r = 2 + azar(i, 27) * 4.5, a = Math.sin(f * Math.PI) * fuerza * (.45 + .55 * Math.sin(t * 3 + i * 2) ** 2);
+    ctxB.fillStyle = `rgba(247,184,100,${a.toFixed(3)})`;
+    ctxB.beginPath(); ctxB.arc(x, y, r, 0, Math.PI * 2); ctxB.fill();
+  }
+}
+
+// ── subtítulos ───────────────────────────────────────────────────────────────
+const BLOQUES = [];
+{
+  let b = null;
+  const conVoz = T.palabras.filter(p => p.escena !== 'cierre');
+  conVoz.forEach((p, i) => {
+    if (!b) { b = { ps: [], ini: p.ini }; BLOQUES.push(b); }
+    b.ps.push(p);
+    const largo = b.ps.reduce((s, q) => s + q.texto.length + 1, 0);
+    const sig = conVoz[i + 1];
+    if (!sig || largo > 21 || b.ps.length >= 5 || (/[.?!:;,]$/.test(p.texto) && b.ps.length >= 2) || sig.ini - p.fin > .45) {
+      b.fin = sig && sig.ini - p.fin < .45 ? sig.ini : p.fin + .3;
+      b = null;
+    }
+  });
+}
+let bloquePrevio = '';
+function subtitulos(t) {
+  const b = BLOQUES.find(x => t >= x.ini && t < x.fin);
+  const html = b ? `<span class="bloque">${b.ps.map(p => (t >= p.ini && t < p.fin + .06 ? `<em>${p.texto}</em>` : p.texto)).join(' ')}</span>` : '';
+  if (html !== bloquePrevio) { $('sub').innerHTML = html; bloquePrevio = html; }
+}
+
+// ── cierre: la cita aparece palabra por palabra ──────────────────────────────
+const tCita = W('cierre', 'El');
+const pCita = T.palabras.filter(p => p.escena === 'cierre' && p.ini >= tCita);
+const iCr = pCita.findIndex(p => p.texto === 'es');
+$('cita').innerHTML = pCita.map((p, i) => `<span class="${i >= iCr && i < iCr + 3 ? 'cr' : ''}">${p.texto}</span>`).join(' ');
+const sCita = [...$('cita').children];
+
+// ── un cuadro ────────────────────────────────────────────────────────────────
+window.seek = function (t) {
+  // mapa
+  const c = camara(t);
+  $('mapa').style.transform = `translate(${540 - c.x * c.z}px,${CY - c.y * c.z}px) scale(${c.z})`;
+  const sinZonas = 1 - sm(pr(t, E.wittenberg.ini - .1, .6));
+  zonas.roma.style.opacity = sm(pr(t, tRoma, .7)) * sinZonas;
+  zonas.inglaterra.style.opacity = sm(pr(t, W('norte', 'Inglaterra') + .4, .7)) * sinZonas;
+  zonas.alemania.style.opacity = sm(pr(t, W('norte', 'Alemania') + .4, .7)) * sinZonas;
+  zonas.irlanda.style.opacity = sm(pr(t, E.irlanda.ini + .35, .7)) * sinZonas;
+  arcos(t, c, 1 - pr(t, E.irlanda.ini + .1, .6));
+  for (const p of PINES) {
+    const k = pr(t, p.t, .5);
+    const [x, y] = pantalla(c, p.l);
+    p.el.style.display = k && (p.l === L.wittenberg || t < E.wittenberg.ini) ? 'block' : 'none';
+    p.el.style.transform = `translate(${x}px,${y - (1 - rebote(k)) * 140}px)`;
+    const anillo = p.el.querySelector('i');
+    const q = ((t - p.t) % 1.6) / 1.6;
+    anillo.style.opacity = (1 - q) * .75;
+    anillo.style.transform = `scale(${.2 + q * 1.3})`;
+  }
+  for (const r of ROTULOS) {
+    const k = rebote(pr(t, r.t, .4));
+    const f = 1 - pr(t, r.fin, .3);
+    const [x, y] = pantalla(c, r.l);
+    r.el.style.opacity = t < r.t ? 0 : f;
+    const ancho = r.el.offsetWidth;
+    r.el.style.transform = `translate(${x + r.dx - ancho / 2}px,${y + r.dy}px) rotate(${r.el.dataset.g}deg) scale(${k})`;
+  }
+
+  // puerta: el gancho y el cierre
+  const entra = 1 - sm(pr(t, E.roma.ini - .35, .6));
+  const finalK = sm(pr(t, E.cierre.ini - .4, .6));
+  const oscura = Math.max(entra, finalK);
+  $('c-oscura').style.opacity = oscura;
+  const esCierre = t > E.mascara.ini;
+  const puerta = $('puerta');
+  if (!esCierre) {
+    const z = 1 + t * .018, h = 1920 * z, w = h * 16 / 9;
+    puerta.style.width = `${w}px`; puerta.style.height = `${h}px`;
+    puerta.style.transform = `translate(${760 - w * .573}px,${(1920 - h) / 2}px)`;
+  } else {
+    const z = 1 + (t - E.cierre.ini) * .012, h = 1240 * z, w = h * 16 / 9;
+    puerta.style.width = `${w}px`; puerta.style.height = `${h}px`;
+    puerta.style.transform = `translate(${735 - w * .573}px,${(1240 - h) * .5}px)`;
+  }
+  $('sombra').style.background = esCierre
+    ? 'linear-gradient(180deg,rgba(13,27,42,.84) 0,rgba(13,27,42,.5) 200px,rgba(13,27,42,.1) 430px,rgba(13,27,42,.14) 760px,rgba(13,27,42,.84) 1020px,#0D1B2A 1190px,#0D1B2A 1920px)'
+    : 'linear-gradient(180deg,rgba(13,27,42,.62) 0,rgba(13,27,42,.3) 40%,rgba(13,27,42,.55) 100%)';
+  $('calabaza').style.display = esCierre ? 'none' : 'block';
+  $('titulo').style.display = esCierre ? 'none' : 'block';
+  $('hilo').style.display = esCierre ? 'none' : 'block';
+  $('marca').style.display = esCierre ? 'flex' : 'none';
+  $('calabaza').style.transform = `scale(${1 + t * .012})`;
+  const llama = .78 + .22 * Math.sin(t * 11) * Math.sin(t * 7.3);
+  $('cara').style.opacity = llama;
+  $('haloc').style.opacity = llama;
+  $('titulo').style.transform = `scale(${1 + .05 * (1 - eo(pr(t, 0, .5)))})`;
+  const h = $('hilop');
+  const kh = sm(pr(t, W('gancho', 'La'), W('gancho', 'enredada') + .5 - W('gancho', 'La')));
+  h.style.strokeDasharray = `${kh} 1`;
+  h.style.opacity = kh ? 1 : 0;
+  const cristo = W('cierre', 'Cristo');
+  const flash = esCierre ? Math.max(.34, Math.exp(-Math.max(0, t - cristo) * 2.1) * pr(t, cristo - .2, .25)) : 0;
+  $('destello').style.opacity = esCierre ? flash * .9 : 0;
+  $('destello').style.display = esCierre ? 'block' : 'none';
+  $('fuerte').style.display = esCierre ? 'block' : 'none';
+  $('fuerte').style.opacity = eo(pr(t, E.cierre.ini, .3)) * (1 - pr(t, tCita - .3, .28));
+  $('cita').style.display = esCierre ? 'block' : 'none';
+  sCita.forEach((s, i) => { s.style.opacity = pr(t, pCita[i].ini - .05, .16) * .96 + (pr(t, pCita[i].ini - .05, .16) ? .04 : 0); });
+  $('pie').style.opacity = eo(pr(t, T.duracion - .2, .6));
+  $('pie').style.display = esCierre ? 'block' : 'none';
+
+  // monedas y máscara
+  const fondoM = sm(pr(t, tMonedas, .5)) * (1 - sm(pr(t, E.cierre.ini - .4, .5)));
+  const cm = $('c-monedas');
+  cm.style.display = fondoM ? 'block' : 'none';
+  cm.style.background = `rgba(13,27,42,${fondoM})`;
+  cm.style.opacity = 1;
+  monedas(t);
+  $('monedas').style.opacity = 1 - sm(pr(t, E.mascara.ini - .1, .6));
+  const tM = W('mascara', 'máscara') - .35, tU = W('mascara', 'Unos'), tO = W('mascara', 'Otros'), tN = W('mascara', 'Ninguno');
+  const sube = eo(pr(t, tM, .6));
+  const lado = sm(pr(t, tU, .6));
+  const apaga = 1 - .72 * sm(pr(t, tN, .5));
+  $('mascara').style.opacity = sube * (1 - lado * (1 - sm(pr(t, tO, .4)))) * apaga * (1 - pr(t, E.cierre.ini - .4, .4));
+  $('careta').setAttribute('transform', `translate(${540 + lado * 245},${780 + (1 - sube) * 160 + Math.sin(t * .8) * 8}) scale(${1 - lado * .42}) rotate(${Math.sin(t * .7) * 1.6 + lado * 5})`);
+  const pila = sm(pr(t, tU, .45));
+  $('pila').style.opacity = pila * apaga * (1 - pr(t, E.cierre.ini - .4, .4));
+  $('pilag').setAttribute('transform', `translate(${295},${900 + (1 - pila) * 40})`);
+
+  // brasas, cartas y subtítulos
+  brasas(t, Math.max(entra, fondoM * .8, finalK * .7));
+  for (const k of CARTAS) {
+    const a = eo(pr(t, k.a, .32)), b = pr(t, k.b - .24, .24);
+    k.el.style.display = t >= k.a && t <= k.b + .02 ? 'block' : 'none';
+    k.el.style.opacity = a * (1 - b);
+    k.el.style.transform = `translateY(${(1 - a) * -38 + b * -20}px) scale(${.97 + a * .03})`;
+    if (k.nota) k.nota.style.opacity = k.notaDesde ? eo(pr(t, k.notaDesde - .05, .3)) : 1;
+  }
+  subtitulos(t);
+};
+window.seek(0);
+</script>
+</body></html>

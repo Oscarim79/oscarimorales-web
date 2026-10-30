@@ -1,4 +1,10 @@
 # Vistas previas y entregables de trabajo (PDF de lectura, capturas, tarjetas de prueba): no se publican
 vista-previa/
+# Videos cortos: la voz y el video final se pueden regenerar y pesan mucho
+recursos/video/*/voz.mp3
+recursos/video/*/*.mp4
+# Claves privadas (ElevenLabs, etc.): el repositorio es público, nunca se suben
+.env
+.env.*
 # Dependencias que una sesión pueda instalar en la raíz (p. ej. tipografías de marca): no se suben
 node_modules/

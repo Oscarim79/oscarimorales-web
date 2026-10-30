@@ -8,6 +8,7 @@ exclude:
   - scripts
   - content/posts
   - recursos/social
+  - recursos/video
   - recursos/guias/src
   - project/app.jsx
   - project/assets/oscar-portrait.jpeg

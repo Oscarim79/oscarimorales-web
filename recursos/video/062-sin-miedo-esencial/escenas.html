@@ -1,0 +1,313 @@
+<!doctype html>
+<!--
+  Escenas del video «Sin miedo» (post 62) — Secundum Fidem · Oscar I. Morales
+  Propósito: que quien lo vea deje de vivir el 31 de octubre con miedo.
+  NO se abre a mano: lo maneja scripts/reel-render.mjs llamando a seek(t) en cada cuadro.
+-->
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../_comun/estilos.css">
+<style>
+.luz{position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(214,150,86,.26) 0,rgba(120,70,40,.1) 38%,transparent 66%)}
+/* calendario */
+#hoja{position:absolute;left:190px;top:640px;width:700px;height:680px;background:linear-gradient(170deg,#FBF8F2,#E6D8C0);border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.6);transform-origin:50% 0;overflow:hidden;text-align:center}
+#hoja u{display:block;text-decoration:none;background:var(--terra);color:var(--papel);font:800 54px/1 'Montserrat',sans-serif;letter-spacing:.2em;padding:36px 0}
+#hoja b{display:block;margin-top:38px;font:italic 700 400px/1 'Playfair Display',serif;color:var(--noche)}
+#sombraHoja{position:absolute;inset:0;background:linear-gradient(0deg,#0D1B2A 0,#0D1B2A 55%,rgba(13,27,42,0) 100%)}
+/* papel del niño */
+.papel{position:absolute;width:620px;height:760px;background:#F7F1E3;border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.papel::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;background:repeating-linear-gradient(180deg,transparent 0 62px,rgba(90,120,160,.2) 62px 65px)}
+/* lista de ideas */
+.idea{position:absolute;left:70px;right:70px;text-align:center;font:italic 400 92px/1.15 'Playfair Display',serif;color:var(--papel)}
+.idea em{color:var(--terra-300)}
+/* erres */
+.erre{position:absolute;left:60px;right:60px;height:320px;display:flex;align-items:center;gap:34px;padding:0 34px;background:rgba(245,240,232,.07);border:2px solid rgba(196,126,90,.55);border-radius:18px}
+.erre .r{flex:none;width:170px;height:230px;display:flex;align-items:center;justify-content:center;background:var(--terra);color:var(--papel);border-radius:12px;font:italic 700 170px/1 'Playfair Display',serif}
+.erre h3{font:800 46px/1.1 'Montserrat',sans-serif;letter-spacing:.09em;color:var(--papel)}
+.erre p{margin-top:16px;font:italic 400 46px/1.14 'Playfair Display',serif;color:var(--terra-200)}
+.erre svg{flex:none;margin-left:auto}
+.erre .tx{flex:1;min-width:0}
+/* límite */
+.lado{position:absolute;left:70px;right:70px;height:490px;border-radius:18px;padding:40px 30px;text-align:center}
+.lado p{margin-top:26px;font:italic 400 60px/1.16 'Playfair Display',serif;color:var(--papel)}
+.lado u{display:block;text-decoration:none;font:800 30px/1.25 'Montserrat',sans-serif;letter-spacing:.17em;color:var(--terra-200)}
+/* cosas de cada día */
+.cosa{position:absolute;width:458px;height:262px;background:rgba(245,240,232,.08);border:2px solid rgba(196,126,90,.55);border-radius:16px;padding:22px 16px;text-align:center}
+.cosa u{display:block;text-decoration:none;font:800 29px/1.1 'Montserrat',sans-serif;letter-spacing:.13em;color:var(--papel)}
+.cosa i{display:block;margin-top:8px;font:italic 400 40px/1.05 'Playfair Display',serif;color:var(--terra-200)}
+.cosa svg{display:block;margin:12px auto 0}
+/* puerta */
+#puerta{position:absolute;left:0;top:0;transform-origin:0 0}
+#sombra{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.84) 0,rgba(13,27,42,.5) 200px,rgba(13,27,42,.1) 430px,rgba(13,27,42,.14) 760px,rgba(13,27,42,.84) 1020px,#0D1B2A 1190px,#0D1B2A 1920px)}
+#destello{position:absolute;inset:0;background:radial-gradient(circle at 735px 500px,#FFE7B0 0,rgba(255,196,110,.82) 22%,rgba(196,126,90,.28) 52%,transparent 74%)}
+#marca{position:absolute;left:64px;right:64px;top:250px;display:flex;align-items:center;gap:20px}
+#marca img{height:70px;width:auto;display:block}
+#marca b{display:block;font:800 22px/1 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--crema);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#marca i{display:block;margin-top:8px;font:italic 400 26px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#cita{position:absolute;left:64px;right:64px;top:1030px;font:italic 400 76px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+#cita .cr{color:var(--terra-300)}
+#pie{position:absolute;left:64px;right:64px;top:1500px}
+#pie hr{border:0;width:76px;height:4px;background:var(--terra);margin-bottom:24px}
+#pie p{font:700 24px/1.3 'Montserrat',sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--terra-200)}
+.versiculo{position:absolute;left:70px;right:70px;top:1262px;text-align:left;font:800 38px/1.2 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--terra-200)}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="bruja" viewBox="0 0 520 620">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M260 40L170 230h180z" fill="#2C2440" stroke="#1B1630" stroke-width="10"/>
+      <path d="M110 232c80-16 220-16 300 0" stroke="#1B1630" stroke-width="16"/>
+      <circle cx="260" cy="300" r="74" fill="#8FBF6A" stroke="#3F6B2A" stroke-width="9"/>
+      <path d="M232 288h2M288 288h2" stroke="#1B1630" stroke-width="16"/>
+      <path d="M226 334c20 18 48 18 68 0" stroke="#1B1630" stroke-width="9"/>
+      <path d="M190 376l-40 180h220l-40-180z" fill="#5A3B8C" stroke="#35205E" stroke-width="9"/>
+      <path d="M60 540L470 370" stroke="#7A4A22" stroke-width="16"/>
+      <path d="M60 540l-34 34m34-34l-44 8m44-8l-14 42m14-42l-46 22" stroke="#C69A3A" stroke-width="11"/>
+    </g>
+  </symbol>
+  <symbol id="puertaIc" viewBox="0 0 130 190">
+    <path d="M12 186V62C12 28 36 6 65 6s53 22 53 56v124z" fill="#3B2A1E" stroke="#DFAA94" stroke-width="5"/>
+    <path d="M65 8v178M14 90h102M14 138h102" stroke="#DFAA94" stroke-opacity=".4" stroke-width="3"/>
+  </symbol>
+</defs></svg>
+
+<!-- 1. gancho -->
+<div class="esc" id="e-gancho">
+  <div class="luz"></div>
+  <div class="grande" id="gTitulo" style="top:260px;text-align:center;font-size:112px">Esa noche,<br><em>¿cambia de dueño?</em></div>
+  <div id="hoja"><u>OCTUBRE</u><b>31</b><div id="sombraHoja"></div></div>
+</div>
+
+<!-- 2. miedo -->
+<div class="esc" id="e-miedo">
+  <div class="luz"></div>
+  <div class="papel" id="papel1" style="left:230px;top:330px">
+    <svg width="560" height="668" style="position:absolute;left:30px;top:50px"><use href="#bruja"/></svg>
+  </div>
+  <div class="idea" id="iEns" style="top:300px"><span style="font-size:74px">¿Qué le estamos enseñando?</span></div>
+  <div class="idea" id="iDia" style="top:560px">El diablo<br><em>es fuerte</em></div>
+  <div class="idea" id="iCri" style="top:880px">Cristo<br><em>es frágil</em></div>
+</div>
+
+<!-- 3. pregunta -->
+<div class="esc" id="e-pregunta">
+  <div class="luz"></div>
+  <div class="idea" id="pQue" style="top:310px;font-size:68px;color:var(--terra-200)"><span id="pTacha" style="position:relative;display:inline-block">¿Qué hacer con Halloween?<i id="pLinea" style="position:absolute;left:-10px;top:52%;height:6px;background:var(--terra);transform-origin:0 50%;width:calc(100% + 20px)"></i></span></div>
+  <div class="grande" id="pMiedo" style="top:480px;text-align:center;font-size:124px">¿A quién<br>le tenemos<br><em>miedo?</em></div>
+  <svg id="vela" width="220" height="430" viewBox="0 0 220 430" style="position:absolute;left:430px;top:930px;overflow:visible">
+    <defs><radialGradient id="flama" cx="50%" cy="70%" r="62%"><stop offset="0" stop-color="#FFF6D2"/><stop offset=".5" stop-color="#FFC95E"/><stop offset="1" stop-color="#E0701E"/></radialGradient>
+    <radialGradient id="aura"><stop offset="0" stop-color="#FFC56A" stop-opacity=".45"/><stop offset="1" stop-color="#FFC56A" stop-opacity="0"/></radialGradient></defs>
+    <circle id="vAura" cx="110" cy="70" r="230" fill="url(#aura)"/>
+    <path d="M68 160h84v270H68z" fill="#E9DFC9" stroke="#8E7A5C" stroke-width="4"/>
+    <path d="M110 160v-26" stroke="#2B1D12" stroke-width="7"/>
+    <path id="vFlama" d="M110 16c30 48 46 72 46 100 0 28-20 44-46 44s-46-16-46-44c0-28 16-52 46-100z" fill="url(#flama)"/>
+  </svg>
+</div>
+
+<!-- 4. conciencia -->
+<div class="esc" id="e-conciencia">
+  <div class="luz"></div>
+  <div class="carta" id="cVerso" style="top:270px"><div class="ceja">ROMANOS 14:5</div><div style="margin-top:22px;font:italic 400 78px/1.16 'Playfair Display',serif;color:var(--papel)">«Cada uno esté plenamente convencido en su propia mente»</div></div>
+  <div class="idea" id="cSolo" style="top:800px;font-size:76px">Solo Dios es <em>Señor de la conciencia</em></div>
+  <svg id="biblia" width="720" height="300" viewBox="0 0 720 300" style="position:absolute;left:180px;top:1060px">
+    <path d="M360 62C290 20 150 12 30 40v224c120-28 260-20 330 22 70-42 210-50 330-22V40C570 12 430 20 360 62z" fill="#F2E9D6" stroke="#3B2A1E" stroke-width="6"/>
+    <path d="M360 62v224" stroke="#3B2A1E" stroke-width="6"/>
+    <path d="M78 92c70-10 170-4 236 26M78 140c70-10 170-4 236 26M78 188c70-10 170-4 236 26M642 92c-70-10-170-4-236 26M642 140c-70-10-170-4-236 26M642 188c-70-10-170-4-236 26" stroke="#B9A689" stroke-width="7" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- 5. las tres erres -->
+<div class="esc" id="e-erres">
+  <div class="luz"></div>
+  <div class="ceja" id="eCeja" style="position:absolute;left:0;right:0;top:252px;text-align:center">TRES CAMINOS, UNA CONCIENCIA</div>
+  <div class="erre" id="e1" style="top:320px"><div class="r">R</div><div class="tx"><h3>RECHAZAR</h3><p>apartarte por completo</p></div></div>
+  <div class="erre" id="e2" style="top:660px"><div class="r">R</div><div class="tx"><h3>RECIBIR</h3><p>participar con tus vecinos</p></div></div>
+  <div class="erre" id="e3" style="top:1000px"><div class="r">R</div><div class="tx"><h3>REDIMIR</h3><p>llenar el día de otra cosa</p></div></div>
+</div>
+
+<!-- 6. el límite -->
+<div class="esc" id="e-limite">
+  <div class="luz"></div>
+  <div class="lado" id="l1" style="top:290px;background:rgba(120,40,30,.28);border:2px solid #A8533F">
+    <u>LIBERTAD NO SIGNIFICA QUE TODO VALE</u>
+    <svg width="170" height="170" viewBox="0 0 170 170" style="display:block;margin:24px auto 0"><circle cx="85" cy="74" r="58" fill="#3F2A6B" stroke="#CDBBE8" stroke-width="5"/><path d="M40 150h90l-14-30H54z" fill="#6B4A2C" stroke="#2E1E10" stroke-width="5"/><path d="M26 18l118 124M144 18L26 142" stroke="#E2573F" stroke-width="16" stroke-linecap="round"/></svg>
+    <p>Lo oculto no es tema de conciencia</p>
+  </div>
+  <div class="lado" id="l2" style="top:830px;background:rgba(245,240,232,.08);border:2px solid var(--terra);height:520px">
+    <svg width="280" height="170" viewBox="0 0 280 170" style="display:block;margin:0 auto"><path d="M34 128C34 56 84 16 140 16s106 40 106 112z" fill="#C8392B" stroke="#6E1B12" stroke-width="6"/><path d="M12 128h256c8 0 10 26-6 26H20c-16 0-16-26-8-26z" fill="#A02B20" stroke="#6E1B12" stroke-width="6"/><path d="M120 18h40v110h-40z" fill="#E0B23C" stroke="#6E1B12" stroke-width="5"/><circle cx="140" cy="78" r="22" fill="#F5F0E8" stroke="#6E1B12" stroke-width="5"/></svg>
+    <p>Un niño disfrazado de bombero no ha hecho un pacto con nadie</p>
+  </div>
+</div>
+
+<!-- 7. velas, anillos, días y meses -->
+<div class="esc" id="e-velas">
+  <div class="luz"></div>
+  <div class="grande" id="vDice" style="top:290px;text-align:center;font-size:96px">«¡Es una fiesta pagana!»</div>
+  <div class="grande" id="vTal" style="top:640px;text-align:center;font-size:150px"><em>Tal vez.</em></div>
+  <div class="grande" id="vMira" style="top:920px;text-align:center;font-size:84px">Pero mira tu semana.</div>
+  <div class="cosa" id="k1" style="left:60px;top:300px"><u>MARTES</u><i>de Marte</i><svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="#B4482C" stroke="#5E2010" stroke-width="4"/><path d="M26 40c20 10 30-6 52 4M18 70c24-8 46 12 82-2" stroke="#7E2E18" stroke-width="7" fill="none"/></svg></div>
+  <div class="cosa" id="k2" style="left:562px;top:300px"><u>JUEVES</u><i>de Júpiter</i><svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="#D9B98A" stroke="#6E4E2A" stroke-width="4"/><path d="M12 42h96M9 60h102M13 80h94" stroke="#A9744A" stroke-width="9"/><ellipse cx="78" cy="72" rx="14" ry="8" fill="#B4482C"/></svg></div>
+  <div class="cosa" id="k3" style="left:60px;top:600px"><u>ENERO</u><i>de Jano</i><svg width="130" height="120" viewBox="0 0 130 120"><rect x="10" y="8" width="110" height="106" rx="9" fill="#F5F0E8" stroke="#3B2A1E" stroke-width="4"/><rect x="10" y="8" width="110" height="28" fill="#C47E5A"/><text x="65" y="98" text-anchor="middle" font-family="Playfair Display" font-style="italic" font-size="66" fill="#0D1B2A">1</text></svg></div>
+  <div class="cosa" id="k4" style="left:562px;top:600px"><u>ANILLO DE BODAS</u><i>probablemente, de Roma</i><svg width="140" height="120" viewBox="0 0 140 120"><ellipse cx="70" cy="66" rx="50" ry="44" fill="none" stroke="#D6A348" stroke-width="16"/><ellipse cx="70" cy="66" rx="50" ry="44" fill="none" stroke="#8A5E22" stroke-width="2"/><path d="M38 34c12-10 24-14 34-14" stroke="#FBEFC2" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="cosa" id="k5" style="left:60px;top:900px;width:960px;height:430px"><u>LAS VELAS DEL PASTEL</u><i>según se cuenta, de ofrendas griegas</i>
+    <svg id="pastel" width="460" height="290" viewBox="0 0 460 290" style="overflow:visible">
+      <path d="M60 150h340v120H60z" fill="#E7D4AE" stroke="#6B4A2C" stroke-width="5"/><path d="M60 150h340v34c-28 26-56 0-84 18s-58-14-86 8-58-16-86 2-56-6-84-14z" fill="#F5F0E8" stroke="#6B4A2C" stroke-width="5"/>
+      <path d="M30 270h400v14H30z" fill="#C47E5A"/>
+      <g id="velitas"></g>
+    </svg></div>
+  <div class="grande" id="vOrigen" style="top:400px;text-align:center;font-size:112px">El origen de algo<br><em>no decide</em><br>lo que significa hoy</div>
+</div>
+
+<!-- 8 y 9. Cristo y cierre, con la puerta -->
+<div class="esc" id="e-puerta">
+  <img id="puerta" src="../../../content/covers/062-el-31-de-octubre-sin-miedo.jpg">
+  <div id="sombra"></div>
+  <div id="destello"></div>
+  <div id="marca"><img src="../../social/assets/icono-crema.png"><div><b>OSCAR I. MORALES</b><i>Secundum Fidem</i></div></div>
+  <div class="grande" id="zCristo" style="top:960px;font-weight:700;font-size:112px">Cristo no pierde<br><em>autoridad</em></div>
+  <div class="versiculo" id="zV1">COLOSENSES 2:15</div>
+  <div class="versiculo" id="zV2">1 JUAN 4:4</div>
+  <div id="cita"></div>
+  <div id="pie"><hr><p>El post completo en oscarimorales.com</p></div>
+</div>
+
+<div class="esc" id="e-hijo" style="background:transparent">
+  <div class="esc"><div class="luz"></div></div>
+  <div class="papel" id="papel2" style="left:290px;top:300px;width:500px;height:612px">
+    <svg width="452" height="540" style="position:absolute;left:24px;top:40px"><use href="#bruja"/></svg>
+  </div>
+  <div class="grande" id="hJesus" style="top:980px;text-align:center;font-size:96px">Recuérdale<br><em>quién es Jesús</em></div>
+</div>
+
+<canvas id="brasas" width="1080" height="1920"></canvas>
+<div id="sub"></div>
+
+<script src="../_comun/motor.js"></script>
+<script>
+const tCita = W('cierre', 'El');
+const subtitulos = crearSubtitulos(tCita - .05);
+
+// velitas del pastel
+$('velitas').innerHTML = [110, 170, 230, 290, 350].map((x, i) => `<path d="M${x - 9} 86h18v66h-18z" fill="${i % 2 ? '#C47E5A' : '#14304A'}" stroke="#2B1D12" stroke-width="3"/><path id="fl${i}" d="M${x} 42c11 18 16 26 16 36 0 11-7 16-16 16s-16-5-16-16c0-10 5-18 16-36z" fill="#FFC95E" stroke="#E0701E" stroke-width="3"/>`).join('');
+
+// cita final, palabra por palabra
+const pCita = T.palabras.filter(p => p.ini >= tCita);
+const iCr = pCita.findIndex(p => p.texto === 'es');
+$('cita').innerHTML = pCita.map((p, i) => `<span class="${i >= iCr && i < iCr + 3 ? 'cr' : ''}">${p.texto}</span>`).join(' ');
+const sCita = [...$('cita').children];
+
+const tRecibir = W('erres', 'Recibir'), tRedimir = W('erres', 'Redimir'), tNinguno = W('erres', 'ninguno');
+const tEnsen = W('miedo', '¿Qué'), tDiablo = W('miedo', 'diablo') - .1, tCrist = W('miedo', 'Cristo') - .1;
+const tMira = W('velas', 'Pero'), tMartes = W('velas', 'martes') - .25, tJueves = W('velas', 'jueves') - .2, tEnero = W('velas', 'Enero') - .2;
+const tAnillo = W('velas', 'anillo') - .3, tVelas = W('velas', 'velas') - .3, tOrigen = W('velas', 'origen') - .35;
+const tDespojo = W('cristo', 'En'), tMayor = W('cristo', 'mayor') - .15;
+
+window.seek = function (t) {
+  // 1 gancho
+  if (ver($('e-gancho'), t, -1, E.miedo.ini - .1)) {
+    const k = sm(pr(t, .4, 4.3));
+    $('sombraHoja').style.transform = `translateY(${100 - k * 112}%)`;
+    $('hoja').style.transform = `rotate(${Math.sin(t * 1.3) * .8 - k * 1.6}deg) scale(${1 + t * .012})`;
+    $('gTitulo').style.transform = `scale(${1 + .05 * (1 - eo(pr(t, 0, .5)))})`;
+  }
+
+  // 2 miedo
+  if (ver($('e-miedo'), t, E.miedo.ini - .1, E.pregunta.ini - .1)) {
+    const tiembla = pr(t, W('miedo', 'irreparable') - .4, .4) * (1 - pr(t, tEnsen, .3));
+    const baja = sm(pr(t, tEnsen - .1, .7));
+    $('papel1').style.transform = `translate(${Math.sin(t * 34) * 7 * tiembla}px,${baja * 1400}px) rotate(${-3 + Math.sin(t * 29) * 1.6 * tiembla}deg) scale(${1 + (t - E.miedo.ini) * .008})`;
+    entra($('iEns'), t, tEnsen, 30);
+    entra($('iDia'), t, tDiablo, 40);
+    entra($('iCri'), t, tCrist, 40);
+  }
+
+  // 3 pregunta
+  if (ver($('e-pregunta'), t, E.pregunta.ini - .1, E.conciencia.ini - .1)) {
+    entra($('pQue'), t, E.pregunta.ini, 24);
+    $('pLinea').style.transform = `scaleX(${eo(pr(t, W('pregunta', 'sino') - .1, .4))})`;
+    entra($('pMiedo'), t, W('pregunta', 'sino'), 44, .55);
+    const f = .92 + .08 * Math.sin(t * 13) * Math.sin(t * 8.1);
+    $('vFlama').setAttribute('transform', `translate(110 160) scale(${f} ${1 + (f - 1) * 1.8}) translate(-110 -160)`);
+    $('vAura').style.opacity = .7 + (f - .92) * 3;
+  }
+
+  // 4 conciencia
+  if (ver($('e-conciencia'), t, E.conciencia.ini - .1, E.erres.ini - .1)) {
+    entra($('cVerso'), t, E.conciencia.ini + .1, 30);
+    entra($('cSolo'), t, W('conciencia', 'Solo') - .1, 30);
+    $('biblia').style.transform = `translateY(${(1 - eo(pr(t, E.conciencia.ini, .7))) * 90}px) scale(${1 + (t - E.conciencia.ini) * .006})`;
+  }
+
+  // 5 erres
+  if (ver($('e-erres'), t, E.erres.ini - .1, E.limite.ini - .1)) {
+    const tiempos = [E.erres.ini, tRecibir, tRedimir];
+    ['e1', 'e2', 'e3'].forEach((id, i) => {
+      const el = $(id), k = pr(t, tiempos[i] - .1, .45);
+      el.style.opacity = eo(cl(k * 2));
+      const activa = t >= tiempos[i] - .1 && (i === 2 ? t < tNinguno : t < tiempos[i + 1] - .1);
+      el.style.transform = `translateX(${(1 - rebote(k)) * -70}px) scale(${activa ? 1.025 : 1})`;
+      el.style.background = activa ? 'rgba(196,126,90,.24)' : 'rgba(245,240,232,.07)';
+    });
+  }
+
+  // 6 límite
+  if (ver($('e-limite'), t, E.limite.ini - .1, E.velas.ini - .1)) {
+    entra($('l1'), t, E.limite.ini, 34);
+    entra($('l2'), t, W('limite', 'Pero') - .15, 34);
+  }
+
+  // 7 velas
+  if (ver($('e-velas'), t, E.velas.ini - .1, E.cristo.ini - .1)) {
+    const fueraIntro = tMartes - .2;
+    ver($('vDice'), t, E.velas.ini, fueraIntro, .3);
+    ver($('vTal'), t, W('velas', 'Tal') - .1, fueraIntro, .3);
+    ver($('vMira'), t, tMira - .1, fueraIntro, .3);
+    const fueraCosas = tOrigen - .1;
+    [['k1', tMartes], ['k2', tJueves], ['k3', tEnero], ['k4', tAnillo], ['k5', tVelas]].forEach(([id, a]) => {
+      const el = $(id), k = pr(t, a, .42), o = 1 - pr(t, fueraCosas, .3);
+      el.style.display = k && o ? '' : 'none';
+      el.style.opacity = eo(cl(k * 2)) * o;
+      el.style.transform = `scale(${.86 + rebote(k) * .14})`;
+    });
+    for (let i = 0; i < 5; i++) {
+      const f = .9 + .1 * Math.sin(t * 12 + i * 2);
+      $(`fl${i}`).style.opacity = .82 + .18 * f;
+    }
+    ver($('vOrigen'), t, tOrigen, 1e3, .4);
+  }
+
+  // 8 Cristo y 9 cierre: la puerta con luz
+  const enPuerta = (t >= E.cristo.ini - .3 && t < E.cierre.ini - .05) || t >= tCita - .3;
+  const ep = $('e-puerta');
+  if (enPuerta) {
+    ep.style.display = '';
+    ep.style.opacity = t < E.cierre.ini ? eo(pr(t, E.cristo.ini - .3, .4)) * (1 - pr(t, E.cierre.ini - .3, .25)) : eo(pr(t, tCita - .3, .4));
+    const z = 1 + (t - E.cristo.ini) * .004, h = 1240 * z, w = h * 16 / 9;
+    const p = $('puerta');
+    p.style.width = `${w}px`; p.style.height = `${h}px`;
+    p.style.transform = `translate(${735 - w * .573}px,${(1240 - h) * .5}px)`;
+    const eCristo = t < E.cierre.ini;
+    const pulso = s => Math.exp(-Math.max(0, t - s) * 1.9) * pr(t, s - .2, .2);
+    const flash = eCristo ? Math.max(.34, pulso(E.cristo.ini + .2), pulso(tMayor)) : .34;
+    $('destello').style.opacity = flash * .9;
+    $('zCristo').style.display = eCristo ? '' : 'none';
+    $('zCristo').style.opacity = eo(pr(t, E.cristo.ini, .35));
+    ver($('zV1'), t, tDespojo, tMayor - .05, .3);
+    ver($('zV2'), t, tMayor, E.cierre.ini, .3);
+    $('cita').style.display = eCristo ? 'none' : '';
+    $('pie').style.display = eCristo ? 'none' : '';
+    sCita.forEach((s, i) => { s.style.opacity = pr(t, pCita[i].ini - .1, .16); });
+    $('pie').style.opacity = eo(pr(t, T.duracion - .2, .6));
+  } else ep.style.display = 'none';
+
+  // la bruja de papel, sin drama
+  if (ver($('e-hijo'), t, E.cierre.ini - .1, tCita - .1)) {
+    $('papel2').style.transform = `rotate(${3 - pr(t, E.cierre.ini, 3) * 3}deg) scale(${.96 + (t - E.cierre.ini) * .01})`;
+    entra($('hJesus'), t, W('cierre', 'Recuérdale') - .1, 34);
+  }
+
+  brasas(t, .75);
+  subtitulos(t);
+};
+window.seek(0);
+</script>
+</body></html>

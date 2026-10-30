@@ -11,6 +11,18 @@
 
 ## 📍 Dónde nos quedamos (30-oct-2026)
 
+**Dos videos cortos de prueba del post #62; Oscar aprobó el enfoque del segundo.** Están en `vista-previa/`:
+`reel-062-el-31-de-octubre-sin-miedo.mp4` (56 s, historia; Oscar pidió cambiar el enfoque) y
+`reel-062-sin-miedo-esencial.mp4` (1:30, lo esencial: miedo, conciencia, tres erres, velas y anillos,
+Cristo). Cómo se arman: `recursos/video/README.md`.
+- **Decisiones de Oscar:** voz de IA, escenas por capas al estilo Knowledgia, publicar en Reels
+  (compartido a Facebook) y YouTube Shorts, sin TikTok para el blog. Claude arma y Oscar revisa y sube.
+  Pueden durar hasta 1:30. **Siempre se define el propósito antes del guion.**
+- **Pendiente:** que Oscar escuche la voz (George); Claude no puede oír el audio. ElevenLabs está en
+  plan **gratis**, así que este video no se puede publicar: para publicar necesita Starter y
+  regenerar la voz con ese plan. Falta también grabar el proceso en la skill blog-oims si la prueba le gusta.
+- **Propuesto:** 12 videos en 6 semanas y luego medir (cuánto se ve, seguidores nuevos, visitas al blog).
+
 **Se publicó el post #62 «El 31 de octubre sin miedo»** (Familia · Cultura y Actualidad):
 orígenes reales de Halloween (Hutton: Todos los Santos no nació de Samhain; Irlanda lo guardaba el
 20 de abril), diferencias Guatemala / EE. UU. / Alemania / Chile, posturas de Lutero, Knox,

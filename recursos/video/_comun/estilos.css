@@ -1,0 +1,17 @@
+/* Estilos comunes de los videos cortos — marca Secundum Fidem */
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;src:url(fuentes/playfair-display-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;src:url(fuentes/playfair-display-latin-700-italic.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:700;src:url(fuentes/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:800;src:url(fuentes/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{--noche:#0D1B2A;--noche-2:#14304A;--terra:#C47E5A;--terra-300:#DFAA94;--terra-200:#ECC8B7;--crema:#F5F0E8;--papel:#FBF8F2;--tinta:#3B2A1E;--oro:#D6A348}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--noche)}
+canvas{position:absolute;left:0;top:0}
+.esc{position:absolute;inset:0;overflow:hidden;background:var(--noche)}
+.grande{position:absolute;left:70px;right:70px;font:italic 400 104px/1.14 'Playfair Display',serif;color:var(--papel);text-shadow:0 4px 30px rgba(0,0,0,.55)}
+.grande em{font-style:italic;color:var(--terra-300)}
+.ceja{font:800 30px/1.25 'Montserrat',sans-serif;letter-spacing:.2em;color:var(--terra-200)}
+.carta{position:absolute;left:70px;right:70px;padding:44px 42px 48px;text-align:center;background:rgba(13,27,42,.9);border:2px solid var(--terra);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.42)}
+#sub{position:absolute;left:60px;right:60px;top:1395px;text-align:center}
+#sub span.bloque{display:inline;padding:10px 20px;background:rgba(13,27,42,.84);border-radius:12px;-webkit-box-decoration-break:clone;box-decoration-break:clone;font:800 56px/1.5 'Montserrat',sans-serif;color:var(--crema)}
+#sub em{font-style:normal;color:#F0B48F}

@@ -1,0 +1,13 @@
+{
+  "post": 62,
+  "voz": "JBFqnCBsd6RMkjVDRZzb",
+  "escenas": [
+    { "id": "gancho",    "texto": "¿Te dijeron que {Halloween|Jalouín} es una fiesta pagana? La historia es más enredada." },
+    { "id": "roma",      "texto": "El nombre es cristiano: víspera de Todos los Santos. Esa fiesta se fijó en Roma, en el año {609|seiscientos nueve}." },
+    { "id": "norte",     "texto": "Hacia el año {800|ochocientos}, Inglaterra y Alemania ya la guardaban el {1|primero} de noviembre." },
+    { "id": "irlanda",   "texto": "¿Y en Irlanda, la tierra del famoso {Samhain|Sáuin}? Según el historiador Ronald {Hutton|Játon}, allí se celebraba el {20|veinte} de abril. Otros ven alguna conexión; no lo sabemos del todo." },
+    { "id": "wittenberg","texto": "En {1517|mil quinientos diecisiete}, en esa misma víspera, Lutero enfrentó en {Wittenberg|Vítemberg} un negocio sostenido por el miedo: pagar para acortar el purgatorio." },
+    { "id": "mascara",   "texto": "Hoy, el mismo miedo se pone máscara. Unos le pagaban. Otros se burlan. Ninguno le ha quitado el aguijón." },
+    { "id": "cierre",    "texto": "Eso lo hizo Cristo. El {31|treinta y uno} de octubre no les pertenece a las brujas ni a los dulces: es de Cristo, como todos los demás días." }
+  ]
+}
