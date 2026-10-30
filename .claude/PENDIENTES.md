@@ -24,6 +24,9 @@ Enlaza al #29 de 2017.
 - **Decisión de estilo:** Oscar confirmó que «Día de la Reforma» es válido aquí porque es lo que
   se celebra en esa fecha. La regla general de evitar el rótulo sigue vigente.
 - **No citar a Mark Driscoll,** aunque el esquema de las tres erres se asocie con él.
+- **Texto para redes (30-oct):** desde ahora, un solo párrafo, idéntico en Instagram, Facebook y
+  X; solo cambia el cierre (link en la bio o URL). Grabado en blog-oims **v9** y en
+  `recursos/social/README.md`. Falta subir la v9 a claude.ai con `actualizar-skill-oims`.
 - **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
   Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.

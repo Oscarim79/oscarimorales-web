@@ -16,8 +16,9 @@ description: >
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
-> con datos confirmados · portada de respaldo con Canva si Hugging Face no tiene cuota · Playwright de gstack para las tarjetas
+> v9 — 2026-10-30 · Texto para redes: UN solo párrafo, idéntico en Instagram, Facebook y X
+> (v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
+> con datos confirmados · portada de respaldo con Canva si Hugging Face no tiene cuota · Playwright de gstack para las tarjetas)
 > (v7 — 2026-10-06 · Tras publicar, el pack social + las instrucciones del correo salen SOLOS (sin que Oscar lo pida))
 > (v6 — 2026-09-29 · Pack social (tarjetas de Instagram: post + historia, y captions) · cómo mostrarle archivos a Oscar ·
 > citas bíblicas verificadas · portadas: copiar la imagen del resultado del MCP
@@ -515,16 +516,17 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
    instalan solas desde npm si faltan. **MIRA las imágenes (Read) antes de enviarlas**: texto dentro del
    diseño, sin costuras, cabecera legible. En la PC de Oscar no hay Playwright global; usa el que trae
    gstack: `NODE_PATH="C:/Users/me/.claude/skills/gstack/node_modules" node scripts/social-cards.mjs …`.
-3. **Escribe el caption de Instagram** y guárdalo como `caption.txt` en esa carpeta: primera línea =
-   gancho (Instagram corta a ~125 caracteres); 3–4 párrafos cortos en la voz de Oscar; cita bíblica
-   exacta; cierre «Léelo completo: link en mi bio.» + invitación a guardar y compartir; 4–5 hashtags con
-   **#SecundumFidem** siempre. Sin emojis salvo que Oscar los pida.
+3. **Escribe UN solo párrafo para redes** (pedido por Oscar el 2026-10-30: siempre el mismo texto, por
+   consistencia, y nunca más de un párrafo). En la voz de Oscar, con el gancho en la primera frase
+   (Instagram corta a ~125 caracteres) y sin pasar de ~230 caracteres para que quepa en X. Solo cambia el
+   final: en Instagram (`caption.txt`), «Link en mi bio. #SecundumFidem». Único hashtag: #SecundumFidem.
+   Sin emojis salvo que Oscar los pida.
 4. **El enlace:** Instagram NO vuelve clicable un enlace en el texto de una publicación. Explícale las
    dos vías: link en la bio (Editar perfil → Enlaces; título = título del post) y Historia con sticker
    «Enlace» en el espacio vacío bajo «Nuevo en el blog». No pegues la URL en el caption.
 5. **Facebook y X** (siempre, desde v7): solo texto, sin tarjeta propia (la vista previa sale de la portada).
-   Facebook: el mismo texto **con la URL completa**. X: ≤ 280 caracteres con el enlace y `#SecundumFidem`,
-   basado en el `excerpt`. X cuenta cada enlace como 23 caracteres: cuéntalo con un script, no a ojo.
+   Los dos llevan el mismo párrafo seguido de la **URL completa** y `#SecundumFidem`, todo en un solo
+   párrafo. X admite ≤ 280 caracteres y cuenta cada enlace como 23: cuéntalo con un script, no a ojo.
    Guárdalos como `facebook.txt` y `x.txt` en la carpeta del post.
 6. **Correo del boletín** (el RSS-to-email de Buttondown es de pago, así que Oscar lo pega a mano en
    Buttondown → Emails → New email): **asunto** corto + **vista previa** (una frase) + cuerpo de ~100 palabras

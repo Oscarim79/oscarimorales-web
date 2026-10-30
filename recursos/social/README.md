@@ -48,18 +48,17 @@ enlace del post y comprobar que ya carga (si Facebook o Instagram lo ven antes, 
 
 ## El texto (caption)
 
-- **Primera línea = gancho** (Instagram corta a los ~125 caracteres con «más»).
-- 3–4 párrafos cortos, en la voz de Oscar; citas bíblicas exactas (RVR1960 o NTV), sin inventar frases de nadie.
-- Cierre: «Léelo completo: link en mi bio.» + una invitación a guardar y compartir.
-- 4–5 hashtags; siempre **#SecundumFidem**.
+- **Un solo párrafo, el mismo en Instagram, Facebook y X** (pedido por Oscar el 30-oct-2026), de hasta ~230 caracteres.
+- **Primera frase = gancho** (Instagram corta a los ~125 caracteres con «más»).
+- En la voz de Oscar; citas bíblicas exactas (RVR1960 o NTV), sin inventar frases de nadie.
+- Cierre en Instagram: «Link en mi bio. #SecundumFidem». Único hashtag: **#SecundumFidem**.
 - Si la portada fue generada con IA, activar la etiqueta de IA si Instagram la ofrece al publicar.
 
 ## Facebook y X
 
 No necesitan tarjeta propia: al pegar el enlace del post, ambas generan la vista previa con la
-portada (`og:image` / `twitter:card`). En Facebook sirve el mismo texto **con la URL completa**
-(allí sí es clicable). En X, máximo 280 caracteres con el enlace y `#SecundumFidem`; sale bien el
-`excerpt` del post como base.
+portada (`og:image` / `twitter:card`). Los dos llevan el mismo párrafo, seguido de la **URL completa**
+y `#SecundumFidem`. En X, máximo 280 caracteres, y cada enlace cuenta como 23.
 
 ## Cambiar el diseño
 
