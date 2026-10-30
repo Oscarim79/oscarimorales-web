@@ -36,6 +36,12 @@ Enlaza al #29 de 2017.
 - **Pack social entregado** (`recursos/social/062-el-31-de-octubre-sin-miedo/`). **Envío del
   correo de Buttondown y publicación en redes: PENDIENTE DE OSCAR** hasta que confirme. También
   sigue sin confirmar el envío del #61.
+- **Archivos internos fuera del sitio (30-oct):** el sitio dejó de publicar las skills, los chats,
+  la bitácora, los scripts, los `.md` y los prototipos. La lista de exclusión está en
+  `_config.yml`; lo interno nuevo fuera de `.claude/` debe agregarse ahí. Verificado en vivo: 30
+  internos dan 404 y 331 de 332 públicos abren; el único fallo es `project/.thumbnail`, interno.
+  **Sigue visible:** el repositorio público en GitHub con su historial, y el retrato de la portada
+  (`project/assets/oscar-stage.png`) con marca C2PA de imagen generada con IA.
 
 ## 📜 Detalle del 29-oct-2026
 
