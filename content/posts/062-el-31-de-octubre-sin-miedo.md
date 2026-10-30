@@ -51,7 +51,7 @@ Busqué y no encontré un sermón de Spurgeon dedicado a Halloween. La gran preg
 
 Pablo no dejó este asunto en el aire: «Uno hace diferencia entre día y día; otro juzga iguales todos los días. Cada uno esté plenamente convencido en su propia mente» (Romanos 14:5). [La Confesión de 1689](https://setru.ipuy.org.uy/assets/confesionbautista1689.pdf) lo recoge en su capítulo 21: solo Dios es Señor de la conciencia.
 
-Dentro de esa libertad veo tres caminos. Puedes **rechazar**: apartarte por completo, como los puritanos. Puedes **recibir**: participar con tus vecinos como uno más, como hacen muchos creyentes fieles. O puedes **redimir**: tomar el día y llenarlo de otra cosa.
+Dentro de esa libertad, entre creyentes se suele hablar de tres respuestas ante la cultura, tres erres que la historia que acabamos de recorrer ya nos mostró. Podemos **rechazar**: apartarnos por completo, como los puritanos. Podemos **recibir**: participar con nuestros vecinos como uno más, como hacen muchos creyentes fieles. O podemos **redimir**: tomar el día y llenarlo de otra cosa.
 
 Libertad no significa que todo vale: lo oculto, la adivinación y lo que celebra la muerte no son temas de conciencia (Efesios 5:11). Pero un niño disfrazado de bombero tampoco ha hecho un pacto con nadie.
 
