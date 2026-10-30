@@ -11,16 +11,17 @@
 
 ## 📍 Dónde nos quedamos (30-oct-2026)
 
-**Dos videos cortos de prueba del post #62; Oscar aprobó el enfoque del segundo.** Están en `vista-previa/`:
-`reel-062-el-31-de-octubre-sin-miedo.mp4` (56 s, historia; Oscar pidió cambiar el enfoque) y
-`reel-062-sin-miedo-esencial.mp4` (1:30, lo esencial: miedo, conciencia, tres erres, velas y anillos,
-Cristo). Cómo se arman: `recursos/video/README.md`.
+**Primer video corto listo para publicar: post #62.** Está en `vista-previa/reel-062-sin-miedo-esencial-con-musica.mp4`
+(Oscar aprobó la música el 30-oct; sin música: `reel-062-sin-miedo-esencial.mp4`). Instagram solo
+deja poner unos segundos de su música, por eso va integrada: no agregar otra al subirlo. (1:36, lo esencial: miedo, conciencia, tres erres, velas y anillos, Cristo), con voz del plan Starter.
+Texto para subirlo: `recursos/social/062-el-31-de-octubre-sin-miedo/reel.txt`. Oscar lo sube; conviene
+antes del 31-oct. Cómo se arman: `recursos/video/README.md`. El primer intento, enfocado en la historia
+(`reel-062-el-31-de-octubre-sin-miedo.mp4`), se descartó y usa voz del plan gratis: no publicarlo.
 - **Decisiones de Oscar:** voz de IA, escenas por capas al estilo Knowledgia, publicar en Reels
   (compartido a Facebook) y YouTube Shorts, sin TikTok para el blog. Claude arma y Oscar revisa y sube.
   Pueden durar hasta 1:30. **Siempre se define el propósito antes del guion.**
-- **Pendiente:** que Oscar escuche la voz (George); Claude no puede oír el audio. ElevenLabs está en
-  plan **gratis**, así que este video no se puede publicar: para publicar necesita Starter y
-  regenerar la voz con ese plan. Falta también grabar el proceso en la skill blog-oims si la prueba le gusta.
+- **Voz:** George, aprobada por Oscar. A 1.12 le sonó «corriendo»; se quedó en 1.10. ElevenLabs ya está
+  en plan **Starter**. Falta decidir si el proceso se graba en la skill blog-oims.
 - **Propuesto:** 12 videos en 6 semanas y luego medir (cuánto se ve, seguidores nuevos, visitas al blog).
 
 **Se publicó el post #62 «El 31 de octubre sin miedo»** (Familia · Cultura y Actualidad):

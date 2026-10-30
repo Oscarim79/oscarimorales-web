@@ -214,7 +214,7 @@ window.seek = function (t) {
   if (ver($('e-miedo'), t, E.miedo.ini - .1, E.pregunta.ini - .1)) {
     const tiembla = pr(t, W('miedo', 'irreparable') - .4, .4) * (1 - pr(t, tEnsen, .3));
     const baja = sm(pr(t, tEnsen - .1, .7));
-    $('papel1').style.transform = `translate(${Math.sin(t * 34) * 7 * tiembla}px,${baja * 1400}px) rotate(${-3 + Math.sin(t * 29) * 1.6 * tiembla}deg) scale(${1 + (t - E.miedo.ini) * .008})`;
+    $('papel1').style.transform = `translate(${Math.sin(t * 34) * 7 * tiembla}px,${baja * 1750}px) rotate(${-3 + Math.sin(t * 29) * 1.6 * tiembla}deg) scale(${1 + (t - E.miedo.ini) * .008})`;
     entra($('iEns'), t, tEnsen, 30);
     entra($('iDia'), t, tDiablo, 40);
     entra($('iCri'), t, tCrist, 40);

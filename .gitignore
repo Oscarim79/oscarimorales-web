@@ -2,6 +2,7 @@
 vista-previa/
 # Videos cortos: la voz y el video final se pueden regenerar y pesan mucho
 recursos/video/*/voz.mp3
+recursos/video/*/musica.mp3
 recursos/video/*/*.mp4
 # Claves privadas (ElevenLabs, etc.): el repositorio es público, nunca se suben
 .env

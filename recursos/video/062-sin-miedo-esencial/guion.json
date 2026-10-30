@@ -4,10 +4,11 @@
   "para_quien": "Padres y creyentes que sienten miedo o culpa ante Halloween.",
   "que_debe_quedar": "Paz, no una clase de historia.",
   "voz": "JBFqnCBsd6RMkjVDRZzb",
+  "musica": "Quiet instrumental underscore for a spoken reflection. Soft felt piano and warm, sustained strings. Slow, around 66 BPM, no drums, no percussion, no vocals. Begins hushed, tender and slightly uneasy, and gradually opens into a warm, peaceful, hopeful resolution in the final third. Simple, sparse and unobtrusive, leaving room for a voice.",
   "escenas": [
     { "id": "gancho", "texto": "Hay creyentes que viven el {31|treinta y uno} de octubre como si esa noche el mundo cambiara de dueño." },
     { "id": "miedo", "texto": "Un niño colorea una bruja en el colegio, y llega a casa con cara de haber cometido algo irreparable. ¿Qué le estamos enseñando? Que el diablo es fuerte y Cristo es frágil." },
-    { "id": "pregunta", "texto": "La pregunta de fondo no es qué hacer con {Halloween|Jalouín}, sino a quién le tenemos miedo." },
+    { "id": "pregunta", "texto": "La pregunta de fondo no es qué hacer con Halloween, sino a quién le tenemos miedo." },
     { "id": "conciencia", "texto": "Pablo dice: Cada uno esté plenamente convencido en su propia mente. Solo Dios es Señor de la conciencia. Y entre creyentes hay tres caminos." },
     { "id": "erres", "texto": "Rechazar: apartarte por completo. Recibir: participar con tus vecinos. Redimir: llenar el día de otra cosa. Y ninguno de los tres cambia el evangelio." },
     { "id": "limite", "texto": "Libertad no significa que todo vale: lo oculto no es tema de conciencia. Pero un niño disfrazado de bombero no ha hecho un pacto con nadie." },

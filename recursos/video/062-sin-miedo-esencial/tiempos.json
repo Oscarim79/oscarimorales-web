@@ -1,5 +1,5 @@
 {
- "duracion": 88.793,
+ "duracion": 93.716,
  "palabras": [
   {
    "texto": "Hay",
@@ -10,1663 +10,1663 @@
   {
    "texto": "creyentes",
    "escena": "gancho",
-   "ini": 0.209,
-   "fin": 0.685
+   "ini": 0.197,
+   "fin": 0.72
   },
   {
    "texto": "que",
    "escena": "gancho",
-   "ini": 0.731,
-   "fin": 0.801
+   "ini": 0.778,
+   "fin": 0.848
   },
   {
    "texto": "viven",
    "escena": "gancho",
-   "ini": 0.848,
-   "fin": 1.068
+   "ini": 0.894,
+   "fin": 1.126
   },
   {
    "texto": "el",
    "escena": "gancho",
-   "ini": 1.115,
-   "fin": 1.184
+   "ini": 1.184,
+   "fin": 1.254
   },
   {
    "texto": "31",
    "escena": "gancho",
-   "ini": 1.231,
-   "fin": 1.776
+   "ini": 1.312,
+   "fin": 1.904
   },
   {
    "texto": "de",
    "escena": "gancho",
-   "ini": 1.823,
-   "fin": 1.881
+   "ini": 1.962,
+   "fin": 2.02
   },
   {
    "texto": "octubre",
    "escena": "gancho",
-   "ini": 1.916,
-   "fin": 2.345
+   "ini": 2.055,
+   "fin": 2.566
   },
   {
    "texto": "como",
    "escena": "gancho",
-   "ini": 2.496,
-   "fin": 2.682
+   "ini": 2.856,
+   "fin": 3.065
   },
   {
    "texto": "si",
    "escena": "gancho",
-   "ini": 2.728,
-   "fin": 2.821
+   "ini": 3.111,
+   "fin": 3.204
   },
   {
    "texto": "esa",
    "escena": "gancho",
-   "ini": 2.856,
-   "fin": 2.995
+   "ini": 3.239,
+   "fin": 3.39
   },
   {
    "texto": "noche",
    "escena": "gancho",
-   "ini": 3.042,
-   "fin": 3.262
+   "ini": 3.448,
+   "fin": 3.82
   },
   {
    "texto": "el",
    "escena": "gancho",
-   "ini": 3.297,
-   "fin": 3.367
+   "ini": 3.924,
+   "fin": 4.063
   },
   {
    "texto": "mundo",
    "escena": "gancho",
-   "ini": 3.413,
-   "fin": 3.657
+   "ini": 4.11,
+   "fin": 4.365
   },
   {
    "texto": "cambiara",
    "escena": "gancho",
-   "ini": 3.704,
-   "fin": 4.052
+   "ini": 4.423,
+   "fin": 4.807
   },
   {
    "texto": "de",
    "escena": "gancho",
-   "ini": 4.098,
-   "fin": 4.168
+   "ini": 4.853,
+   "fin": 4.934
   },
   {
    "texto": "dueño.",
    "escena": "gancho",
-   "ini": 4.214,
-   "fin": 4.714
+   "ini": 4.981,
+   "fin": 5.503
   },
   {
    "texto": "Un",
    "escena": "miedo",
-   "ini": 5.248,
-   "fin": 5.41
+   "ini": 5.909,
+   "fin": 6.072
   },
   {
    "texto": "niño",
    "escena": "miedo",
-   "ini": 5.445,
-   "fin": 5.724
+   "ini": 6.118,
+   "fin": 6.397
   },
   {
    "texto": "colorea",
    "escena": "miedo",
-   "ini": 5.77,
-   "fin": 6.142
+   "ini": 6.444,
+   "fin": 6.838
   },
   {
    "texto": "una",
    "escena": "miedo",
-   "ini": 6.188,
-   "fin": 6.316
+   "ini": 6.896,
+   "fin": 7.036
   },
   {
    "texto": "bruja",
    "escena": "miedo",
-   "ini": 6.362,
-   "fin": 6.629
+   "ini": 7.082,
+   "fin": 7.372
   },
   {
    "texto": "en",
    "escena": "miedo",
-   "ini": 6.653,
-   "fin": 6.699
+   "ini": 7.396,
+   "fin": 7.454
   },
   {
    "texto": "el",
    "escena": "miedo",
-   "ini": 6.745,
-   "fin": 6.803
+   "ini": 7.512,
+   "fin": 7.581
   },
   {
    "texto": "colegio,",
    "escena": "miedo",
-   "ini": 6.85,
-   "fin": 7.372
+   "ini": 7.639,
+   "fin": 8.208
   },
   {
    "texto": "y",
    "escena": "miedo",
-   "ini": 7.512,
-   "fin": 7.616
+   "ini": 8.348,
+   "fin": 8.452
   },
   {
    "texto": "llega",
    "escena": "miedo",
-   "ini": 7.651,
-   "fin": 7.918
+   "ini": 8.499,
+   "fin": 8.766
   },
   {
    "texto": "a",
    "escena": "miedo",
-   "ini": 7.964,
-   "fin": 7.988
+   "ini": 8.8,
+   "fin": 8.824
   },
   {
    "texto": "casa",
    "escena": "miedo",
-   "ini": 8.034,
-   "fin": 8.301
+   "ini": 8.882,
+   "fin": 9.172
   },
   {
    "texto": "con",
    "escena": "miedo",
-   "ini": 8.348,
-   "fin": 8.464
+   "ini": 9.218,
+   "fin": 9.346
   },
   {
    "texto": "cara",
    "escena": "miedo",
-   "ini": 8.522,
-   "fin": 8.707
+   "ini": 9.404,
+   "fin": 9.636
   },
   {
    "texto": "de",
    "escena": "miedo",
-   "ini": 8.754,
-   "fin": 8.812
+   "ini": 9.694,
+   "fin": 9.764
   },
   {
    "texto": "haber",
    "escena": "miedo",
-   "ini": 8.835,
-   "fin": 9.021
+   "ini": 9.799,
+   "fin": 10.008
   },
   {
    "texto": "cometido",
    "escena": "miedo",
-   "ini": 9.079,
-   "fin": 9.485
+   "ini": 10.066,
+   "fin": 10.542
   },
   {
    "texto": "algo",
    "escena": "miedo",
-   "ini": 9.532,
-   "fin": 9.706
+   "ini": 10.612,
+   "fin": 10.832
   },
   {
    "texto": "irreparable.",
    "escena": "miedo",
-   "ini": 9.741,
-   "fin": 10.484
+   "ini": 10.867,
+   "fin": 11.691
   },
   {
    "texto": "¿Qué",
    "escena": "miedo",
-   "ini": 10.879,
-   "fin": 11.122
+   "ini": 12.237,
+   "fin": 12.516
   },
   {
    "texto": "le",
    "escena": "miedo",
-   "ini": 11.169,
-   "fin": 11.238
+   "ini": 12.562,
+   "fin": 12.632
   },
   {
    "texto": "estamos",
    "escena": "miedo",
-   "ini": 11.262,
-   "fin": 11.587
+   "ini": 12.655,
+   "fin": 13.003
   },
   {
    "texto": "enseñando?",
    "escena": "miedo",
-   "ini": 11.645,
-   "fin": 12.365
+   "ini": 13.061,
+   "fin": 13.815
   },
   {
    "texto": "Que",
    "escena": "miedo",
-   "ini": 12.76,
-   "fin": 12.876
+   "ini": 14.222,
+   "fin": 14.338
   },
   {
    "texto": "el",
    "escena": "miedo",
-   "ini": 12.911,
-   "fin": 12.992
+   "ini": 14.373,
+   "fin": 14.442
   },
   {
    "texto": "diablo",
    "escena": "miedo",
-   "ini": 13.05,
-   "fin": 13.387
+   "ini": 14.5,
+   "fin": 14.826
   },
   {
    "texto": "es",
    "escena": "miedo",
-   "ini": 13.433,
-   "fin": 13.503
+   "ini": 14.884,
+   "fin": 14.953
   },
   {
    "texto": "fuerte",
    "escena": "miedo",
-   "ini": 13.561,
-   "fin": 13.979
+   "ini": 15.011,
+   "fin": 15.418
   },
   {
    "texto": "y",
    "escena": "miedo",
-   "ini": 14.037,
-   "fin": 14.118
+   "ini": 15.557,
+   "fin": 15.638
   },
   {
    "texto": "Cristo",
    "escena": "miedo",
-   "ini": 14.188,
-   "fin": 14.49
+   "ini": 15.708,
+   "fin": 16.01
   },
   {
    "texto": "es",
    "escena": "miedo",
-   "ini": 14.536,
-   "fin": 14.606
+   "ini": 16.056,
+   "fin": 16.114
   },
   {
    "texto": "frágil.",
    "escena": "miedo",
-   "ini": 14.652,
-   "fin": 15.233
+   "ini": 16.172,
+   "fin": 16.73
   },
   {
    "texto": "La",
    "escena": "pregunta",
-   "ini": 15.628,
-   "fin": 15.732
+   "ini": 17.368,
+   "fin": 17.484
   },
   {
    "texto": "pregunta",
    "escena": "pregunta",
-   "ini": 15.767,
-   "fin": 16.127
+   "ini": 17.519,
+   "fin": 17.914
   },
   {
    "texto": "de",
    "escena": "pregunta",
-   "ini": 16.173,
-   "fin": 16.243
+   "ini": 17.96,
+   "fin": 18.03
   },
   {
    "texto": "fondo",
    "escena": "pregunta",
-   "ini": 16.289,
-   "fin": 16.556
+   "ini": 18.088,
+   "fin": 18.436
   },
   {
    "texto": "no",
    "escena": "pregunta",
-   "ini": 16.603,
-   "fin": 16.684
+   "ini": 18.541,
+   "fin": 18.668
   },
   {
    "texto": "es",
    "escena": "pregunta",
-   "ini": 16.73,
-   "fin": 16.789
+   "ini": 18.727,
+   "fin": 18.796
   },
   {
    "texto": "qué",
    "escena": "pregunta",
-   "ini": 16.835,
-   "fin": 16.905
+   "ini": 18.854,
+   "fin": 18.935
   },
   {
    "texto": "hacer",
    "escena": "pregunta",
-   "ini": 16.928,
-   "fin": 17.137
+   "ini": 18.97,
+   "fin": 19.191
   },
   {
    "texto": "con",
    "escena": "pregunta",
-   "ini": 17.183,
-   "fin": 17.299
+   "ini": 19.249,
+   "fin": 19.377
   },
   {
    "texto": "Halloween,",
    "escena": "pregunta",
-   "ini": 17.346,
-   "fin": 17.891
+   "ini": 19.435,
+   "fin": 20.015
   },
   {
    "texto": "sino",
    "escena": "pregunta",
-   "ini": 18.042,
-   "fin": 18.263
+   "ini": 20.131,
+   "fin": 20.352
   },
   {
    "texto": "a",
    "escena": "pregunta",
-   "ini": 18.298,
-   "fin": 18.321
+   "ini": 20.398,
+   "fin": 20.422
   },
   {
    "texto": "quién",
    "escena": "pregunta",
-   "ini": 18.367,
-   "fin": 18.518
+   "ini": 20.48,
+   "fin": 20.642
   },
   {
    "texto": "le",
    "escena": "pregunta",
-   "ini": 18.565,
-   "fin": 18.634
+   "ini": 20.689,
+   "fin": 20.758
   },
   {
    "texto": "tenemos",
    "escena": "pregunta",
-   "ini": 18.669,
-   "fin": 18.971
+   "ini": 20.805,
+   "fin": 21.118
   },
   {
    "texto": "miedo.",
    "escena": "pregunta",
-   "ini": 19.018,
-   "fin": 19.505
+   "ini": 21.176,
+   "fin": 21.652
   },
   {
    "texto": "Pablo",
    "escena": "conciencia",
-   "ini": 19.842,
-   "fin": 20.121
+   "ini": 21.942,
+   "fin": 22.244
   },
   {
    "texto": "dice:",
    "escena": "conciencia",
-   "ini": 20.167,
-   "fin": 20.655
+   "ini": 22.291,
+   "fin": 22.79
   },
   {
    "texto": "Cada",
    "escena": "conciencia",
-   "ini": 20.759,
-   "fin": 20.991
+   "ini": 22.929,
+   "fin": 23.15
   },
   {
    "texto": "uno",
    "escena": "conciencia",
-   "ini": 21.061,
-   "fin": 21.2
+   "ini": 23.22,
+   "fin": 23.359
   },
   {
    "texto": "esté",
    "escena": "conciencia",
-   "ini": 21.235,
-   "fin": 21.398
+   "ini": 23.394,
+   "fin": 23.579
   },
   {
    "texto": "plenamente",
    "escena": "conciencia",
-   "ini": 21.444,
-   "fin": 21.908
+   "ini": 23.626,
+   "fin": 24.125
   },
   {
    "texto": "convencido",
    "escena": "conciencia",
-   "ini": 21.955,
-   "fin": 22.454
+   "ini": 24.172,
+   "fin": 24.671
   },
   {
    "texto": "en",
    "escena": "conciencia",
-   "ini": 22.489,
-   "fin": 22.535
+   "ini": 24.706,
+   "fin": 24.752
   },
   {
    "texto": "su",
    "escena": "conciencia",
-   "ini": 22.57,
-   "fin": 22.663
+   "ini": 24.799,
+   "fin": 24.891
   },
   {
    "texto": "propia",
    "escena": "conciencia",
-   "ini": 22.71,
-   "fin": 22.965
+   "ini": 24.938,
+   "fin": 25.24
   },
   {
    "texto": "mente.",
    "escena": "conciencia",
-   "ini": 23,
-   "fin": 23.511
+   "ini": 25.286,
+   "fin": 25.832
   },
   {
    "texto": "Solo",
    "escena": "conciencia",
-   "ini": 23.905,
-   "fin": 24.161
+   "ini": 26.238,
+   "fin": 26.505
   },
   {
    "texto": "Dios",
    "escena": "conciencia",
-   "ini": 24.207,
-   "fin": 24.428
+   "ini": 26.552,
+   "fin": 26.772
   },
   {
    "texto": "es",
    "escena": "conciencia",
-   "ini": 24.486,
-   "fin": 24.544
+   "ini": 26.842,
+   "fin": 26.9
   },
   {
    "texto": "Señor",
    "escena": "conciencia",
-   "ini": 24.567,
-   "fin": 24.834
+   "ini": 26.923,
+   "fin": 27.213
   },
   {
    "texto": "de",
    "escena": "conciencia",
-   "ini": 24.881,
-   "fin": 24.939
+   "ini": 27.271,
+   "fin": 27.318
   },
   {
    "texto": "la",
    "escena": "conciencia",
-   "ini": 24.974,
-   "fin": 25.032
+   "ini": 27.364,
+   "fin": 27.422
   },
   {
    "texto": "conciencia.",
    "escena": "conciencia",
-   "ini": 25.078,
-   "fin": 25.845
+   "ini": 27.469,
+   "fin": 28.223
   },
   {
    "texto": "Y",
    "escena": "conciencia",
-   "ini": 26.181,
-   "fin": 26.263
+   "ini": 28.514,
+   "fin": 28.595
   },
   {
    "texto": "entre",
    "escena": "conciencia",
-   "ini": 26.332,
-   "fin": 26.541
+   "ini": 28.664,
+   "fin": 28.885
   },
   {
    "texto": "creyentes",
    "escena": "conciencia",
-   "ini": 26.576,
-   "fin": 27.075
+   "ini": 28.92,
+   "fin": 29.419
   },
   {
    "texto": "hay",
    "escena": "conciencia",
-   "ini": 27.145,
-   "fin": 27.261
+   "ini": 29.5,
+   "fin": 29.628
   },
   {
    "texto": "tres",
    "escena": "conciencia",
-   "ini": 27.308,
-   "fin": 27.47
+   "ini": 29.675,
+   "fin": 29.849
   },
   {
    "texto": "caminos.",
    "escena": "conciencia",
-   "ini": 27.517,
-   "fin": 28.12
+   "ini": 29.895,
+   "fin": 30.51
   },
   {
    "texto": "Rechazar:",
    "escena": "erres",
-   "ini": 28.573,
-   "fin": 29.246
+   "ini": 31.056,
+   "fin": 31.753
   },
   {
    "texto": "apartarte",
    "escena": "erres",
-   "ini": 29.641,
-   "fin": 30.152
+   "ini": 32.217,
+   "fin": 32.774
   },
   {
    "texto": "por",
    "escena": "erres",
-   "ini": 30.198,
-   "fin": 30.315
+   "ini": 32.821,
+   "fin": 32.937
   },
   {
    "texto": "completo.",
    "escena": "erres",
-   "ini": 30.361,
-   "fin": 31.011
+   "ini": 32.995,
+   "fin": 33.622
   },
   {
    "texto": "Recibir:",
    "escena": "erres",
-   "ini": 31.545,
-   "fin": 32.137
+   "ini": 34.086,
+   "fin": 34.667
   },
   {
    "texto": "participar",
    "escena": "erres",
-   "ini": 32.474,
-   "fin": 32.973
+   "ini": 34.806,
+   "fin": 35.375
   },
   {
    "texto": "con",
    "escena": "erres",
-   "ini": 33.02,
-   "fin": 33.124
+   "ini": 35.433,
+   "fin": 35.549
   },
   {
    "texto": "tus",
    "escena": "erres",
-   "ini": 33.171,
-   "fin": 33.298
+   "ini": 35.596,
+   "fin": 35.735
   },
   {
    "texto": "vecinos.",
    "escena": "erres",
-   "ini": 33.345,
-   "fin": 33.972
+   "ini": 35.781,
+   "fin": 36.374
   },
   {
    "texto": "Redimir:",
    "escena": "erres",
-   "ini": 34.599,
-   "fin": 35.249
+   "ini": 36.78,
+   "fin": 37.395
   },
   {
    "texto": "llenar",
    "escena": "erres",
-   "ini": 35.539,
-   "fin": 35.864
+   "ini": 37.5,
+   "fin": 37.825
   },
   {
    "texto": "el",
    "escena": "erres",
-   "ini": 35.911,
-   "fin": 35.98
+   "ini": 37.871,
+   "fin": 37.929
   },
   {
    "texto": "día",
    "escena": "erres",
-   "ini": 36.027,
-   "fin": 36.212
+   "ini": 37.987,
+   "fin": 38.185
   },
   {
    "texto": "de",
    "escena": "erres",
-   "ini": 36.259,
-   "fin": 36.317
+   "ini": 38.243,
+   "fin": 38.301
   },
   {
    "texto": "otra",
    "escena": "erres",
-   "ini": 36.363,
-   "fin": 36.537
+   "ini": 38.359,
+   "fin": 38.568
   },
   {
    "texto": "cosa.",
    "escena": "erres",
-   "ini": 36.584,
-   "fin": 37.06
+   "ini": 38.614,
+   "fin": 39.102
   },
   {
    "texto": "Y",
    "escena": "erres",
-   "ini": 37.211,
-   "fin": 37.269
+   "ini": 39.288,
+   "fin": 39.357
   },
   {
    "texto": "ninguno",
    "escena": "erres",
-   "ini": 37.327,
-   "fin": 37.652
+   "ini": 39.415,
+   "fin": 39.74
   },
   {
    "texto": "de",
    "escena": "erres",
-   "ini": 37.698,
-   "fin": 37.745
+   "ini": 39.787,
+   "fin": 39.833
   },
   {
    "texto": "los",
    "escena": "erres",
-   "ini": 37.78,
-   "fin": 37.896
+   "ini": 39.88,
+   "fin": 39.996
   },
   {
    "texto": "tres",
    "escena": "erres",
-   "ini": 37.942,
-   "fin": 38.128
+   "ini": 40.042,
+   "fin": 40.216
   },
   {
    "texto": "cambia",
    "escena": "erres",
-   "ini": 38.186,
-   "fin": 38.465
+   "ini": 40.274,
+   "fin": 40.553
   },
   {
    "texto": "el",
    "escena": "erres",
-   "ini": 38.488,
-   "fin": 38.546
+   "ini": 40.588,
+   "fin": 40.646
   },
   {
    "texto": "evangelio.",
    "escena": "erres",
-   "ini": 38.592,
-   "fin": 39.289
+   "ini": 40.692,
+   "fin": 41.401
   },
   {
    "texto": "Libertad",
    "escena": "limite",
-   "ini": 39.742,
-   "fin": 40.171
+   "ini": 41.807,
+   "fin": 42.26
   },
   {
    "texto": "no",
    "escena": "limite",
-   "ini": 40.218,
-   "fin": 40.287
+   "ini": 42.318,
+   "fin": 42.399
   },
   {
    "texto": "significa",
    "escena": "limite",
-   "ini": 40.334,
-   "fin": 40.775
+   "ini": 42.446,
+   "fin": 42.945
   },
   {
    "texto": "que",
    "escena": "limite",
-   "ini": 40.822,
-   "fin": 40.891
+   "ini": 42.991,
+   "fin": 43.061
   },
   {
    "texto": "todo",
    "escena": "limite",
-   "ini": 40.938,
-   "fin": 41.112
+   "ini": 43.119,
+   "fin": 43.305
   },
   {
    "texto": "vale:",
    "escena": "limite",
-   "ini": 41.158,
-   "fin": 41.634
+   "ini": 43.351,
+   "fin": 43.781
   },
   {
    "texto": "lo",
    "escena": "limite",
-   "ini": 42.087,
-   "fin": 42.192
+   "ini": 43.967,
+   "fin": 44.083
   },
   {
    "texto": "oculto",
    "escena": "limite",
-   "ini": 42.226,
-   "fin": 42.644
+   "ini": 44.118,
+   "fin": 44.454
   },
   {
    "texto": "no",
    "escena": "limite",
-   "ini": 42.76,
-   "fin": 42.865
+   "ini": 44.512,
+   "fin": 44.605
   },
   {
    "texto": "es",
    "escena": "limite",
-   "ini": 42.911,
-   "fin": 42.969
+   "ini": 44.652,
+   "fin": 44.71
   },
   {
    "texto": "tema",
    "escena": "limite",
-   "ini": 43.016,
-   "fin": 43.202
+   "ini": 44.768,
+   "fin": 44.977
   },
   {
    "texto": "de",
    "escena": "limite",
-   "ini": 43.236,
-   "fin": 43.294
+   "ini": 45.023,
+   "fin": 45.081
   },
   {
    "texto": "conciencia.",
    "escena": "limite",
-   "ini": 43.341,
-   "fin": 44.038
+   "ini": 45.128,
+   "fin": 45.836
   },
   {
    "texto": "Pero",
    "escena": "limite",
-   "ini": 44.281,
-   "fin": 44.467
+   "ini": 45.975,
+   "fin": 46.173
   },
   {
    "texto": "un",
    "escena": "limite",
-   "ini": 44.514,
-   "fin": 44.595
+   "ini": 46.219,
+   "fin": 46.312
   },
   {
    "texto": "niño",
    "escena": "limite",
-   "ini": 44.63,
-   "fin": 44.85
+   "ini": 46.347,
+   "fin": 46.602
   },
   {
    "texto": "disfrazado",
    "escena": "limite",
-   "ini": 44.885,
-   "fin": 45.349
+   "ini": 46.637,
+   "fin": 47.194
   },
   {
    "texto": "de",
    "escena": "limite",
-   "ini": 45.396,
-   "fin": 45.466
+   "ini": 47.241,
+   "fin": 47.299
   },
   {
    "texto": "bombero",
    "escena": "limite",
-   "ini": 45.512,
-   "fin": 45.907
+   "ini": 47.334,
+   "fin": 47.752
   },
   {
    "texto": "no",
    "escena": "limite",
-   "ini": 46.011,
-   "fin": 46.116
+   "ini": 47.914,
+   "fin": 48.03
   },
   {
    "texto": "ha",
    "escena": "limite",
-   "ini": 46.151,
-   "fin": 46.197
+   "ini": 48.077,
+   "fin": 48.135
   },
   {
    "texto": "hecho",
    "escena": "limite",
-   "ini": 46.22,
-   "fin": 46.418
+   "ini": 48.158,
+   "fin": 48.367
   },
   {
    "texto": "un",
    "escena": "limite",
-   "ini": 46.452,
-   "fin": 46.499
+   "ini": 48.413,
+   "fin": 48.46
   },
   {
    "texto": "pacto",
    "escena": "limite",
-   "ini": 46.545,
-   "fin": 46.812
+   "ini": 48.518,
+   "fin": 48.773
   },
   {
    "texto": "con",
    "escena": "limite",
-   "ini": 46.859,
-   "fin": 46.963
+   "ini": 48.82,
+   "fin": 48.947
   },
   {
    "texto": "nadie.",
    "escena": "limite",
-   "ini": 46.998,
-   "fin": 47.462
+   "ini": 48.994,
+   "fin": 49.516
   },
   {
    "texto": "Es",
    "escena": "velas",
-   "ini": 47.915,
-   "fin": 48.078
+   "ini": 49.923,
+   "fin": 50.085
   },
   {
    "texto": "que",
    "escena": "velas",
-   "ini": 48.113,
-   "fin": 48.194
+   "ini": 50.12,
+   "fin": 50.201
   },
   {
    "texto": "es",
    "escena": "velas",
-   "ini": 48.24,
-   "fin": 48.298
+   "ini": 50.259,
+   "fin": 50.329
   },
   {
    "texto": "una",
    "escena": "velas",
-   "ini": 48.356,
-   "fin": 48.449
+   "ini": 50.387,
+   "fin": 50.503
   },
   {
    "texto": "fiesta",
    "escena": "velas",
-   "ini": 48.496,
-   "fin": 48.774
+   "ini": 50.561,
+   "fin": 50.863
   },
   {
    "texto": "pagana.",
    "escena": "velas",
-   "ini": 48.821,
-   "fin": 49.332
+   "ini": 50.91,
+   "fin": 51.467
   },
   {
    "texto": "Tal",
    "escena": "velas",
-   "ini": 49.784,
-   "fin": 49.959
+   "ini": 51.815,
+   "fin": 51.978
   },
   {
    "texto": "vez.",
    "escena": "velas",
-   "ini": 50.005,
-   "fin": 50.388
+   "ini": 52.024,
+   "fin": 52.465
   },
   {
    "texto": "Pero",
    "escena": "velas",
-   "ini": 50.678,
-   "fin": 50.864
+   "ini": 52.872,
+   "fin": 53.057
   },
   {
    "texto": "mira",
    "escena": "velas",
-   "ini": 50.899,
-   "fin": 51.05
+   "ini": 53.092,
+   "fin": 53.255
   },
   {
    "texto": "tu",
    "escena": "velas",
-   "ini": 51.096,
-   "fin": 51.178
+   "ini": 53.301,
+   "fin": 53.382
   },
   {
    "texto": "semana.",
    "escena": "velas",
-   "ini": 51.224,
-   "fin": 51.7
+   "ini": 53.429,
+   "fin": 53.963
   },
   {
    "texto": "El",
    "escena": "velas",
-   "ini": 51.99,
-   "fin": 52.118
+   "ini": 54.253,
+   "fin": 54.393
   },
   {
    "texto": "martes",
    "escena": "velas",
-   "ini": 52.165,
-   "fin": 52.443
+   "ini": 54.451,
+   "fin": 54.741
   },
   {
    "texto": "es",
    "escena": "velas",
-   "ini": 52.49,
-   "fin": 52.559
+   "ini": 54.799,
+   "fin": 54.869
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 52.594,
-   "fin": 52.652
+   "ini": 54.915,
+   "fin": 54.973
   },
   {
    "texto": "Marte.",
    "escena": "velas",
-   "ini": 52.699,
-   "fin": 53.163
+   "ini": 55.019,
+   "fin": 55.53
   },
   {
    "texto": "El",
    "escena": "velas",
-   "ini": 53.558,
-   "fin": 53.674
+   "ini": 55.879,
+   "fin": 56.018
   },
   {
    "texto": "jueves,",
    "escena": "velas",
-   "ini": 53.72,
-   "fin": 54.08
+   "ini": 56.076,
+   "fin": 56.424
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 54.138,
-   "fin": 54.219
+   "ini": 56.482,
+   "fin": 56.575
   },
   {
    "texto": "Júpiter.",
    "escena": "velas",
-   "ini": 54.266,
-   "fin": 54.777
+   "ini": 56.622,
+   "fin": 57.167
   },
   {
    "texto": "Enero",
    "escena": "velas",
-   "ini": 55.171,
-   "fin": 55.519
+   "ini": 57.574,
+   "fin": 57.875
   },
   {
    "texto": "viene",
    "escena": "velas",
-   "ini": 55.566,
-   "fin": 55.786
+   "ini": 57.91,
+   "fin": 58.131
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 55.833,
-   "fin": 55.891
+   "ini": 58.166,
+   "fin": 58.224
   },
   {
    "texto": "Jano.",
    "escena": "velas",
-   "ini": 55.937,
-   "fin": 56.367
+   "ini": 58.282,
+   "fin": 58.7
   },
   {
    "texto": "Tu",
    "escena": "velas",
-   "ini": 56.901,
-   "fin": 57.006
+   "ini": 59.106,
+   "fin": 59.211
   },
   {
    "texto": "anillo",
    "escena": "velas",
-   "ini": 57.052,
-   "fin": 57.296
+   "ini": 59.269,
+   "fin": 59.547
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 57.342,
-   "fin": 57.4
+   "ini": 59.594,
+   "fin": 59.652
   },
   {
    "texto": "bodas,",
    "escena": "velas",
-   "ini": 57.435,
-   "fin": 57.737
+   "ini": 59.687,
+   "fin": 60.081
   },
   {
    "texto": "probablemente,",
    "escena": "velas",
-   "ini": 57.76,
-   "fin": 58.48
+   "ini": 60.128,
+   "fin": 60.952
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 58.526,
-   "fin": 58.608
+   "ini": 61.01,
+   "fin": 61.091
   },
   {
    "texto": "Roma.",
    "escena": "velas",
-   "ini": 58.666,
-   "fin": 59.049
+   "ini": 61.161,
+   "fin": 61.649
   },
   {
    "texto": "Las",
    "escena": "velas",
-   "ini": 59.676,
-   "fin": 59.815
+   "ini": 61.997,
+   "fin": 62.16
   },
   {
    "texto": "velas",
    "escena": "velas",
-   "ini": 59.873,
-   "fin": 60.071
+   "ini": 62.218,
+   "fin": 62.461
   },
   {
    "texto": "del",
    "escena": "velas",
-   "ini": 60.117,
-   "fin": 60.221
+   "ini": 62.496,
+   "fin": 62.601
   },
   {
    "texto": "pastel,",
    "escena": "velas",
-   "ini": 60.268,
-   "fin": 60.674
+   "ini": 62.659,
+   "fin": 63.077
   },
   {
    "texto": "según",
    "escena": "velas",
-   "ini": 60.697,
-   "fin": 60.918
+   "ini": 63.135,
+   "fin": 63.39
   },
   {
    "texto": "se",
    "escena": "velas",
-   "ini": 60.965,
-   "fin": 61.046
+   "ini": 63.437,
+   "fin": 63.518
   },
   {
    "texto": "cuenta,",
    "escena": "velas",
-   "ini": 61.081,
-   "fin": 61.545
+   "ini": 63.553,
+   "fin": 64.064
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 61.65,
-   "fin": 61.719
+   "ini": 64.168,
+   "fin": 64.249
   },
   {
    "texto": "ofrendas",
    "escena": "velas",
-   "ini": 61.766,
-   "fin": 62.137
+   "ini": 64.296,
+   "fin": 64.69
   },
   {
    "texto": "griegas.",
    "escena": "velas",
-   "ini": 62.184,
-   "fin": 62.741
+   "ini": 64.737,
+   "fin": 65.329
   },
   {
    "texto": "Y",
    "escena": "velas",
-   "ini": 63.368,
-   "fin": 63.426
+   "ini": 65.515,
+   "fin": 65.584
   },
   {
    "texto": "nadie",
    "escena": "velas",
-   "ini": 63.507,
-   "fin": 63.739
+   "ini": 65.666,
+   "fin": 65.886
   },
   {
    "texto": "pide",
    "escena": "velas",
-   "ini": 63.774,
-   "fin": 63.96
+   "ini": 65.921,
+   "fin": 66.13
   },
   {
    "texto": "perdón",
    "escena": "velas",
-   "ini": 64.006,
-   "fin": 64.262
+   "ini": 66.188,
+   "fin": 66.49
   },
   {
    "texto": "por",
    "escena": "velas",
-   "ini": 64.308,
-   "fin": 64.424
+   "ini": 66.548,
+   "fin": 66.676
   },
   {
    "texto": "eso",
    "escena": "velas",
-   "ini": 64.471,
-   "fin": 64.61
+   "ini": 66.734,
+   "fin": 66.978
   },
   {
    "texto": "el",
    "escena": "velas",
-   "ini": 64.645,
-   "fin": 64.703
+   "ini": 67.059,
+   "fin": 67.163
   },
   {
    "texto": "lunes.",
    "escena": "velas",
-   "ini": 64.749,
-   "fin": 65.214
+   "ini": 67.198,
+   "fin": 67.732
   },
   {
    "texto": "El",
    "escena": "velas",
-   "ini": 65.609,
-   "fin": 65.725
+   "ini": 68.197,
+   "fin": 68.336
   },
   {
    "texto": "origen",
    "escena": "velas",
-   "ini": 65.771,
-   "fin": 66.003
+   "ini": 68.382,
+   "fin": 68.673
   },
   {
    "texto": "de",
    "escena": "velas",
-   "ini": 66.05,
-   "fin": 66.119
+   "ini": 68.731,
+   "fin": 68.789
   },
   {
    "texto": "algo",
    "escena": "velas",
-   "ini": 66.177,
-   "fin": 66.444
+   "ini": 68.847,
+   "fin": 69.067
   },
   {
    "texto": "no",
    "escena": "velas",
-   "ini": 66.526,
-   "fin": 66.63
+   "ini": 69.126,
+   "fin": 69.207
   },
   {
    "texto": "decide",
    "escena": "velas",
-   "ini": 66.677,
-   "fin": 66.944
+   "ini": 69.265,
+   "fin": 69.602
   },
   {
    "texto": "lo",
    "escena": "velas",
-   "ini": 66.99,
-   "fin": 67.06
+   "ini": 69.648,
+   "fin": 69.718
   },
   {
    "texto": "que",
    "escena": "velas",
-   "ini": 67.095,
-   "fin": 67.164
+   "ini": 69.764,
+   "fin": 69.834
   },
   {
    "texto": "significa",
    "escena": "velas",
-   "ini": 67.199,
-   "fin": 67.629
+   "ini": 69.869,
+   "fin": 70.368
   },
   {
    "texto": "hoy.",
    "escena": "velas",
-   "ini": 67.675,
-   "fin": 68.012
+   "ini": 70.414,
+   "fin": 70.832
   },
   {
    "texto": "Cristo",
    "escena": "cristo",
-   "ini": 68.348,
-   "fin": 68.662
+   "ini": 71.297,
+   "fin": 71.633
   },
   {
    "texto": "no",
    "escena": "cristo",
-   "ini": 68.708,
-   "fin": 68.766
+   "ini": 71.691,
+   "fin": 71.761
   },
   {
    "texto": "pierde",
    "escena": "cristo",
-   "ini": 68.813,
-   "fin": 69.068
+   "ini": 71.807,
+   "fin": 72.086
   },
   {
    "texto": "autoridad",
    "escena": "cristo",
-   "ini": 69.114,
-   "fin": 69.544
+   "ini": 72.121,
+   "fin": 72.609
   },
   {
    "texto": "esa",
    "escena": "cristo",
-   "ini": 69.59,
-   "fin": 69.706
+   "ini": 72.655,
+   "fin": 72.783
   },
   {
    "texto": "noche.",
    "escena": "cristo",
-   "ini": 69.753,
-   "fin": 70.229
+   "ini": 72.841,
+   "fin": 73.363
   },
   {
    "texto": "En",
    "escena": "cristo",
-   "ini": 70.763,
-   "fin": 70.867
+   "ini": 74.002,
+   "fin": 74.13
   },
   {
    "texto": "la",
    "escena": "cristo",
-   "ini": 70.914,
-   "fin": 70.983
+   "ini": 74.176,
+   "fin": 74.246
   },
   {
    "texto": "cruz",
    "escena": "cristo",
-   "ini": 71.03,
-   "fin": 71.239
+   "ini": 74.304,
+   "fin": 74.594
   },
   {
    "texto": "despojó",
    "escena": "cristo",
-   "ini": 71.274,
-   "fin": 71.61
+   "ini": 74.698,
+   "fin": 75.105
   },
   {
    "texto": "a",
    "escena": "cristo",
-   "ini": 71.645,
-   "fin": 71.668
+   "ini": 75.14,
+   "fin": 75.163
   },
   {
    "texto": "los",
    "escena": "cristo",
-   "ini": 71.692,
-   "fin": 71.808
+   "ini": 75.186,
+   "fin": 75.302
   },
   {
    "texto": "principados",
    "escena": "cristo",
-   "ini": 71.854,
-   "fin": 72.435
+   "ini": 75.349,
+   "fin": 75.964
   },
   {
    "texto": "y",
    "escena": "cristo",
-   "ini": 72.493,
-   "fin": 72.516
+   "ini": 76.068,
+   "fin": 76.126
   },
   {
    "texto": "a",
    "escena": "cristo",
-   "ini": 72.551,
-   "fin": 72.574
+   "ini": 76.173,
+   "fin": 76.196
   },
   {
    "texto": "las",
    "escena": "cristo",
-   "ini": 72.597,
-   "fin": 72.69
+   "ini": 76.231,
+   "fin": 76.335
   },
   {
    "texto": "potestades.",
    "escena": "cristo",
-   "ini": 72.737,
-   "fin": 73.445
+   "ini": 76.382,
+   "fin": 77.171
   },
   {
    "texto": "Y",
    "escena": "cristo",
-   "ini": 73.735,
-   "fin": 73.793
+   "ini": 77.52,
+   "fin": 77.589
   },
   {
    "texto": "mayor",
    "escena": "cristo",
-   "ini": 73.863,
-   "fin": 74.153
+   "ini": 77.659,
+   "fin": 77.914
   },
   {
    "texto": "es",
    "escena": "cristo",
-   "ini": 74.188,
-   "fin": 74.246
+   "ini": 77.961,
+   "fin": 78.019
   },
   {
    "texto": "el",
    "escena": "cristo",
-   "ini": 74.292,
-   "fin": 74.35
+   "ini": 78.077,
+   "fin": 78.135
   },
   {
    "texto": "que",
    "escena": "cristo",
-   "ini": 74.397,
-   "fin": 74.466
+   "ini": 78.193,
+   "fin": 78.263
   },
   {
    "texto": "está",
    "escena": "cristo",
-   "ini": 74.49,
-   "fin": 74.641
+   "ini": 78.286,
+   "fin": 78.448
   },
   {
    "texto": "en",
    "escena": "cristo",
-   "ini": 74.687,
-   "fin": 74.733
+   "ini": 78.495,
+   "fin": 78.541
   },
   {
    "texto": "vosotros,",
    "escena": "cristo",
-   "ini": 74.78,
-   "fin": 75.418
+   "ini": 78.588,
+   "fin": 79.284
   },
   {
    "texto": "que",
    "escena": "cristo",
-   "ini": 75.558,
-   "fin": 75.662
+   "ini": 79.575,
+   "fin": 79.668
   },
   {
    "texto": "el",
    "escena": "cristo",
-   "ini": 75.686,
-   "fin": 75.744
+   "ini": 79.702,
+   "fin": 79.772
   },
   {
    "texto": "que",
    "escena": "cristo",
-   "ini": 75.79,
-   "fin": 75.86
+   "ini": 79.83,
+   "fin": 79.9
   },
   {
    "texto": "está",
    "escena": "cristo",
-   "ini": 75.894,
-   "fin": 76.057
+   "ini": 79.923,
+   "fin": 80.109
   },
   {
    "texto": "en",
    "escena": "cristo",
-   "ini": 76.115,
-   "fin": 76.173
+   "ini": 80.155,
+   "fin": 80.202
   },
   {
    "texto": "el",
    "escena": "cristo",
-   "ini": 76.22,
-   "fin": 76.278
+   "ini": 80.26,
+   "fin": 80.318
   },
   {
    "texto": "mundo.",
    "escena": "cristo",
-   "ini": 76.324,
-   "fin": 76.812
+   "ini": 80.364,
+   "fin": 80.945
   },
   {
    "texto": "Si",
    "escena": "cierre",
-   "ini": 77.206,
-   "fin": 77.334
+   "ini": 81.49,
+   "fin": 81.63
   },
   {
    "texto": "tu",
    "escena": "cierre",
-   "ini": 77.381,
-   "fin": 77.45
+   "ini": 81.676,
+   "fin": 81.769
   },
   {
    "texto": "hijo",
    "escena": "cierre",
-   "ini": 77.497,
-   "fin": 77.694
+   "ini": 81.792,
+   "fin": 81.99
   },
   {
    "texto": "llega",
    "escena": "cierre",
-   "ini": 77.717,
-   "fin": 77.938
+   "ini": 82.013,
+   "fin": 82.303
   },
   {
    "texto": "con",
    "escena": "cierre",
-   "ini": 77.984,
-   "fin": 78.089
+   "ini": 82.349,
+   "fin": 82.466
   },
   {
    "texto": "una",
    "escena": "cierre",
-   "ini": 78.135,
-   "fin": 78.228
+   "ini": 82.524,
+   "fin": 82.64
   },
   {
    "texto": "bruja",
    "escena": "cierre",
-   "ini": 78.275,
-   "fin": 78.484
+   "ini": 82.675,
+   "fin": 82.93
   },
   {
    "texto": "de",
    "escena": "cierre",
-   "ini": 78.53,
-   "fin": 78.588
+   "ini": 82.976,
+   "fin": 83.034
   },
   {
    "texto": "papel,",
    "escena": "cierre",
-   "ini": 78.634,
-   "fin": 79.041
+   "ini": 83.081,
+   "fin": 83.522
   },
   {
    "texto": "no",
    "escena": "cierre",
-   "ini": 79.157,
-   "fin": 79.261
+   "ini": 83.685,
+   "fin": 83.777
   },
   {
    "texto": "hagas",
    "escena": "cierre",
-   "ini": 79.308,
-   "fin": 79.517
+   "ini": 83.812,
+   "fin": 83.998
   },
   {
    "texto": "un",
    "escena": "cierre",
-   "ini": 79.586,
-   "fin": 79.645
+   "ini": 84.079,
+   "fin": 84.137
   },
   {
    "texto": "drama.",
    "escena": "cierre",
-   "ini": 79.679,
-   "fin": 80.167
+   "ini": 84.161,
+   "fin": 84.695
   },
   {
    "texto": "Recuérdale",
    "escena": "cierre",
-   "ini": 80.794,
-   "fin": 81.293
+   "ini": 85.24,
+   "fin": 85.728
   },
   {
    "texto": "quién",
    "escena": "cierre",
-   "ini": 81.351,
-   "fin": 81.537
+   "ini": 85.786,
+   "fin": 85.949
   },
   {
    "texto": "es",
    "escena": "cierre",
-   "ini": 81.583,
-   "fin": 81.653
+   "ini": 85.995,
+   "fin": 86.065
   },
   {
    "texto": "Jesús.",
    "escena": "cierre",
-   "ini": 81.699,
-   "fin": 82.291
+   "ini": 86.111,
+   "fin": 86.692
   },
   {
    "texto": "El",
    "escena": "cierre",
-   "ini": 82.744,
-   "fin": 82.895
+   "ini": 87.33,
+   "fin": 87.458
   },
   {
    "texto": "31",
    "escena": "cierre",
-   "ini": 82.942,
-   "fin": 83.464
+   "ini": 87.516,
+   "fin": 88.073
   },
   {
    "texto": "de",
    "escena": "cierre",
-   "ini": 83.51,
-   "fin": 83.557
+   "ini": 88.12,
+   "fin": 88.166
   },
   {
    "texto": "octubre",
    "escena": "cierre",
-   "ini": 83.592,
-   "fin": 83.928
+   "ini": 88.201,
+   "fin": 88.573
   },
   {
    "texto": "no",
    "escena": "cierre",
-   "ini": 83.975,
-   "fin": 84.044
+   "ini": 88.619,
+   "fin": 88.7
   },
   {
    "texto": "les",
    "escena": "cierre",
-   "ini": 84.079,
-   "fin": 84.184
+   "ini": 88.735,
+   "fin": 88.828
   },
   {
    "texto": "pertenece",
    "escena": "cierre",
-   "ini": 84.23,
-   "fin": 84.671
+   "ini": 88.874,
+   "fin": 89.362
   },
   {
    "texto": "a",
    "escena": "cierre",
-   "ini": 84.718,
-   "fin": 84.741
+   "ini": 89.397,
+   "fin": 89.42
   },
   {
    "texto": "las",
    "escena": "cierre",
-   "ini": 84.788,
-   "fin": 84.892
+   "ini": 89.455,
+   "fin": 89.583
   },
   {
    "texto": "brujas",
    "escena": "cierre",
-   "ini": 84.938,
-   "fin": 85.264
+   "ini": 89.629,
+   "fin": 89.943
   },
   {
    "texto": "ni",
    "escena": "cierre",
-   "ini": 85.31,
-   "fin": 85.38
+   "ini": 90.001,
+   "fin": 90.059
   },
   {
    "texto": "a",
    "escena": "cierre",
-   "ini": 85.403,
-   "fin": 85.426
+   "ini": 90.093,
+   "fin": 90.117
   },
   {
    "texto": "los",
    "escena": "cierre",
-   "ini": 85.461,
-   "fin": 85.565
+   "ini": 90.152,
+   "fin": 90.268
   },
   {
    "texto": "dulces:",
    "escena": "cierre",
-   "ini": 85.612,
-   "fin": 86.123
+   "ini": 90.314,
+   "fin": 90.871
   },
   {
    "texto": "es",
    "escena": "cierre",
-   "ini": 86.413,
-   "fin": 86.552
+   "ini": 91.278,
+   "fin": 91.394
   },
   {
    "texto": "de",
    "escena": "cierre",
-   "ini": 86.599,
-   "fin": 86.657
+   "ini": 91.44,
+   "fin": 91.51
   },
   {
    "texto": "Cristo,",
    "escena": "cierre",
-   "ini": 86.703,
-   "fin": 87.214
+   "ini": 91.556,
+   "fin": 92.044
   },
   {
    "texto": "como",
    "escena": "cierre",
-   "ini": 87.249,
-   "fin": 87.435
+   "ini": 92.102,
+   "fin": 92.299
   },
   {
    "texto": "todos",
    "escena": "cierre",
-   "ini": 87.481,
-   "fin": 87.702
+   "ini": 92.346,
+   "fin": 92.59
   },
   {
    "texto": "los",
    "escena": "cierre",
-   "ini": 87.748,
-   "fin": 87.864
+   "ini": 92.636,
+   "fin": 92.752
   },
   {
    "texto": "demás",
    "escena": "cierre",
-   "ini": 87.899,
-   "fin": 88.12
+   "ini": 92.787,
+   "fin": 93.019
   },
   {
    "texto": "días.",
    "escena": "cierre",
-   "ini": 88.154,
-   "fin": 88.793
+   "ini": 93.066,
+   "fin": 93.716
   }
  ],
  "escenas": [
   {
    "id": "gancho",
    "ini": 0,
-   "fin": 4.714
+   "fin": 5.503
   },
   {
    "id": "miedo",
-   "ini": 5.248,
-   "fin": 15.233
+   "ini": 5.909,
+   "fin": 16.73
   },
   {
    "id": "pregunta",
-   "ini": 15.628,
-   "fin": 19.505
+   "ini": 17.368,
+   "fin": 21.652
   },
   {
    "id": "conciencia",
-   "ini": 19.842,
-   "fin": 28.12
+   "ini": 21.942,
+   "fin": 30.51
   },
   {
    "id": "erres",
-   "ini": 28.573,
-   "fin": 39.289
+   "ini": 31.056,
+   "fin": 41.401
   },
   {
    "id": "limite",
-   "ini": 39.742,
-   "fin": 47.462
+   "ini": 41.807,
+   "fin": 49.516
   },
   {
    "id": "velas",
-   "ini": 47.915,
-   "fin": 68.012
+   "ini": 49.923,
+   "fin": 70.832
   },
   {
    "id": "cristo",
-   "ini": 68.348,
-   "fin": 76.812
+   "ini": 71.297,
+   "fin": 80.945
   },
   {
    "id": "cierre",
-   "ini": 77.206,
-   "fin": 88.793
+   "ini": 81.49,
+   "fin": 93.716
   }
  ]
 }
