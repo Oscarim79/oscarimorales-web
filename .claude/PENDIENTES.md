@@ -15,14 +15,17 @@
 orígenes reales de Halloween (Hutton: Todos los Santos no nació de Samhain; Irlanda lo guardaba el
 20 de abril), diferencias Guatemala / EE. UU. / Alemania / Chile, posturas de Lutero, Knox,
 Westminster, puritanos, Spurgeon, MacArthur, Mohler, Piper y Ligonier, las tres erres (rechazar,
-replicar, redimir) y el énfasis que Oscar añadió: enseñar a los hijos a NO tener miedo.
+recibir, redimir) y el énfasis que Oscar añadió: enseñar a los hijos a NO tener miedo.
 Enlaza al #29 de 2017.
-- **Decisión de estilo:** se usó «Día de la Reforma» porque Oscar lo pidió, solo como nombre del
-  día; sin «reformado» y fuera del título. La regla general de evitar el rótulo sigue vigente.
+- **Cambios pedidos por Oscar tras publicar (30-oct):** «replicar» pasó a «recibir» (también en
+  redes y correo), se añadió la sección TAMBIÉN SOPLAS LAS VELAS (costumbres de origen pagano y
+  redimir la cosmovisión), enlaces a las fuentes de cada dato, y su tentación quedó como «no
+  siempre, pero me ha pasado». El himno se presenta como famoso: en su iglesia no se canta.
+- **Decisión de estilo:** Oscar confirmó que «Día de la Reforma» es válido aquí porque es lo que
+  se celebra en esa fecha. La regla general de evitar el rótulo sigue vigente.
+- **No citar a Mark Driscoll,** aunque el esquema de las tres erres se asocie con él.
 - **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
   Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
-- **Datos propuestos que Oscar aprobó al publicar sin cambios:** su tentación de sentirse mejor
-  que el vecino desde el devocional; «el himno que todavía cantamos».
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
 - Portada: Hugging Face sin cuota → Canva (diseño «Portada post 62 — El 31 de octubre sin
   miedo»). Eligió la 2 (puerta con luz).

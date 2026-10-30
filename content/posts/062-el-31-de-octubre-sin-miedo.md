@@ -3,7 +3,7 @@ n: 62
 title: "El 31 de octubre sin miedo"
 date: "2026-10-30"
 cats: ["Familia", "Cultura y Actualidad"]
-excerpt: "Rechazar, replicar o redimir: tres caminos que la libertad de conciencia deja abiertos ante Halloween. Lo que ninguno permite es vivir ese día como si Cristo hubiera perdido su autoridad."
+excerpt: "Rechazar, recibir o redimir: tres caminos que la libertad de conciencia deja abiertos ante Halloween. Lo que ninguno permite es vivir ese día como si Cristo hubiera perdido su autoridad."
 quote: "El 31 de octubre no les pertenece a las brujas ni a los dulces: es de Cristo, como todos los demás días."
 featured: false
 cover: "content/covers/062-el-31-de-octubre-sin-miedo.jpg"
@@ -21,15 +21,15 @@ Casi todos conocemos la versión corta: «es una fiesta pagana que la iglesia ba
 
 El nombre es cristiano. *Halloween* viene de *All Hallows' Eve*, la víspera de Todos los Santos. Esa fiesta se fijó en Roma en el año 609, el 13 de mayo. Hacia el año 800, iglesias de Inglaterra y Alemania ya la guardaban el 1 de noviembre. ¿Y en Irlanda, la tierra del famoso Samhain? Allí, según [muestra el historiador Ronald Hutton](https://www.johnsanidopoulos.com/2010/10/christian-not-pagan-origins-of.html), se celebraba el 20 de abril.
 
-Samhain existió, y era una fiesta irlandesa. Pero la idea de que fue «la fiesta pagana de los muertos» la popularizó James Frazer hace poco más de un siglo, y Hutton señala que la dedujo sin tener registro de ella. Otros historiadores sí ven alguna conexión. Lo honesto es decir que no lo sabemos del todo.
+Samhain existió, y era una fiesta irlandesa. Pero la idea de que fue «la fiesta pagana de los muertos» la popularizó James Frazer hace poco más de un siglo, y Hutton señala que la dedujo sin tener registro de ella. [Otros historiadores](https://www.medievalists.net/2023/10/pagan-christian-origins-halloween/) sí ven alguna conexión. Lo honesto es decir que no lo sabemos del todo.
 
-Lo demás se fue sumando con los siglos. En la Edad Media, los pobres pedían comida de puerta en puerta a cambio de oraciones por los muertos. En Escocia e Irlanda aparecieron los disfraces. Los inmigrantes llevaron esas costumbres a Norteamérica, y la frase *trick or treat* se documenta en 1927, en un pueblito de Canadá. Lo que hoy vemos en las tiendas es, en buena parte, folclor y comercio.
+Lo demás se fue sumando con los siglos. [En la Edad Media](https://www.mentalfloss.com/holidays/halloween/why-do-we-go-trick-or-treating-halloween), los pobres pedían comida de puerta en puerta a cambio de oraciones por los muertos. En Escocia e Irlanda aparecieron los disfraces. Los inmigrantes [llevaron esas costumbres a Norteamérica](https://olmstedcounty.gov/post/halloween-spread-north-america-training-post), y la frase *trick or treat* [se documenta en 1927](https://amp.cbc.ca/lite/story/1.3829669), en un pueblito de Canadá. Lo que hoy vemos en las tiendas es, en buena parte, folclor y comercio.
 
 ## UN MISMO DÍA, TRES CULTURAS
 
-En Estados Unidos, Halloween es una fiesta de barrio: el vecino toca tu puerta. En Alemania, el 31 de octubre es feriado en nueve estados, pero por Lutero; Halloween creció allá apenas desde los años noventa, y un [representante del gremio de juguetes](https://deutschland.de/en/topic/culture/halloween-in-germany) cuenta que lo impulsaron para recuperar las ventas perdidas cuando se canceló el carnaval de 1991. En Chile, desde 2008, la ley llama a esa fecha Día Nacional de las Iglesias Evangélicas y Protestantes.
+En Estados Unidos, Halloween es una fiesta de barrio: el vecino toca tu puerta. En Alemania, el 31 de octubre [es feriado en nueve estados](https://www.hannover.de/Service/Presse-Medien/Hannover.de/Aktuelles/Gut-zu-wissen/Glossar-Feste-und-Feiertage/Warum-und-wie-Hannover-den-Reformationstag-feiert), pero por Lutero; Halloween creció allá apenas desde los años noventa, y un [representante del gremio de juguetes](https://deutschland.de/en/topic/culture/halloween-in-germany) cuenta que lo impulsaron para recuperar las ventas perdidas cuando se canceló el carnaval de 1991. En Chile, desde 2008, [la ley llama a esa fecha](https://www.calendariochile.com/fechas/dia-de-las-iglesias-evangelicas-en-chile-2026) Día Nacional de las Iglesias Evangélicas y Protestantes.
 
-Y a nosotros nos llegó importado, y le pusimos Día de las Brujas. Nuestra tradición de verdad viene al día siguiente: el cementerio, el fiambre, los barriletes de Sumpango.
+Y a nosotros nos llegó importado, y le pusimos Día de las Brujas. Nuestra tradición de verdad viene al día siguiente: el cementerio, el fiambre, [los barriletes de Sumpango](https://www.islands.com/1684404/central-america-guatemala-celebrate-day-dead-unique-kite-festival/).
 
 Por eso un pastor en Ohio y uno en Guatemala no responden exactamente la misma pregunta. Allá el tema suele ser cómo amar al vecino que toca el timbre. Aquí, quizá lo más serio no sea el disfraz, sino lo que creemos de nuestros muertos. Recordarlos con amor no es pecado. Consultarlos, sí (Deuteronomio 18:11).
 
@@ -37,27 +37,27 @@ Por eso un pastor en Ohio y uno en Guatemala no responden exactamente la misma p
 
 Busqué y no encontré un sermón de Spurgeon dedicado a Halloween. La gran pregunta de los siglos pasados era otra: ¿quién tiene derecho a declarar santo un día?
 
-**Lutero** no escogió el 31 de octubre por las brujas. Todo indica que lo escogió porque al día siguiente era Todos los Santos, y Wittenberg se llenaba de gente que iba a venerar reliquias para ganar indulgencias.
+**Lutero** no escogió el 31 de octubre por las brujas. [Todo indica que lo escogió](https://www.futurity.org/reformation-day-halloween-1589502-2/) porque al día siguiente era Todos los Santos, y Wittenberg se llenaba de gente que iba a venerar reliquias para ganar indulgencias.
 
-**John Knox** y el [Libro de Disciplina escocés](https://heidelblog.net/2015/12/the-first-book-of-discipline-1560-on-holy-days) (1560) dieron por abolidas las fiestas inventadas por hombres, incluidas las de apóstoles y mártires. El [Directorio de Westminster](https://heidelblog.net/2013/12/the-directory-of-publick-worship-on-christmas/) (1645) dijo que esos días no tienen respaldo en la Palabra. Los **puritanos** de Nueva Inglaterra no los guardaban, e **Increase Mather** escribió contra ellos en 1687. Eso es rechazar con convicción, aunque su blanco era el calendario impuesto, no un niño con máscara.
+**John Knox** y el [Libro de Disciplina escocés](https://heidelblog.net/2015/12/the-first-book-of-discipline-1560-on-holy-days) (1560) dieron por abolidas las fiestas inventadas por hombres, incluidas las de apóstoles y mártires. El [Directorio de Westminster](https://heidelblog.net/2013/12/the-directory-of-publick-worship-on-christmas/) (1645) dijo que esos días no tienen respaldo en la Palabra. Los **puritanos** de Nueva Inglaterra [no los guardaban](https://olmstedcounty.gov/post/halloween-spread-north-america-training-post), e **Increase Mather** [escribió en 1687](https://www.covenanter.org/reformed/2015/8/14/increase-mathers-testimony-against-that-prophane-and-superstitious-custom-of-christ-mass-keeping) contra costumbres como guardar la Navidad. Eso es rechazar con convicción, aunque su blanco era el calendario impuesto, no un niño con máscara.
 
 **Spurgeon**, predicando sobre la Navidad, dijo [no tener «ninguna consideración supersticiosa por los tiempos y las estaciones»](https://www.spurgeon.org/blog/spurgeons-guidance-on-celebrating-christmas). Pero aconsejó dejarles «sus supersticiones a los supersticiosos» y tomar lo bueno que el día nos trae. Y añadió: «Haremos voluntariamente lo que rehusaríamos hacer por obligación».
 
-**John MacArthur**, según [relató Tim Challies](https://www.challies.com/articles/the-inevitable-halloween-discussion), no veía sabio que los niños salieran a pedir dulces, y su familia prefería una alternativa. **Albert Mohler** pidió a los padres [decidir con una conciencia formada por la Biblia](https://repository.sbts.edu/handle/10392/1313?show=full), reconociendo que algunas prácticas quedan claramente fuera de los límites. Y **John Piper**, que de niño pidió dulces, [dijo en 2010](https://www.desiringgod.org/interviews/what-are-your-thoughts-on-halloween) que respeta tanto a quien renuncia a la fecha como a quien propone: «Redimámoslo, penetrémoslo y usémoslo». Y Ligonier, el ministerio que fundó **R.C. Sproul**, dedica cada 31 de octubre a recordar a Lutero.
+**John MacArthur**, según [relató Tim Challies](https://www.challies.com/articles/the-inevitable-halloween-discussion), no veía sabio que los niños salieran a pedir dulces, y su familia prefería una alternativa. **Albert Mohler** pidió a los padres [decidir con una conciencia formada por la Biblia](https://repository.sbts.edu/handle/10392/1313?show=full), reconociendo que algunas prácticas quedan claramente fuera de los límites. Y **John Piper**, que de niño pidió dulces, [dijo en 2010](https://www.desiringgod.org/interviews/what-are-your-thoughts-on-halloween) que respeta tanto a quien renuncia a la fecha como a quien propone: «Redimámoslo, penetrémoslo y usémoslo». Y Ligonier, el ministerio que fundó **R.C. Sproul**, [dedica cada 31 de octubre](https://www.ligonier.org/posts/reformation-day-resources-plus-free-mp3-downloads) a recordar a Lutero.
 
 ¿Ves lo que pasa? Hombres que aman la Palabra llegan a conclusiones distintas, y ninguno cambia el evangelio por eso.
 
 ## TRES ERRES, UNA CONCIENCIA
 
-Pablo no dejó este asunto en el aire: «Uno hace diferencia entre día y día; otro juzga iguales todos los días. Cada uno esté plenamente convencido en su propia mente» (Romanos 14:5). La Confesión de 1689 lo recoge en su capítulo 21: solo Dios es Señor de la conciencia.
+Pablo no dejó este asunto en el aire: «Uno hace diferencia entre día y día; otro juzga iguales todos los días. Cada uno esté plenamente convencido en su propia mente» (Romanos 14:5). [La Confesión de 1689](https://setru.ipuy.org.uy/assets/confesionbautista1689.pdf) lo recoge en su capítulo 21: solo Dios es Señor de la conciencia.
 
-Dentro de esa libertad veo tres caminos. Puedes **rechazar**: apartarte por completo, como los puritanos. Puedes **replicar**: participar con tus vecinos como uno más, como hacen muchos creyentes fieles. O puedes **redimir**: tomar el día y llenarlo de otra cosa.
+Dentro de esa libertad veo tres caminos. Puedes **rechazar**: apartarte por completo, como los puritanos. Puedes **recibir**: participar con tus vecinos como uno más, como hacen muchos creyentes fieles. O puedes **redimir**: tomar el día y llenarlo de otra cosa.
 
 Libertad no significa que todo vale: lo oculto, la adivinación y lo que celebra la muerte no son temas de conciencia (Efesios 5:11). Pero un niño disfrazado de bombero tampoco ha hecho un pacto con nadie.
 
 ¿Cómo saber cuándo algo se puede redimir? Primero, que la Palabra no lo prohíba. Después, una pregunta sencilla: ¿puedo hacerlo «en el nombre del Señor Jesús», dándole gracias por ello (Colosenses 3:17)? Si no puedo darle gracias, no lo estoy redimiendo. Solo lo estoy justificando.
 
-Cada erre trae su propia tentación. El que rechaza puede volverse fariseo. El que replica puede volverse descuidado. Y el que redime, que es mi caso, puede volverse orgulloso. Si soy honesto, esa es la mía: mirar desde mi devocional al vecino y sentirme mejor que él. En 2017 [escribí](https://oscarimorales.com/halloween-la-famosa-reforma) que no sirve de nada recordar la Reforma solo para tener una «opción sana» contra Halloween. Lo sigo creyendo. Si nuestro devocional es una trinchera, ya perdimos el punto. «¿Tú quién eres, que juzgas al criado ajeno?» (Romanos 14:4).
+Cada erre trae su propia tentación. El que rechaza puede volverse fariseo. El que recibe puede volverse descuidado. Y el que redime, que es mi caso, puede volverse orgulloso. Si soy honesto, no siempre, pero me ha pasado: he mirado desde mi devocional al vecino y me he sentido mejor que él. En 2017 [escribí](https://oscarimorales.com/halloween-la-famosa-reforma) que no sirve de nada recordar la Reforma solo para tener una «opción sana» contra Halloween. Lo sigo creyendo. Si nuestro devocional es una trinchera, ya perdimos el punto. «¿Tú quién eres, que juzgas al criado ajeno?» (Romanos 14:4).
 
 ## NO LES ENSEÑEMOS A TEMER
 
@@ -79,9 +79,23 @@ Y aquí está lo que más me conmueve de esa fecha.
 
 En la víspera de Todos los Santos de 1517, las indulgencias eran un negocio sostenido por el miedo: se pagaba para acortar el purgatorio. Hoy, quinientos años después, el mismo miedo se pone máscara: nos reímos de la muerte para no tener que mirarla. Unos le pagaban. Otros se burlan. Ninguno le ha quitado el aguijón.
 
-Lutero conocía ese miedo por dentro. Fue un monje aterrado ante Dios, hasta que vio en Romanos 1:17 que la justicia que él no podía ganar, Dios la da en el evangelio: «Mas el justo por la fe vivirá». Por eso, para mis hijos, la Reforma no es una clase de historia. Es la historia de un hombre que dejó de temblar. Años después escribió el himno que todavía cantamos: «Aun si están demonios mil / prontos a devorarnos, / no temeremos…».
+Lutero conocía ese miedo por dentro. Fue un monje aterrado ante Dios, hasta que [vio en Romanos 1:17](https://christianitytoday.com/history/issues/issue-34/breakthrough.html) que la justicia que él no podía ganar, Dios la da en el evangelio: «Mas el justo por la fe vivirá». Por eso, para mis hijos, la Reforma no es una clase de historia. Es la historia de un hombre que dejó de temblar. Años después escribió uno de los himnos más famosos de la historia de la iglesia, [«Castillo fuerte es nuestro Dios»](https://hymnary.org/hymn/CC1964/129a): «Aun si están demonios mil / prontos a devorarnos, / no temeremos…».
 
 Eso es el evangelio. Cristo murió «para destruir por medio de la muerte al que tenía el imperio de la muerte» y librar a los que «por el temor de la muerte estaban durante toda la vida sujetos a servidumbre» (Hebreos 2:14-15).
+
+## TAMBIÉN SOPLAS LAS VELAS
+
+«¡Es que es una fiesta pagana!», decimos. Tal vez. Pero mira tu semana.
+
+En español, [los días](https://www.udep.edu.pe/castellanoactual/los-dias-de-la-semana/) llevan nombres romanos: el lunes es de la Luna, el martes de Marte, el miércoles de Mercurio, el jueves de Júpiter y el viernes de Venus. [Los meses](https://www.teletica.com/bbc-news-mundo/dioses-emperadores-y-numeros-que-no-coinciden-cual-es-el-origen-de-los-12-meses-del-ano_399757) también: enero viene de Jano, marzo de Marte y junio de Juno. El [anillo de bodas](https://www.discovermagazine.com/the-ancient-history-of-wedding-rings-44795) probablemente viene de los anillos de compromiso romanos, y la costumbre de ponerlo en ese dedo, de la creencia en una «vena del amor» que llegaba al corazón. Y [las velas del pastel](https://www.nationalgeographic.com/history/article/history-of-birthday-candles), según una historia muy repetida aunque mal documentada, vienen de las ofrendas griegas a Artemisa.
+
+Hacemos todo eso sin cuestionarlo, y ningún cristiano pide perdón por ello el lunes en la mañana.
+
+Hasta la palabra *evangelio* tiene ese pasado: [una inscripción del año 9 a. C.](https://en.wikipedia.org/wiki/Priene_calendar_inscription) llamó al nacimiento del emperador Augusto el comienzo de las buenas noticias para el mundo. Los apóstoles tomaron esa palabra y se la dieron al verdadero Rey. Y el mejor ejemplo está en el calendario: los romanos le dedicaban un día al Sol, y los cristianos lo llamaron *dies dominicus*, el día del Señor. Por eso en inglés todavía es *Sunday*, pero en español es domingo.
+
+¿Qué nos enseña esto? Que el origen de algo no decide lo que significa hoy. Pablo usó un altar pagano para predicar en Atenas y citó a sus poetas (Hechos 17:23, 28). A los corintios les dijo que comieran la carne del mercado sin preguntar de dónde venía, «porque del Señor es la tierra y su plenitud» (1 Corintios 10:26). Y Abraham Kuyper lo resumió en 1880: no hay [un centímetro cuadrado](https://bredenhof.ca/2018/03/20/quotable-church-history-not-a-square-inch/) de la existencia humana sobre el cual Cristo no clame: «¡Mío!».
+
+Eso no convierte lo prohibido en permitido. Pero sí nos llama a redimir nuestra cosmovisión: «transformaos por medio de la renovación de vuestro entendimiento» (Romanos 12:2). El evangelio no solo cambia lo que hacemos el domingo. Cambia cómo vemos el martes. Con esos ojos, soplar unas velas es dar gracias por un año más de vida, y un anillo habla de un pacto que apunta al amor de Cristo por su iglesia. Todo fue creado «por medio de él y para él» (Colosenses 1:16).
 
 ## ASÍ LO REDIMIMOS
 
