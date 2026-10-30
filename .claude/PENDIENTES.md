@@ -613,6 +613,20 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    (#30-#35, 6 posts) en nov-dic, «Este año quiero buscar a Dios» (#18) en enero,
    San Valentín (#36) y Cuaresma (#37) en febrero. Re-compartirlos cada año y pedir a
    Google que los vuelva a revisar ~1 mes antes de cada fecha.
+   **30-oct:** plan de Navidad en `recursos/social/temporada-navidad-2026.md` (calendario y
+   textos). OJO: #30, #31 y #33 tienen errores históricos verificados (p. ej. el Edicto de
+   Milán no menciona la Navidad): corregirlos ANTES de difundirlos y de pedir a Google que
+   los revise. #32 no se promueve. Halloween ya quedó cubierto con el #62.
+   **30-oct, HECHO:** Oscar aprobó y se publicaron las correcciones de #30, #31 y #33 (commit
+   7103d7c, verificado en vivo), con excerpt y «Nota de 2026» al final. Detalle en
+   `recursos/social/correcciones-navidad-2026.md`. Google recibió la solicitud de revisión
+   de #30, #31, #33 y #35; las cuatro ya estaban indexadas. #32 y #34 no se pidieron.
+   **Search Console (18 a 28-oct):** 8 clics, 818 impresiones, posición media 8.4, 52 páginas
+   con impresiones. Más vistas: evangelio vs religión (318 impresiones, 1 clic), ministro
+   de alabanza (102, 2), #33 invierno en Israel (88, 0). Consulta top: «el evangelio es una
+   religión» (40, 0). Falta: mejorar el título/descripción de lo que sale y no recibe clics.
+   **Sigue:** suavizar «este tonto argumento» en #34 y pedir su revisión; enlazar los seis
+   posts de la serie entre sí; compartir según el calendario desde el 23-nov.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
    de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
    en español, con enlaces al archivo y a los últimos posts. Y `feed/` (el RSS viejo de

@@ -1,10 +1,14 @@
 # Temporada de Navidad 2026: plan y revisión
 
-Preparado el 30-oct-2026. Los seis posts de Navidad son de 2017. Antes de darles difusión hay
-datos que conviene corregir, porque el blog ya exige fuentes para cada dato histórico y el #60
+Preparado el 30-oct-2026. Los seis posts de Navidad son de 2017. Antes de darles difusión había
+datos que convenía corregir, porque el blog ya exige fuentes para cada dato histórico y el #60
 le pidió a otra persona que estudiara la historia.
 
-## 1. Datos por corregir
+**Actualización:** el 30-oct se corrigieron y publicaron los #30, #31 y #33, con el texto de
+`correcciones-navidad-2026.md`. Las tablas de abajo describen cómo estaban antes. Siguen
+pendientes el tono del #34 y los enlaces entre los posts de la serie.
+
+## 1. Datos que se revisaron
 
 ### #30 Navidad: Su supuesto origen pagano (el más importante)
 
@@ -63,16 +67,17 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
 | Fecha | Qué compartir | Estado |
 |---|---|---|
 | 30-31 oct | #62 El 31 de octubre sin miedo | Pack listo, falta que Oscar lo envíe |
-| Lun 23 nov | #30 Su supuesto origen pagano | Después de corregirlo |
-| Lun 30 nov | #31 Y los primeros cristianos | Después de corregirlo |
-| Lun 7 dic | #34 Iconos, símbolos y tradiciones I | Después de suavizar el tono |
-| Lun 14 dic | #33 El invierno en Israel | Después de corregirlo |
+| Lun 23 nov | #30 Su supuesto origen pagano | Corregido, listo |
+| Lun 30 nov | #31 Y los primeros cristianos | Corregido, listo |
+| Lun 7 dic | #34 Iconos, símbolos y tradiciones I | Falta suavizar el tono |
+| Lun 14 dic | #33 El invierno en Israel | Corregido, listo |
 | Lun 21 dic | #35 Iconos, símbolos y tradiciones II | Listo |
 
 El #29 de Halloween no hace falta compartirlo aparte: el #62 ya lo enlaza. El lunes es una
 propuesta; se puede cambiar.
 
 Pedir a Google que revise cada post **después** de corregirlo, para que lea la versión nueva.
+Los #30, #31 y #33 ya se pueden pedir.
 
 ## 3. Textos para redes
 
