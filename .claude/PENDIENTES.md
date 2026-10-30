@@ -26,7 +26,8 @@ Enlaza al #29 de 2017.
 - **No citar a Mark Driscoll,** aunque el esquema de las tres erres se asocie con él.
 - **Texto para redes (30-oct):** desde ahora, un solo párrafo, idéntico en Instagram, Facebook y
   X; solo cambia el cierre (link en la bio o URL). Grabado en blog-oims **v9** y en
-  `recursos/social/README.md`. Falta subir la v9 a claude.ai con `actualizar-skill-oims`.
+  `recursos/social/README.md`. **ZIP listo en el escritorio (`blog-oims-v9.zip`): PENDIENTE DE
+  OSCAR subirlo** en claude.ai → Configuración → Capacidades → Skills.
 - **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
   Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
