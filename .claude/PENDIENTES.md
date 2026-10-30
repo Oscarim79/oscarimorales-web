@@ -625,8 +625,13 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    con impresiones. Más vistas: evangelio vs religión (318 impresiones, 1 clic), ministro
    de alabanza (102, 2), #33 invierno en Israel (88, 0). Consulta top: «el evangelio es una
    religión» (40, 0). Falta: mejorar el título/descripción de lo que sale y no recibe clics.
-   **Sigue:** suavizar «este tonto argumento» en #34 y pedir su revisión; enlazar los seis
-   posts de la serie entre sí; compartir según el calendario desde el 23-nov.
+   **30-oct, también HECHO:** el #34 ya no dice «tonto argumento» y Google recibió su solicitud
+   de revisión. Los seis posts llevan la caja «Serie sobre la Navidad» (clase `.prose__serie` en
+   `post-prod.css`, en un div para no quitar la letra capital); el #32 la lleva, pero no se lista
+   en los demás. Excerpt agregado a #32, #34 y #35.
+   **Sigue:** compartir según el calendario desde el 23-nov. Mejorar título y descripción de lo
+   que sale en Google sin recibir clics (empezar por «El evangelio vs la religión»). En el #34
+   quedan «hasta risible» y «nada puede ser más absurdo»: decisión de Oscar.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
    de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
    en español, con enlaces al archivo y a los últimos posts. Y `feed/` (el RSS viejo de

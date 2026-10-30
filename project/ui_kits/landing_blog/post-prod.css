@@ -59,7 +59,7 @@ body { font-family: var(--font-body); }
   letter-spacing: var(--tracking-wider);
   color: var(--dorado-700);
 }
-.prose__serie ul { list-style: none; margin: 0; padding: 0; }
+.prose__html .prose__serie ul { list-style: none; margin: 0; padding: 0; }
 .prose__html .prose__serie li { font-size: 16px; line-height: 1.45; margin: 0 0 6px; }
 .prose__html .prose__serie li:last-child { margin-bottom: 0; }
 /* Drop cap en el primer párrafo */

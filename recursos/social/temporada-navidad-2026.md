@@ -5,8 +5,9 @@ datos que convenía corregir, porque el blog ya exige fuentes para cada dato his
 le pidió a otra persona que estudiara la historia.
 
 **Actualización:** el 30-oct se corrigieron y publicaron los #30, #31 y #33, con el texto de
-`correcciones-navidad-2026.md`. Las tablas de abajo describen cómo estaban antes. Siguen
-pendientes el tono del #34 y los enlaces entre los posts de la serie.
+`correcciones-navidad-2026.md`. Las tablas de abajo describen cómo estaban antes. También se
+suavizó el #34 y los seis posts ya se enlazan con una caja al inicio. El #32 lleva la caja,
+pero no aparece en la lista de los demás.
 
 ## 1. Datos que se revisaron
 
@@ -69,7 +70,7 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
 | 30-31 oct | #62 El 31 de octubre sin miedo | Pack listo, falta que Oscar lo envíe |
 | Lun 23 nov | #30 Su supuesto origen pagano | Corregido, listo |
 | Lun 30 nov | #31 Y los primeros cristianos | Corregido, listo |
-| Lun 7 dic | #34 Iconos, símbolos y tradiciones I | Falta suavizar el tono |
+| Lun 7 dic | #34 Iconos, símbolos y tradiciones I | Listo |
 | Lun 14 dic | #33 El invierno en Israel | Corregido, listo |
 | Lun 21 dic | #35 Iconos, símbolos y tradiciones II | Listo |
 
@@ -77,7 +78,7 @@ El #29 de Halloween no hace falta compartirlo aparte: el #62 ya lo enlaza. El lu
 propuesta; se puede cambiar.
 
 Pedir a Google que revise cada post **después** de corregirlo, para que lea la versión nueva.
-Los #30, #31 y #33 ya se pueden pedir.
+Solicitud hecha para los #30, #31, #33 y #35 el 30-oct.
 
 ## 3. Textos para redes
 
