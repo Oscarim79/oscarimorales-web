@@ -636,6 +636,17 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    **Sigue:** compartir según el calendario desde el 23-nov. Mejorar título y descripción de lo
    que sale en Google sin recibir clics (empezar por «El evangelio vs la religión»). En el #34
    quedan «hasta risible» y «nada puede ser más absurdo»: decisión de Oscar.
+   **30-oct, HECHO (commit e47f96c):** Oscar aprobó `recursos/social/titulos-google-2026.md`. Hay
+   títulos o descripciones nuevos en #21, #49, #33, #29, #46, #45, #51 y #1, más las correcciones del
+   documento. Driscoll ya no aparece en ningún post. El #1 trae las cinco creencias reales de Smith y
+   el #45 las cifras de Fee y Stuart (tomadas de una cita de la p. 166, sin cotejar el libro).
+   Comprobado en vivo: 8 de 8 páginas con su título y descripción.
+   **Google confirmó la solicitud de revisión de #21, #49, #33, #29, #46 y #45.**
+   **FALTA pedirla para #51 (`el-miedo-y-romanos-8`) y #1 (`deismo-terapeutico-moralista`):** Google
+   respondió «Cuota superada» tras 11 solicitudes el 30-oct. Repetir desde el 31-oct.
+   **Medir** unas cuatro semanas después (hacia fin de noviembre) contra los números del documento.
+   **Idea de post:** ¿el evangelio y el cristianismo son lo mismo? Sumó 34 impresiones en 11 días y
+   el #21 no lo responde.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
    de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
    en español, con enlaces al archivo y a los últimos posts. Y `feed/` (el RSS viejo de

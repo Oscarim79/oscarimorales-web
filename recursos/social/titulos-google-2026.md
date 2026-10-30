@@ -2,6 +2,7 @@
 
 **Aprobado por Oscar el 30-oct-2026 y aplicado.** En el #21 se usó la definición de la RAE y en el #45
 se quitó la frase de los sermones. En los #29, #46 y #49 la nota final dice solo «corregir algunos datos».
+Google confirmó la revisión de #21, #49, #33, #29, #46 y #45. Faltan #51 y #1 porque se agotó la cuota del día.
 Cada cambio dice qué hay hoy, qué se propone y por qué. Lo que no aparece aquí se queda igual.
 
 Los números son de Search Console, del 18 al 28 de octubre de 2026 (11 días, desde que se activó).
