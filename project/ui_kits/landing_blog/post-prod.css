@@ -41,6 +41,27 @@ body { font-family: var(--font-body); }
 }
 .prose__html > p { margin: 0 0 24px; }
 .prose__html li { margin: 0 0 10px; }
+/* Caja de serie al inicio de un post. Va en un <div> para que la letra capital
+   se quede en el primer párrafo. */
+.prose__serie {
+  margin: 0 0 32px;
+  padding: 18px 22px;
+  background: rgba(184, 154, 106, 0.10);
+  border-left: 2px solid var(--dorado-500);
+}
+.prose__serie-lbl {
+  display: block;
+  margin: 0 0 10px;
+  font-family: var(--font-descriptor);
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--dorado-700);
+}
+.prose__serie ul { list-style: none; margin: 0; padding: 0; }
+.prose__html .prose__serie li { font-size: 16px; line-height: 1.45; margin: 0 0 6px; }
+.prose__html .prose__serie li:last-child { margin-bottom: 0; }
 /* Drop cap en el primer párrafo */
 .prose__html > p:first-of-type::first-letter {
   font-weight: 700;
