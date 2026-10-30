@@ -647,6 +647,11 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    **Medir** unas cuatro semanas después (hacia fin de noviembre) contra los números del documento.
    **Idea de post:** ¿el evangelio y el cristianismo son lo mismo? Sumó 34 impresiones en 11 días y
    el #21 no lo responde.
+   **Programado (30-oct):** la tarea `pedir-revision-google-51-y-1` pide las dos revisiones que
+   faltan el 31-oct a la 1:00 p. m. Si la app está cerrada, corre al abrirla. Los recordatorios están
+   en Google Calendar (me@oscarimorales.com), con post, enlace y texto: #62 el 30-oct a las 6:00 p. m.;
+   a las 8:00 a. m. #30 (lun 23-nov), #31 (lun 30-nov), #34 (lun 7-dic), #33 (lun 14-dic) y #35
+   (lun 21-dic). Esos cinco posts de Navidad aún no tienen tarjetas de Instagram.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
    de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
    en español, con enlaces al archivo y a los últimos posts. Y `feed/` (el RSS viejo de
