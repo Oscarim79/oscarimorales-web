@@ -9,7 +9,28 @@
 
 ---
 
-## 📍 Dónde nos quedamos (29-oct-2026)
+## 📍 Dónde nos quedamos (30-oct-2026)
+
+**Se publicó el post #62 «El 31 de octubre sin miedo»** (Familia · Cultura y Actualidad):
+orígenes reales de Halloween (Hutton: Todos los Santos no nació de Samhain; Irlanda lo guardaba el
+20 de abril), diferencias Guatemala / EE. UU. / Alemania / Chile, posturas de Lutero, Knox,
+Westminster, puritanos, Spurgeon, MacArthur, Mohler, Piper y Ligonier, las tres erres (rechazar,
+replicar, redimir) y el énfasis que Oscar añadió: enseñar a los hijos a NO tener miedo.
+Enlaza al #29 de 2017.
+- **Decisión de estilo:** se usó «Día de la Reforma» porque Oscar lo pidió, solo como nombre del
+  día; sin «reformado» y fuera del título. La regla general de evitar el rótulo sigue vigente.
+- **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
+  Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
+- **Datos propuestos que Oscar aprobó al publicar sin cambios:** su tentación de sentirse mejor
+  que el vecino desde el devocional; «el himno que todavía cantamos».
+- **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
+- Portada: Hugging Face sin cuota → Canva (diseño «Portada post 62 — El 31 de octubre sin
+  miedo»). Eligió la 2 (puerta con luz).
+- **Pack social entregado** (`recursos/social/062-el-31-de-octubre-sin-miedo/`). **Envío del
+  correo de Buttondown y publicación en redes: PENDIENTE DE OSCAR** hasta que confirme. También
+  sigue sin confirmar el envío del #61.
+
+## 📜 Detalle del 29-oct-2026
 
 **Se publicó el post #61 «Salmo 91 a medianoche»** (Cultura y Actualidad · Caminar Cristiano),
 reacción a la nota de Christian Today sobre las cifras 2026 de YouVersion (Salmo 91 = búsqueda
