@@ -11,8 +11,7 @@ description: >
   la confirmación de Oscar, lo publica en el sitio estático: crea el archivo en
   content/posts/, compila y hace push. También prepara el pack social de cada post: tarjetas de Instagram
   (publicación cuadrada e Historia vertical), textos para Instagram, Facebook y X, y el correo del boletín;
-  úsalo cuando Oscar pida un post, una historia o una tarjeta para redes. Si Oscar decide que un post lo
-  amerita, saca de él un video corto para Reels y YouTube Shorts.
+  úsalo cuando Oscar pida un post, una historia o una tarjeta para redes. Si Oscar lo decide, hace un video corto.
 ---
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
