@@ -2,6 +2,14 @@
 
 Video vertical de 1080×1920 sacado de un post: voz de IA, escenas por capas y subtítulos. Lo arma Claude; Oscar lo escucha, lo aprueba y lo sube.
 
+## Qué posts llevan video
+
+Oscar decide post por post. Los criterios están en la skill `blog-oims`, sección «Video corto». Anotar aquí cada decisión:
+
+| Post | ¿Video? | Estado |
+|---|---|---|
+| #62 El 31 de octubre sin miedo | Sí | Final: `reel-062-sin-miedo-esencial-con-musica.mp4` |
+
 ## Pasos
 
 0. **Propósito, siempre primero:** antes del guion, definir con Oscar qué debe entender o sentir quien lo vea y para quién es. Va en `proposito`, `para_quien` y `que_debe_quedar` del `guion.json`. Lo esencial del post manda; el trasfondo solo entra si sirve al propósito.

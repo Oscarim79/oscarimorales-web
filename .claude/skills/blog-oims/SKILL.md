@@ -11,12 +11,14 @@ description: >
   la confirmación de Oscar, lo publica en el sitio estático: crea el archivo en
   content/posts/, compila y hace push. También prepara el pack social de cada post: tarjetas de Instagram
   (publicación cuadrada e Historia vertical), textos para Instagram, Facebook y X, y el correo del boletín;
-  úsalo cuando Oscar pida un post, una historia o una tarjeta para redes.
+  úsalo cuando Oscar pida un post, una historia o una tarjeta para redes. Si Oscar decide que un post lo
+  amerita, saca de él un video corto para Reels y YouTube Shorts.
 ---
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v10 — 2026-10-30 · Revisión de muletillas obligatoria antes de entregar, con límites medidos sobre sus posts reales
+> v11 — 2026-10-30 · Video corto OPCIONAL: Claude propone, Oscar decide qué posts lo ameritan; propósito antes del guion
+> (v10 — 2026-10-30 · Revisión de muletillas obligatoria antes de entregar, con límites medidos sobre sus posts reales)
 > (v9 — 2026-10-30 · Texto para redes: UN solo párrafo, idéntico en Instagram, Facebook y X)
 > (v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
 > con datos confirmados · portada de respaldo con Canva si Hugging Face no tiene cuota · Playwright de gstack para las tarjetas)
@@ -280,6 +282,7 @@ un destino en el frontmatter al publicar (ver tabla en "Publicación"):
 5. **Pack social** (AUTOMÁTICO después de publicar; también cuando Oscar lo pida) — tarjetas de Instagram (publicación
    cuadrada + Historia vertical), los textos para Instagram, Facebook y X, y el correo del boletín.
    Ver la sección «Pack social».
+6. **Video corto** (OPCIONAL: solo si Oscar decide que el post lo amerita) — ver la sección «Video corto».
 
 ---
 
@@ -519,6 +522,8 @@ pida**, en la misma respuesta de «publicado»:
    Historia con sticker de enlace; link en la bio), (4) Facebook y X.
 4. Anota en la bitácora que el pack del post quedó entregado y que el envío del correo está
    **pendiente de Oscar** hasta que él confirme.
+5. **Pregunta si este post merece video** (sección «Video corto», paso 1). Solo la propuesta, en
+   una o dos líneas. No hagas el video hasta que Oscar diga que sí.
 
 ### Reglas de publicación
 - **No cambies el `n`** de un post ya publicado: rompe su permalink y el correo enviado.
@@ -569,6 +574,45 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 
 ---
 
+## Video corto (opcional, para Reels y YouTube Shorts)
+
+**No todos los posts llevan video. Oscar decide cuáles** (pedido el 2026-10-30). Nunca lo hagas por tu
+cuenta: gasta créditos y su tiempo de revisión. Aprobado con el post #62; todo vive en `recursos/video/`
+(guía técnica en su `README.md`). Solo se puede armar en Claude Code, en la PC de Oscar, porque necesita
+FFmpeg y la clave de `.env.local`. En chat o desde el celular, deja la propuesta y dile que lo retome allí.
+
+1. **Propón y espera su decisión.** Di en una o dos líneas si lo recomiendas y por qué. Vale la pena si:
+   - tiene **una idea central** que se entiende sola en menos de 1:30, sin haber leído el post;
+   - tiene un **gancho** claro para los primeros segundos: una pregunta, un miedo o un error común;
+   - **sirve a alguien que no conoce a Oscar**, no solo a quien ya lo sigue;
+   - no depende de un argumento largo ni de una historia personal que deba contar él.
+
+   Recomienda **no** hacerlo si el tema pide sobriedad pastoral (suicidio, duelo, abuso): una voz de IA
+   no es el tono. Tampoco si es muy de coyuntura y ya pasó la fecha. Si Oscar dice que no, sigue adelante
+   sin insistir. Anota la decisión en la lista de `recursos/video/README.md`.
+2. **Define el propósito con él, antes del guion** (regla de Oscar): qué debe entender o sentir quien lo
+   vea, para quién es y qué debe quedar. Va en `proposito`, `para_quien` y `que_debe_quedar` del
+   `guion.json`. **Lo esencial del post manda; el trasfondo solo entra si sirve al propósito.** El primer
+   video del #62 se fue a la historia y Oscar lo descartó.
+3. **Guion:** hasta ~1:30, con frases del post. No agregues datos que el post no trae. Sin «yo» ni
+   anécdotas de la familia: la voz no es la de Oscar, y nunca debe sonar como si lo fuera.
+4. **Posts viejos:** si el post tiene `n` ≤ 51, léelo y verifica sus datos antes de proponerlo. Varios
+   traen errores históricos.
+5. **Voz:** George a velocidad 1.10 (a 1.12 a Oscar le suena «corriendo»). Lee la «J» a la inglesa:
+   «Jalouín» sonó «Yaloguin». Las palabras en inglés van como se escriben. **Claude no puede oír el
+   audio:** si algo suena mal, genera un audio corto con varias opciones y que Oscar elija.
+6. **Escenas:** por capas, con los colores y letras de la marca, dibujadas en SVG, y la portada del post
+   como escena. Revisa cuadros sueltos antes de generar el video completo, que tarda unos 10 minutos.
+7. **Música:** va integrada en el video, porque Instagram solo dejó poner unos segundos de la suya. Avísale
+   que no agregue otra al subirlo.
+8. **Revisión:** antes de entregarlo, mira cuadros del video final y mide el volumen. Dile con claridad
+   qué revisaste y que él debe escucharlo. Corrige una vez todo lo que señale, para no regenerar de más.
+9. **Entrega:** el `.mp4` con `SendUserFile` y un `reel.txt` en la carpeta del post, con el párrafo de
+   Instagram y el título y la descripción de YouTube. Va a **Reels (compartido a Facebook) y YouTube
+   Shorts. Sin TikTok.** Oscar lo sube o lo programa. Recuérdale marcar la etiqueta de IA.
+
+---
+
 ## Cómo mostrarle archivos a Oscar (lo que sí le abre)
 
 Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el post #57:
@@ -596,3 +640,4 @@ Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el
 - Recursos de referencia: `references/voz-y-marco.md`, `references/ejemplos-de-posts.md`
   y `references/banco-de-ideas.md` (≈70 títulos por frente/categoría, para Modo A).
 - Pack social: `recursos/social/README.md`, `recursos/social/plantilla.html` y `scripts/social-cards.mjs`.
+- Video corto: `recursos/video/README.md` y `scripts/reel-voz.mjs`, `reel-render.mjs` y `reel-musica.mjs`.

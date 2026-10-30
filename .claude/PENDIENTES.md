@@ -21,7 +21,10 @@ antes del 31-oct. Cómo se arman: `recursos/video/README.md`. El primer intento,
   (compartido a Facebook) y YouTube Shorts, sin TikTok para el blog. Claude arma y Oscar revisa y sube.
   Pueden durar hasta 1:30. **Siempre se define el propósito antes del guion.**
 - **Voz:** George, aprobada por Oscar. A 1.12 le sonó «corriendo»; se quedó en 1.10. ElevenLabs ya está
-  en plan **Starter**. Falta decidir si el proceso se graba en la skill blog-oims.
+  en plan **Starter**.
+- **Skill blog-oims v11 (30-oct):** el video quedó como paso opcional: Claude propone y Oscar decide
+  post por post. **ZIP en el escritorio (`blog-oims-v11.zip`): PENDIENTE DE OSCAR subirlo a claude.ai.**
+  La lista de decisiones está en `recursos/video/README.md`.
 - **Propuesto:** 12 videos en 6 semanas y luego medir (cuánto se ve, seguidores nuevos, visitas al blog).
 
 **Se publicó el post #62 «El 31 de octubre sin miedo»** (Familia · Cultura y Actualidad):
