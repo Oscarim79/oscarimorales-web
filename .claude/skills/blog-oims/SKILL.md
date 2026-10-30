@@ -16,7 +16,8 @@ description: >
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v9 — 2026-10-30 · Texto para redes: UN solo párrafo, idéntico en Instagram, Facebook y X
+> v10 — 2026-10-30 · Revisión de muletillas obligatoria antes de entregar, con límites medidos sobre sus posts reales
+> (v9 — 2026-10-30 · Texto para redes: UN solo párrafo, idéntico en Instagram, Facebook y X)
 > (v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
 > con datos confirmados · portada de respaldo con Canva si Hugging Face no tiene cuota · Playwright de gstack para las tarjetas)
 > (v7 — 2026-10-06 · Tras publicar, el pack social + las instrucciones del correo salen SOLOS (sin que Oscar lo pida))
@@ -171,7 +172,8 @@ flexibilidad — la longitud y el número de secciones varían según el tema.
 
 4. [VULNERABILIDAD PROPIA — El Sacerdote]
    — En algún punto, Oscar se incluye en el diagnóstico. "Yo mismo he sido crítico de...",
-     "Si soy honesto...", "Yo estaba molesto, estresado." Nunca predica desde arriba.
+     "Yo estaba molesto, estresado." Nunca predica desde arriba. Cambia la forma de
+     entrar en cada post ("Si soy honesto" tiene límite: ver «Revisión de muletillas»).
    — Esto crea el "espacio seguro" de la voz. El lector no es regañado; es acompañado.
 
 5. [EL PIVOTE DEL EVANGELIO — El Profeta + ancla cristocéntrica]
@@ -227,10 +229,35 @@ el evangelio no es accesorio · poner la mira · el cuidado del alma · Secundum
   confesiones y los catecismos, pero evita el rótulo para no espantar a los lectores.
 - No llama «ministerio de alabanza» al servicio de los músicos: dice **«ministerio de música para la
   iglesia»**. «Alabanza» como acto de adorar sí se usa, y la categoría «Alabanza» del blog se queda igual.
-- No inventa datos personales para la vulnerabilidad (sección «Si soy honesto»): usa solo lo que Oscar ha
+- No inventa datos personales para la vulnerabilidad (el paso 4 de la estructura): usa solo lo que Oscar ha
   contado (bitácora `.claude/PENDIENTES.md` y posts anteriores). Si el post pide un dato nuevo, propónlo
   y **márcalo en la entrega para que Oscar lo confirme** (así se corrigieron en el #59 la replantación y
   la edad en que soñaba con «sonar como ellos»).
+
+### Revisión de muletillas (OBLIGATORIA antes de entregar)
+
+La meta es que el texto suene a Oscar. Una medición del 2026-10-30 mostró que los posts 052–062 tienen
+hábitos que casi no aparecen en los 51 posts anteriores, los de su voz real. Revisa todo lo que se publica:
+post, extracto, textos de redes y correo. Cuenta en el borrador en lugar de calcular a ojo.
+
+| Rasgo | 001–051 (por 1.000 palabras) | 052–062 (por 1.000 palabras) | Límite por post |
+|---|---|---|---|
+| Raya (—) como pausa | 0,27 | 7,03 | Ninguna |
+| «no…, sino…» y «no porque…, sino porque…» | 0,85 | 1,80 | 2 |
+| Frase suelta de cinco palabras o menos | 0,72 | 4,83 | 3 |
+| Dos puntos para anunciar o revelar algo | 4,99 | 15,86 | 8, sin contar citas |
+| «Si soy honesto» | 0 | 0,66 | 1, y no en dos posts seguidos |
+| «Y aquí» | 0 | 0,55 | 1 |
+| «Y aun así» | 0 | 0,33 | 1 |
+| «Por eso» al abrir frase | 0,06 | 1,15 | 2 |
+| «de verdad» | 0,04 | 0,44 | 1 |
+
+- Los límites son techos, no metas: un post puede no usar ninguno de estos recursos.
+- La raya solo se queda si está en una cita textual ajena o marca un diálogo. Cámbiala por coma, punto o
+  paréntesis, o reescribe la frase.
+- No cambies una muletilla por otra: quitar las rayas no debe llenar el texto de dos puntos o frases cortas.
+- Prefiere frases completas y pausadas que desarrollen la idea. Una frase corta pesa más cuando es rara.
+- Los posts publicados no se tocan por esta regla (ver Protocolo Editorial, punto 4).
 
 ---
 
@@ -306,6 +333,8 @@ esperar confirmación → bloquear.** Aplica esto así en el blog:
 5. **NO publiques sin confirmación.** El paso de "Publicación" solo se ejecuta cuando
    Oscar aprueba el borrador (o lo pide explícitamente). Primero se redacta y se afina;
    publicar es el último acto.
+6. **Antes de entregar,** pasa la «Revisión de muletillas» y corrige lo que supere los límites.
+   Después señala 1 o 2 lugares donde una frase o un recuerdo de Oscar haría el post más suyo.
 
 ---
 

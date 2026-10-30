@@ -26,8 +26,12 @@ Enlaza al #29 de 2017.
 - **No citar a Mark Driscoll,** aunque el esquema de las tres erres se asocie con él.
 - **Texto para redes (30-oct):** desde ahora, un solo párrafo, idéntico en Instagram, Facebook y
   X; solo cambia el cierre (link en la bio o URL). Grabado en blog-oims **v9** y en
-  `recursos/social/README.md`. **ZIP listo en el escritorio (`blog-oims-v9.zip`): PENDIENTE DE
-  OSCAR subirlo** en claude.ai → Configuración → Capacidades → Skills.
+  `recursos/social/README.md`.
+- **Revisión de muletillas (30-oct, blog-oims v10):** límites por post para rayas, «no…, sino…»,
+  frases muy cortas, dos puntos, «Si soy honesto», «Y aquí», «Y aun así», «Por eso» y «de verdad»,
+  medidos contra los posts 001–051. Se aplica a lo nuevo; los posts publicados no se tocan.
+  **ZIP listo en el escritorio (`blog-oims-v10.zip`, incluye lo de v9): PENDIENTE DE OSCAR
+  subirlo** en claude.ai → Configuración → Capacidades → Skills.
 - **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
   Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
