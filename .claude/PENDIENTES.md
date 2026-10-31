@@ -11,6 +11,11 @@
 
 ## 📍 Dónde nos quedamos (30-oct-2026)
 
+**31-oct:** Oscar pidió revisar el #29 (2017, «¿Celebrar Halloween o recordar la Reforma?») para
+re-compartirlo hoy. Decidió **dejarlo así**: no se re-comparte ni se corrige (le quedan erratas de
+ortografía y habla de «este 2017 / 500 años»). Dijo que el #62 ya está publicado. Si algún año se
+re-comparte el #29, presentarlo como «del archivo» y ofrecer antes corregir la ortografía.
+
 **Primer video corto listo para publicar: post #62.** Está en `vista-previa/reel-062-sin-miedo-esencial-con-musica.mp4`
 (Oscar aprobó la música el 30-oct; sin música: `reel-062-sin-miedo-esencial.mp4`). Instagram solo
 deja poner unos segundos de su música, por eso va integrada: no agregar otra al subirlo. (1:36, lo esencial: miedo, conciencia, tres erres, velas y anillos, Cristo), con voz del plan Starter.
