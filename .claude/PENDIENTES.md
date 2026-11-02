@@ -9,13 +9,22 @@
 
 ---
 
-## 📍 Dónde nos quedamos (30-oct-2026)
+## 📍 Dónde nos quedamos (2-nov-2026)
 
-**Primer video corto listo para publicar: post #62.** Está en `vista-previa/reel-062-sin-miedo-esencial-con-musica.mp4`
+**Oscar confirmó el 2-nov:** el correo del boletín y las redes del #62 ya salieron, y el video
+también se subió. Falta confirmar el correo y las redes del #61.
+- **Calendario:** Oscar dijo no ver nada, pero los seis recordatorios del blog sí están en el
+  calendario `me@oscarimorales.com` (revisado el 2-nov): #62 el 30-oct y #30, #31, #34, #33 y #35
+  en sus lunes. El próximo es el 23-nov.
+- **Vacaciones de Oscar:** 23-nov a 11-dic. Los recordatorios de #30, #31 y #34 caen en esas fechas,
+  y sus tarjetas estaban previstas para el mismo día. Por decidir si se hacen antes.
+
+## 📍 Detalle del 30-oct-2026
+
+**Primer video corto del blog: post #62.** Está en `vista-previa/reel-062-sin-miedo-esencial-con-musica.mp4`
 (Oscar aprobó la música el 30-oct; sin música: `reel-062-sin-miedo-esencial.mp4`). Instagram solo
 deja poner unos segundos de su música, por eso va integrada: no agregar otra al subirlo. (1:36, lo esencial: miedo, conciencia, tres erres, velas y anillos, Cristo), con voz del plan Starter.
-Texto para subirlo: `recursos/social/062-el-31-de-octubre-sin-miedo/reel.txt`. Oscar lo sube; conviene
-antes del 31-oct. Cómo se arman: `recursos/video/README.md`. El primer intento, enfocado en la historia
+Texto para subirlo: `recursos/social/062-el-31-de-octubre-sin-miedo/reel.txt`. Cómo se arman: `recursos/video/README.md`. El primer intento, enfocado en la historia
 (`reel-062-el-31-de-octubre-sin-miedo.mp4`), se descartó y usa voz del plan gratis: no publicarlo.
 - **Decisiones de Oscar:** voz de IA, escenas por capas al estilo Knowledgia, publicar en Reels
   (compartido a Facebook) y YouTube Shorts, sin TikTok para el blog. Claude arma y Oscar revisa y sube.
@@ -53,9 +62,8 @@ Enlaza al #29 de 2017.
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
 - Portada: Hugging Face sin cuota → Canva (diseño «Portada post 62 — El 31 de octubre sin
   miedo»). Eligió la 2 (puerta con luz).
-- **Pack social entregado** (`recursos/social/062-el-31-de-octubre-sin-miedo/`). **Envío del
-  correo de Buttondown y publicación en redes: PENDIENTE DE OSCAR** hasta que confirme. También
-  sigue sin confirmar el envío del #61.
+- **Pack social entregado** (`recursos/social/062-el-31-de-octubre-sin-miedo/`). Correo de
+  Buttondown y redes enviados por Oscar (confirmado el 2-nov). Sigue sin confirmar el envío del #61.
 - **Archivos internos fuera del sitio (30-oct):** el sitio dejó de publicar las skills, los chats,
   la bitácora, los scripts, los `.md` y los prototipos. La lista de exclusión está en
   `_config.yml`; lo interno nuevo fuera de `.claude/` debe agregarse ahí. Verificado en vivo: 30
@@ -635,7 +643,7 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    en los demás. Excerpt agregado a #32, #34 y #35.
    **Sigue:** compartir según el calendario desde el 23-nov. Mejorar título y descripción de lo
    que sale en Google sin recibir clics (empezar por «El evangelio vs la religión»). En el #34
-   quedan «hasta risible» y «nada puede ser más absurdo»: decisión de Oscar.
+   quedaban «hasta risible» y «nada puede ser más absurdo»: Oscar aprobó cambiarlas el 2-nov.
    **30-oct, HECHO (commit e47f96c):** Oscar aprobó `recursos/social/titulos-google-2026.md`. Hay
    títulos o descripciones nuevos en #21, #49, #33, #29, #46, #45, #51 y #1, más las correcciones del
    documento. Driscoll ya no aparece en ningún post. El #1 trae las cinco creencias reales de Smith y
