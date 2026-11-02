@@ -12,12 +12,14 @@
 ## 📍 Dónde nos quedamos (2-nov-2026)
 
 **Oscar confirmó el 2-nov:** el correo del boletín y las redes del #62 ya salieron, y el video
-también se subió. Falta confirmar el correo y las redes del #61.
+también se subió. El correo y las redes del #61 también salieron.
 - **Calendario:** Oscar dijo no ver nada, pero los seis recordatorios del blog sí están en el
   calendario `me@oscarimorales.com` (revisado el 2-nov): #62 el 30-oct y #30, #31, #34, #33 y #35
   en sus lunes. El próximo es el 23-nov.
 - **Vacaciones de Oscar:** 23-nov a 11-dic. Los recordatorios de #30, #31 y #34 caen en esas fechas,
-  y sus tarjetas estaban previstas para el mismo día. Por decidir si se hacen antes.
+  así que Oscar decidió hacer sus tres tarjetas antes de salir: lun 9-nov (#30), jue 12-nov (#31) y
+  vie 13-nov (#34). Hay recordatorios en su calendario a las 10:00 a. m. Las de #33 y #35 siguen
+  para el día de cada una.
 
 ## 📍 Detalle del 30-oct-2026
 
@@ -32,7 +34,7 @@ Texto para subirlo: `recursos/social/062-el-31-de-octubre-sin-miedo/reel.txt`. C
 - **Voz:** George, aprobada por Oscar. A 1.12 le sonó «corriendo»; se quedó en 1.10. ElevenLabs ya está
   en plan **Starter**.
 - **Skill blog-oims v11 (30-oct):** el video quedó como paso opcional: Claude propone y Oscar decide
-  post por post. **ZIP en el escritorio (`blog-oims-v11.zip`): PENDIENTE DE OSCAR subirlo a claude.ai.**
+  post por post. Oscar subió `blog-oims-v11.zip` a claude.ai (confirmado el 2-nov).
   La lista de decisiones está en `recursos/video/README.md`.
 - **Propuesto:** 12 videos en 6 semanas y luego medir (cuánto se ve, seguidores nuevos, visitas al blog).
 
@@ -55,15 +57,14 @@ Enlaza al #29 de 2017.
 - **Revisión de muletillas (30-oct, blog-oims v10):** límites por post para rayas, «no…, sino…»,
   frases muy cortas, dos puntos, «Si soy honesto», «Y aquí», «Y aun así», «Por eso» y «de verdad»,
   medidos contra los posts 001–051. Se aplica a lo nuevo; los posts publicados no se tocan.
-  **ZIP listo en el escritorio (`blog-oims-v10.zip`, incluye lo de v9): PENDIENTE DE OSCAR
-  subirlo** en claude.ai → Configuración → Capacidades → Skills.
+  Ya está en claude.ai dentro de la v11.
 - **Prueba para redimir algo de la cultura:** Oscar preguntó por «¿lo harías de la mano con
   Jesús?». Quedó en cambio Colosenses 3:17: ¿puedo hacerlo en su nombre y darle gracias?
 - **Sin voz latina entre los maestros:** no hubo postura verificable de Núñez ni Michelén.
 - Portada: Hugging Face sin cuota → Canva (diseño «Portada post 62 — El 31 de octubre sin
   miedo»). Eligió la 2 (puerta con luz).
 - **Pack social entregado** (`recursos/social/062-el-31-de-octubre-sin-miedo/`). Correo de
-  Buttondown y redes enviados por Oscar (confirmado el 2-nov). Sigue sin confirmar el envío del #61.
+  Buttondown y redes enviados por Oscar (confirmado el 2-nov).
 - **Archivos internos fuera del sitio (30-oct):** el sitio dejó de publicar las skills, los chats,
   la bitácora, los scripts, los `.md` y los prototipos. La lista de exclusión está en
   `_config.yml`; lo interno nuevo fuera de `.claude/` debe agregarse ahí. Verificado en vivo: 30
@@ -84,8 +85,8 @@ SI SOY HONESTO / NO LES FALLEMOS COMO HERMANOS / A LOS QUE PREDICAMOS / LAS SEND
   playlists de canciones que le recuerdan el evangelio. No volver a escribir que tuvo ansiedad.
 - Portada: Hugging Face sin cuota → Canva (diseño «Portada post 61» en su Canva). Eligió la 1
   (noche azul).
-- **Pack social entregado** (`recursos/social/061-salmo-91-a-medianoche/`). **Envío del correo
-  de Buttondown y publicación en redes: PENDIENTE DE OSCAR** hasta que confirme.
+- **Pack social entregado** (`recursos/social/061-salmo-91-a-medianoche/`). Correo de Buttondown y
+  redes enviados por Oscar (confirmado el 2-nov).
 
 ## 📜 Detalle del 19-oct-2026
 
@@ -650,18 +651,17 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    el #45 las cifras de Fee y Stuart (tomadas de una cita de la p. 166, sin cotejar el libro).
    Comprobado en vivo: 8 de 8 páginas con su título y descripción.
    **Google confirmó la solicitud de revisión de #21, #49, #33, #29, #46 y #45.**
-   **FALTA pedirla para #51 (`el-miedo-y-romanos-8`) y #1 (`deismo-terapeutico-moralista`):** Google
-   respondió «Cuota superada» tras 11 solicitudes el 30-oct. Repetir desde el 31-oct.
-   El 2-nov la tarea programada tampoco pudo pedirla: las dos páginas siguen bien en línea, pero el
-   navegador integrado perdió la sesión de Google y Search Console pide iniciar sesión. Oscar debe
-   entrar él en ese navegador; luego se repite.
+   **HECHO 2-nov:** Google también confirmó la solicitud de #51 (`el-miedo-y-romanos-8`) y #1
+   (`deismo-terapeutico-moralista`). Ya no hacía falta iniciar sesión: la de Google seguía activa.
+   Si el panel del navegador es angosto, Search Console esconde la caja de inspección: hay que
+   simular 1280×800. Abrir directo la dirección `/inspect` da 404.
    **Medir** unas cuatro semanas después (hacia fin de noviembre) contra los números del documento.
    **Idea de post:** ¿el evangelio y el cristianismo son lo mismo? Sumó 34 impresiones en 11 días y
    el #21 no lo responde.
    **Programado (30-oct):** la tarea `pedir-revision-google-51-y-1` pide las dos revisiones que
    faltan el 31-oct a la 1:00 p. m. Si la app está cerrada, corre al abrirla. Los recordatorios están
    en Google Calendar (me@oscarimorales.com), con post, enlace y texto: #62 el 30-oct a las 6:00 p. m.;
-   a las 8:00 a. m. #30 (lun 23-nov), #31 (lun 30-nov), #34 (lun 7-dic), #33 (lun 14-dic) y #35
+   a las 10:00 a. m. (movidos el 2-nov a pedido de Oscar) #30 (lun 23-nov), #31 (lun 30-nov), #34 (lun 7-dic), #33 (lun 14-dic) y #35
    (lun 21-dic). Esos cinco posts aún no tienen tarjetas de Instagram: Oscar decidió hacerlas el día
    que toque cada una, y cada recordatorio se lo avisa.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
