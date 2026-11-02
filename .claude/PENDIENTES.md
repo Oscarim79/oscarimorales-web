@@ -644,6 +644,9 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    **Google confirmó la solicitud de revisión de #21, #49, #33, #29, #46 y #45.**
    **FALTA pedirla para #51 (`el-miedo-y-romanos-8`) y #1 (`deismo-terapeutico-moralista`):** Google
    respondió «Cuota superada» tras 11 solicitudes el 30-oct. Repetir desde el 31-oct.
+   El 2-nov la tarea programada tampoco pudo pedirla: las dos páginas siguen bien en línea, pero el
+   navegador integrado perdió la sesión de Google y Search Console pide iniciar sesión. Oscar debe
+   entrar él en ese navegador; luego se repite.
    **Medir** unas cuatro semanas después (hacia fin de noviembre) contra los números del documento.
    **Idea de post:** ¿el evangelio y el cristianismo son lo mismo? Sumó 34 impresiones en 11 días y
    el #21 no lo responde.
