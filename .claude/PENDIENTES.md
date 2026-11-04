@@ -9,7 +9,24 @@
 
 ---
 
-## 📍 Dónde nos quedamos (2-nov-2026)
+## 📍 Dónde nos quedamos (3-nov-2026)
+
+**Post #63 «Romanos 13 no es un cheque en blanco» LISTO PARA PUBLICAR, pendiente del visto bueno final de Oscar.**
+- Borrador aprobado en lo esencial («Me gusta»), recortado a ~2,190 palabras, en `vista-previa/borrador-063-romanos-13.md`
+  (carpeta ignorada por git). Para publicar: copiarlo a `content/posts/063-romanos-13-no-es-un-cheque-en-blanco.md`,
+  `node scripts/build-posts.mjs`, commit y push; luego el pack social (Paso 6 de blog-oims).
+- Portada elegida por Oscar: la 2 (Z-Image, espada y pergamino), ya convertida a
+  `content/covers/063-romanos-13-no-es-un-cheque-en-blanco.jpg` (117 KB, sin commitear).
+- **Frase para las tarjetas y redes (la escogió Oscar):** «La separación que defendemos no es la de un Estado que
+  echa a Dios de la plaza. Es la de una iglesia que no le presta su púlpito al César, y un César que no se mete
+  en el culto.» Ya está como `excerpt` del post.
+- Sin resolver: Oscar no confirmó aún la confesión en primera persona («leer Romanos 13 según quién esté en el
+  palacio») ni aportó anécdota propia; el post sale igual si no dice nada.
+- Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF (skill blog-oims corregida en
+  disco; falta empaquetarla con `actualizar-skill-oims`).
+- La sesión se cortó por límite de uso antes de publicar.
+
+## 📍 Detalle del 2-nov-2026
 
 **Oscar confirmó el 2-nov:** el correo del boletín y las redes del #62 ya salieron, y el video
 también se subió. El correo y las redes del #61 también salieron.

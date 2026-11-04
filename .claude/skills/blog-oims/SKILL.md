@@ -619,10 +619,10 @@ Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el
   (≈14,000 px de alto: en el celular quedan diminutas o no se ven).
 - **Sí le abre `SendUserFile`** (tarjeta de archivo; con `display: "render"` se ve dentro de la app). Úsalo
   para imágenes, PDFs y cualquier entregable.
-- Para que **lea un texto largo** (un borrador), mándale un **PDF de lectura**: página de ~110×195 mm, letra
-  grande (~14 pt), portada arriba y la etiqueta «Propuesta · sin publicar». Se genera con markdown-it +
-  Chromium/Playwright y las tipografías de marca de npm (o pega el texto en el chat). Para mostrar cómo se
-  verá el sitio: servidor local + Playwright, capturando por pantallas (no una sola imagen enorme).
+- **El borrador del post va pegado en el chat, como texto** (sin los enlaces, para que se lea de corrido).
+  Oscar lo pidió así el 2026-11-03 tras recibir un PDF de lectura: «dámelo como siempre por acá». No le
+  mandes PDFs para leer borradores. Para mostrar cómo se verá el sitio: servidor local + Playwright,
+  capturando por pantallas (no una sola imagen enorme).
 - Lo que no deba publicarse (vistas previas, PDFs de lectura) va en `vista-previa/`, que el `.gitignore`
   del repo ignora, para que `git add -A` no lo suba.
 
