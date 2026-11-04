@@ -9,22 +9,20 @@
 
 ---
 
-## 📍 Dónde nos quedamos (3-nov-2026)
+## 📍 Dónde nos quedamos (4-nov-2026)
 
-**Post #63 «Romanos 13 no es un cheque en blanco» LISTO PARA PUBLICAR, pendiente del visto bueno final de Oscar.**
-- Borrador aprobado en lo esencial («Me gusta»), recortado a ~2,190 palabras, en `vista-previa/borrador-063-romanos-13.md`
-  (carpeta ignorada por git). Para publicar: copiarlo a `content/posts/063-romanos-13-no-es-un-cheque-en-blanco.md`,
-  `node scripts/build-posts.mjs`, commit y push; luego el pack social (Paso 6 de blog-oims).
-- Portada elegida por Oscar: la 2 (Z-Image, espada y pergamino), ya convertida a
-  `content/covers/063-romanos-13-no-es-un-cheque-en-blanco.jpg` (117 KB, sin commitear).
-- **Frase para las tarjetas y redes (la escogió Oscar):** «La separación que defendemos no es la de un Estado que
-  echa a Dios de la plaza. Es la de una iglesia que no le presta su púlpito al César, y un César que no se mete
-  en el culto.» Ya está como `excerpt` del post.
-- Sin resolver: Oscar no confirmó aún la confesión en primera persona («leer Romanos 13 según quién esté en el
-  palacio») ni aportó anécdota propia; el post sale igual si no dice nada.
-- Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF (skill blog-oims corregida en
-  disco; falta empaquetarla con `actualizar-skill-oims`).
-- La sesión se cortó por límite de uso antes de publicar.
+**Se publicó el post #63 «Romanos 13 no es un cheque en blanco»** (Cultura y Actualidad · Iglesia), commit 0f6ccb1.
+URL: https://oscarimorales.com/romanos-13-no-es-un-cheque-en-blanco. Portada: espada y pergamino (Z-Image, elegida
+por Oscar). Contenido: Romanos 13 bajo Nerón, «servidor de Dios» como límite, separación iglesia/Estado (Helwys,
+Williams, Confesión de 1689 cap. 24), maestros (Crisóstomo, Agustín, Lutero, Calvino, Rutherford, Barmen, King,
+MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se sometió a la espada. ~2,190 palabras.
+- **Pack social entregado** en `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/` (tarjetas, caption,
+  facebook, x, boletín). Frase elegida por Oscar: «una iglesia que no le presta su púlpito al César, y un César que
+  no se mete en el culto». **Pendiente de Oscar:** enviar el correo en Buttondown y publicar en redes.
+- **Video corto:** propuesto a Oscar (recomendado: sí). Falta su decisión.
+- Oscar no confirmó la confesión en primera persona («leer Romanos 13 según quién esté en el palacio»); salió así.
+- Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF. Skill blog-oims corregida en disco;
+  **falta empaquetarla con `actualizar-skill-oims`** y subirla a claude.ai.
 
 ## 📍 Detalle del 2-nov-2026
 
