@@ -24,8 +24,7 @@ MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se s
   el voto, y el mesías político que ignora que lo malo está dentro de nosotros. Hecho y entregado:
   `vista-previa/reel-063-pulpito-no-papeleta-con-musica.mp4` (1:22, voz George a 1.10, música integrada,
   -14.0 LUFS igual que el #62). Fuentes en `recursos/video/063-pulpito-no-papeleta/`; texto para subirlo en
-  `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/reel.txt`. **Pendiente de Oscar:** escucharlo
-  (Claude no oye el audio; ojo a «Nerón» y «César») y subirlo a Reels (compartido a Facebook) y Shorts, con
+  `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/reel.txt`. **Oscar lo aprobó el 5-nov.** Pendiente de Oscar: subirlo a Reels (compartido a Facebook) y Shorts, con
   etiqueta de IA y sin agregar otra música.
 - Oscar no confirmó la confesión en primera persona («leer Romanos 13 según quién esté en el palacio»); salió así.
 - Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF. Skill blog-oims corregida en disco;

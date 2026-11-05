@@ -9,7 +9,7 @@ Oscar decide post por post. Los criterios están en la skill `blog-oims`, secci�
 | Post | ¿Video? | Estado |
 |---|---|---|
 | #62 El 31 de octubre sin miedo | Sí | Final: `reel-062-sin-miedo-esencial-con-musica.mp4` |
-| #63 Romanos 13 no es un cheque en blanco | Sí (opción B: «El púlpito no es para la papeleta») | Carpeta `063-pulpito-no-papeleta`; en producción el 5-nov-2026 |
+| #63 Romanos 13 no es un cheque en blanco | Sí (opción B: «El púlpito no es para la papeleta») | Carpeta `063-pulpito-no-papeleta`; aprobado por Oscar el 5-nov-2026; final: `reel-063-pulpito-no-papeleta-con-musica.mp4` |
 
 ## Pasos
 
