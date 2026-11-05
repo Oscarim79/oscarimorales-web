@@ -1,0 +1,326 @@
+<!doctype html>
+<!--
+  Escenas del video «El púlpito no es para la papeleta» (post 63) — Secundum Fidem · Oscar I. Morales
+  Propósito: que la iglesia no le preste su púlpito al César ni espere de un mesías político lo que solo Dios arregla.
+  NO se abre a mano: lo maneja scripts/reel-render.mjs llamando a seek(t) en cada cuadro.
+-->
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../_comun/estilos.css">
+<style>
+.luz{position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(214,150,86,.26) 0,rgba(120,70,40,.1) 38%,transparent 66%)}
+/* calendario */
+#hoja{position:absolute;left:240px;top:300px;width:600px;height:560px;background:linear-gradient(170deg,#FBF8F2,#E6D8C0);border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.6);transform-origin:50% 0;overflow:hidden;text-align:center}
+#hoja u{display:block;text-decoration:none;background:var(--terra);color:var(--papel);font:800 46px/1 'Montserrat',sans-serif;letter-spacing:.2em;padding:32px 0}
+#hoja b{display:block;margin-top:28px;font:italic 700 300px/1 'Playfair Display',serif;color:var(--noche)}
+#hoja i{display:block;margin-top:-10px;font:800 40px/1 'Montserrat',sans-serif;letter-spacing:.25em;color:var(--terra)}
+/* púlpito */
+#pulpito{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#pancarta{position:absolute;left:150px;top:560px;width:780px;padding:34px 30px;text-align:center;background:#2E6FD6;border:6px solid #F5F0E8;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.6);transform-origin:50% 0}
+#pancarta b{display:block;font:800 76px/1 'Montserrat',sans-serif;letter-spacing:.06em;color:#fff;text-shadow:0 3px 0 #1B4A99}
+#pancarta i{display:block;margin-top:16px;font:italic 400 46px/1.1 'Playfair Display',serif;color:#FFE38A}
+/* versículo recortado */
+#verso{position:absolute;left:70px;right:70px;top:300px;padding:40px 42px 46px;background:#F7F1E3;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.55);transform-origin:50% 50%}
+#verso .ceja{color:var(--terra)}
+#verso p{margin-top:18px;font:italic 400 64px/1.18 'Playfair Display',serif;color:var(--noche)}
+#verso p s{text-decoration:none;color:#8E7A5C}
+#sello{position:absolute;left:120px;top:640px;padding:18px 36px;border:10px solid #B5261B;border-radius:14px;color:#B5261B;font:800 78px/1 'Montserrat',sans-serif;letter-spacing:.08em;transform:rotate(-14deg);transform-origin:50% 50%;background:rgba(247,241,227,.6)}
+/* dos encargos */
+.lado{position:absolute;left:70px;right:70px;height:400px;border-radius:18px;padding:36px 30px;text-align:center;background:rgba(13,27,42,.82);border:2px solid var(--terra)}
+.lado u{display:block;text-decoration:none;font:800 34px/1.25 'Montserrat',sans-serif;letter-spacing:.17em;color:var(--terra-200)}
+.lado p{margin-top:18px;font:italic 400 66px/1.14 'Playfair Display',serif;color:var(--papel)}
+.lado svg{display:block;margin:18px auto 0}
+#portadaP{position:absolute;left:0;top:0;transform-origin:0 0}
+#sombraP{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.9) 0,rgba(13,27,42,.55) 230px,rgba(13,27,42,.25) 600px,rgba(13,27,42,.55) 1000px,#0D1B2A 1300px,#0D1B2A 1920px)}
+/* moneda */
+#moneda{position:absolute;left:290px;top:300px;width:500px;height:500px}
+/* participa */
+.cosa{position:absolute;width:300px;height:330px;background:rgba(245,240,232,.08);border:2px solid rgba(196,126,90,.55);border-radius:16px;padding:26px 12px;text-align:center}
+.cosa u{display:block;text-decoration:none;font:800 38px/1.1 'Montserrat',sans-serif;letter-spacing:.13em;color:var(--papel)}
+.cosa svg{display:block;margin:18px auto 0}
+/* iglesia con camiseta */
+#igle{position:absolute;left:190px;top:300px;width:700px;height:640px}
+/* mesías */
+#mesias{position:absolute;left:240px;top:300px;width:600px;height:640px}
+#corazon{position:absolute;left:290px;top:330px;width:500px;height:520px}
+/* cierre */
+#portadaC{position:absolute;left:0;top:0;transform-origin:0 0}
+#sombraC{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.84) 0,rgba(13,27,42,.5) 200px,rgba(13,27,42,.1) 430px,rgba(13,27,42,.14) 760px,rgba(13,27,42,.84) 1020px,#0D1B2A 1190px,#0D1B2A 1920px)}
+#destello{position:absolute;inset:0;background:radial-gradient(circle at 300px 420px,#FFE7B0 0,rgba(255,196,110,.7) 18%,rgba(196,126,90,.24) 48%,transparent 72%)}
+#marca{position:absolute;left:64px;right:64px;top:250px;display:flex;align-items:center;gap:20px}
+#marca img{height:70px;width:auto;display:block}
+#marca b{display:block;font:800 22px/1 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--crema);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#marca i{display:block;margin-top:8px;font:italic 400 26px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.linea{position:absolute;left:64px;right:64px;font:italic 400 74px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+.linea em{color:var(--terra-300)}
+#cita{position:absolute;left:64px;right:64px;top:1000px;font:italic 400 98px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+#cita .cr{color:var(--terra-300)}
+#pie{position:absolute;left:64px;right:64px;top:1500px}
+#pie hr{border:0;width:76px;height:4px;background:var(--terra);margin-bottom:24px}
+#pie p{font:700 24px/1.3 'Montserrat',sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--terra-200)}
+.versiculo{position:absolute;left:70px;right:70px;top:1262px;text-align:left;font:800 38px/1.2 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--terra-200)}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="pulpitoIc" viewBox="0 0 600 560">
+    <path d="M90 520h420l-40-330H130z" fill="#5A3B23" stroke="#2B1D12" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M130 190h340l-30 330H160z" fill="#7A4E2C"/>
+    <path d="M100 150h400l30 40H70z" fill="#8E5C34" stroke="#2B1D12" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M300 250v170M240 310h120" stroke="#DFAA94" stroke-width="18" stroke-linecap="round"/>
+    <path d="M300 150V60" stroke="#2B2B2B" stroke-width="10"/>
+    <rect x="272" y="8" width="56" height="86" rx="28" fill="#2B2B2B" stroke="#8C8C8C" stroke-width="6"/>
+    <path d="M255 70c0 30 20 50 45 50s45-20 45-50" fill="none" stroke="#8C8C8C" stroke-width="8"/>
+  </symbol>
+  <symbol id="iglesiaIc" viewBox="0 0 700 640">
+    <path d="M120 600V300L350 150l230 150v300z" fill="#E9DFC9" stroke="#3B2A1E" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M100 310L350 140l250 170" fill="none" stroke="#3B2A1E" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M300 600V450c0-30 22-50 50-50s50 20 50 50v150z" fill="#3B2A1E"/>
+    <path d="M350 140V40M310 80h80" stroke="#C47E5A" stroke-width="16" stroke-linecap="round"/>
+    <rect x="170" y="400" width="60" height="90" rx="30" fill="#14304A"/><rect x="470" y="400" width="60" height="90" rx="30" fill="#14304A"/>
+  </symbol>
+  <symbol id="camisetaIc" viewBox="0 0 400 360">
+    <path d="M120 20l80 30 80-30 100 70-50 70-40-20v220H110V140l-40 20-50-70z" fill="#2E6FD6" stroke="#F5F0E8" stroke-width="10" stroke-linejoin="round"/>
+    <text x="200" y="245" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="78" fill="#fff">VOTA</text>
+  </symbol>
+</defs></svg>
+
+<!-- 1. gancho: calendario y púlpito -->
+<div class="esc" id="e-gancho">
+  <div class="luz"></div>
+  <div id="hoja"><u>ELECCIONES</u><b>27</b><i>JUNIO 2027</i></div>
+</div>
+
+<!-- 1b y 2. el púlpito prestado -->
+<div class="esc" id="e-pulpito">
+  <div class="luz"></div>
+  <svg id="pulpito" viewBox="0 0 1080 1920"><use href="#pulpitoIc" x="240" y="700" width="600" height="560"/></svg>
+  <div id="pancarta"><b>¡VOTE POR MÍ!</b><i id="pancartaSub">candidato cristiano</i></div>
+  <div id="verso"><div class="ceja">ROMANOS 13:1</div><p>«Sométase toda persona a las autoridades superiores…»</p></div>
+  <div id="sello">FUERA DE CONTEXTO</div>
+</div>
+
+<!-- 3. Pablo: dos encargos -->
+<div class="esc" id="e-pablo">
+  <img id="portadaP" src="../../../content/covers/063-romanos-13-no-es-un-cheque-en-blanco.jpg">
+  <div id="sombraP"></div>
+  <div class="grande" id="pServ" style="top:300px;text-align:center;font-size:100px">«Servidor<br><em>de Dios»</em></div>
+  <div class="lado" id="lEsp" style="top:300px"><u>AL GOBERNANTE</u>
+    <svg width="300" height="110" viewBox="0 0 300 110"><path d="M10 55h190l40-18v36l-40-18" fill="#C9CED6" stroke="#5B6470" stroke-width="5" stroke-linejoin="round"/><path d="M200 30v50" stroke="#D6A348" stroke-width="14"/><path d="M212 55h60" stroke="#3B2A1E" stroke-width="18" stroke-linecap="round"/><circle cx="284" cy="55" r="14" fill="#D6A348"/></svg>
+    <p>la espada</p></div>
+  <div class="lado" id="lPal" style="top:760px"><u>A LA IGLESIA</u>
+    <svg width="300" height="120" viewBox="0 0 300 120"><path d="M150 30C120 10 60 6 12 18v88c48-12 108-8 138 10 30-18 90-22 138-10V18c-48-12-108-8-138 12z" fill="#F2E9D6" stroke="#3B2A1E" stroke-width="5"/><path d="M150 30v96" stroke="#3B2A1E" stroke-width="5"/><path d="M34 44c30-4 70-2 100 10M34 66c30-4 70-2 100 10M266 44c-30-4-70-2-100 10M266 66c-30-4-70-2-100 10" stroke="#B9A689" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+    <p>la Palabra</p></div>
+  <div class="grande" id="pDos" style="top:1190px;text-align:center;font-size:84px">Dos encargos <em>distintos</em></div>
+</div>
+
+<!-- 4. Jesús: la moneda -->
+<div class="esc" id="e-jesus">
+  <div class="luz"></div>
+  <svg id="moneda" viewBox="0 0 500 500">
+    <defs><radialGradient id="oro" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F2D98A"/><stop offset=".6" stop-color="#D6A348"/><stop offset="1" stop-color="#8A5E22"/></radialGradient></defs>
+    <circle cx="250" cy="250" r="236" fill="url(#oro)" stroke="#6E4A14" stroke-width="10"/>
+    <circle cx="250" cy="250" r="200" fill="none" stroke="#8A5E22" stroke-width="6" stroke-dasharray="6 10"/>
+    <path d="M250 120c-60 0-95 60-95 130s35 130 95 130c30 0 50-14 64-34" fill="none" stroke="#6E4A14" stroke-width="18" stroke-linecap="round"/>
+    <path d="M160 190c40-30 70-10 90 20M160 310c40 30 70 10 90-20" fill="none" stroke="#6E4A14" stroke-width="10" stroke-linecap="round"/>
+    <text x="250" y="440" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="52" letter-spacing="8" fill="#6E4A14">CAESAR</text>
+  </svg>
+  <div class="carta" id="jCarta" style="top:880px"><div class="ceja">MATEO 22:21</div><div style="margin-top:22px;font:italic 400 70px/1.16 'Playfair Display',serif;color:var(--papel)">«Dad a César lo que es de César, y a Dios <span style="color:var(--terra-300)">lo que es de Dios»</span></div></div>
+</div>
+
+<!-- 5. la línea -->
+<div class="esc" id="e-linea">
+  <div class="luz"></div>
+  <div class="ceja" id="nCeja" style="position:absolute;left:0;right:0;top:300px;text-align:center">EL CREYENTE PARTICIPA</div>
+  <div class="cosa" id="c1" style="left:60px;top:400px"><u>VOTA</u><svg width="150" height="150" viewBox="0 0 150 150"><rect x="15" y="70" width="120" height="70" rx="8" fill="#F5F0E8" stroke="#3B2A1E" stroke-width="6"/><rect x="45" y="20" width="60" height="80" rx="4" fill="#fff" stroke="#3B2A1E" stroke-width="6"/><path d="M58 60l12 12 24-26" fill="none" stroke="#C47E5A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="cosa" id="c2" style="left:390px;top:400px"><u>OPINA</u><svg width="150" height="150" viewBox="0 0 150 150"><path d="M20 30h110a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H70l-30 26v-26H20a12 12 0 0 1-12-12V42a12 12 0 0 1 12-12z" fill="#F5F0E8" stroke="#3B2A1E" stroke-width="6"/><circle cx="50" cy="70" r="8" fill="#C47E5A"/><circle cx="80" cy="70" r="8" fill="#C47E5A"/><circle cx="110" cy="70" r="8" fill="#C47E5A"/></svg></div>
+  <div class="cosa" id="c3" style="left:720px;top:400px"><u>SIRVE</u><svg width="150" height="150" viewBox="0 0 150 150"><path d="M20 90c20-30 40-30 56-16l22 18-18 12-20-14M130 90c-20-30-40-30-56-16" fill="none" stroke="#F5F0E8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M75 60c-10-16-30-18-36-4-6 14 12 28 36 44 24-16 42-30 36-44-6-14-26-12-36 4z" fill="#C47E5A"/></svg></div>
+  <div class="grande" id="nAfilia" style="top:820px;text-align:center;font-size:92px">Pero la iglesia,<br>como iglesia,<br><em>no se afilia</em></div>
+  <div class="grande" id="nPulpito" style="top:360px;text-align:center;font-size:96px">El púlpito es<br>para la <em>Palabra</em>,<br>no para la papeleta</div>
+  <svg id="igle" viewBox="0 0 700 640"><use href="#iglesiaIc" width="700" height="640"/><g id="igleCam"><use href="#camisetaIc" x="150" y="300" width="400" height="360"/></g><g id="igleX"><path d="M90 90L610 560M610 90L90 560" stroke="#E2573F" stroke-width="42" stroke-linecap="round"/></g></svg>
+  <div class="grande" id="nEntrega" style="top:1000px;text-align:center;font-size:76px">le entrega al César<br><em>lo que es de Dios</em></div>
+</div>
+
+<!-- 6. el mesías político -->
+<div class="esc" id="e-mesias">
+  <div class="luz"></div>
+  <svg id="mesias" viewBox="0 0 600 640">
+    <path d="M300 420c-110 0-200 60-220 180h440c-20-120-110-180-220-180z" fill="#14304A" stroke="#DFAA94" stroke-width="8"/>
+    <circle cx="300" cy="300" r="110" fill="#14304A" stroke="#DFAA94" stroke-width="8"/>
+    <path d="M190 190l30-80 40 50 40-90 40 90 40-50 30 80z" fill="#D6A348" stroke="#8A5E22" stroke-width="8" stroke-linejoin="round"/>
+    <g id="mesX"><path d="M90 120L510 560M510 120L90 560" stroke="#E2573F" stroke-width="40" stroke-linecap="round"/></g>
+  </svg>
+  <div class="ceja" id="mCeja" style="position:absolute;left:0;right:0;top:960px;text-align:center;font-size:40px">¿UN MESÍAS POLÍTICO?</div>
+  <svg id="corazon" viewBox="0 0 500 520">
+    <path d="M250 480C120 380 30 300 30 180 30 100 90 40 170 40c40 0 65 20 80 48 15-28 40-48 80-48 80 0 140 60 140 140 0 120-90 200-220 300z" fill="#7A1F1F" stroke="#DFAA94" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M250 90l-30 90 50 60-40 90 50 70" fill="none" stroke="#0D1B2A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="grande" id="mDentro" style="top:900px;text-align:center;font-size:88px">Lo malo está<br><em>dentro de nosotros</em></div>
+  <div class="carta" id="mVerso" style="top:300px"><div class="ceja">SALMO 146:3</div><div style="margin-top:22px;font:italic 400 66px/1.16 'Playfair Display',serif;color:var(--papel)">«No confiéis en los príncipes, ni en hijo de hombre, porque <span style="color:var(--terra-300)">no hay en él salvación»</span></div></div>
+</div>
+
+<!-- 7. cierre con la portada -->
+<div class="esc" id="e-cierre">
+  <img id="portadaC" src="../../../content/covers/063-romanos-13-no-es-un-cheque-en-blanco.jpg">
+  <div id="sombraC"></div>
+  <div id="destello"></div>
+  <div id="marca"><img src="../../social/assets/icono-crema.png"><div><b>OSCAR I. MORALES</b><i>Secundum Fidem</i></div></div>
+  <div class="linea" id="z1" style="top:960px">Una iglesia que <em>no le presta su púlpito</em> al César,</div>
+  <div class="linea" id="z2" style="top:1180px">y un César que <em>no se mete en el culto</em>.</div>
+  <div id="cita"></div>
+  <div id="pie"><hr><p>El post completo en oscarimorales.com</p></div>
+</div>
+
+<canvas id="brasas" width="1080" height="1920"></canvas>
+<div id="sub"></div>
+
+<script src="../_comun/motor.js"></script>
+<script>
+const tCita = W('cierre', 'Al');
+const subtitulos = crearSubtitulos(tCita - .05);
+
+// cita final, palabra por palabra: «Al César se le obedece. Solo a Cristo se le adora.»
+const pCita = T.palabras.filter(p => p.ini >= tCita);
+const iCr = pCita.findIndex(p => p.texto === 'Solo');
+$('cita').innerHTML = pCita.map((p, i) => `<span class="${i >= iCr ? 'cr' : ''}">${p.texto}</span>`).join(' ');
+const sCita = [...$('cita').children];
+
+const tCada = W('gancho', 'Y'), tCand = W('gancho', 'candidato') - .15;
+const tHasta = W('prestamo', 'hasta'), tDirige = W('prestamo', 'Y'), tTextos = W('prestamo', 'textos') - .1;
+const tServ = W('pablo', 'servidor') - .1, tEsp = W('pablo', 'espada') - .3, tPal = W('pablo', 'Palabra') - .3, tDos = W('pablo', 'Dos') - .1;
+const tDad = W('jesus', 'Dad') - .1;
+const tVota = W('linea', 'vota') - .15, tOpina = W('linea', 'opina') - .15, tSirve = W('linea', 'sirve') - .15;
+const tPero = W('linea', 'Pero') - .1, tPulpito = W('linea', 'El', 1) - .1, tCada2 = W('linea', 'Cada') - .1, tEntrega = W('linea', 'le') - .1;
+const tMes = W('mesias', 'mesías') - .2, tPeroM = W('mesias', 'Pero') - .1, tDentro = W('mesias', 'Está') - .1, tVerso = W('mesias', 'No') - .1;
+const tEs = W('cierre', 'Es') - .1, tY = W('cierre', 'y') - .1;
+
+window.seek = function (t) {
+  // 1 gancho: calendario
+  if (ver($('e-gancho'), t, -1, tCada - .1)) {
+    const k = eo(pr(t, 0, .6));
+    $('hoja').style.transform = `translateY(${(1 - k) * 80}px) rotate(${Math.sin(t * 1.3) * .8}deg) scale(${1 + t * .012})`;
+    $('hoja').style.opacity = k;
+  }
+
+  // 1b y 2: púlpito, pancarta y versículo recortado
+  if (ver($('e-pulpito'), t, tCada - .1, E.pablo.ini - .1)) {
+    const sube = eo(pr(t, tCada - .1, .6));
+    $('pulpito').style.transform = `translateY(${(1 - sube) * 260}px)`;
+    const cae = rebote(pr(t, tCand, .55));
+    const p = $('pancarta');
+    p.style.display = t >= tCand ? '' : 'none';
+    p.style.transform = `translateY(${(cae - 1) * 700}px) rotate(${(1 - cae) * -6}deg)`;
+    $('pancartaSub').textContent = t >= tHasta ? '«yo ni siquiera soy creyente»' : 'candidato cristiano';
+    $('pancartaSub').style.color = t >= tHasta ? '#FFB3A6' : '#FFE38A';
+    const enVerso = t >= tDirige;
+    $('pulpito').style.opacity = enVerso ? .25 : 1;
+    p.style.opacity = enVerso ? .2 : 1;
+    const v = $('verso');
+    v.style.display = enVerso ? '' : 'none';
+    const kv = pr(t, tDirige, .5);
+    v.style.opacity = eo(cl(kv * 2));
+    v.style.transform = `translateY(${(1 - rebote(kv)) * 60}px) rotate(${-2 + kv * 2}deg)`;
+    const ks = pr(t, tTextos, .22);
+    const s = $('sello');
+    s.style.display = t >= tTextos ? '' : 'none';
+    s.style.opacity = ks;
+    s.style.transform = `rotate(-14deg) scale(${2.2 - 1.2 * eo(ks)})`;
+  }
+
+  // 3 Pablo: portada y dos encargos
+  if (ver($('e-pablo'), t, E.pablo.ini - .1, E.jesus.ini - .1)) {
+    const z = 1 + (t - E.pablo.ini) * .006, h = 1100 * z, w = h * 16 / 9;
+    const im = $('portadaP');
+    im.style.width = `${w}px`; im.style.height = `${h}px`;
+    im.style.transform = `translate(${540 - w * .55}px,${(1100 - h) * .5 + 60}px)`;
+    const enLados = t >= tEsp;
+    ver($('pServ'), t, tServ, tEsp, .3);
+    $('lEsp').style.display = enLados ? '' : 'none';
+    $('lPal').style.display = t >= tPal ? '' : 'none';
+    if (enLados) entra($('lEsp'), t, tEsp, 40);
+    if (t >= tPal) entra($('lPal'), t, tPal, 40);
+    ver($('pDos'), t, tDos, 1e3, .3);
+  }
+
+  // 4 Jesús: la moneda
+  if (ver($('e-jesus'), t, E.jesus.ini - .1, E.linea.ini - .1)) {
+    const k = eo(pr(t, E.jesus.ini - .1, .7));
+    $('moneda').style.transform = `rotateY(${(1 - k) * 90}deg) scale(${.9 + k * .1})`;
+    $('moneda').style.opacity = k;
+    entra($('jCarta'), t, tDad, 34);
+  }
+
+  // 5 la línea
+  if (ver($('e-linea'), t, E.linea.ini - .1, E.mesias.ini - .1)) {
+    const fuera1 = tPero - .15;
+    ver($('nCeja'), t, E.linea.ini, fuera1, .3);
+    [['c1', tVota], ['c2', tOpina], ['c3', tSirve]].forEach(([id, a]) => {
+      const el = $(id), k = pr(t, a, .42), o = 1 - pr(t, fuera1, .3);
+      el.style.display = k && o ? '' : 'none';
+      el.style.opacity = eo(cl(k * 2)) * o;
+      el.style.transform = `scale(${.86 + rebote(k) * .14})`;
+    });
+    ver($('nAfilia'), t, tPero, tPulpito - .1, .3);
+    ver($('nPulpito'), t, tPulpito, tCada2 - .1, .3);
+    const enIgle = t >= tCada2;
+    $('igle').style.display = enIgle ? '' : 'none';
+    if (enIgle) {
+      entra($('igle'), t, tCada2, 40);
+      const kc = pr(t, tCada2 + .5, .4);
+      $('igleCam').style.opacity = kc;
+      $('igleCam').style.transform = `translateY(${(1 - eo(kc)) * -120}px)`;
+      const kx = pr(t, tEntrega, .25);
+      $('igleX').style.opacity = kx;
+      $('igleX').style.transform = `scale(${1.6 - .6 * eo(kx)})`;
+      $('igleX').style.transformOrigin = '350px 325px';
+    }
+    ver($('nEntrega'), t, tEntrega, 1e3, .3);
+  }
+
+  // 6 mesías
+  if (ver($('e-mesias'), t, E.mesias.ini - .1, E.cierre.ini - .1)) {
+    const fueraM = tDentro - .15;
+    const enM = t < fueraM;
+    $('mesias').style.display = enM ? '' : 'none';
+    $('mCeja').style.display = enM ? '' : 'none';
+    if (enM) {
+      entra($('mesias'), t, tMes, 50);
+      $('mCeja').style.opacity = eo(pr(t, tMes + .2, .3));
+      const kx = pr(t, tPeroM, .25);
+      $('mesX').style.opacity = kx;
+      $('mesX').style.transform = `scale(${1.6 - .6 * eo(kx)})`;
+      $('mesX').style.transformOrigin = '300px 340px';
+    }
+    const enC = t >= fueraM && t < tVerso - .1;
+    $('corazon').style.display = enC ? '' : 'none';
+    if (enC) {
+      const lat = 1 + .035 * Math.max(0, Math.sin((t - tDentro) * 5.2)) ** 3;
+      $('corazon').style.transform = `scale(${lat * (.9 + .1 * eo(pr(t, tDentro, .4)))})`;
+      $('corazon').style.opacity = eo(pr(t, tDentro, .4));
+    }
+    ver($('mDentro'), t, tDentro + .1, tVerso - .1, .3);
+    $('mVerso').style.display = t >= tVerso ? '' : 'none';
+    if (t >= tVerso) entra($('mVerso'), t, tVerso, 34);
+  }
+
+  // 7 cierre: la portada con luz
+  if (ver($('e-cierre'), t, E.cierre.ini - .1, 1e3, .5)) {
+    const z = 1 + (t - E.cierre.ini) * .004, h = 1240 * z, w = h * 16 / 9;
+    const p = $('portadaC');
+    p.style.width = `${w}px`; p.style.height = `${h}px`;
+    p.style.transform = `translate(${560 - w * .52}px,${(1240 - h) * .5}px)`;
+    $('destello').style.opacity = .3 + .25 * Math.exp(-Math.max(0, t - tCita) * 1.5) * pr(t, tCita - .2, .2);
+    const antes = t < tCita - .2;
+    $('z1').style.display = antes ? '' : 'none';
+    $('z2').style.display = antes && t >= tY ? '' : 'none';
+    if (antes) { entra($('z1'), t, tEs, 30); if (t >= tY) entra($('z2'), t, tY, 30); }
+    $('cita').style.display = antes ? 'none' : '';
+    $('pie').style.display = antes ? 'none' : '';
+    sCita.forEach((s, i) => { s.style.opacity = pr(t, pCita[i].ini - .1, .16); });
+    $('pie').style.opacity = eo(pr(t, T.duracion - .2, .6));
+  }
+
+  brasas(t, .6);
+  subtitulos(t);
+};
+window.seek(0);
+</script>
+</body></html>

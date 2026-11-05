@@ -1,0 +1,1542 @@
+{
+ "duracion": 80.016,
+ "palabras": [
+  {
+   "texto": "Falta",
+   "escena": "gancho",
+   "ini": 0,
+   "fin": 0.337
+  },
+  {
+   "texto": "medio",
+   "escena": "gancho",
+   "ini": 0.383,
+   "fin": 0.65
+  },
+  {
+   "texto": "año",
+   "escena": "gancho",
+   "ini": 0.685,
+   "fin": 0.871
+  },
+  {
+   "texto": "para",
+   "escena": "gancho",
+   "ini": 0.906,
+   "fin": 1.057
+  },
+  {
+   "texto": "la",
+   "escena": "gancho",
+   "ini": 1.091,
+   "fin": 1.149
+  },
+  {
+   "texto": "campaña,",
+   "escena": "gancho",
+   "ini": 1.196,
+   "fin": 1.834
+  },
+  {
+   "texto": "y",
+   "escena": "gancho",
+   "ini": 1.997,
+   "fin": 2.055
+  },
+  {
+   "texto": "en",
+   "escena": "gancho",
+   "ini": 2.113,
+   "fin": 2.159
+  },
+  {
+   "texto": "Guatemala",
+   "escena": "gancho",
+   "ini": 2.206,
+   "fin": 2.67
+  },
+  {
+   "texto": "ya",
+   "escena": "gancho",
+   "ini": 2.728,
+   "fin": 2.821
+  },
+  {
+   "texto": "se",
+   "escena": "gancho",
+   "ini": 2.868,
+   "fin": 2.949
+  },
+  {
+   "texto": "siente.",
+   "escena": "gancho",
+   "ini": 2.995,
+   "fin": 3.541
+  },
+  {
+   "texto": "Y",
+   "escena": "gancho",
+   "ini": 3.796,
+   "fin": 3.866
+  },
+  {
+   "texto": "cada",
+   "escena": "gancho",
+   "ini": 3.936,
+   "fin": 4.133
+  },
+  {
+   "texto": "cuatro",
+   "escena": "gancho",
+   "ini": 4.191,
+   "fin": 4.493
+  },
+  {
+   "texto": "años",
+   "escena": "gancho",
+   "ini": 4.54,
+   "fin": 4.772
+  },
+  {
+   "texto": "pasa",
+   "escena": "gancho",
+   "ini": 4.83,
+   "fin": 5.05
+  },
+  {
+   "texto": "lo",
+   "escena": "gancho",
+   "ini": 5.085,
+   "fin": 5.155
+  },
+  {
+   "texto": "mismo:",
+   "escena": "gancho",
+   "ini": 5.201,
+   "fin": 5.689
+  },
+  {
+   "texto": "un",
+   "escena": "gancho",
+   "ini": 5.979,
+   "fin": 6.072
+  },
+  {
+   "texto": "candidato",
+   "escena": "gancho",
+   "ini": 6.13,
+   "fin": 6.618
+  },
+  {
+   "texto": "aparece",
+   "escena": "gancho",
+   "ini": 6.664,
+   "fin": 7.047
+  },
+  {
+   "texto": "en",
+   "escena": "gancho",
+   "ini": 7.082,
+   "fin": 7.14
+  },
+  {
+   "texto": "el",
+   "escena": "gancho",
+   "ini": 7.198,
+   "fin": 7.268
+  },
+  {
+   "texto": "culto.",
+   "escena": "gancho",
+   "ini": 7.326,
+   "fin": 7.848
+  },
+  {
+   "texto": "Se",
+   "escena": "prestamo",
+   "ini": 8.104,
+   "fin": 8.22
+  },
+  {
+   "texto": "le",
+   "escena": "prestamo",
+   "ini": 8.266,
+   "fin": 8.336
+  },
+  {
+   "texto": "presta",
+   "escena": "prestamo",
+   "ini": 8.382,
+   "fin": 8.684
+  },
+  {
+   "texto": "el",
+   "escena": "prestamo",
+   "ini": 8.719,
+   "fin": 8.766
+  },
+  {
+   "texto": "púlpito",
+   "escena": "prestamo",
+   "ini": 8.835,
+   "fin": 9.218
+  },
+  {
+   "texto": "a",
+   "escena": "prestamo",
+   "ini": 9.265,
+   "fin": 9.288
+  },
+  {
+   "texto": "políticos",
+   "escena": "prestamo",
+   "ini": 9.323,
+   "fin": 9.822
+  },
+  {
+   "texto": "que",
+   "escena": "prestamo",
+   "ini": 9.88,
+   "fin": 9.961
+  },
+  {
+   "texto": "se",
+   "escena": "prestamo",
+   "ini": 10.008,
+   "fin": 10.077
+  },
+  {
+   "texto": "dicen",
+   "escena": "prestamo",
+   "ini": 10.124,
+   "fin": 10.379
+  },
+  {
+   "texto": "cristianos,",
+   "escena": "prestamo",
+   "ini": 10.414,
+   "fin": 11.169
+  },
+  {
+   "texto": "y",
+   "escena": "prestamo",
+   "ini": 11.331,
+   "fin": 11.389
+  },
+  {
+   "texto": "hasta",
+   "escena": "prestamo",
+   "ini": 11.447,
+   "fin": 11.68
+  },
+  {
+   "texto": "a",
+   "escena": "prestamo",
+   "ini": 11.714,
+   "fin": 11.738
+  },
+  {
+   "texto": "quienes",
+   "escena": "prestamo",
+   "ini": 11.796,
+   "fin": 12.051
+  },
+  {
+   "texto": "dicen",
+   "escena": "prestamo",
+   "ini": 12.098,
+   "fin": 12.341
+  },
+  {
+   "texto": "abiertamente",
+   "escena": "prestamo",
+   "ini": 12.399,
+   "fin": 13.026
+  },
+  {
+   "texto": "que",
+   "escena": "prestamo",
+   "ini": 13.073,
+   "fin": 13.143
+  },
+  {
+   "texto": "no",
+   "escena": "prestamo",
+   "ini": 13.201,
+   "fin": 13.293
+  },
+  {
+   "texto": "lo",
+   "escena": "prestamo",
+   "ini": 13.34,
+   "fin": 13.421
+  },
+  {
+   "texto": "son.",
+   "escena": "prestamo",
+   "ini": 13.479,
+   "fin": 13.909
+  },
+  {
+   "texto": "Y",
+   "escena": "prestamo",
+   "ini": 14.373,
+   "fin": 14.443
+  },
+  {
+   "texto": "desde",
+   "escena": "prestamo",
+   "ini": 14.524,
+   "fin": 14.733
+  },
+  {
+   "texto": "ahí",
+   "escena": "prestamo",
+   "ini": 14.78,
+   "fin": 14.896
+  },
+  {
+   "texto": "se",
+   "escena": "prestamo",
+   "ini": 14.954,
+   "fin": 15.035
+  },
+  {
+   "texto": "dirige",
+   "escena": "prestamo",
+   "ini": 15.081,
+   "fin": 15.395
+  },
+  {
+   "texto": "el",
+   "escena": "prestamo",
+   "ini": 15.418,
+   "fin": 15.476
+  },
+  {
+   "texto": "voto",
+   "escena": "prestamo",
+   "ini": 15.534,
+   "fin": 15.778
+  },
+  {
+   "texto": "con",
+   "escena": "prestamo",
+   "ini": 15.836,
+   "fin": 15.952
+  },
+  {
+   "texto": "textos",
+   "escena": "prestamo",
+   "ini": 16.01,
+   "fin": 16.359
+  },
+  {
+   "texto": "sacados",
+   "escena": "prestamo",
+   "ini": 16.382,
+   "fin": 16.765
+  },
+  {
+   "texto": "de",
+   "escena": "prestamo",
+   "ini": 16.8,
+   "fin": 16.858
+  },
+  {
+   "texto": "contexto.",
+   "escena": "prestamo",
+   "ini": 16.904,
+   "fin": 17.636
+  },
+  {
+   "texto": "Pablo",
+   "escena": "pablo",
+   "ini": 18.1,
+   "fin": 18.402
+  },
+  {
+   "texto": "escribió",
+   "escena": "pablo",
+   "ini": 18.448,
+   "fin": 18.855
+  },
+  {
+   "texto": "Romanos",
+   "escena": "pablo",
+   "ini": 18.913,
+   "fin": 19.261
+  },
+  {
+   "texto": "13",
+   "escena": "pablo",
+   "ini": 19.319,
+   "fin": 19.598
+  },
+  {
+   "texto": "bajo",
+   "escena": "pablo",
+   "ini": 19.644,
+   "fin": 19.841
+  },
+  {
+   "texto": "Nerón.",
+   "escena": "pablo",
+   "ini": 19.888,
+   "fin": 20.422
+  },
+  {
+   "texto": "Al",
+   "escena": "pablo",
+   "ini": 20.886,
+   "fin": 21.026
+  },
+  {
+   "texto": "gobernante",
+   "escena": "pablo",
+   "ini": 21.072,
+   "fin": 21.583
+  },
+  {
+   "texto": "lo",
+   "escena": "pablo",
+   "ini": 21.618,
+   "fin": 21.699
+  },
+  {
+   "texto": "llama",
+   "escena": "pablo",
+   "ini": 21.722,
+   "fin": 21.966
+  },
+  {
+   "texto": "servidor",
+   "escena": "pablo",
+   "ini": 22.013,
+   "fin": 22.384
+  },
+  {
+   "texto": "de",
+   "escena": "pablo",
+   "ini": 22.442,
+   "fin": 22.512
+  },
+  {
+   "texto": "Dios,",
+   "escena": "pablo",
+   "ini": 22.558,
+   "fin": 22.965
+  },
+  {
+   "texto": "y",
+   "escena": "pablo",
+   "ini": 22.999,
+   "fin": 23.057
+  },
+  {
+   "texto": "le",
+   "escena": "pablo",
+   "ini": 23.116,
+   "fin": 23.185
+  },
+  {
+   "texto": "da",
+   "escena": "pablo",
+   "ini": 23.232,
+   "fin": 23.301
+  },
+  {
+   "texto": "la",
+   "escena": "pablo",
+   "ini": 23.359,
+   "fin": 23.417
+  },
+  {
+   "texto": "espada.",
+   "escena": "pablo",
+   "ini": 23.464,
+   "fin": 24.079
+  },
+  {
+   "texto": "A",
+   "escena": "pablo",
+   "ini": 24.544,
+   "fin": 24.602
+  },
+  {
+   "texto": "la",
+   "escena": "pablo",
+   "ini": 24.66,
+   "fin": 24.718
+  },
+  {
+   "texto": "iglesia",
+   "escena": "pablo",
+   "ini": 24.753,
+   "fin": 25.136
+  },
+  {
+   "texto": "le",
+   "escena": "pablo",
+   "ini": 25.182,
+   "fin": 25.252
+  },
+  {
+   "texto": "da",
+   "escena": "pablo",
+   "ini": 25.298,
+   "fin": 25.368
+  },
+  {
+   "texto": "la",
+   "escena": "pablo",
+   "ini": 25.414,
+   "fin": 25.472
+  },
+  {
+   "texto": "Palabra.",
+   "escena": "pablo",
+   "ini": 25.519,
+   "fin": 26.122
+  },
+  {
+   "texto": "Dos",
+   "escena": "pablo",
+   "ini": 26.587,
+   "fin": 26.784
+  },
+  {
+   "texto": "encargos",
+   "escena": "pablo",
+   "ini": 26.842,
+   "fin": 27.248
+  },
+  {
+   "texto": "distintos.",
+   "escena": "pablo",
+   "ini": 27.295,
+   "fin": 28.003
+  },
+  {
+   "texto": "Jesús",
+   "escena": "jesus",
+   "ini": 28.142,
+   "fin": 28.456
+  },
+  {
+   "texto": "lo",
+   "escena": "jesus",
+   "ini": 28.514,
+   "fin": 28.583
+  },
+  {
+   "texto": "dijo",
+   "escena": "jesus",
+   "ini": 28.63,
+   "fin": 28.839
+  },
+  {
+   "texto": "antes:",
+   "escena": "jesus",
+   "ini": 28.885,
+   "fin": 29.454
+  },
+  {
+   "texto": "Dad",
+   "escena": "jesus",
+   "ini": 29.861,
+   "fin": 30.093
+  },
+  {
+   "texto": "a",
+   "escena": "jesus",
+   "ini": 30.162,
+   "fin": 30.267
+  },
+  {
+   "texto": "César",
+   "escena": "jesus",
+   "ini": 30.325,
+   "fin": 30.708
+  },
+  {
+   "texto": "lo",
+   "escena": "jesus",
+   "ini": 30.847,
+   "fin": 30.963
+  },
+  {
+   "texto": "que",
+   "escena": "jesus",
+   "ini": 31.01,
+   "fin": 31.091
+  },
+  {
+   "texto": "es",
+   "escena": "jesus",
+   "ini": 31.126,
+   "fin": 31.196
+  },
+  {
+   "texto": "de",
+   "escena": "jesus",
+   "ini": 31.254,
+   "fin": 31.323
+  },
+  {
+   "texto": "César,",
+   "escena": "jesus",
+   "ini": 31.37,
+   "fin": 31.904
+  },
+  {
+   "texto": "y",
+   "escena": "jesus",
+   "ini": 32.043,
+   "fin": 32.101
+  },
+  {
+   "texto": "a",
+   "escena": "jesus",
+   "ini": 32.159,
+   "fin": 32.183
+  },
+  {
+   "texto": "Dios",
+   "escena": "jesus",
+   "ini": 32.241,
+   "fin": 32.473
+  },
+  {
+   "texto": "lo",
+   "escena": "jesus",
+   "ini": 32.531,
+   "fin": 32.612
+  },
+  {
+   "texto": "que",
+   "escena": "jesus",
+   "ini": 32.659,
+   "fin": 32.74
+  },
+  {
+   "texto": "es",
+   "escena": "jesus",
+   "ini": 32.786,
+   "fin": 32.867
+  },
+  {
+   "texto": "de",
+   "escena": "jesus",
+   "ini": 32.914,
+   "fin": 32.972
+  },
+  {
+   "texto": "Dios.",
+   "escena": "jesus",
+   "ini": 33.03,
+   "fin": 33.529
+  },
+  {
+   "texto": "El",
+   "escena": "linea",
+   "ini": 33.785,
+   "fin": 33.936
+  },
+  {
+   "texto": "creyente",
+   "escena": "linea",
+   "ini": 33.982,
+   "fin": 34.377
+  },
+  {
+   "texto": "participa:",
+   "escena": "linea",
+   "ini": 34.423,
+   "fin": 35.213
+  },
+  {
+   "texto": "vota,",
+   "escena": "linea",
+   "ini": 35.619,
+   "fin": 36.072
+  },
+  {
+   "texto": "opina,",
+   "escena": "linea",
+   "ini": 36.176,
+   "fin": 36.78
+  },
+  {
+   "texto": "sirve.",
+   "escena": "linea",
+   "ini": 36.966,
+   "fin": 37.546
+  },
+  {
+   "texto": "Pero",
+   "escena": "linea",
+   "ini": 37.953,
+   "fin": 38.162
+  },
+  {
+   "texto": "la",
+   "escena": "linea",
+   "ini": 38.208,
+   "fin": 38.255
+  },
+  {
+   "texto": "iglesia,",
+   "escena": "linea",
+   "ini": 38.289,
+   "fin": 38.777
+  },
+  {
+   "texto": "como",
+   "escena": "linea",
+   "ini": 38.823,
+   "fin": 39.021
+  },
+  {
+   "texto": "iglesia,",
+   "escena": "linea",
+   "ini": 39.056,
+   "fin": 39.59
+  },
+  {
+   "texto": "no",
+   "escena": "linea",
+   "ini": 39.671,
+   "fin": 39.787
+  },
+  {
+   "texto": "se",
+   "escena": "linea",
+   "ini": 39.833,
+   "fin": 39.903
+  },
+  {
+   "texto": "afilia.",
+   "escena": "linea",
+   "ini": 39.926,
+   "fin": 40.507
+  },
+  {
+   "texto": "El",
+   "escena": "linea",
+   "ini": 40.913,
+   "fin": 41.076
+  },
+  {
+   "texto": "púlpito",
+   "escena": "linea",
+   "ini": 41.134,
+   "fin": 41.494
+  },
+  {
+   "texto": "es",
+   "escena": "linea",
+   "ini": 41.54,
+   "fin": 41.598
+  },
+  {
+   "texto": "para",
+   "escena": "linea",
+   "ini": 41.656,
+   "fin": 41.83
+  },
+  {
+   "texto": "la",
+   "escena": "linea",
+   "ini": 41.865,
+   "fin": 41.923
+  },
+  {
+   "texto": "Palabra,",
+   "escena": "linea",
+   "ini": 41.97,
+   "fin": 42.504
+  },
+  {
+   "texto": "no",
+   "escena": "linea",
+   "ini": 42.643,
+   "fin": 42.748
+  },
+  {
+   "texto": "para",
+   "escena": "linea",
+   "ini": 42.806,
+   "fin": 42.98
+  },
+  {
+   "texto": "la",
+   "escena": "linea",
+   "ini": 43.015,
+   "fin": 43.073
+  },
+  {
+   "texto": "papeleta.",
+   "escena": "linea",
+   "ini": 43.119,
+   "fin": 43.816
+  },
+  {
+   "texto": "Cada",
+   "escena": "linea",
+   "ini": 44.362,
+   "fin": 44.582
+  },
+  {
+   "texto": "vez",
+   "escena": "linea",
+   "ini": 44.629,
+   "fin": 44.768
+  },
+  {
+   "texto": "que",
+   "escena": "linea",
+   "ini": 44.826,
+   "fin": 44.907
+  },
+  {
+   "texto": "una",
+   "escena": "linea",
+   "ini": 44.954,
+   "fin": 45.081
+  },
+  {
+   "texto": "iglesia",
+   "escena": "linea",
+   "ini": 45.105,
+   "fin": 45.476
+  },
+  {
+   "texto": "se",
+   "escena": "linea",
+   "ini": 45.523,
+   "fin": 45.604
+  },
+  {
+   "texto": "pone",
+   "escena": "linea",
+   "ini": 45.65,
+   "fin": 45.824
+  },
+  {
+   "texto": "la",
+   "escena": "linea",
+   "ini": 45.859,
+   "fin": 45.929
+  },
+  {
+   "texto": "camiseta",
+   "escena": "linea",
+   "ini": 45.975,
+   "fin": 46.417
+  },
+  {
+   "texto": "de",
+   "escena": "linea",
+   "ini": 46.463,
+   "fin": 46.509
+  },
+  {
+   "texto": "un",
+   "escena": "linea",
+   "ini": 46.556,
+   "fin": 46.602
+  },
+  {
+   "texto": "partido,",
+   "escena": "linea",
+   "ini": 46.649,
+   "fin": 47.241
+  },
+  {
+   "texto": "le",
+   "escena": "linea",
+   "ini": 47.403,
+   "fin": 47.496
+  },
+  {
+   "texto": "entrega",
+   "escena": "linea",
+   "ini": 47.531,
+   "fin": 47.891
+  },
+  {
+   "texto": "al",
+   "escena": "linea",
+   "ini": 47.926,
+   "fin": 48.007
+  },
+  {
+   "texto": "César",
+   "escena": "linea",
+   "ini": 48.065,
+   "fin": 48.379
+  },
+  {
+   "texto": "lo",
+   "escena": "linea",
+   "ini": 48.437,
+   "fin": 48.518
+  },
+  {
+   "texto": "que",
+   "escena": "linea",
+   "ini": 48.564,
+   "fin": 48.646
+  },
+  {
+   "texto": "es",
+   "escena": "linea",
+   "ini": 48.704,
+   "fin": 48.797
+  },
+  {
+   "texto": "de",
+   "escena": "linea",
+   "ini": 48.843,
+   "fin": 48.901
+  },
+  {
+   "texto": "Dios.",
+   "escena": "linea",
+   "ini": 48.959,
+   "fin": 49.458
+  },
+  {
+   "texto": "Y",
+   "escena": "mesias",
+   "ini": 49.865,
+   "fin": 49.934
+  },
+  {
+   "texto": "hay",
+   "escena": "mesias",
+   "ini": 49.992,
+   "fin": 50.108
+  },
+  {
+   "texto": "un",
+   "escena": "mesias",
+   "ini": 50.167,
+   "fin": 50.225
+  },
+  {
+   "texto": "engaño",
+   "escena": "mesias",
+   "ini": 50.271,
+   "fin": 50.608
+  },
+  {
+   "texto": "más",
+   "escena": "mesias",
+   "ini": 50.654,
+   "fin": 50.805
+  },
+  {
+   "texto": "hondo:",
+   "escena": "mesias",
+   "ini": 50.863,
+   "fin": 51.362
+  },
+  {
+   "texto": "esperar",
+   "escena": "mesias",
+   "ini": 51.548,
+   "fin": 51.954
+  },
+  {
+   "texto": "que",
+   "escena": "mesias",
+   "ini": 52.013,
+   "fin": 52.082
+  },
+  {
+   "texto": "un",
+   "escena": "mesias",
+   "ini": 52.129,
+   "fin": 52.198
+  },
+  {
+   "texto": "mesías",
+   "escena": "mesias",
+   "ini": 52.256,
+   "fin": 52.593
+  },
+  {
+   "texto": "político",
+   "escena": "mesias",
+   "ini": 52.651,
+   "fin": 53.174
+  },
+  {
+   "texto": "arregle",
+   "escena": "mesias",
+   "ini": 53.313,
+   "fin": 53.719
+  },
+  {
+   "texto": "lo",
+   "escena": "mesias",
+   "ini": 53.766,
+   "fin": 53.835
+  },
+  {
+   "texto": "malo.",
+   "escena": "mesias",
+   "ini": 53.893,
+   "fin": 54.393
+  },
+  {
+   "texto": "Pero",
+   "escena": "mesias",
+   "ini": 54.683,
+   "fin": 54.88
+  },
+  {
+   "texto": "lo",
+   "escena": "mesias",
+   "ini": 54.915,
+   "fin": 54.985
+  },
+  {
+   "texto": "malo",
+   "escena": "mesias",
+   "ini": 55.031,
+   "fin": 55.263
+  },
+  {
+   "texto": "no",
+   "escena": "mesias",
+   "ini": 55.321,
+   "fin": 55.426
+  },
+  {
+   "texto": "está",
+   "escena": "mesias",
+   "ini": 55.472,
+   "fin": 55.646
+  },
+  {
+   "texto": "solo",
+   "escena": "mesias",
+   "ini": 55.704,
+   "fin": 55.913
+  },
+  {
+   "texto": "afuera.",
+   "escena": "mesias",
+   "ini": 55.948,
+   "fin": 56.564
+  },
+  {
+   "texto": "Está",
+   "escena": "mesias",
+   "ini": 56.97,
+   "fin": 57.237
+  },
+  {
+   "texto": "dentro",
+   "escena": "mesias",
+   "ini": 57.295,
+   "fin": 57.585
+  },
+  {
+   "texto": "de",
+   "escena": "mesias",
+   "ini": 57.62,
+   "fin": 57.678
+  },
+  {
+   "texto": "nosotros,",
+   "escena": "mesias",
+   "ini": 57.725,
+   "fin": 58.363
+  },
+  {
+   "texto": "y",
+   "escena": "mesias",
+   "ini": 58.549,
+   "fin": 58.619
+  },
+  {
+   "texto": "eso",
+   "escena": "mesias",
+   "ini": 58.7,
+   "fin": 58.932
+  },
+  {
+   "texto": "solo",
+   "escena": "mesias",
+   "ini": 58.99,
+   "fin": 59.222
+  },
+  {
+   "texto": "Dios",
+   "escena": "mesias",
+   "ini": 59.257,
+   "fin": 59.443
+  },
+  {
+   "texto": "lo",
+   "escena": "mesias",
+   "ini": 59.489,
+   "fin": 59.559
+  },
+  {
+   "texto": "puede",
+   "escena": "mesias",
+   "ini": 59.605,
+   "fin": 59.838
+  },
+  {
+   "texto": "arreglar.",
+   "escena": "mesias",
+   "ini": 59.873,
+   "fin": 60.441
+  },
+  {
+   "texto": "No",
+   "escena": "mesias",
+   "ini": 60.848,
+   "fin": 60.975
+  },
+  {
+   "texto": "confiéis",
+   "escena": "mesias",
+   "ini": 61.022,
+   "fin": 61.486
+  },
+  {
+   "texto": "en",
+   "escena": "mesias",
+   "ini": 61.544,
+   "fin": 61.591
+  },
+  {
+   "texto": "los",
+   "escena": "mesias",
+   "ini": 61.626,
+   "fin": 61.753
+  },
+  {
+   "texto": "príncipes,",
+   "escena": "mesias",
+   "ini": 61.8,
+   "fin": 62.427
+  },
+  {
+   "texto": "ni",
+   "escena": "mesias",
+   "ini": 62.531,
+   "fin": 62.647
+  },
+  {
+   "texto": "en",
+   "escena": "mesias",
+   "ini": 62.682,
+   "fin": 62.752
+  },
+  {
+   "texto": "hijo",
+   "escena": "mesias",
+   "ini": 62.787,
+   "fin": 62.972
+  },
+  {
+   "texto": "de",
+   "escena": "mesias",
+   "ini": 63.019,
+   "fin": 63.088
+  },
+  {
+   "texto": "hombre,",
+   "escena": "mesias",
+   "ini": 63.135,
+   "fin": 63.646
+  },
+  {
+   "texto": "porque",
+   "escena": "mesias",
+   "ini": 63.994,
+   "fin": 64.261
+  },
+  {
+   "texto": "no",
+   "escena": "mesias",
+   "ini": 64.319,
+   "fin": 64.389
+  },
+  {
+   "texto": "hay",
+   "escena": "mesias",
+   "ini": 64.424,
+   "fin": 64.563
+  },
+  {
+   "texto": "en",
+   "escena": "mesias",
+   "ini": 64.621,
+   "fin": 64.679
+  },
+  {
+   "texto": "él",
+   "escena": "mesias",
+   "ini": 64.737,
+   "fin": 64.842
+  },
+  {
+   "texto": "salvación.",
+   "escena": "mesias",
+   "ini": 64.9,
+   "fin": 65.608
+  },
+  {
+   "texto": "La",
+   "escena": "cierre",
+   "ini": 66.014,
+   "fin": 66.119
+  },
+  {
+   "texto": "separación",
+   "escena": "cierre",
+   "ini": 66.165,
+   "fin": 66.664
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 66.711,
+   "fin": 66.78
+  },
+  {
+   "texto": "defendemos",
+   "escena": "cierre",
+   "ini": 66.827,
+   "fin": 67.419
+  },
+  {
+   "texto": "no",
+   "escena": "cierre",
+   "ini": 67.582,
+   "fin": 67.698
+  },
+  {
+   "texto": "es",
+   "escena": "cierre",
+   "ini": 67.744,
+   "fin": 67.814
+  },
+  {
+   "texto": "la",
+   "escena": "cierre",
+   "ini": 67.872,
+   "fin": 67.941
+  },
+  {
+   "texto": "de",
+   "escena": "cierre",
+   "ini": 67.999,
+   "fin": 68.058
+  },
+  {
+   "texto": "un",
+   "escena": "cierre",
+   "ini": 68.116,
+   "fin": 68.197
+  },
+  {
+   "texto": "Estado",
+   "escena": "cierre",
+   "ini": 68.255,
+   "fin": 68.592
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 68.65,
+   "fin": 68.766
+  },
+  {
+   "texto": "echa",
+   "escena": "cierre",
+   "ini": 68.812,
+   "fin": 69.01
+  },
+  {
+   "texto": "a",
+   "escena": "cierre",
+   "ini": 69.056,
+   "fin": 69.079
+  },
+  {
+   "texto": "Dios",
+   "escena": "cierre",
+   "ini": 69.137,
+   "fin": 69.346
+  },
+  {
+   "texto": "de",
+   "escena": "cierre",
+   "ini": 69.393,
+   "fin": 69.451
+  },
+  {
+   "texto": "la",
+   "escena": "cierre",
+   "ini": 69.497,
+   "fin": 69.555
+  },
+  {
+   "texto": "plaza.",
+   "escena": "cierre",
+   "ini": 69.602,
+   "fin": 70.113
+  },
+  {
+   "texto": "Es",
+   "escena": "cierre",
+   "ini": 70.519,
+   "fin": 70.681
+  },
+  {
+   "texto": "la",
+   "escena": "cierre",
+   "ini": 70.739,
+   "fin": 70.809
+  },
+  {
+   "texto": "de",
+   "escena": "cierre",
+   "ini": 70.856,
+   "fin": 70.914
+  },
+  {
+   "texto": "una",
+   "escena": "cierre",
+   "ini": 70.972,
+   "fin": 71.1
+  },
+  {
+   "texto": "iglesia",
+   "escena": "cierre",
+   "ini": 71.123,
+   "fin": 71.587
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 71.75,
+   "fin": 71.854
+  },
+  {
+   "texto": "no",
+   "escena": "cierre",
+   "ini": 71.912,
+   "fin": 71.982
+  },
+  {
+   "texto": "le",
+   "escena": "cierre",
+   "ini": 72.029,
+   "fin": 72.098
+  },
+  {
+   "texto": "presta",
+   "escena": "cierre",
+   "ini": 72.145,
+   "fin": 72.447
+  },
+  {
+   "texto": "su",
+   "escena": "cierre",
+   "ini": 72.493,
+   "fin": 72.597
+  },
+  {
+   "texto": "púlpito",
+   "escena": "cierre",
+   "ini": 72.655,
+   "fin": 73.004
+  },
+  {
+   "texto": "al",
+   "escena": "cierre",
+   "ini": 73.05,
+   "fin": 73.108
+  },
+  {
+   "texto": "César,",
+   "escena": "cierre",
+   "ini": 73.166,
+   "fin": 73.666
+  },
+  {
+   "texto": "y",
+   "escena": "cierre",
+   "ini": 74.072,
+   "fin": 74.118
+  },
+  {
+   "texto": "un",
+   "escena": "cierre",
+   "ini": 74.176,
+   "fin": 74.258
+  },
+  {
+   "texto": "César",
+   "escena": "cierre",
+   "ini": 74.316,
+   "fin": 74.629
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 74.699,
+   "fin": 74.769
+  },
+  {
+   "texto": "no",
+   "escena": "cierre",
+   "ini": 74.827,
+   "fin": 74.896
+  },
+  {
+   "texto": "se",
+   "escena": "cierre",
+   "ini": 74.943,
+   "fin": 75.024
+  },
+  {
+   "texto": "mete",
+   "escena": "cierre",
+   "ini": 75.07,
+   "fin": 75.268
+  },
+  {
+   "texto": "en",
+   "escena": "cierre",
+   "ini": 75.303,
+   "fin": 75.372
+  },
+  {
+   "texto": "el",
+   "escena": "cierre",
+   "ini": 75.43,
+   "fin": 75.5
+  },
+  {
+   "texto": "culto.",
+   "escena": "cierre",
+   "ini": 75.558,
+   "fin": 76.057
+  },
+  {
+   "texto": "Al",
+   "escena": "cierre",
+   "ini": 76.522,
+   "fin": 76.661
+  },
+  {
+   "texto": "César",
+   "escena": "cierre",
+   "ini": 76.719,
+   "fin": 76.998
+  },
+  {
+   "texto": "se",
+   "escena": "cierre",
+   "ini": 77.056,
+   "fin": 77.137
+  },
+  {
+   "texto": "le",
+   "escena": "cierre",
+   "ini": 77.183,
+   "fin": 77.241
+  },
+  {
+   "texto": "obedece.",
+   "escena": "cierre",
+   "ini": 77.276,
+   "fin": 77.915
+  },
+  {
+   "texto": "Solo",
+   "escena": "cierre",
+   "ini": 78.379,
+   "fin": 78.623
+  },
+  {
+   "texto": "a",
+   "escena": "cierre",
+   "ini": 78.669,
+   "fin": 78.693
+  },
+  {
+   "texto": "Cristo",
+   "escena": "cierre",
+   "ini": 78.751,
+   "fin": 79.087
+  },
+  {
+   "texto": "se",
+   "escena": "cierre",
+   "ini": 79.145,
+   "fin": 79.227
+  },
+  {
+   "texto": "le",
+   "escena": "cierre",
+   "ini": 79.285,
+   "fin": 79.343
+  },
+  {
+   "texto": "adora.",
+   "escena": "cierre",
+   "ini": 79.366,
+   "fin": 80.016
+  }
+ ],
+ "escenas": [
+  {
+   "id": "gancho",
+   "ini": 0,
+   "fin": 7.848
+  },
+  {
+   "id": "prestamo",
+   "ini": 8.104,
+   "fin": 17.636
+  },
+  {
+   "id": "pablo",
+   "ini": 18.1,
+   "fin": 28.003
+  },
+  {
+   "id": "jesus",
+   "ini": 28.142,
+   "fin": 33.529
+  },
+  {
+   "id": "linea",
+   "ini": 33.785,
+   "fin": 49.458
+  },
+  {
+   "id": "mesias",
+   "ini": 49.865,
+   "fin": 65.608
+  },
+  {
+   "id": "cierre",
+   "ini": 66.014,
+   "fin": 80.016
+  }
+ ]
+}

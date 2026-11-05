@@ -19,7 +19,14 @@ MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se s
 - **Pack social entregado** en `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/` (tarjetas, caption,
   facebook, x, boletín). Frase elegida por Oscar: «una iglesia que no le presta su púlpito al César, y un César que
   no se mete en el culto». **Pendiente de Oscar:** enviar el correo en Buttondown y publicar en redes.
-- **Video corto:** propuesto a Oscar (recomendado: sí). Falta su decisión.
+- **Video corto del #63 (5-nov):** Oscar eligió la opción B, «El púlpito no es para la papeleta», con su énfasis:
+  púlpitos prestados a políticos (incluso a quienes dicen no ser creyentes), textos fuera de contexto para dirigir
+  el voto, y el mesías político que ignora que lo malo está dentro de nosotros. Hecho y entregado:
+  `vista-previa/reel-063-pulpito-no-papeleta-con-musica.mp4` (1:22, voz George a 1.10, música integrada,
+  -14.0 LUFS igual que el #62). Fuentes en `recursos/video/063-pulpito-no-papeleta/`; texto para subirlo en
+  `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/reel.txt`. **Pendiente de Oscar:** escucharlo
+  (Claude no oye el audio; ojo a «Nerón» y «César») y subirlo a Reels (compartido a Facebook) y Shorts, con
+  etiqueta de IA y sin agregar otra música.
 - Oscar no confirmó la confesión en primera persona («leer Romanos 13 según quién esté en el palacio»); salió así.
 - Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF. Skill blog-oims corregida en disco;
   **falta empaquetarla con `actualizar-skill-oims`** y subirla a claude.ai.

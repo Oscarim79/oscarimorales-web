@@ -1,0 +1,17 @@
+{
+  "post": 63,
+  "proposito": "Que la iglesia no se ponga la camiseta de ningún partido ni le preste el púlpito a políticos, y que nadie espere de un mesías político lo que solo Dios puede arreglar: lo malo que está dentro de nosotros.",
+  "para_quien": "Pastores y miembros de iglesias en Guatemala que ven a candidatos en los cultos y textos sacados de contexto para dirigir el voto.",
+  "que_debe_quedar": "Una iglesia que no le presta su púlpito al César, y un César que no se mete en el culto. Al César se le obedece; solo a Cristo se le adora.",
+  "voz": "JBFqnCBsd6RMkjVDRZzb",
+  "musica": "Quiet instrumental underscore for a spoken reflection. Soft felt piano with warm, sustained low strings. Slow, around 64 BPM, no drums, no percussion, no vocals. Begins restrained and slightly tense, holds a sober, dignified mood through the middle, and opens into a calm, steady, hopeful resolution in the final third. Sparse and unobtrusive, leaving room for a voice.",
+  "escenas": [
+    { "id": "gancho", "texto": "Falta medio año para la campaña, y en Guatemala ya se siente. Y cada cuatro años pasa lo mismo: un candidato aparece en el culto." },
+    { "id": "prestamo", "texto": "Se le presta el púlpito a políticos que se dicen cristianos, y hasta a quienes dicen abiertamente que no lo son. Y desde ahí se dirige el voto con textos sacados de contexto." },
+    { "id": "pablo", "texto": "Pablo escribió Romanos {13|trece} bajo Nerón. Al gobernante lo llama servidor de Dios, y le da la espada. A la iglesia le da la Palabra. Dos encargos distintos." },
+    { "id": "jesus", "texto": "Jesús lo dijo antes: Dad a César lo que es de César, y a Dios lo que es de Dios." },
+    { "id": "linea", "texto": "El creyente participa: vota, opina, sirve. Pero la iglesia, como iglesia, no se afilia. El púlpito es para la Palabra, no para la papeleta. Cada vez que una iglesia se pone la camiseta de un partido, le entrega al César lo que es de Dios." },
+    { "id": "mesias", "texto": "Y hay un engaño más hondo: esperar que un mesías político arregle lo malo. Pero lo malo no está solo afuera. Está dentro de nosotros, y eso solo Dios lo puede arreglar. No confiéis en los príncipes, ni en hijo de hombre, porque no hay en él salvación." },
+    { "id": "cierre", "texto": "La separación que defendemos no es la de un Estado que echa a Dios de la plaza. Es la de una iglesia que no le presta su púlpito al César, y un César que no se mete en el culto. Al César se le obedece. Solo a Cristo se le adora." }
+  ]
+}
