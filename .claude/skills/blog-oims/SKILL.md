@@ -16,7 +16,8 @@ description: >
 
 # Skill: Redacción y Publicación de Posts — Oscar Morales
 
-> v11 — 2026-10-30 · Video corto OPCIONAL: Claude propone, Oscar decide qué posts lo ameritan; propósito antes del guion
+> v12 — 2026-11-05 · El borrador del post se entrega pegado en el chat, nunca como PDF de lectura (pedido de Oscar el 3-nov)
+> (v11 — 2026-10-30 · Video corto OPCIONAL: Claude propone, Oscar decide qué posts lo ameritan; propósito antes del guion)
 > (v10 — 2026-10-30 · Revisión de muletillas obligatoria antes de entregar, con límites medidos sobre sus posts reales)
 > (v9 — 2026-10-30 · Texto para redes: UN solo párrafo, idéntico en Instagram, Facebook y X)
 > (v8 — 2026-10-14 · Oscar aún NO replanta (corregido) · «ministerio de música para la iglesia» · vulnerabilidad solo
