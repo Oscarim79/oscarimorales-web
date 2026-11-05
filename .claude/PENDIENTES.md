@@ -27,8 +27,9 @@ MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se s
   `recursos/social/063-romanos-13-no-es-un-cheque-en-blanco/reel.txt`. **Oscar lo aprobó el 5-nov.** Pendiente de Oscar: subirlo a Reels (compartido a Facebook) y Shorts, con
   etiqueta de IA y sin agregar otra música.
 - Oscar no confirmó la confesión en primera persona («leer Romanos 13 según quién esté en el palacio»); salió así.
-- Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF. Skill blog-oims corregida en disco;
-  **falta empaquetarla con `actualizar-skill-oims`** y subirla a claude.ai.
+- Regla nueva (3-nov): los borradores se entregan pegados en el chat, no en PDF. Skill blog-oims **v12** empaquetada el 5-nov en
+  `C:/Users/me/OneDrive/Desktop/blog-oims-v12.zip`. **Pendiente de Oscar:** subirla en claude.ai (Configuracion ->
+  Capacidades -> Skills -> reemplazar). Hasta entonces, chat y Cowork siguen con la v11.
 
 ## 📍 Detalle del 2-nov-2026
 
