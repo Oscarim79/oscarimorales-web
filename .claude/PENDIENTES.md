@@ -33,6 +33,15 @@ MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se s
 
 ## 📍 Detalle del 6-nov-2026
 
+**Cloudflare, últimos 30 días (7-oct a 6-nov):** ~1,000 visitas y 1,190 páginas vistas. Guatemala 500,
+EE. UU. 180, China 120, Singapur 90, México 40. Robots probables: China + Singapur (~210) y navegador
+«Unknown» (420, coincide con «None (direct)»). Lectores reales estimados: 600 a 800. Fuentes: directo/WhatsApp
+420, Facebook 380 (lm + facebook + m), Instagram 90; Google no aparece entre las 5 primeras (menos de 70).
+Posts más leídos: «Amar no es callar la verdad» 410, «El 31 de octubre sin miedo» 140, portada 110, «La
+alfombra roja y el aposento alto» 90, «Salmo 91 a medianoche» 50. 81 % desde el celular. Search Console en el
+mismo lapso: 19 clics. Conclusión: casi todo llega por redes y WhatsApp; Google sigue siendo la puerta chica.
+Las sesiones de Google y Cloudflare del navegador integrado habían caducado; Oscar volvió a entrar en ambas.
+
 **Serie de Navidad: revisados y corregidos los dos de iconos y símbolos (#34 y #35)**, con fuentes
 enlazadas y nota de 2026 al final. Detalle de cada cambio en `recursos/social/temporada-navidad-2026.md`
 (sección «#34 y #35»). Con esto los cinco posts del calendario están revisados; el #32 sigue fuera.
