@@ -44,10 +44,10 @@ enlazadas y nota de 2026 al final. Detalle de cada cambio en `recursos/social/te
 - **Libro del #35:** Oscar pasó el enlace de «Navidad, el regalo esperado» (Llamada de Medianoche, editor
   André Beitze, 55 págs.; incluye una adaptación de un texto de Fruchtenbaum). Ya está enlazado en el post
   (commit 6039402).
-- **Revisión de Google para #34 y #35:** Oscar pidió hacerla el 6-nov. La sesión de Google en el navegador
-  integrado había caducado (Search Console mandó a iniciar sesión); Claude no puede escribir contraseñas,
-  así que Oscar inicia sesión en el panel y Claude pide las dos revisiones. **Estado:** ver más abajo si ya
-  se hizo.
+- **Revisión de Google para #34 y #35: HECHA el 6-nov.** Google confirmó las dos solicitudes («Se ha
+  solicitado la indexación»); ambas URL ya estaban indexadas. La sesión de Google en el navegador integrado
+  había caducado: Oscar inició sesión en el panel y Claude pidió las revisiones (caja de inspección con el
+  panel a 1280×800, como la otra vez). El enlace del libro quedó verificado en vivo.
 
 ## 📍 Detalle del 2-nov-2026
 
