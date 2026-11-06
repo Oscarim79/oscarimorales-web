@@ -41,6 +41,17 @@ Posts más leídos: «Amar no es callar la verdad» 410, «El 31 de octubre sin 
 alfombra roja y el aposento alto» 90, «Salmo 91 a medianoche» 50. 81 % desde el celular. Search Console en el
 mismo lapso: 19 clics. Conclusión: casi todo llega por redes y WhatsApp; Google sigue siendo la puerta chica.
 Las sesiones de Google y Cloudflare del navegador integrado habían caducado; Oscar volvió a entrar en ambas.
+- **WhatsApp:** Oscar no comparte ahí todavía. Claude le propuso un canal de WhatsApp del blog (la gente se
+  suscribe sola, separado del trabajo) o historias con lista cerrada. **Recordatorio en Google Calendar el
+  mar 10-nov a las 10:00 a. m.** para decidirlo. Si dice que sí: sumar WhatsApp al pack social y preparar un
+  enlace medible aparte.
+- **Robots en las estadísticas:** el sitio lo sirve GitHub Pages directo (DNS a 185.199.x.x, sin proxy de
+  Cloudflare), así que Cloudflare no puede filtrarlos en la entrada; solo cuenta lo que su script ve. No
+  cuestan nada ni dañan nada: solo ensucian las cifras. Opciones explicadas a Oscar el 6-nov: (1) seguir
+  restando China/Singapur/«Unknown» al leer; (2) `robots.txt` para rastreadores de IA (solo los educados
+  obedecen); (3) pasar el dominio por el proxy de Cloudflare (nube naranja, SSL «Full») para activar Bot Fight
+  Mode y retar a China/Singapur; es un cambio de DNS con riesgo bajo pero real, no se hace sin que Oscar lo pida.
+  El filtro por país en la URL de Cloudflare (`country~nin=CN,SG`) no se conserva al cargar.
 
 **Serie de Navidad: revisados y corregidos los dos de iconos y símbolos (#34 y #35)**, con fuentes
 enlazadas y nota de 2026 al final. Detalle de cada cambio en `recursos/social/temporada-navidad-2026.md`
