@@ -88,14 +88,14 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
 
 **Cambiado el 6-nov (versión final):** Oscar quiere los cinco antes de Navidad, dos por semana, en
 diciembre. Quedan martes y jueves a las 10:00 a. m., del 8 al 22 de diciembre. Empieza el 8 y no el 1
-para que solo dos caigan en sus vacaciones (23-nov a 11-dic); las tarjetas de esos dos se hacen antes
-de salir (9-nov y 12-nov).
+para que solo dos caigan en sus vacaciones (23-nov a 11-dic). Las tarjetas se hacen el mismo día que
+sube cada post (decisión de Oscar, 6-nov), incluidas las de vacaciones.
 
 | Fecha | Qué compartir | Estado |
 |---|---|---|
 | 30-31 oct | #62 El 31 de octubre sin miedo | Enviado |
-| Mar 8 dic | #30 Su supuesto origen pagano | Corregido, listo (tarjeta el 9-nov) |
-| Jue 10 dic | #31 Y los primeros cristianos | Corregido, listo (tarjeta el 12-nov) |
+| Mar 8 dic | #30 Su supuesto origen pagano | Corregido, listo |
+| Jue 10 dic | #31 Y los primeros cristianos | Corregido, listo |
 | Mar 15 dic | #34 Iconos, símbolos y tradiciones I | Corregido el 6-nov, listo |
 | Jue 17 dic | #33 El invierno en Israel | Corregido, listo |
 | Mar 22 dic | #35 Iconos, símbolos y tradiciones II | Corregido el 6-nov, listo |

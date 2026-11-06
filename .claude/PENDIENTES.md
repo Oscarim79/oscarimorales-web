@@ -79,9 +79,10 @@ también se subió. El correo y las redes del #61 también salieron.
 - **Vacaciones de Oscar:** 23-nov a 11-dic. Los recordatorios de #30, #31 y #34 caen en esas fechas,
   así que Oscar decidió hacer sus tres tarjetas antes de salir: lun 9-nov (#30), jue 12-nov (#31) y
   vie 13-nov (#34). Hay recordatorios en su calendario a las 10:00 a. m. Las de #33 y #35 siguen
-  para el día de cada una. **Cambió el 6-nov:** con el calendario final (martes y jueves del 8 al
-  22-dic) caen en vacaciones el #30 (8-dic) y el #31 (10-dic); sus tarjetas siguen el 9-nov y el 12-nov.
-  El recordatorio de tarjeta del 13-nov (#34) se borró porque el #34 sale el 15-dic, ya de regreso.
+  para el día de cada una. **Cambió el 6-nov (final):** Oscar decidió hacer cada tarjeta el mismo día
+  que sube el post, también las del #30 (8-dic) y #31 (10-dic) que caen en sus vacaciones. Los tres
+  recordatorios de tarjeta (9, 12 y 13-nov) quedaron borrados. En noviembre solo queda el recordatorio
+  del canal de WhatsApp (mar 10-nov). Cada recordatorio de publicación ya dice que pida la tarjeta a Claude.
 
 ## 📍 Detalle del 30-oct-2026
 
