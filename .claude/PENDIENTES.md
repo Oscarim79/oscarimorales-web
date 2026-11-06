@@ -41,8 +41,13 @@ enlazadas y nota de 2026 al final. Detalle de cada cambio en `recursos/social/te
   y #35 mar 22-dic. Los cinco recordatorios de Google Calendar ya están movidos. Martes y jueves fue
   sugerencia de Claude (entre semana por la mañana suele rendir mejor en Facebook e Instagram); si las
   estadísticas de Cloudflare muestran otra cosa, se ajusta el próximo año.
-- **Pendiente de Oscar:** pedir a Google que vuelva a revisar #34 y #35 (Search Console → inspección de
-  URL → solicitar indexación), ya que cambió el contenido.
+- **Libro del #35:** Oscar pasó el enlace de «Navidad, el regalo esperado» (Llamada de Medianoche, editor
+  André Beitze, 55 págs.; incluye una adaptación de un texto de Fruchtenbaum). Ya está enlazado en el post
+  (commit 6039402).
+- **Revisión de Google para #34 y #35:** Oscar pidió hacerla el 6-nov. La sesión de Google en el navegador
+  integrado había caducado (Search Console mandó a iniciar sesión); Claude no puede escribir contraseñas,
+  así que Oscar inicia sesión en el panel y Claude pide las dos revisiones. **Estado:** ver más abajo si ya
+  se hizo.
 
 ## 📍 Detalle del 2-nov-2026
 
