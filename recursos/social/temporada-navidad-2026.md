@@ -86,20 +86,21 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
 
 ## 2. Calendario propuesto
 
-**Cambiado el 6-nov:** Oscar pidió uno por semana a partir de diciembre. Quedan los lunes, y el
-orden cambia para que «¿Pudo nacer Jesús en diciembre?» salga justo antes de Navidad y el de los
-nacimientos y la estrella cierre antes del día de Reyes.
+**Cambiado el 6-nov (versión final):** Oscar quiere los cinco antes de Navidad, dos por semana, en
+diciembre. Quedan martes y jueves a las 10:00 a. m., del 8 al 22 de diciembre. Empieza el 8 y no el 1
+para que solo dos caigan en sus vacaciones (23-nov a 11-dic); las tarjetas de esos dos se hacen antes
+de salir (9-nov y 12-nov).
 
 | Fecha | Qué compartir | Estado |
 |---|---|---|
 | 30-31 oct | #62 El 31 de octubre sin miedo | Enviado |
-| Lun 7 dic | #30 Su supuesto origen pagano | Corregido, listo (tarjeta el 9-nov, antes de vacaciones) |
-| Lun 14 dic | #31 Y los primeros cristianos | Corregido, listo |
-| Lun 21 dic | #33 El invierno en Israel | Corregido, listo |
-| Lun 28 dic | #34 Iconos, símbolos y tradiciones I | Corregido el 6-nov, listo |
-| Lun 4 ene 2027 | #35 Iconos, símbolos y tradiciones II | Corregido el 6-nov, listo |
+| Mar 8 dic | #30 Su supuesto origen pagano | Corregido, listo (tarjeta el 9-nov) |
+| Jue 10 dic | #31 Y los primeros cristianos | Corregido, listo (tarjeta el 12-nov) |
+| Mar 15 dic | #34 Iconos, símbolos y tradiciones I | Corregido el 6-nov, listo |
+| Jue 17 dic | #33 El invierno en Israel | Corregido, listo |
+| Mar 22 dic | #35 Iconos, símbolos y tradiciones II | Corregido el 6-nov, listo |
 
-Calendario anterior (30-oct): 23-nov #30, 30-nov #31, 7-dic #34, 14-dic #33, 21-dic #35.
+Calendarios anteriores: 30-oct (lunes 23-nov a 21-dic) y 6-nov por la mañana (lunes 7-dic a 4-ene).
 El #29 de Halloween no hace falta compartirlo aparte: el #62 ya lo enlaza.
 
 Pedir a Google que revise cada post **después** de corregirlo, para que lea la versión nueva.
