@@ -56,6 +56,27 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
   cambie su conclusión, pero no verifiqué cada detalle de sus citas históricas.
 - **#35:** no encontré un error que impida compartirlo. Tampoco verifiqué cada detalle.
 
+**Revisados a fondo el 6-nov (publicados):**
+
+- **#34:** Deuteronomio 16:21-22 e Isaías 60:13 cotejados con la RVR1960. La cita de Panati se queda,
+  pero se añadió un párrafo que aclara que el abeto de Bonifacio (cuento de Henry van Dyke, 1897) y las
+  velas de Lutero (grabado de 1843, el de la portada) son leyendas, y que los primeros árboles
+  documentados son de Riga y Tallin (siglo XV) y Alsacia (siglo XVI). Se quitó la cita del rabino Eli Lev
+  (no se encontró en ningún sitio; el enlace de Chabad estaba roto) y se reemplazó por la idea de Tu
+  Bishvat con enlace. Se quitó la cita de un comentario bíblico sin nombre sobre Asera y se puso una
+  frase con enlace. «Sectas gnósticas» pasó a «algunos». Enlaces internos viejos (`post.html?n=`) pasados
+  a slug. Nota de 2026 al final.
+- **#35:** se quitó una cita sin fuente que decía que los belenes llegaron a su apogeo en Nápoles «medio
+  siglo después» del siglo XIII (fue en el XVIII); ahora hay un párrafo con enlaces a *Admirabile signum*
+  y al belén napolitano. Fechas corregidas: la circuncisión es el 1 de enero (decía 2) y la presentación
+  en el Templo el 2 de febrero (decía «principios de marzo»). «Jesús y María llegan a Belén» pasó a «José
+  y María». Celano enlazado (audiencia del Vaticano, 20-dic-2023); «Juan de Vellita» pasó a «un hombre de
+  Greccio llamado Juan». «Fruchtembaun» corregido a Fruchtenbaum, con enlace a Ariel Ministries; el libro
+  «Navidad, el regalo esperado» de André Beitze no se pudo localizar, se deja como lo citó Oscar. La cita
+  de A. B. Simpson sí está en *Christ in the Tabernacle* (1888), enlazado en archive.org. Los magos ya no
+  son «estudiosos de las Escrituras» sino «estudiosos de los astros y, según muchos comentaristas,
+  conocedores de la esperanza mesiánica». Nota de 2026 al final.
+
 ### Para todos
 
 - Hoy no se enlazan entre sí. Conviene agregar al inicio de cada uno enlaces al resto de la serie.
@@ -65,17 +86,21 @@ El argumento central del post sigue en pie: nadie puede probar qué clima hubo e
 
 ## 2. Calendario propuesto
 
+**Cambiado el 6-nov:** Oscar pidió uno por semana a partir de diciembre. Quedan los lunes, y el
+orden cambia para que «¿Pudo nacer Jesús en diciembre?» salga justo antes de Navidad y el de los
+nacimientos y la estrella cierre antes del día de Reyes.
+
 | Fecha | Qué compartir | Estado |
 |---|---|---|
-| 30-31 oct | #62 El 31 de octubre sin miedo | Pack listo, falta que Oscar lo envíe |
-| Lun 23 nov | #30 Su supuesto origen pagano | Corregido, listo |
-| Lun 30 nov | #31 Y los primeros cristianos | Corregido, listo |
-| Lun 7 dic | #34 Iconos, símbolos y tradiciones I | Listo |
-| Lun 14 dic | #33 El invierno en Israel | Corregido, listo |
-| Lun 21 dic | #35 Iconos, símbolos y tradiciones II | Listo |
+| 30-31 oct | #62 El 31 de octubre sin miedo | Enviado |
+| Lun 7 dic | #30 Su supuesto origen pagano | Corregido, listo (tarjeta el 9-nov, antes de vacaciones) |
+| Lun 14 dic | #31 Y los primeros cristianos | Corregido, listo |
+| Lun 21 dic | #33 El invierno en Israel | Corregido, listo |
+| Lun 28 dic | #34 Iconos, símbolos y tradiciones I | Corregido el 6-nov, listo |
+| Lun 4 ene 2027 | #35 Iconos, símbolos y tradiciones II | Corregido el 6-nov, listo |
 
-El #29 de Halloween no hace falta compartirlo aparte: el #62 ya lo enlaza. El lunes es una
-propuesta; se puede cambiar.
+Calendario anterior (30-oct): 23-nov #30, 30-nov #31, 7-dic #34, 14-dic #33, 21-dic #35.
+El #29 de Halloween no hace falta compartirlo aparte: el #62 ya lo enlaza.
 
 Pedir a Google que revise cada post **después** de corregirlo, para que lea la versión nueva.
 Solicitud hecha para los #30, #31, #33 y #35 el 30-oct.

@@ -31,6 +31,19 @@ MacArthur), tres marcas de la desobediencia fiel, la política y el Rey que se s
   `C:/Users/me/OneDrive/Desktop/blog-oims-v12.zip`. **Pendiente de Oscar:** subirla en claude.ai (Configuracion ->
   Capacidades -> Skills -> reemplazar). Hasta entonces, chat y Cowork siguen con la v11.
 
+## 📍 Detalle del 6-nov-2026
+
+**Serie de Navidad: revisados y corregidos los dos de iconos y símbolos (#34 y #35)**, con fuentes
+enlazadas y nota de 2026 al final. Detalle de cada cambio en `recursos/social/temporada-navidad-2026.md`
+(sección «#34 y #35»). Con esto los cinco posts del calendario están revisados; el #32 sigue fuera.
+- **Calendario nuevo (pedido de Oscar):** uno por semana a partir de diciembre, los lunes a las 10:00 a. m.:
+  #30 el 7-dic, #31 el 14-dic, #33 el 21-dic, #34 el 28-dic y #35 el 4-ene-2027. Los cinco recordatorios
+  de Google Calendar ya están movidos. El orden cambió para que «¿Pudo nacer Jesús en diciembre?» salga
+  antes de Navidad y el de los nacimientos y la estrella cierre antes de Reyes.
+- **Pendiente de Oscar:** pedir a Google que vuelva a revisar #34 y #35 (Search Console → inspección de
+  URL → solicitar indexación), ya que cambió el contenido. Y decidir qué hacer con los dos recordatorios
+  de tarjeta del 12 y 13-nov (ver «Vacaciones» abajo).
+
 ## 📍 Detalle del 2-nov-2026
 
 **Oscar confirmó el 2-nov:** el correo del boletín y las redes del #62 ya salieron, y el video
@@ -41,7 +54,10 @@ también se subió. El correo y las redes del #61 también salieron.
 - **Vacaciones de Oscar:** 23-nov a 11-dic. Los recordatorios de #30, #31 y #34 caen en esas fechas,
   así que Oscar decidió hacer sus tres tarjetas antes de salir: lun 9-nov (#30), jue 12-nov (#31) y
   vie 13-nov (#34). Hay recordatorios en su calendario a las 10:00 a. m. Las de #33 y #35 siguen
-  para el día de cada una.
+  para el día de cada una. **Cambió el 6-nov:** con el calendario nuevo solo el #30 (7-dic) cae en
+  vacaciones; su tarjeta sigue el 9-nov. Los recordatorios de tarjeta del 12-nov (#31) y 13-nov (#34)
+  ya no hacen falta, pero no se pudieron borrar desde aquí: Oscar decide si los borra o si prefiere
+  hacer esas tarjetas antes de salir de todos modos.
 
 ## 📍 Detalle del 30-oct-2026
 
@@ -664,7 +680,7 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    de revisión. Los seis posts llevan la caja «Serie sobre la Navidad» (clase `.prose__serie` en
    `post-prod.css`, en un div para no quitar la letra capital); el #32 la lleva, pero no se lista
    en los demás. Excerpt agregado a #32, #34 y #35.
-   **Sigue:** compartir según el calendario desde el 23-nov. Mejorar título y descripción de lo
+   **Sigue:** compartir según el calendario desde el 7-dic (uno por semana; cambiado el 6-nov). Mejorar título y descripción de lo
    que sale en Google sin recibir clics (empezar por «El evangelio vs la religión»). En el #34
    quedaban «hasta risible» y «nada puede ser más absurdo»: Oscar aprobó cambiarlas el 2-nov.
    **30-oct, HECHO (commit e47f96c):** Oscar aprobó `recursos/social/titulos-google-2026.md`. Hay
@@ -683,8 +699,8 @@ Basada en Cloudflare. Meta a enero 2027: ~770 → 1,200 lectores reales/mes; Goo
    **Programado (30-oct):** la tarea `pedir-revision-google-51-y-1` pide las dos revisiones que
    faltan el 31-oct a la 1:00 p. m. Si la app está cerrada, corre al abrirla. Los recordatorios están
    en Google Calendar (me@oscarimorales.com), con post, enlace y texto: #62 el 30-oct a las 6:00 p. m.;
-   a las 10:00 a. m. (movidos el 2-nov a pedido de Oscar) #30 (lun 23-nov), #31 (lun 30-nov), #34 (lun 7-dic), #33 (lun 14-dic) y #35
-   (lun 21-dic). Esos cinco posts aún no tienen tarjetas de Instagram: Oscar decidió hacerlas el día
+   a las 10:00 a. m. (movidos el 2-nov y otra vez el 6-nov a pedido de Oscar) #30 (lun 7-dic), #31 (lun 14-dic), #33 (lun 21-dic),
+   #34 (lun 28-dic) y #35 (lun 4-ene-2027). Esos cinco posts aún no tienen tarjetas de Instagram: Oscar decidió hacerlas el día
    que toque cada una, y cada recordatorio se lo avisa.
 8. Página de error propia (añadido 19-oct): hoy un enlace roto muestra la página genérica
    de GitHub en inglés («Page not found · GitHub Pages»). Hacer `404.html` con la marca,
