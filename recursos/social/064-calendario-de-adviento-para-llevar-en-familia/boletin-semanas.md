@@ -50,7 +50,7 @@ Mañana encendemos la vela rosada, la del Gozo. Leemos el anuncio de Gabriel a M
 
 **[Descargar la sesión 3: Gozo](https://oscarimorales.com/recursos/adviento/adviento-03-gozo.pdf)**
 
-Todo el calendario está en [el blog](https://oscarimorales.com/calendario-de-adviento-para-llevar-en-familia).
+Si empiezan esta semana, enciendan juntas las velas anteriores y lean primero la [guía para papás](https://oscarimorales.com/recursos/adviento/adviento-00-guia-para-papas.pdf). Todo el calendario está en [el blog](https://oscarimorales.com/calendario-de-adviento-para-llevar-en-familia).
 
 Oscar
 #SecundumFidem
@@ -67,7 +67,7 @@ Mañana encendemos la última vela morada, la del Amor. José recibe a María, e
 
 **[Descargar la sesión 4: Amor](https://oscarimorales.com/recursos/adviento/adviento-04-amor.pdf)**
 
-Todo el calendario está en [el blog](https://oscarimorales.com/calendario-de-adviento-para-llevar-en-familia).
+Si empiezan esta semana, enciendan juntas las velas anteriores y lean primero la [guía para papás](https://oscarimorales.com/recursos/adviento/adviento-00-guia-para-papas.pdf). Todo el calendario está en [el blog](https://oscarimorales.com/calendario-de-adviento-para-llevar-en-familia).
 
 Oscar
 #SecundumFidem

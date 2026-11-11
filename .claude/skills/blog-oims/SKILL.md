@@ -565,7 +565,7 @@ el post #57; todo vive en `recursos/social/` (guía completa en su `README.md`).
 6. **Correo del boletín** (el RSS-to-email de Buttondown es de pago, así que Oscar lo pega a mano en
    Buttondown → Emails → New email): **asunto** corto + **vista previa** (una frase) + cuerpo de ~100 palabras
    en primera persona (el gancho del post, una línea de qué texto bíblico o tema toca, el enlace en negrita
-   `**[Leer «Título»](URL)**`, y un cierre invitando a compartir) firmado «Oscar / Secundum Fidem».
+   `**[Leer «Título»](URL)**`, y un cierre invitando a compartir) firmado «Oscar / #SecundumFidem».
    Guárdalo como `boletin.md` en la carpeta del post. Cuando el post tenga Guía de Estudio, anúnciala ahí.
 7. **Entrega:** las 2 imágenes con `SendUserFile` (`display: "render"`) y el caption y el correo en bloques
    de texto (para copiarlos). Recuérdale abrir el enlace del post y comprobar que carga antes de publicar en

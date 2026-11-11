@@ -15,7 +15,7 @@ No hace falta prepararse ni ser maestro de escuela dominical. Basta con unas vel
 
 **[Descargar el Calendario de Adviento](https://oscarimorales.com/calendario-de-adviento-para-llevar-en-familia)**
 
-Empezamos el domingo 29 de noviembre. Cada sábado les voy a mandar un recordatorio con la sesión de la semana. Y si conocen a otra familia a la que le pueda servir, compártanselo.
+Empezamos el domingo 29 de noviembre. El día anterior a cada sesión les voy a mandar un recordatorio con la hoja de la semana. Y si conocen a otra familia a la que le pueda servir, compártanselo.
 
 Oscar
 #SecundumFidem

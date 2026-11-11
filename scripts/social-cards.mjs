@@ -4,7 +4,7 @@
 //   · historia.jpg  1080×1920 → Historia de Instagram (con espacio libre para el sticker de enlace)
 //
 // Uso:
-//   node scripts/social-cards.mjs <n | ruta/al/post.md> [--frase "Renglón 1|Renglón 2|*énfasis*"]
+//   node scripts/social-cards.mjs <n | ruta/al/post.md|html> [--frase "Renglón 1|Renglón 2|*énfasis*"]
 //                                 [--solo post|historia] [--tam 80] [--fonts <carpeta node_modules>]
 //
 //   --frase   El texto grande de la tarjeta. «|» parte el renglón; *palabras* salen en terracota.
@@ -42,7 +42,7 @@ const FUENTES = [ // [paquete fontsource, peso, estilo, familia CSS]
 
 function uso(msg) {
   if (msg) console.error(`✗ ${msg}\n`);
-  console.error('Uso: node scripts/social-cards.mjs <n | ruta/al/post.md> [--frase "Renglón 1|Renglón 2|*énfasis*"] [--solo post|historia] [--tam 80] [--fonts <node_modules>]');
+  console.error('Uso: node scripts/social-cards.mjs <n | ruta/al/post.md|html> [--frase "Renglón 1|Renglón 2|*énfasis*"] [--solo post|historia] [--tam 80] [--fonts <node_modules>]');
   process.exit(1);
 }
 
