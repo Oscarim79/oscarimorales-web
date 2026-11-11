@@ -74,7 +74,7 @@ if (!nombres.length) { console.error('No hay HTML que imprimir en', SRC); proces
 const fuentesCss = prepararFuentes();
 const { chromium } = cargarPlaywright();
 const browser = await chromium.launch();
-const page = await browser.newPage();
+const page = await browser.newPage({ viewport: { width: 816, height: 1056 } }); // carta a 96 ppp
 let fallos = 0;
 
 for (const nombre of nombres) {
@@ -82,7 +82,10 @@ for (const nombre of nombres) {
   if (!fs.existsSync(html)) { console.error(`❌ No existe ${path.relative(ROOT, html)}`); fallos++; continue; }
   await page.goto(pathToFileURL(html).href, { waitUntil: 'load' });
   await page.addStyleTag({ content: fuentesCss });
+  await page.emulateMedia({ media: 'print' });
   await page.evaluate(() => document.fonts.ready);
+  // Alto de cada hoja en pulgadas: una hoja de más de 11 in se parte en dos páginas.
+  const altos = await page.$$eval('.hoja', els => els.map(e => e.getBoundingClientRect().height / 96));
 
   const conteo = await page.$$eval('[data-leer]', els => els.map(e => [e.dataset.leer, e.innerText]));
   let leer = 0, historia = 0;
@@ -93,7 +96,10 @@ for (const nombre of nombres) {
   const pags = contarPaginas(buf);
 
   const errores = [];
-  if (pags !== paginasEsperadas(nombre)) errores.push(`${pags} págs (se esperaban ${paginasEsperadas(nombre)})`);
+  if (pags !== paginasEsperadas(nombre)) {
+    const largas = altos.map((h, i) => [i + 1, h]).filter(([, h]) => h > 11).map(([i, h]) => `hoja ${i} mide ${h.toFixed(2)} in`);
+    errores.push(`${pags} págs (se esperaban ${paginasEsperadas(nombre)})` + (largas.length ? ` [${largas.join(', ')}; el máximo es 11 in]` : ''));
+  }
   if (buf.length >= LIMITE.bytes) errores.push(`pesa ${(buf.length / 1048576).toFixed(2)} MB`);
   if (leer > LIMITE.leer) errores.push(`leer ${leer} > ${LIMITE.leer}`);
   if (historia > LIMITE.historia) errores.push(`historia ${historia} > ${LIMITE.historia}`);
