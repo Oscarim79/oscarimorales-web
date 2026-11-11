@@ -11,18 +11,20 @@
 
 ## 📍 Dónde nos quedamos (11-nov-2026): Calendario de Adviento
 
-**Calendario de Adviento para llevar en familia** (rama `ccr-5fe6ee1c-4moqt2`, sin publicar). Cinco PDF de
-descarga libre: cuatro domingos (29-nov, 6, 13, 20-dic) y Nochebuena, tres edades por sesión, 10 minutos.
+**Calendario de Adviento para llevar en familia**: todo listo en la rama `ccr-5fe6ee1c-4moqt2`, **sin publicar**.
 Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `docs/superpowers/plans/2026-11-11-calendario-adviento.md`.
-- **Hecho (tareas 1 a 3 del plan):** estilos y script `node scripts/adviento-pdf.mjs` (imprime y verifica páginas,
-  peso y minutos de lectura), guía para papás (`recursos/adviento/adviento-00-guia-para-papas.pdf`) y sesión 1
-  Esperanza (`adviento-01-esperanza.pdf`, ~9 min).
-- **Esperando a Oscar:** que revise la sesión 1 y la guía (voz, tiempos, nivel de los niños) antes de escribir
-  las sesiones 2 a 5.
-- **Por verificar:** Génesis 3:15 en NTV y la letra de «Oh ven, oh ven, Emanuel» se escribieron de memoria.
-  Se añadió www.biblegateway.com a la red del entorno el 11-nov, pero en esta sesión aún no respondía.
-  El conector de Logos no está instalado en claude.ai.
-- **Sigue:** sesiones 2 a 5, post #64, pack social y cinco correos; publicar hacia el 22-nov.
+- **Hecho:** guía para papás y las cinco sesiones en `recursos/adviento/` (regenerar con `node scripts/adviento-pdf.mjs`);
+  post #64 `content/posts/064-calendario-de-adviento-para-llevar-en-familia.html` (fecha provisional 22-nov, destacado);
+  enlace en la caja de serie de los #30 a #35; pack social y cinco correos en
+  `recursos/social/064-calendario-de-adviento-para-llevar-en-familia/`. Revisión independiente hecha y corregida.
+- **Esperando a Oscar:**
+  1. Cotejar en Logos los versículos clave (Gn 3:15, Is 9:6, Lc 1:46-47, Mt 1:23, Lc 2:11, todos NTV), Dt 6:7 (RVR1960,
+     en el post) y las estrofas de los cinco villancicos. Se escribieron de memoria: Logos solo está en su PC.
+  2. Elegir portada (provisional: la Z-Image de la corona en la cocina).
+  3. ¿El #32 (neognosticismo) debe aparecer en la lista de la caja de serie? Nunca estuvo.
+  4. Decir «publícalo». Luego: programar los cinco correos (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
+- **Reglas nuevas de Oscar (11-nov):** «Secundum Fidem» siempre como #SecundumFidem; citas bíblicas con Logos;
+  los PDF se le muestran como imágenes JPG por página (anotado en el skill del blog).
 
 ## 📍 Dónde nos quedamos (4-nov-2026)
 
