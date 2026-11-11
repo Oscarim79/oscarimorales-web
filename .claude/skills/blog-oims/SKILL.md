@@ -636,6 +636,9 @@ Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el
 
 - Escribe SIEMPRE en español, en la voz de Oscar (primera persona cuando aplique).
 - Verifica los hechos de cualquier referencia cultural real antes de escribir.
+- **«Secundum Fidem» siempre como hashtag (pedido de Oscar, 11-nov-2026):** cuando el nombre aparezca en
+  algo que escribes (firmas de correo, textos de redes, pies de página de PDF y recursos), escríbelo
+  `#SecundumFidem`. El logotipo de la marca (en el sitio y en las tarjetas) no se toca.
 - **Citas bíblicas (pedido de Oscar, 11-nov-2026): «siempre que necesites referencias bíblicas, usa el
   conector a Logos que usa mi skill de sermones».** Si existen las herramientas `mcp__logos__*`
   (cárgalas con `ToolSearch`), úsalas: `get_bible_text` da RVR60 en español; la NTV y la NBLA exactas

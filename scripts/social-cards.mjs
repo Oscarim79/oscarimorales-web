@@ -57,13 +57,13 @@ if (opt.solo && !FORMATOS[opt.solo]) uso(`--solo debe ser "post" o "historia" (r
 
 // ── el post ───────────────────────────────────────────────────────────────────
 function buscarPost(arg) {
-  if (/\.md$/i.test(arg)) return path.resolve(arg);
+  if (/\.(md|html)$/i.test(arg)) return path.resolve(arg);
   if (/^\d+$/.test(arg)) {
     const nnn = arg.padStart(3, '0');
-    const f = fs.readdirSync(POSTS).find(x => x.startsWith(nnn + '-') && x.endsWith('.md'));
+    const f = fs.readdirSync(POSTS).find(x => x.startsWith(nnn + '-') && /\.(md|html)$/.test(x));
     if (f) return path.join(POSTS, f);
   }
-  uso(`No encuentro el post "${arg}" en content/posts/ (solo los posts .md; los importados de WordPress son .html).`);
+  uso(`No encuentro el post "${arg}" en content/posts/.`);
 }
 function leerFrontmatter(file) {
   const m = fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
@@ -118,7 +118,7 @@ function cargarPlaywright() {
 // ── main ──────────────────────────────────────────────────────────────────────
 const file = buscarPost(pos[0]);
 const fm = leerFrontmatter(file);
-const base = path.basename(file, '.md');
+const base = path.basename(file).replace(/\.(md|html)$/i, '');
 const salida = path.join(SOCIAL, base);
 fs.mkdirSync(salida, { recursive: true });
 
