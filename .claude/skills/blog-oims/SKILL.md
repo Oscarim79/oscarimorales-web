@@ -624,6 +624,9 @@ Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el
   Oscar lo pidió así el 2026-11-03 tras recibir un PDF de lectura: «dámelo como siempre por acá». No le
   mandes PDFs para leer borradores. Para mostrar cómo se verá el sitio: servidor local + Playwright,
   capturando por pantallas (no una sola imagen enorme).
+- **Los PDF no le abren por `SendUserFile`** (comprobado el 11-nov-2026 con el Calendario de Adviento).
+  Para mostrarle un PDF, conviértelo a una imagen JPG por página (`pdftoppm -r 130 -jpeg …`) en
+  `vista-previa/` y manda las imágenes con `display: "render"`.
 - Lo que no deba publicarse (vistas previas, PDFs de lectura) va en `vista-previa/`, que el `.gitignore`
   del repo ignora, para que `git add -A` no lo suba.
 
@@ -633,6 +636,13 @@ Oscar sigue las sesiones desde la app de Claude en el celular. Comprobado con el
 
 - Escribe SIEMPRE en español, en la voz de Oscar (primera persona cuando aplique).
 - Verifica los hechos de cualquier referencia cultural real antes de escribir.
+- **Citas bíblicas (pedido de Oscar, 11-nov-2026): «siempre que necesites referencias bíblicas, usa el
+  conector a Logos que usa mi skill de sermones».** Si existen las herramientas `mcp__logos__*`
+  (cárgalas con `ToolSearch`), úsalas: `get_bible_text` da RVR60 en español; la NTV y la NBLA exactas
+  salen por Logos Web en el navegador integrado (ver `references/logos.md` del skill sermon-oims). Ese
+  conector vive en la PC de Oscar: en sesiones en la nube no existe. Ahí, verifica en
+  www.biblegateway.com (permitido en el entorno desde el 11-nov) y, si tampoco responde, dile a Oscar
+  qué citas quedaron sin verificar para que las coteje él.
 - Si el tema toca dolor profundo (suicidio, duelo, enfermedad), maneja con especial
   cuidado pastoral y sobriedad — Oscar ya ha escrito sobre estos temas con gravedad.
 - Si Oscar da un tema muy amplio, propón un ángulo específico en lugar de pedirle que lo
