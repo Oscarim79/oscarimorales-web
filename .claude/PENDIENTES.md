@@ -17,21 +17,28 @@ Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `
   post #64 `content/posts/064-calendario-de-adviento-para-llevar-en-familia.html` (fecha provisional 22-nov, destacado);
   enlace en la caja de serie de los #30 a #35; pack social y cinco correos en
   `recursos/social/064-calendario-de-adviento-para-llevar-en-familia/`. Revisión independiente hecha y corregida.
+- **Hecho el 11-nov (tarde, sesión en la PC de Oscar):**
+  - **Cotejo con Logos** (NTV por Logos Web `LLS:NTV`; Dt 6:7 RVR1960 por el conector). Cambiaron dos y se
+    corrigieron: Lucas 1:47 → «¡Cuánto mi espíritu se alegra en Dios mi Salvador!» (también en el relato de la
+    sesión 3) y Mateo 1:23 → coma tras «un hijo,». Génesis 3:15, Isaías 9:6, Lucas 2:11 y Dt 6:7 coinciden. Commit `a10b695`.
+  - **Tres opciones de canto por sesión** (pedido de Oscar): a la izquierda la estrofa impresa del villancico; a la
+    derecha «Elijan uno» con villancico, himno y canción actual, cada uno con enlace de búsqueda a YouTube Music y
+    Spotify (sin letra del himno ni de la canción: derechos de autor y no cabe). Lista aprobada por Oscar:
+    1 Esperanza: Oh ven, oh ven, Emanuel · Ven, Jesús muy esperado · En ti esperamos (Sovereign Grace).
+    2 Paz: Noche de paz · Alcancé salvación · Gracia y paz (Sovereign Grace).
+    3 Gozo: Ángeles cantando están · Jubilosos, te adoramos · El gozo de Dios (Evan Craft, elegida por Oscar).
+    4 Amor: Venid, fieles todos · Oh amor de Dios · Profundo es el amor de Dios (Stuart Townend).
+    5 Cristo: Al mundo paz · A Cristo coronad · Sólo en Jesús (Getty y Townend).
+    Guía para papás, post #64 y boletín dicen ahora «un canto a elegir». Todo ✅. Commit `77fdf27`.
+    JPG de las páginas cambiadas en `vista-previa/adviento-cotejo/` (no se sube: está en .gitignore).
 - **Esperando a Oscar:**
-  1. **Cotejo con Logos (pedido de Oscar el 11-nov: «coteja tú»).** Debe hacerse en una sesión que corra en la PC de
-     Oscar (app de escritorio o `claude remote-control`), donde existe el conector `mcp__logos__*`; la nube no lo
-     alcanza. NTV exacta por Logos Web (`LLS:NTV`), según `references/logos.md` del skill sermon-oims. Textos, todos
-     dentro de `class="clave__txt"` en `recursos/adviento/src/`:
-     - `adviento-01-esperanza.html` · Génesis 3:15 (NTV)
-     - `adviento-02-paz.html` · Isaías 9:6 (NTV)
-     - `adviento-03-gozo.html` · Lucas 1:46-47 (NTV; empieza en «Oh, cuánto alaba…»)
-     - `adviento-04-amor.html` · Mateo 1:23 (NTV)
-     - `adviento-05-cristo.html` · Lucas 2:11 (NTV)
-     - Post #64 · Deuteronomio 6:7 (RVR1960, `get_bible_text` del conector sirve)
-     - Villancicos (`class="canto__letra"`): «Oh ven, oh ven, Emanuel», «Noche de paz», «Ángeles cantando están»,
-       «Venid, fieles todos», «Al mundo paz». Cotejar con el himnario que usa su iglesia.
-     Después: `node scripts/adviento-pdf.mjs`, commit y push.
+  1. Comparar las cinco estrofas de villancicos (`class="canto__letra"`) con el himnario de su iglesia, y ver si
+     ahí están «Alcancé salvación», «Oh amor de Dios» y «A Cristo coronad» (no los pude confirmar en línea).
   2. Decir «publícalo». Luego: programar los cinco correos (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
+- **Nota técnica de Logos Web (11-nov):** el «modo de Vista limitada» estaba apagado y se volvió a activar
+  (Configuración). En la NTV los marcadores de versículo traen `data-datatype="bible+nlt"`: el lector del §5 de
+  `references/logos.md` (sermon-oims) necesita `[data-datatype^="bible"]` en vez de `[data-datatype="bible"]`.
+  Pendiente pasar ese ajuste al skill.
 - **Decidido el 11-nov:** portada = candidata 2 (Z-Image, corona en la cocina). Se dice «cinco pequeños
   devocionales», nunca «encuentros». El #32 sigue sin listarse en la caja de serie (decisión del 30-oct: no
   promoverlo); solo lleva el enlace al calendario en su propia caja.
