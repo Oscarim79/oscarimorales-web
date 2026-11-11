@@ -65,7 +65,7 @@ body { font-family: var(--serif); font-size: 10.5pt; line-height: 1.48; color: v
 .cab b { color: var(--terracota-700); }
 
 /* ── Momentos de la liturgia ──────────────────────────────────────────────────── */
-.momento { margin-bottom: 16px; page-break-inside: avoid; break-inside: avoid; }
+.momento { margin-bottom: 12px; page-break-inside: avoid; break-inside: avoid; }
 .momento__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
 .momento__n { font-family: var(--display); font-weight: 700; font-size: 20pt; line-height: 1; color: var(--terracota); min-width: 22px; }
 .momento__t { font-family: var(--display); font-weight: 700; font-size: 15pt; line-height: 1.1; }
@@ -165,3 +165,8 @@ p + p { margin-top: 6px; }
 .caja { border: 1px solid var(--rule); border-left: 3px solid var(--terracota); padding: 9px 14px 8px; margin-top: 8px; break-inside: avoid; }
 .caja__t { font-family: var(--sans); font-weight: 800; font-size: 7.4pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracota-600); margin-bottom: 3px; }
 .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Oración por frases: una frase por renglón, en dos columnas (el adulto dice, los niños repiten) */
+.oracion { columns: 2; column-gap: 28px; margin-top: 4px; }
+.oracion span { display: block; break-inside: avoid; padding-left: 12px; text-indent: -12px; }
+.oracion span::before { content: "› "; color: var(--terracota); font-weight: 600; }
