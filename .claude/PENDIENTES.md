@@ -18,11 +18,23 @@ Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `
   enlace en la caja de serie de los #30 a #35; pack social y cinco correos en
   `recursos/social/064-calendario-de-adviento-para-llevar-en-familia/`. Revisión independiente hecha y corregida.
 - **Esperando a Oscar:**
-  1. Cotejar en Logos los versículos clave (Gn 3:15, Is 9:6, Lc 1:46-47, Mt 1:23, Lc 2:11, todos NTV), Dt 6:7 (RVR1960,
-     en el post) y las estrofas de los cinco villancicos. Se escribieron de memoria: Logos solo está en su PC.
-  2. Elegir portada (provisional: la Z-Image de la corona en la cocina).
-  3. ¿El #32 (neognosticismo) debe aparecer en la lista de la caja de serie? Nunca estuvo.
-  4. Decir «publícalo». Luego: programar los cinco correos (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
+  1. **Cotejo con Logos (pedido de Oscar el 11-nov: «coteja tú»).** Debe hacerse en una sesión que corra en la PC de
+     Oscar (app de escritorio o `claude remote-control`), donde existe el conector `mcp__logos__*`; la nube no lo
+     alcanza. NTV exacta por Logos Web (`LLS:NTV`), según `references/logos.md` del skill sermon-oims. Textos, todos
+     dentro de `class="clave__txt"` en `recursos/adviento/src/`:
+     - `adviento-01-esperanza.html` · Génesis 3:15 (NTV)
+     - `adviento-02-paz.html` · Isaías 9:6 (NTV)
+     - `adviento-03-gozo.html` · Lucas 1:46-47 (NTV; empieza en «Oh, cuánto alaba…»)
+     - `adviento-04-amor.html` · Mateo 1:23 (NTV)
+     - `adviento-05-cristo.html` · Lucas 2:11 (NTV)
+     - Post #64 · Deuteronomio 6:7 (RVR1960, `get_bible_text` del conector sirve)
+     - Villancicos (`class="canto__letra"`): «Oh ven, oh ven, Emanuel», «Noche de paz», «Ángeles cantando están»,
+       «Venid, fieles todos», «Al mundo paz». Cotejar con el himnario que usa su iglesia.
+     Después: `node scripts/adviento-pdf.mjs`, commit y push.
+  2. Decir «publícalo». Luego: programar los cinco correos (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
+- **Decidido el 11-nov:** portada = candidata 2 (Z-Image, corona en la cocina). Se dice «cinco pequeños
+  devocionales», nunca «encuentros». El #32 sigue sin listarse en la caja de serie (decisión del 30-oct: no
+  promoverlo); solo lleva el enlace al calendario en su propia caja.
 - **Reglas nuevas de Oscar (11-nov):** «Secundum Fidem» siempre como #SecundumFidem; citas bíblicas con Logos;
   los PDF se le muestran como imágenes JPG por página (anotado en el skill del blog).
 
