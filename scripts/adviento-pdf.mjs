@@ -92,7 +92,11 @@ for (const nombre of nombres) {
   for (const [tipo, txt] of conteo) { const n = palabras(txt); leer += n; if (tipo === 'historia') historia += n; }
 
   const pdf = path.join(OUT, `${nombre}.pdf`);
-  const buf = await page.pdf({ path: pdf, format: 'Letter', printBackground: true, preferCSSPageSize: true });
+  // Fecha fija (mismo largo que la real): el PDF sale idéntico si el contenido no cambió,
+  // y git no ve cambios cada vez que se corre el script.
+  const buf = Buffer.from((await page.pdf({ format: 'Letter', printBackground: true, preferCSSPageSize: true }))
+    .toString('latin1').replace(/\/(CreationDate|ModDate) \(D:\d{14}/g, '/$1 (D:20261129000000'), 'latin1');
+  fs.writeFileSync(pdf, buf);
   const pags = contarPaginas(buf);
 
   const errores = [];
