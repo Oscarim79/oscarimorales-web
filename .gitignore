@@ -9,3 +9,4 @@ recursos/video/*/*.mp4
 .env.*
 # Dependencias que una sesión pueda instalar en la raíz (p. ej. tipografías de marca): no se suben
 node_modules/
+recursos/adviento/_*.pdf

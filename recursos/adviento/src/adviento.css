@@ -1,0 +1,149 @@
+/* Calendario de Adviento para llevar en familia — estilos compartidos
+   Marca Oscar I. Morales · Secundum Fidem (misma paleta y tipografías que las Guías de Estudio).
+   Pensado para imprimir en casa: fondo blanco, poca tinta, legible en blanco y negro.
+   Las tipografías las inyecta scripts/adviento-pdf.mjs (locales); aquí van los respaldos. */
+
+:root {
+  --noche: #0D1B2A;
+  --terracota: #C47E5A;
+  --terracota-600: #B06E4D;
+  --terracota-700: #9C5F40;
+  --crema-50: #FBF8F3;
+  --crema-100: #F5F0E8;
+  --crema-200: #ECE4D5;
+  --dorado: #B89A6A;
+  --dorado-700: #8E7549;
+  --niebla-700: #5F6D7C;
+  --rule: rgba(13, 27, 42, 0.16);
+  --serif: "Spectral", Georgia, serif;
+  --display: "Playfair Display", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
+}
+
+@page { size: letter; margin: 0.7in 0.85in 0.6in; }
+@page :first { margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: var(--serif); font-size: 11pt; line-height: 1.5; color: var(--noche); background: #fff; }
+
+/* ── Hojas: cada .hoja es una página. Si el contenido no cabe, el script lo detecta
+      porque el PDF sale con más páginas de las esperadas. ─────────────────────── */
+.hoja { display: flex; flex-direction: column; min-height: 9.55in; page-break-after: always; break-after: page; }
+.hoja:last-child { page-break-after: auto; break-after: auto; }
+
+/* ── Portada (primera página, a sangre, fondo claro) ──────────────────────────── */
+.portada { min-height: 10.9in; padding: 0 0.85in 0.6in; text-align: center; align-items: center; }
+.portada__banda { height: 10px; background: var(--terracota); margin: 0 -0.85in 0.75in; align-self: stretch; }
+.portada__eyebrow { font-family: var(--sans); font-weight: 800; font-size: 8.5pt; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--dorado-700); }
+.portada__recurso { font-family: var(--display); font-style: italic; font-size: 14pt; color: var(--niebla-700); margin-top: 8px; }
+.portada__corona { width: 4.6in; margin: 0.45in auto 0.2in; }
+.portada__sesion { font-family: var(--sans); font-weight: 700; font-size: 9pt; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--terracota-700); }
+.portada__fecha { font-family: var(--display); font-style: italic; font-size: 15pt; margin-top: 6px; }
+.portada__vela { font-family: var(--display); font-weight: 700; font-size: 58pt; line-height: 1; margin-top: 0.22in; letter-spacing: -0.01em; }
+.portada__tramo { font-family: var(--display); font-style: italic; font-size: 16pt; color: var(--terracota-700); margin-top: 12px; }
+.portada__regla { width: 64px; height: 1px; background: var(--dorado); margin: 0.3in auto; }
+.portada__nota { font-size: 10.5pt; color: var(--niebla-700); max-width: 4.8in; line-height: 1.5; }
+.portada__nota b { color: var(--noche); }
+.portada__pie { margin-top: auto; font-family: var(--sans); font-weight: 700; font-size: 8pt; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--niebla-700); }
+.portada__pie b { color: var(--terracota-700); }
+
+/* Corona (la dibuja adviento.js) */
+.corona { display: block; width: 100%; height: auto; }
+.corona__nombres { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 6px;
+  font-family: var(--sans); font-weight: 700; font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: #9aa3ad; }
+.corona__nombres .on { color: var(--noche); }
+.corona__nombres .hoy { color: var(--terracota-700); border-bottom: 2px solid var(--terracota); }
+
+/* ── Encabezado de las hojas interiores ───────────────────────────────────────── */
+.cab { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule);
+  padding-bottom: 6px; margin-bottom: 16px; font-family: var(--sans); font-weight: 700; font-size: 7.5pt;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--niebla-700); }
+.cab b { color: var(--terracota-700); }
+
+/* ── Momentos de la liturgia ──────────────────────────────────────────────────── */
+.momento { margin-bottom: 16px; page-break-inside: avoid; break-inside: avoid; }
+.momento__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.momento__n { font-family: var(--display); font-weight: 700; font-size: 20pt; line-height: 1; color: var(--terracota); min-width: 22px; }
+.momento__t { font-family: var(--display); font-weight: 700; font-size: 15pt; line-height: 1.1; }
+.momento__min { margin-left: auto; font-family: var(--sans); font-weight: 800; font-size: 7.5pt; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--niebla-700); border: 1px solid var(--rule); border-radius: 20px; padding: 2px 9px; white-space: nowrap; }
+.momento p + p { margin-top: 6px; }
+
+/* Rúbrica: instrucción para el adulto (no se lee en voz alta), como en la liturgia */
+.rubrica { font-family: var(--serif); font-style: italic; font-size: 10pt; color: var(--terracota-700); }
+.rubrica b { font-style: normal; font-weight: 600; }
+
+/* Diálogo responsorial */
+.dialogo { margin: 6px 0 0; }
+.dialogo p { padding-left: 74px; position: relative; }
+.dialogo .quien { position: absolute; left: 0; top: 1px; font-family: var(--sans); font-weight: 800; font-size: 7.5pt;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracota-700); }
+
+/* Versículo clave */
+.clave { background: var(--crema-50); border: 1px solid var(--rule); border-left: 3px solid var(--dorado); padding: 10px 16px 8px; margin-top: 8px; }
+.clave__txt { font-family: var(--display); font-style: italic; font-size: 13pt; line-height: 1.4; }
+.clave__ref { font-family: var(--sans); font-weight: 800; font-size: 7.5pt; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--dorado-700); margin-top: 5px; }
+.credito { font-size: 7.5pt; color: var(--niebla-700); margin-top: 4px; }
+
+/* Historia contada: letra un poco mayor para leer en voz alta */
+.historia { font-size: 11.5pt; line-height: 1.55; }
+.historia p + p { margin-top: 7px; text-indent: 0; }
+
+/* Niveles por edad: icono + texto (se distinguen sin color) */
+.niveles { display: grid; gap: 8px; }
+.nivel { border: 1px solid var(--rule); padding: 9px 14px 8px; break-inside: avoid; }
+.nivel__lbl { display: flex; align-items: center; gap: 7px; font-family: var(--sans); font-weight: 800; font-size: 7.6pt;
+  letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 4px; }
+.nivel__lbl::before { content: ""; width: 9px; height: 9px; background: var(--noche); flex: none; }
+.nivel[data-nivel="preescolar"] .nivel__lbl::before { border-radius: 50%; }
+.nivel[data-nivel="primaria"] .nivel__lbl::before { border-radius: 0; }
+.nivel[data-nivel="preadolescentes"] .nivel__lbl::before { width: 0; height: 0; background: none;
+  border-left: 5.5px solid transparent; border-right: 5.5px solid transparent; border-bottom: 10px solid var(--noche); }
+.nivel__pregunta { font-weight: 600; }
+.nivel__ayuda { font-style: italic; font-size: 9.8pt; color: var(--niebla-700); margin-top: 3px; }
+
+/* Canto */
+.canto { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: start; margin-top: 8px;
+  background: var(--crema-50); border: 1px solid var(--rule); padding: 10px 16px; }
+.canto__t { font-family: var(--sans); font-weight: 800; font-size: 7.6pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dorado-700); margin-bottom: 4px; }
+.canto__letra { font-style: italic; font-size: 10.5pt; line-height: 1.45; }
+.canto__link { font-family: var(--sans); font-weight: 700; font-size: 7.5pt; letter-spacing: 0.08em; color: var(--terracota-700);
+  text-decoration: none; border: 1px solid var(--terracota); padding: 5px 9px; white-space: nowrap; }
+
+/* Frase de la familia */
+.frase-familia { margin-top: 10px; border-top: 1px solid var(--dorado); border-bottom: 1px solid var(--dorado); padding: 11px 6px; text-align: center; }
+.frase-familia__lbl { font-family: var(--sans); font-weight: 800; font-size: 7.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dorado-700); margin-bottom: 5px; }
+.frase-familia p { font-family: var(--display); font-size: 12.5pt; line-height: 1.4; }
+.frase-familia .quien { font-family: var(--sans); font-weight: 800; font-size: 7.4pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracota-700); margin-right: 6px; }
+
+/* ── Recortable ───────────────────────────────────────────────────────────────── */
+.recortable { align-items: center; text-align: center; }
+.recortable__t { font-family: var(--display); font-weight: 700; font-size: 20pt; margin-top: 4px; }
+.recortable__s { font-size: 10.5pt; color: var(--niebla-700); max-width: 5.2in; margin: 6px auto 0; }
+.recortable__pieza { position: relative; margin: 0.3in auto 0; border: 2px dashed #8a949e; border-radius: 14px; padding: 0.3in 0.35in 0.2in; width: 5.6in; }
+.recortable__pieza::before { content: "✂"; position: absolute; top: -15px; left: 22px; background: #fff; padding: 0 6px; font-size: 18px; color: #6b7682; }
+.recortable__pieza svg { display: block; width: 100%; height: auto; }
+.recortable__pestana { margin-top: 0.12in; border-top: 1.5px dashed #8a949e; padding-top: 6px; font-family: var(--sans); font-weight: 700;
+  font-size: 7.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--niebla-700); }
+.recortable__rotulo { font-family: var(--display); font-style: italic; font-size: 14pt; margin-top: 8px; }
+
+/* ── Guía para papás ──────────────────────────────────────────────────────────── */
+.guia-h { font-family: var(--display); font-weight: 700; font-size: 14pt; margin: 14px 0 5px; }
+.guia-h small { display: block; font-family: var(--sans); font-weight: 800; font-size: 7.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--terracota-600); margin-bottom: 3px; }
+.lista { list-style: none; }
+.lista li { position: relative; padding-left: 18px; margin-bottom: 4px; }
+.lista li::before { content: "•"; position: absolute; left: 4px; color: var(--terracota); font-weight: 700; }
+.tabla { width: 100%; border-collapse: collapse; font-size: 9.8pt; margin-top: 6px; }
+.tabla th { font-family: var(--sans); font-weight: 800; font-size: 7.2pt; letter-spacing: 0.14em; text-transform: uppercase; text-align: left;
+  color: var(--niebla-700); border-bottom: 1.5px solid var(--noche); padding: 5px 6px; }
+.tabla td { border-bottom: 1px solid var(--rule); padding: 5px 6px; vertical-align: top; }
+.tabla td:first-child { white-space: nowrap; }
+
+/* ── Pie de las hojas interiores ──────────────────────────────────────────────── */
+.pie { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between;
+  font-family: var(--sans); font-weight: 700; font-size: 7pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--niebla-700); }
+.pie b { color: var(--terracota-700); }
