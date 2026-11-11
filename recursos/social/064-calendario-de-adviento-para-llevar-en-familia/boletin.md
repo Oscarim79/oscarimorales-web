@@ -9,7 +9,7 @@ Hola,
 
 Diciembre en Guatemala se llena antes de empezar, y muchas veces la Navidad se nos pasa corriendo frente a los ojos de nuestros hijos. Por eso preparé algo sencillo para este año.
 
-Es un Calendario de Adviento para llevar en familia. Son cinco pequeños devocionales de diez minutos, uno cada domingo de adviento y otro en Nochebuena. Cada uno trae la vela de la semana, una lectura de la Biblia, una historia para leer en voz alta, preguntas para preescolares, primaria y preadolescentes, una oración, un villancico y una pieza para armar un pesebre de papel. Van de la promesa en el Edén hasta el pesebre de Belén.
+Es un Calendario de Adviento para llevar en familia. Son cinco pequeños devocionales de diez minutos, uno cada domingo de adviento y otro en Nochebuena. Cada uno trae la vela de la semana, una lectura de la Biblia, una historia para leer en voz alta, preguntas para preescolares, primaria y preadolescentes, una oración, un canto para elegir (villancico, himno o canción actual) y una pieza para armar un pesebre de papel. Van de la promesa en el Edén hasta el pesebre de Belén.
 
 No hace falta prepararse ni ser maestro de escuela dominical. Basta con unas velas, una Biblia y unas tijeras. Todo es de descarga libre.
 
