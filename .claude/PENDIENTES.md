@@ -9,6 +9,21 @@
 
 ---
 
+## 📍 Dónde nos quedamos (11-nov-2026): Calendario de Adviento
+
+**Calendario de Adviento para llevar en familia** (rama `ccr-5fe6ee1c-4moqt2`, sin publicar). Cinco PDF de
+descarga libre: cuatro domingos (29-nov, 6, 13, 20-dic) y Nochebuena, tres edades por sesión, 10 minutos.
+Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `docs/superpowers/plans/2026-11-11-calendario-adviento.md`.
+- **Hecho (tareas 1 a 3 del plan):** estilos y script `node scripts/adviento-pdf.mjs` (imprime y verifica páginas,
+  peso y minutos de lectura), guía para papás (`recursos/adviento/adviento-00-guia-para-papas.pdf`) y sesión 1
+  Esperanza (`adviento-01-esperanza.pdf`, ~9 min).
+- **Esperando a Oscar:** que revise la sesión 1 y la guía (voz, tiempos, nivel de los niños) antes de escribir
+  las sesiones 2 a 5.
+- **Por verificar:** Génesis 3:15 en NTV y la letra de «Oh ven, oh ven, Emanuel» se escribieron de memoria.
+  Se añadió www.biblegateway.com a la red del entorno el 11-nov, pero en esta sesión aún no respondía.
+  El conector de Logos no está instalado en claude.ai.
+- **Sigue:** sesiones 2 a 5, post #64, pack social y cinco correos; publicar hacia el 22-nov.
+
 ## 📍 Dónde nos quedamos (4-nov-2026)
 
 **Se publicó el post #63 «Romanos 13 no es un cheque en blanco»** (Cultura y Actualidad · Iglesia), commit 0f6ccb1.
