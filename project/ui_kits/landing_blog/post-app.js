@@ -867,6 +867,15 @@
       window.wireSubscribe(document.getElementById('js-news-form'), {
         success: '¡Gracias! Revisa tu correo y confirma — al confirmar se abre tu lectura de bienvenida.'
       });
+      // Invitaciones a suscribirse dentro del texto de un post:
+      // <div class="prose__suscribir" data-tag="…"> … <form>…</form></div>
+      Array.prototype.forEach.call(document.querySelectorAll('.prose__suscribir form'), function (f) {
+        var box = f.closest('.prose__suscribir');
+        window.wireSubscribe(f, {
+          tag: (box && box.getAttribute('data-tag')) || ('post-' + (post.slug || post.n)),
+          success: '¡Gracias! Revisen su correo y confirmen la suscripción (y la carpeta de spam, por si acaso).'
+        });
+      });
     }
   }
 

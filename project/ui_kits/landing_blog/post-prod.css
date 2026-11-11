@@ -360,7 +360,82 @@ body { font-family: var(--font-body); }
   margin: 12px 0 0;
 }
 
+/* Invitación a suscribirse dentro del texto de un post (p. ej. el Calendario de Adviento).
+   Mismo aspecto que la tarjeta de la Guía de Estudio; post-app.js conecta el formulario
+   con Buttondown y usa data-tag como etiqueta del suscriptor. */
+.prose__html .prose__suscribir {
+  margin: 36px 0 8px;
+  background: var(--crema-50, #FBF8F3);
+  border: 1px solid var(--rule, rgba(13, 27, 42, 0.12));
+  border-top: 3px solid var(--terracota-500, #C47E5A);
+  border-radius: 3px;
+  padding: 28px 32px 24px;
+  box-shadow: var(--shadow-md, 0 4px 14px -6px rgba(13, 27, 42, 0.14));
+}
+.prose__html .prose__suscribir-eyebrow {
+  font-family: var(--font-descriptor), sans-serif;
+  font-weight: 800; font-size: 10px;
+  text-transform: uppercase; letter-spacing: var(--tracking-wider, 0.16em);
+  color: var(--dorado-700, #8E7549);
+  margin: 0 0 10px;
+}
+.prose__html .prose__suscribir-t {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(21px, 2.2vw, 26px);
+  line-height: 1.18;
+  letter-spacing: -0.008em;
+  color: var(--noche-800, #0D1B2A);
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+.prose__html .prose__suscribir-s {
+  font-family: var(--font-body);
+  font-size: 16px; line-height: 1.62;
+  margin: 0 0 18px;
+}
+.prose__suscribir-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.prose__suscribir-form input[type="email"] {
+  flex: 1 1 220px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--noche-800, #0D1B2A);
+  background: #fff;
+  border: 1px solid var(--rule-strong, rgba(13, 27, 42, 0.22));
+  border-radius: 2px;
+  padding: 12px 14px;
+}
+.prose__suscribir-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--terracota-500, #C47E5A);
+  box-shadow: 0 0 0 3px var(--focus-ring, rgba(196, 126, 90, 0.35));
+}
+.prose__suscribir-form button {
+  font-family: var(--font-descriptor), sans-serif;
+  font-weight: 800; font-size: 11px;
+  text-transform: uppercase; letter-spacing: var(--tracking-wider, 0.16em);
+  color: var(--crema-50, #FBF8F3);
+  background: var(--terracota-500, #C47E5A);
+  border: 0; border-radius: 2px;
+  padding: 13px 22px;
+  cursor: pointer;
+  transition: background var(--transition-fast, 140ms);
+}
+.prose__suscribir-form button:hover { background: var(--terracota-600, #B06E4D); }
+.prose__suscribir-form button:disabled { opacity: 0.6; cursor: wait; }
+.prose__html .prose__suscribir-fine {
+  font-family: var(--font-descriptor), sans-serif;
+  font-size: 12.5px; line-height: 1.55;
+  color: var(--niebla-700, #5F6D7C);
+  margin: 12px 0 0;
+}
+
 @media (max-width: 600px) {
+  .prose__html .prose__suscribir { padding: 24px 20px 22px; }
+  .prose__suscribir-form { flex-direction: column; }
+  .prose__suscribir-form button { width: 100%; }
+  /* En columna, flex-basis 220px se volvía altura: la casilla salía altísima. */
+  .prose__suscribir-form input[type="email"], .guia__form input[type="email"] { flex: none; }
   .guia__card { flex-direction: column; gap: 14px; padding: 24px 20px 22px; }
   .guia__form { flex-direction: column; }
   .guia__submit { width: 100%; }
