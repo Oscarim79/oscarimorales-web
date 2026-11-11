@@ -31,10 +31,18 @@ Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `
     5 Cristo: Al mundo paz · A Cristo coronad · Sólo en Jesús (Getty y Townend).
     Guía para papás, post #64 y boletín dicen ahora «un canto a elegir». Todo ✅. Commit `77fdf27`.
     JPG de las páginas cambiadas en `vista-previa/adviento-cotejo/` (no se sube: está en .gitignore).
+  - **Invitación a suscribirse al final del post** (pedido de Oscar): tarjeta `.prose__suscribir` con el estilo de
+    la Guía de Estudio, etiqueta de Buttondown `adviento-2026`; `post-app.js` conecta cualquier `.prose__suscribir`
+    que se pegue en un post (sirve para posts futuros). Probada en computadora y celular. Commit `62bd1c8`.
+  - Oscar confirmó: una sola publicación (el post con los seis PDF) + anuncio del boletín + los **cinco**
+    recordatorios semanales (`boletin-semanas.md`).
 - **Esperando a Oscar:**
   1. Comparar las cinco estrofas de villancicos (`class="canto__letra"`) con el himnario de su iglesia, y ver si
      ahí están «Alcancé salvación», «Oh amor de Dios» y «A Cristo coronad» (no los pude confirmar en línea).
-  2. Decir «publícalo». Luego: programar los cinco correos (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
+  2. **Publicación: Oscar quiere el viernes 13-nov en la tarde.** Recomendé las 6:00 p. m. (hora de Guatemala) en vez de
+     media tarde. Al publicar: cambiar `date` del post a `2026-11-13`, unir la rama a `main`, compilar, push,
+     verificar en vivo los seis PDF y la tarjeta de suscripción; anuncio del boletín ese día; programar los cinco
+     recordatorios (28-nov, 5, 12, 19 y 23-dic) y publicar en redes.
 - **Nota técnica de Logos Web (11-nov):** el «modo de Vista limitada» estaba apagado y se volvió a activar
   (Configuración). En la NTV los marcadores de versículo traen `data-datatype="bible+nlt"`: el lector del §5 de
   `references/logos.md` (sermon-oims) necesita `[data-datatype^="bible"]` en vez de `[data-datatype="bible"]`.
