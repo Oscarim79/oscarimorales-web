@@ -39,7 +39,8 @@ Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `
 - **Esperando a Oscar:**
   1. Comparar las cinco estrofas de villancicos (`class="canto__letra"`) con el himnario de su iglesia, y ver si
      ahí están «Alcancé salvación», «Oh amor de Dios» y «A Cristo coronad» (no los pude confirmar en línea).
-  2. **Publicación: viernes 13-nov a las 6:00 p. m. (confirmado por Oscar).** Quedó PROGRAMADA como tarea de la app
+  2. **Publicación: viernes 13-nov a las 12:30 p. m.** (Oscar lo cambió de 6 p. m. a 12:30 para dejar él programadas
+     las redes a las 6:00 p. m. antes de salir de la oficina). Quedó PROGRAMADA como tarea de la app
      (`publicar-calendario-adviento`, en «Programadas»; corre sola si la app está abierta, o al abrirla). Si Oscar
      encuentra algo en el himnario antes, se corrige en la rama: la tarea une lo que haya en ese momento. Lo que hace: cambiar `date` del post a `2026-11-13`, unir la rama a `main`, compilar, push,
      verificar en vivo los seis PDF y la tarjeta de suscripción; anuncio del boletín ese día; programar los cinco
