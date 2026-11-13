@@ -11,7 +11,16 @@
 
 ## 📍 Dónde nos quedamos (11-nov-2026): Calendario de Adviento
 
-**Calendario de Adviento para llevar en familia**: todo listo en la rama `ccr-5fe6ee1c-4moqt2`, **sin publicar**.
+**Calendario de Adviento para llevar en familia**: ✅ **publicado el 13-nov-2026 a las 12:30 y verificado en vivo**
+(tarea programada: rama `ccr-5fe6ee1c-4moqt2` unida a `main`, fecha del post 2026-11-13, commit `4233a18`; página,
+seis PDF, tarjeta de suscripción y fecha en posts-data.js responden bien en oscarimorales.com).
+- **Pendientes de Oscar (13-nov):**
+  (a) programar las redes para las 6:00 p. m. (caption.txt, facebook.txt, x.txt + post.jpg e historia.jpg);
+  (b) enviar el anuncio del boletín en Buttondown (`boletin.md`), cerca de las 6:00 p. m.;
+  (c) los cinco recordatorios de `boletin-semanas.md`: sáb 28-nov, sáb 5-dic, sáb 12-dic, sáb 19-dic y mié 23-dic.
+- Sigue pendiente comparar las estrofas con el himnario de su iglesia (punto 1 de abajo); si cambia algo, se corrige en `main`.
+
+Lo que sigue es el historial de la preparación:
 Spec: `docs/superpowers/specs/2026-11-11-calendario-adviento-design.md`. Plan: `docs/superpowers/plans/2026-11-11-calendario-adviento.md`.
 - **Hecho:** guía para papás y las cinco sesiones en `recursos/adviento/` (regenerar con `node scripts/adviento-pdf.mjs`);
   post #64 `content/posts/064-calendario-de-adviento-para-llevar-en-familia.html` (fecha provisional 22-nov, destacado);
