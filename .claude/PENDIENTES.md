@@ -31,9 +31,12 @@
 (tarea programada: rama `ccr-5fe6ee1c-4moqt2` unida a `main`, fecha del post 2026-11-13, commit `4233a18`; página,
 seis PDF, tarjeta de suscripción y fecha en posts-data.js responden bien en oscarimorales.com).
 - **Pendientes de Oscar (13-nov):**
-  (a) programar las redes para las 6:00 p. m. (caption.txt, facebook.txt, x.txt + post.jpg e historia.jpg);
-  (b) enviar el anuncio del boletín en Buttondown (`boletin.md`), cerca de las 6:00 p. m.;
+  (a) redes a las 6:00 p. m. del 13-nov: Oscar las publica él (textos e imágenes entregados en el chat);
+  (b) anuncio del boletín (`boletin.md`): Oscar dijo que lo enviaba la tarde del 13-nov (sin confirmar aún);
   (c) los cinco recordatorios de `boletin-semanas.md`: sáb 28-nov, sáb 5-dic, sáb 12-dic, sáb 19-dic y mié 23-dic.
+     **Avisos en Google Calendar `me@oscarimorales.com` a las 10:00 a. m. de cada fecha** («Blog: enviar recordatorio
+     de Adviento N · …»), con asunto y cuerpo listos para pegar. Ojo: 28-nov y 5-dic caen en sus vacaciones
+     (23-nov a 11-dic); Buttondown permite programar envíos (Send → Schedule), falta confirmar si en su plan gratis.
 - Sigue pendiente comparar las estrofas con el himnario de su iglesia (punto 1 de abajo); si cambia algo, se corrige en `main`.
 
 Lo que sigue es el historial de la preparación:
