@@ -32,7 +32,7 @@
 seis PDF, tarjeta de suscripción y fecha en posts-data.js responden bien en oscarimorales.com).
 - **Pendientes de Oscar (13-nov):**
   (a) redes a las 6:00 p. m. del 13-nov: Oscar las publica él (textos e imágenes entregados en el chat);
-  (b) anuncio del boletín (`boletin.md`): Oscar dijo que lo enviaba la tarde del 13-nov (sin confirmar aún);
+  (b) ✅ anuncio del boletín (`boletin.md`): Oscar lo envió la tarde del 13-nov (confirmado por él);
   (c) los cinco recordatorios de `boletin-semanas.md`: sáb 28-nov, sáb 5-dic, sáb 12-dic, sáb 19-dic y mié 23-dic.
      **Avisos en Google Calendar `me@oscarimorales.com` a las 10:00 a. m. de cada fecha** («Blog: enviar recordatorio
      de Adviento N · …»), con asunto y cuerpo listos para pegar. Ojo: 28-nov y 5-dic caen en sus vacaciones
