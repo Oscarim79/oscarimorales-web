@@ -9,7 +9,20 @@
 
 ---
 
-## 📍 Dónde nos quedamos (11-nov-2026): Calendario de Adviento
+## 📍 Dónde nos quedamos (13-nov-2026): post sobre Wes Huff programado
+
+**«¿Cancelado por un papel de hace diez años?»** (caso Wes Huff), aprobado por Oscar el 13-nov:
+⏰ **PROGRAMADO para el sábado 14-nov a las 4:00 p. m.** como tarea de la app `publicar-post-wes-huff`
+(en «Programadas»; modo Auto; corre sola si la app está abierta, o al abrirla).
+- El material está SOLO en esta computadora (no en GitHub): `programados/2026-11-14-wes-huff/`
+  (post .md, portada .jpg e INSTRUCCIONES.md). La tarea lo copia a `content/posts/` como n=065 y borra la carpeta.
+- Antes de publicar, la tarea busca novedades sobre Wes Huff desde el 13-nov; si las hay, NO publica y avisa a Oscar.
+- Después: pack social (sin video) y anota aquí la publicación. Redes y correo de Buttondown quedan para Oscar.
+- Ojo: el post no trae enlaces a sus fuentes (regla de Oscar desde el 30-oct). Se le planteó el 13-nov.
+
+---
+
+## Calendario de Adviento (11-nov-2026)
 
 **Calendario de Adviento para llevar en familia**: ✅ **publicado el 13-nov-2026 a las 12:30 y verificado en vivo**
 (tarea programada: rama `ccr-5fe6ee1c-4moqt2` unida a `main`, fecha del post 2026-11-13, commit `4233a18`; página,
