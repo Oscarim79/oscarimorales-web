@@ -21,6 +21,10 @@
 - 13-nov: se agregaron enlaces a fuentes comprobadas (17 en total). Con el OK de Oscar se corrigieron dos frases:
   «Lo borró TODO» → videos con títulos como «Su respuesta lo empeoró todo» (video real de YouTube), y las nuevas
   convulsiones de la niña fueron «ese mismo día» (martes), no «al día siguiente». El post final está listo.
+- 13-nov (tarde): Huff publicó una declaración en Facebook (rinde cuentas ante su pastor, ancianos y la junta de
+  Apologetics Canada, que hace una revisión a fondo; se aparta de comentarios públicos). Con el OK de Oscar se
+  actualizó el post en tres lugares (Lo que pasó, El problema debajo del problema, ¿Qué hacemos nosotros?), con
+  enlace a esa publicación. Las dos tareas del sábado e INSTRUCCIONES.md saben que eso ya está incorporado.
 - Revisión extra pedida por Oscar: tarea `revisar-noticias-wes-huff`, sábado 14-nov 10:00 a. m. (solo revisa y avisa; no publica).
 
 ---
