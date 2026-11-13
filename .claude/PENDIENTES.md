@@ -18,9 +18,9 @@
   (post .md, portada .jpg e INSTRUCCIONES.md). La tarea lo copia a `content/posts/` como n=065 y borra la carpeta.
 - Antes de publicar, la tarea busca novedades sobre Wes Huff desde el 13-nov; si las hay, NO publica y avisa a Oscar.
 - Después: pack social (sin video) y anota aquí la publicación. Redes y correo de Buttondown quedan para Oscar.
-- 13-nov: se agregaron 15 enlaces a fuentes comprobadas (sin cambiar el texto). Quedan dos frases por decidir con Oscar:
-  (a) el título «Lo borró TODO» no se encontró en ningún video real (propuesta: «Su respuesta lo empeoró todo», video real de YouTube);
-  (b) las nuevas convulsiones fueron el mismo martes, antes de la noche en el hospital, no «al día siguiente».
+- 13-nov: se agregaron enlaces a fuentes comprobadas (17 en total). Con el OK de Oscar se corrigieron dos frases:
+  «Lo borró TODO» → videos con títulos como «Su respuesta lo empeoró todo» (video real de YouTube), y las nuevas
+  convulsiones de la niña fueron «ese mismo día» (martes), no «al día siguiente». El post final está listo.
 - Revisión extra pedida por Oscar: tarea `revisar-noticias-wes-huff`, sábado 14-nov 10:00 a. m. (solo revisa y avisa; no publica).
 
 ---
