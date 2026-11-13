@@ -25,6 +25,9 @@
   Apologetics Canada, que hace una revisión a fondo; se aparta de comentarios públicos). Con el OK de Oscar se
   actualizó el post en tres lugares (Lo que pasó, El problema debajo del problema, ¿Qué hacemos nosotros?), con
   enlace a esa publicación. Las dos tareas del sábado e INSTRUCCIONES.md saben que eso ya está incorporado.
+- 13-nov (noche): pack social YA HECHO y entregado a Oscar en `recursos/social/065-cancelado-por-un-papel-de-hace-diez-anos/`
+  (post.jpg, historia.jpg, caption/facebook/x.txt y boletin.md). La tarea de las 4 p. m. no lo reescribe.
+  Oscar debe programar redes y enviar el correo DESPUÉS de las 4:00 p. m. del sábado (antes el enlace no abre).
 - Revisión extra pedida por Oscar: tarea `revisar-noticias-wes-huff`, sábado 14-nov 10:00 a. m. (solo revisa y avisa; no publica).
 
 ---
