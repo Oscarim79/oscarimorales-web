@@ -9,7 +9,26 @@
 
 ---
 
-## 📍 Dónde nos quedamos (13-nov-2026): post sobre Wes Huff programado
+## 📍 Dónde nos quedamos (16-nov-2026): post sobre Wes Huff PUBLICADO
+
+**«¿Cancelado por un papel de hace diez años?»** ✅ **publicado y verificado en vivo** (n=065, commit `8852179`).
+- Estaba programado para el sábado 14-nov a las 4:00 p. m. (primera prueba de publicar en fin de semana), pero la
+  tarea `publicar-post-wes-huff` no corrió ese día (la app no estaba abierta) y se ejecutó al abrirla el **lunes 16-nov**.
+  La fecha del post quedó como estaba aprobada: `2026-11-14`. Si Oscar prefiere que diga 16-nov, se cambia `date` y se recompila.
+  Lección: una tarea programada para fin de semana solo corre si la PC y la app están abiertas a esa hora.
+- Revisión de novedades (16-nov): nada nuevo después de la declaración de Huff del 13-nov; la junta de Apologetics Canada
+  sigue revisando sin resultado anunciado; ni Tyndale ni Wycliffe han dicho nada. Dato menor: según TheBlaze y Evangelical
+  Dark Web, el mismo viernes 13 (antes de su declaración) Huff volvió a abrir su sitio, su X y parte de sus videos
+  (163 de unos 401). El post dice en pasado que los cerró; sigue siendo cierto, pero no menciona que los reabrió.
+- Pack social ya estaba en `recursos/social/065-cancelado-por-un-papel-de-hace-diez-anos/` (commit `0bb5cfd`); no se tocó.
+- **Pendientes de Oscar:** (a) compartir en redes (mismo párrafo en Instagram, Facebook y X; imágenes post.jpg e historia.jpg);
+  (b) enviar el correo del boletín por Buttondown (asunto y cuerpo en `boletin.md`).
+- La revisión de las 10 a. m. del sábado (`revisar-noticias-wes-huff`) no dejó nota aquí; probablemente tampoco corrió.
+
+---
+
+## Post sobre Wes Huff — preparación (13-nov-2026)
+
 
 **«¿Cancelado por un papel de hace diez años?»** (caso Wes Huff), aprobado por Oscar el 13-nov:
 ⏰ **PROGRAMADO para el sábado 14-nov a las 4:00 p. m.** como tarea de la app `publicar-post-wes-huff`
