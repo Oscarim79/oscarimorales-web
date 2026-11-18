@@ -22,6 +22,8 @@
   (1:26, voz George 1.10, música integrada). Textos en `recursos/social/066-dar-gracias-no-tiene-pasaporte/reel.txt`.
   **APROBADO por Oscar el 18-nov** (segunda versión: voz con seseo latino y escenas sin huecos). Falta que lo suba el martes 24-nov
   a Reels (compartido a Facebook) y YouTube Shorts, con la etiqueta de IA y sin agregar otra música.
+- **Cómo retomar:** «¿en qué nos quedamos?». Lo siguiente es comprobar que el post salió el viernes 20-nov (si la app
+  estaba cerrada, sale al abrirla), que Oscar programó redes y envió el correo, y recordarle subir el video el martes 24-nov.
 - Historial del video: Oscar SÍ lo quiere, para guardarlo o repostear el martes 24-nov (Thanksgiving es el jueves 26). Propósito
   propuesto el 18-nov (falta su visto bueno antes del guion): que quien celebre o critique entienda que la fecha nació de
   gente que agradeció a Dios tras perder a la mitad de los suyos, y que dé gracias a Alguien; queda la frase
