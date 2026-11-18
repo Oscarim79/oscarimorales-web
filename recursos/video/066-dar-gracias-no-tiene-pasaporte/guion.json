@@ -1,0 +1,18 @@
+{
+  "post": 66,
+  "proposito": "Que quien celebre (o critique) Thanksgiving entienda que la fecha nació de gente que agradeció a Dios después de perder a la mitad de los suyos, y que dé gracias a Alguien, no al aire.",
+  "para_quien": "Familias guatemaltecas que van a poner la mesa el cuarto jueves de noviembre, creyentes o no, y quienes dicen que es otra copia de los gringos.",
+  "que_debe_quedar": "La gratitud no tiene pasaporte, pero sí tiene destinatario.",
+  "voz": "JBFqnCBsd6RMkjVDRZzb",
+  "musica": "Quiet instrumental underscore for a spoken reflection. Warm acoustic guitar with soft felt piano and gentle sustained strings. Slow, around 66 BPM, no drums, no percussion, no vocals. Begins light and slightly playful, turns sober and still in the middle, and opens into a warm, grateful, hopeful resolution in the final third. Sparse and unobtrusive, leaving room for a voice.",
+  "escenas": [
+    { "id": "gancho", "texto": "Cada noviembre se oye lo mismo en Guatemala: Thanksgiving es otra cosa que les copiamos a los gringos. Y casi siempre lo dice alguien que repartió dulces en Halloween y que pronto va a armar su árbol de Navidad." },
+    { "id": "pregunta", "texto": "El origen de una costumbre casi nunca es la razón por la que la aceptamos o la rechazamos. La pregunta que vale la pena es qué estaríamos celebrando." },
+    { "id": "barco", "texto": "En {1620|mil seiscientos veinte}, un barco llamado Mayflower zarpó de Inglaterra con {102|ciento dos} pasajeros. El primer invierno fue brutal. Enterraron a casi la mitad de los suyos." },
+    { "id": "cosecha", "texto": "Y aun así, cuando llegó la cosecha hicieron fiesta. Uno de ellos escribió: por la bondad de Dios, estamos lejos de la necesidad. Esta fecha no celebra que todo salió bien. Celebra que Dios sostuvo a su gente cuando casi nada salía bien." },
+    { "id": "libertad", "texto": "La Biblia no manda guardar ese jueves, y tampoco peca quien pone la mesa. Cada uno esté plenamente convencido en su propia mente." },
+    { "id": "destinatario", "texto": "Pero se puede tener la mesa llena y el corazón distraído. Decimos estoy agradecido, sin decir a quién. La gratitud bíblica tiene destinatario. Toda buena dádiva desciende de lo alto, y la mayor de todas ya nos fue dada en Cristo." },
+    { "id": "viernes", "texto": "Y cuidado con el comercio. El jueves decimos que tenemos suficiente, y el viernes nos convencen de lo contrario." },
+    { "id": "cierre", "texto": "Si este año pones la mesa, que cada uno nombre algo concreto que Dios le dio. La gratitud no tiene pasaporte, pero sí tiene destinatario." }
+  ]
+}
