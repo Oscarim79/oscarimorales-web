@@ -10,7 +10,7 @@ Oscar decide post por post. Los criterios están en la skill `blog-oims`, secci�
 |---|---|---|
 | #62 El 31 de octubre sin miedo | Sí | Final: `reel-062-sin-miedo-esencial-con-musica.mp4` |
 | #63 Romanos 13 no es un cheque en blanco | Sí (opción B: «El púlpito no es para la papeleta») | Carpeta `063-pulpito-no-papeleta`; aprobado por Oscar el 5-nov-2026; final: `reel-063-pulpito-no-papeleta-con-musica.mp4` |
-| #66 Dar gracias no tiene pasaporte | Sí (Oscar lo pidió el 18-nov-2026) | Carpeta `066-dar-gracias-no-tiene-pasaporte`; guion aprobado y video armado el 18-nov; final: `reel-066-dar-gracias-no-tiene-pasaporte-con-musica.mp4` (1:26, -14 LUFS). Falta que Oscar lo escuche. Sale el martes 24-nov |
+| #66 Dar gracias no tiene pasaporte | Sí (Oscar lo pidió el 18-nov-2026) | Carpeta `066-dar-gracias-no-tiene-pasaporte`; guion aprobado y video armado el 18-nov; final: `reel-066-dar-gracias-no-tiene-pasaporte-con-musica.mp4` (1:26, -14 LUFS). **Aprobado por Oscar el 18-nov** (segunda versión: voz con seseo y escenas sin huecos). Lo sube él el martes 24-nov |
 
 ## Pasos
 
