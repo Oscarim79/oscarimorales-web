@@ -9,7 +9,23 @@
 
 ---
 
-## 📍 Dónde nos quedamos (16-nov-2026): post sobre Wes Huff PUBLICADO
+## 📍 Dónde nos quedamos (18-nov-2026): post de Thanksgiving PROGRAMADO para el viernes 20-nov, 12:30 p. m.
+
+**«Dar gracias no tiene pasaporte»** (Thanksgiving; Cultura y Actualidad · Familia), aprobado por Oscar el 18-nov.
+- ⏰ Tarea de la app `publicar-post-dar-gracias` (en «Programadas»; corre sola si la app está abierta, o al abrirla).
+- El material está SOLO en esta computadora: `programados/2026-11-20-dar-gracias-no-tiene-pasaporte/` (post .md con
+  enlaces a fuentes y portada .jpg, la candidata 1 de FLUX). La tarea lo publica como n=066, hace el pack social y anota aquí.
+- Cambios pedidos por Oscar ya aplicados: Lincoln en una sola frase; su oración «por años empezaba con lo que me duele,
+  hoy empieza con gratitud»; en casa lo han celebrado solo en ocasiones y quiere adoptarlo por Alex y Sofi;
+  «creyentes de raíz puritana a quienes llamaban separatistas» se queda así.
+- **Video: Oscar SÍ lo quiere**, para guardarlo o repostear el martes 24-nov (Thanksgiving es el jueves 26). Propósito
+  propuesto el 18-nov (falta su visto bueno antes del guion): que quien celebre o critique entienda que la fecha nació de
+  gente que agradeció a Dios tras perder a la mitad de los suyos, y que dé gracias a Alguien; queda la frase
+  «La gratitud no tiene pasaporte, pero sí tiene destinatario».
+
+---
+
+## Dónde nos quedamos (16-nov-2026): post sobre Wes Huff PUBLICADO
 
 **«¿Cancelado por un papel de hace diez años?»** ✅ **publicado y verificado en vivo** (n=065, commit `8852179`).
 - Estaba programado para el sábado 14-nov a las 4:00 p. m. (primera prueba de publicar en fin de semana), pero la
