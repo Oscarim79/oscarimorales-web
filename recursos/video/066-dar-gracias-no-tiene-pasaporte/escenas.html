@@ -1,0 +1,312 @@
+<!doctype html>
+<!--
+  Escenas del video «Dar gracias no tiene pasaporte» (post 66) — Secundum Fidem · Oscar I. Morales
+  Propósito: que quien celebre o critique Thanksgiving dé gracias a Alguien, no al aire.
+  NO se abre a mano: lo maneja scripts/reel-render.mjs llamando a seek(t) en cada cuadro.
+-->
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../_comun/estilos.css">
+<style>
+.luz{position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(214,150,86,.26) 0,rgba(120,70,40,.1) 38%,transparent 66%)}
+.centro{position:absolute;left:0;right:0;text-align:center}
+/* calendario */
+.hoja{position:absolute;width:440px;height:420px;background:linear-gradient(170deg,#FBF8F2,#E6D8C0);border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.6);transform-origin:50% 0;overflow:hidden;text-align:center}
+.hoja u{display:block;text-decoration:none;background:var(--terra);color:var(--papel);font:800 36px/1 'Montserrat',sans-serif;letter-spacing:.2em;padding:26px 0}
+.hoja b{display:block;margin-top:14px;font:italic 700 196px/1 'Playfair Display',serif;color:var(--noche)}
+.hoja i{display:block;margin-top:22px;font:800 32px/1 'Montserrat',sans-serif;letter-spacing:.22em;color:var(--terra)}
+/* globo de chat */
+.globo{position:absolute;left:90px;right:150px;padding:38px 44px 42px;background:#F7F1E3;border-radius:36px 36px 36px 8px;box-shadow:0 24px 60px rgba(0,0,0,.55);font:italic 400 68px/1.16 'Playfair Display',serif;color:var(--noche);transform-origin:0 100%}
+.globo small{display:block;margin-bottom:14px;font:800 26px/1 'Montserrat',sans-serif;letter-spacing:.16em;color:var(--terra)}
+/* tarjetas con dibujo */
+.cosa{position:absolute;width:430px;height:520px;background:rgba(245,240,232,.08);border:2px solid rgba(196,126,90,.55);border-radius:18px;padding:34px 12px;text-align:center}
+.cosa u{display:block;text-decoration:none;font:800 38px/1.1 'Montserrat',sans-serif;letter-spacing:.13em;color:var(--papel)}
+.cosa svg{display:block;margin:26px auto 0}
+/* barco */
+#mar{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#anio{position:absolute;left:0;right:0;top:270px;text-align:center;font:italic 700 210px/1 'Playfair Display',serif;color:var(--papel);text-shadow:0 6px 40px rgba(0,0,0,.6)}
+#frio{position:absolute;inset:0;background:linear-gradient(180deg,rgba(150,180,210,.34),rgba(13,27,42,.6))}
+#cruces{position:absolute;left:130px;right:130px;top:300px;display:flex;flex-wrap:wrap;gap:22px 30px;justify-content:center}
+#cruces svg{width:70px;height:96px}
+/* portada */
+.portada{position:absolute;left:0;top:0;transform-origin:0 0}
+#sombraP{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.9) 0,rgba(13,27,42,.45) 230px,rgba(13,27,42,.12) 520px,rgba(13,27,42,.5) 860px,#0D1B2A 1180px,#0D1B2A 1920px)}
+#sombraC{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.84) 0,rgba(13,27,42,.5) 200px,rgba(13,27,42,.1) 430px,rgba(13,27,42,.14) 760px,rgba(13,27,42,.84) 1020px,#0D1B2A 1190px,#0D1B2A 1920px)}
+#destello{position:absolute;inset:0;background:radial-gradient(circle at 700px 430px,#FFE7B0 0,rgba(255,196,110,.6) 14%,rgba(196,126,90,.2) 40%,transparent 64%)}
+.cuerpo{margin-top:22px;font:italic 400 68px/1.16 'Playfair Display',serif;color:var(--papel)}
+.cuerpo span{color:var(--terra-300)}
+/* ni mandamiento ni pecado */
+.lado{position:absolute;left:70px;right:70px;height:250px;border-radius:18px;padding:40px 30px;text-align:center;background:rgba(13,27,42,.82);border:2px solid var(--terra)}
+.lado u{display:block;text-decoration:none;font:800 30px/1.25 'Montserrat',sans-serif;letter-spacing:.17em;color:var(--terra-200)}
+.lado p{margin-top:14px;font:italic 400 84px/1.1 'Playfair Display',serif;color:var(--papel)}
+#sobre{position:absolute;left:290px;top:300px;width:500px;height:360px}
+#quien{position:absolute;left:0;right:0;top:880px;text-align:center;font:italic 700 150px/1 'Playfair Display',serif;color:var(--terra-300);text-shadow:0 6px 40px rgba(0,0,0,.6)}
+#etiqueta{position:absolute;left:560px;top:820px;width:420px;padding:30px 20px 34px;text-align:center;background:#B5261B;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.6);transform-origin:20% 0}
+#etiqueta b{display:block;font:800 120px/1 'Montserrat',sans-serif;color:#fff}
+#etiqueta i{display:block;margin-top:8px;font:800 40px/1 'Montserrat',sans-serif;letter-spacing:.2em;color:#FFE38A;font-style:normal}
+.nota{position:absolute;width:440px;text-align:center;font:italic 400 58px/1.14 'Playfair Display',serif;color:var(--papel)}
+/* cierre */
+#marca{position:absolute;left:64px;right:64px;top:250px;display:flex;align-items:center;gap:20px}
+#marca img{height:70px;width:auto;display:block}
+#marca b{display:block;font:800 22px/1 'Montserrat',sans-serif;letter-spacing:.18em;color:var(--crema);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+#marca i{display:block;margin-top:8px;font:italic 400 26px/1 'Playfair Display',serif;color:var(--terra-200);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.linea{position:absolute;left:64px;right:64px;font:italic 400 78px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+.linea em{color:var(--terra-300)}
+#cita{position:absolute;left:64px;right:64px;top:1000px;font:italic 400 98px/1.17 'Playfair Display',serif;color:var(--papel);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+#cita .cr{color:var(--terra-300)}
+#pie{position:absolute;left:64px;right:64px;top:1500px}
+#pie hr{border:0;width:76px;height:4px;background:var(--terra);margin-bottom:24px}
+#pie p{font:700 24px/1.3 'Montserrat',sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--terra-200)}
+</style></head><body>
+
+<!-- 1. gancho: el calendario y la queja -->
+<div class="esc" id="e-gancho">
+  <div class="luz"></div>
+  <div class="hoja" id="hojaG" style="left:320px;top:290px"><u>NOVIEMBRE</u><b>26</b><i>JUEVES</i></div>
+  <div class="globo" id="queja" style="top:800px"><small>EN EL CHAT FAMILIAR</small>«Otra cosa que les copiamos a los gringos»</div>
+  <div class="cosa" id="gH" style="left:80px;top:430px"><u>HALLOWEEN</u>
+    <svg width="300" height="300" viewBox="0 0 300 300"><path d="M150 70c-14-30 4-52 22-58" fill="none" stroke="#4E7A3A" stroke-width="16" stroke-linecap="round"/><ellipse cx="150" cy="180" rx="128" ry="104" fill="#E0812C" stroke="#8A4A12" stroke-width="8"/><path d="M150 78c-50 30-50 174 0 204M150 78c50 30 50 174 0 204" fill="none" stroke="#8A4A12" stroke-width="6"/><path d="M84 150l40 6-28 30zM216 150l-40 6 28 30z" fill="#2B1608"/><path d="M82 214c40 40 96 40 136 0l-22-6-20 16-26-14-26 14-20-16z" fill="#2B1608"/></svg></div>
+  <div class="cosa" id="gN" style="left:570px;top:430px"><u>NAVIDAD</u>
+    <svg width="300" height="320" viewBox="0 0 300 320"><rect x="128" y="250" width="44" height="54" fill="#6B4423"/><path d="M150 40l70 90h-36l62 76h-40l58 64H36l58-64H54l62-76H80z" fill="#2F6B45" stroke="#17402A" stroke-width="8" stroke-linejoin="round"/><path d="M150 6l10 22 24 3-18 16 5 24-21-12-21 12 5-24-18-16 24-3z" fill="#D6A348"/><circle cx="120" cy="150" r="10" fill="#E2573F"/><circle cx="186" cy="196" r="10" fill="#F2D98A"/><circle cx="110" cy="232" r="10" fill="#F2D98A"/><circle cx="170" cy="118" r="9" fill="#E2573F"/><circle cx="200" cy="246" r="10" fill="#E2573F"/></svg></div>
+</div>
+
+<!-- 2. la pregunta -->
+<div class="esc" id="e-pregunta">
+  <div class="luz"></div>
+  <div class="grande" id="pOrigen" style="top:380px;text-align:center;font-size:96px">El origen<br>casi nunca<br>es <em>la razón</em></div>
+  <div class="grande" id="pQue" style="top:420px;text-align:center;font-size:112px">¿Qué estaríamos <em>celebrando?</em></div>
+</div>
+
+<!-- 3. el barco y el invierno -->
+<div class="esc" id="e-barco">
+  <svg id="mar" viewBox="0 0 1080 1920">
+    <defs><linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1B2A"/><stop offset=".55" stop-color="#274B66"/><stop offset=".72" stop-color="#C98F5E"/></linearGradient></defs>
+    <rect width="1080" height="1160" fill="url(#cielo)"/>
+    <g id="nave">
+      <path d="M330 900h440l-50 120H400z" fill="#5A3B23" stroke="#2B1D12" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M300 900h500" stroke="#2B1D12" stroke-width="14" stroke-linecap="round"/>
+      <path d="M450 900V560M560 900V500M670 900V590" stroke="#2B1D12" stroke-width="12" stroke-linecap="round"/>
+      <path d="M390 610q60 20 120 0l10 130q-70 24-140 0zM490 540q70 24 140 0l14 170q-84 28-168 0zM620 630q50 18 100 0l8 120q-58 20-116 0z" fill="#F2E9D6" stroke="#8E7A5C" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M560 500l60 16-60 16z" fill="#C47E5A"/>
+      <path d="M330 900l-90-60" stroke="#2B1D12" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <path id="ola1" d="M-200 1010q50-34 100 0t100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0V1300H-200z" fill="#14304A"/>
+    <path id="ola2" d="M-200 1070q50-30 100 0t100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0V1920H-200z" fill="#0D1B2A"/>
+  </svg>
+  <div id="anio">1620</div>
+  <div class="carta" id="bPas" style="top:1120px"><div class="ceja">MAYFLOWER</div><div class="cuerpo"><span>102</span> pasajeros</div></div>
+  <div id="frio"></div>
+  <canvas id="nieve" width="1080" height="1920"></canvas>
+  <div class="grande" id="bInv" style="top:330px;text-align:center;font-size:100px">El primer invierno<br>fue <em>brutal</em></div>
+  <div id="cruces"></div>
+  <div class="grande" id="bMitad" style="top:1090px;text-align:center;font-size:84px">Enterraron a <em>casi la mitad</em></div>
+</div>
+
+<!-- 4. la cosecha -->
+<div class="esc" id="e-cosecha">
+  <img class="portada" id="portadaP" src="portada.jpg">
+  <div id="sombraP"></div>
+  <div class="ceja centro" id="cOtono" style="top:270px;font-size:34px">OTOÑO DE 1621</div>
+  <div class="grande" id="cFiesta" style="top:930px;text-align:center;font-size:104px">Y aun así,<br>hicieron <em>fiesta</em></div>
+  <div class="carta" id="cCarta" style="top:900px"><div class="ceja">EDWARD WINSLOW · 1621</div><div class="cuerpo">«Por la bondad de Dios estamos tan <span>lejos de la necesidad»</span></div></div>
+  <div class="grande" id="cNo" style="top:900px;text-align:center;font-size:84px">No celebra que<br>todo salió bien</div>
+  <div class="grande" id="cSi" style="top:900px;text-align:center;font-size:84px">Celebra que<br><em>Dios sostuvo<br>a su gente</em></div>
+</div>
+
+<!-- 5. libertad de conciencia -->
+<div class="esc" id="e-libertad">
+  <div class="luz"></div>
+  <div class="lado" id="lMan" style="top:290px"><u>GUARDAR ESE JUEVES</u><p>Ni mandamiento</p></div>
+  <div class="lado" id="lPec" style="top:580px"><u>PONER LA MESA</u><p>Ni pecado</p></div>
+  <div class="carta" id="lCarta" style="top:900px"><div class="ceja">ROMANOS 14:5</div><div class="cuerpo">«Cada uno esté plenamente convencido <span>en su propia mente»</span></div></div>
+</div>
+
+<!-- 6. el destinatario -->
+<div class="esc" id="e-dest">
+  <div class="luz"></div>
+  <div class="grande" id="dMesa" style="top:400px;text-align:center;font-size:104px">Mesa llena,<br><em>corazón distraído</em></div>
+  <div class="globo" id="dGlobo" style="top:380px">«Estoy agradecido…»</div>
+  <div id="quien">¿A quién?</div>
+  <svg id="sobre" viewBox="0 0 500 360"><rect x="12" y="12" width="476" height="336" rx="18" fill="#F7F1E3" stroke="#3B2A1E" stroke-width="10"/><path d="M14 22l236 180L486 22" fill="none" stroke="#3B2A1E" stroke-width="10" stroke-linejoin="round"/><path d="M14 340l170-150M486 340L316 190" stroke="#B9A689" stroke-width="8" stroke-linecap="round"/><path d="M250 250c-14-22-42-24-50-6-8 18 16 38 50 60 34-22 58-42 50-60-8-18-36-16-50 6z" fill="#C47E5A"/></svg>
+  <div class="grande" id="dDest" style="top:740px;text-align:center;font-size:92px">La gratitud bíblica tiene <em>destinatario</em></div>
+  <div class="carta" id="dCarta" style="top:300px"><div class="ceja">SANTIAGO 1:17</div><div class="cuerpo">«Toda buena dádiva… <span>desciende de lo alto»</span></div></div>
+  <div class="grande" id="dCristo" style="top:860px;text-align:center;font-size:88px">Y la mayor de todas<br>ya nos fue dada<br><em>en Cristo</em></div>
+</div>
+
+<!-- 7. cuidado con el viernes -->
+<div class="esc" id="e-viernes">
+  <div class="luz"></div>
+  <div class="ceja centro" id="vCeja" style="top:270px;font-size:36px">CUIDADO CON EL COMERCIO</div>
+  <div class="hoja" id="vJ" style="left:70px;top:370px"><u>JUEVES</u><b>26</b><i>GRACIAS</i></div>
+  <div class="nota" id="vJn" style="left:70px;top:830px">«Tenemos<br>suficiente»</div>
+  <div class="hoja" id="vV" style="left:570px;top:370px"><u style="background:#B5261B">VIERNES</u><b>27</b><i style="color:#B5261B">OFERTAS</i></div>
+  <div id="etiqueta"><b>-50%</b><i>¿TE FALTA?</i></div>
+</div>
+
+<!-- 8. cierre con la portada -->
+<div class="esc" id="e-cierre">
+  <img class="portada" id="portadaC" src="portada.jpg">
+  <div id="sombraC"></div>
+  <div id="destello"></div>
+  <div id="marca"><img src="../../social/assets/icono-crema.png"><div><b>OSCAR I. MORALES</b><i>Secundum Fidem</i></div></div>
+  <div class="linea" id="z1" style="top:960px">Que cada uno nombre <em>algo concreto</em></div>
+  <div class="linea" id="z2" style="top:1180px">que <em>Dios le dio</em>.</div>
+  <div id="cita"></div>
+  <div id="pie"><hr><p>El post completo en oscarimorales.com</p></div>
+</div>
+
+<canvas id="brasas" width="1080" height="1920"></canvas>
+<div id="sub"></div>
+
+<script src="../_comun/motor.js"></script>
+<script>
+const tCita = W('cierre', 'La');
+const subtitulos = crearSubtitulos(tCita - .05);
+
+// cita final, palabra por palabra: «La gratitud no tiene pasaporte, pero sí tiene destinatario.»
+const pCita = T.palabras.filter(p => p.ini >= tCita);
+const iCr = pCita.findIndex(p => p.texto === 'pero');
+$('cita').innerHTML = pCita.map((p, i) => `<span class="${i >= iCr ? 'cr' : ''}">${p.texto}</span>`).join(' ');
+const sCita = [...$('cita').children];
+
+// 23 cruces sencillas
+$('cruces').innerHTML = Array.from({ length: 24 }, () => '<svg viewBox="0 0 70 96"><path d="M35 6v84M12 32h46" stroke="#F5F0E8" stroke-width="10" stroke-linecap="round"/></svg>').join('');
+const sCruces = [...$('cruces').children];
+const ctxN = $('nieve').getContext('2d');
+
+const tThanks = W('gancho', 'Thanksgiving') - .15, tY = W('gancho', 'Y') - .1, tDulces = W('gancho', 'dulces') - .2, tArbol = W('gancho', 'árbol') - .2;
+const tPreg = W('pregunta', 'La') - .1;
+const tZarpo = W('barco', 'un') - .1, t102 = W('barco', '102') - .2, tInv = W('barco', 'El') - .15, tEnt = W('barco', 'Enterraron') - .1;
+const tUno = W('cosecha', 'Uno') - .1, tBondad = W('cosecha', 'por') - .15, tEsta = W('cosecha', 'Esta') - .1, tCelebra = W('cosecha', 'Celebra') - .1;
+const tNoManda = W('libertad', 'no') - .15, tTampoco = W('libertad', 'tampoco') - .15, tCadaUno = W('libertad', 'Cada') - .1;
+const tDecimos = W('destinatario', 'Decimos') - .1, tSin = W('destinatario', 'sin') - .1, tGrat = W('destinatario', 'La') - .1, tToda = W('destinatario', 'Toda') - .1, tMayor = W('destinatario', 'y', 1) - .1;
+const tJue = W('viernes', 'El') - .1, tSuf = W('viernes', 'tenemos') - .1, tVie = W('viernes', 'y') - .1, tConv = W('viernes', 'convencen') - .1;
+const tQue = W('cierre', 'que') - .1, tDios = W('cierre', 'que', 1) - .1;
+
+function portada(el, t, t0, alto, cx, dy = 0) {
+  const z = 1 + (t - t0) * .005, h = alto * z, w = h * 1344 / 768;
+  el.style.width = `${w}px`; el.style.height = `${h}px`;
+  el.style.transform = `translate(${540 - w * cx}px,${(alto - h) * .5 + dy}px)`;
+}
+function pop(el, t, a, b = 1e3) {
+  const k = pr(t, a, .42), o = 1 - pr(t, b, .3);
+  el.style.display = k && o ? '' : 'none';
+  el.style.opacity = eo(cl(k * 2)) * o;
+  return k;
+}
+
+window.seek = function (t) {
+  // 1 gancho
+  if (ver($('e-gancho'), t, -1, E.pregunta.ini - .1)) {
+    const parte1 = t < tY - .15;
+    const h = $('hojaG');
+    h.style.display = parte1 ? '' : 'none';
+    const k = eo(pr(t, 0, .6));
+    h.style.transform = `translateY(${(1 - k) * 80}px) rotate(${Math.sin(t * 1.3) * .8}deg)`;
+    h.style.opacity = k * (1 - pr(t, tY - .45, .3));
+    const q = $('queja');
+    const kq = pop(q, t, tThanks, tY - .45);
+    q.style.transform = `scale(${.7 + rebote(kq) * .3})`;
+    [['gH', tDulces], ['gN', tArbol]].forEach(([id, a]) => {
+      const kk = pop($(id), t, a);
+      $(id).style.transform = `scale(${.86 + rebote(kk) * .14}) rotate(${Math.sin(t * 1.1 + a) * 1.2}deg)`;
+    });
+  }
+
+  // 2 la pregunta
+  if (ver($('e-pregunta'), t, E.pregunta.ini - .1, E.barco.ini - .1)) {
+    ver($('pOrigen'), t, E.pregunta.ini, tPreg - .1, .3);
+    ver($('pQue'), t, tPreg, 1e3, .3);
+    $('pQue').style.transform = `scale(${1 + (t - tPreg) * .012})`;
+  }
+
+  // 3 el barco y el invierno
+  if (ver($('e-barco'), t, E.barco.ini - .1, E.cosecha.ini - .1)) {
+    const d = t - E.barco.ini;
+    $('nave').setAttribute('transform', `translate(${-260 + d * 26},${Math.sin(t * 1.6) * 10}) rotate(${Math.sin(t * 1.3) * 1.6} 550 900)`);
+    $('ola1').setAttribute('transform', `translate(${(t * 40) % 200},${Math.sin(t * 1.4) * 6})`);
+    $('ola2').setAttribute('transform', `translate(${-((t * 55) % 200) + 200},${Math.cos(t * 1.2) * 6})`);
+    const inv = pr(t, tInv, .8);
+    $('anio').style.opacity = eo(pr(t, E.barco.ini, .4)) * (1 - inv);
+    pop($('bPas'), t, t102, tInv);
+    $('frio').style.opacity = inv;
+    ctxN.clearRect(0, 0, 1080, 1920);
+    if (inv) for (let i = 0; i < 90; i++) {
+      const f = (t * (.12 + azar(i, 3) * .16) + azar(i, 5)) % 1;
+      ctxN.fillStyle = `rgba(245,240,232,${(.35 + azar(i, 7) * .5) * inv})`;
+      ctxN.beginPath(); ctxN.arc(azar(i, 9) * 1080 + Math.sin(t + i) * 30, f * 1400 - 20, 3 + azar(i, 11) * 5, 0, 7); ctxN.fill();
+    }
+    ver($('bInv'), t, tInv, tEnt - .1, .3);
+    $('nave').style.opacity = 1 - .7 * pr(t, tEnt - .2, .4);
+    sCruces.forEach((s, i) => { s.style.opacity = pr(t, tEnt + i * .045, .2); });
+    $('cruces').style.display = t >= tEnt ? '' : 'none';
+    ver($('bMitad'), t, tEnt + .5, 1e3, .3);
+  }
+
+  // 4 la cosecha
+  if (ver($('e-cosecha'), t, E.cosecha.ini - .1, E.libertad.ini - .1)) {
+    portada($('portadaP'), t, E.cosecha.ini, 1100, .55, 60);
+    $('cOtono').style.opacity = eo(pr(t, E.cosecha.ini, .4));
+    ver($('cFiesta'), t, E.cosecha.ini, tUno, .3);
+    pop($('cCarta'), t, tBondad, tEsta - .2);
+    if (t >= tBondad && t < tEsta) entra($('cCarta'), t, tBondad, 34), ($('cCarta').style.opacity = 1 - pr(t, tEsta - .2, .3));
+    ver($('cNo'), t, tEsta, tCelebra - .1, .3);
+    ver($('cSi'), t, tCelebra, 1e3, .3);
+  }
+
+  // 5 libertad de conciencia
+  if (ver($('e-libertad'), t, E.libertad.ini - .1, E.destinatario.ini - .1)) {
+    $('lMan').style.display = t >= tNoManda ? '' : 'none';
+    $('lPec').style.display = t >= tTampoco ? '' : 'none';
+    $('lCarta').style.display = t >= tCadaUno ? '' : 'none';
+    if (t >= tNoManda) entra($('lMan'), t, tNoManda, 40);
+    if (t >= tTampoco) entra($('lPec'), t, tTampoco, 40);
+    if (t >= tCadaUno) entra($('lCarta'), t, tCadaUno, 34);
+  }
+
+  // 6 el destinatario
+  if (ver($('e-dest'), t, E.destinatario.ini - .1, E.viernes.ini - .1)) {
+    ver($('dMesa'), t, E.destinatario.ini, tDecimos - .1, .3);
+    const kg = pop($('dGlobo'), t, tDecimos, tGrat - .25);
+    $('dGlobo').style.transform = `scale(${.7 + rebote(kg) * .3})`;
+    const kq = pop($('quien'), t, tSin + .45, tGrat - .25);
+    $('quien').style.transform = `scale(${1.5 - .5 * eo(kq)})`;
+    const ks = pop($('sobre'), t, tGrat, tToda - .25);
+    $('sobre').style.transform = `translateY(${(1 - rebote(ks)) * 50}px) rotate(${Math.sin(t * 1.4) * 2}deg)`;
+    ver($('dDest'), t, tGrat + .15, tToda - .1, .3);
+    $('dCarta').style.display = t >= tToda ? '' : 'none';
+    if (t >= tToda) entra($('dCarta'), t, tToda, 34);
+    ver($('dCristo'), t, tMayor, 1e3, .3);
+  }
+
+  // 7 cuidado con el viernes
+  if (ver($('e-viernes'), t, E.viernes.ini - .1, E.cierre.ini - .1)) {
+    $('vCeja').style.opacity = eo(pr(t, E.viernes.ini, .4));
+    const kj = pop($('vJ'), t, E.viernes.ini + .2);
+    $('vJ').style.transform = `translateY(${(1 - rebote(kj)) * 60}px) rotate(-2deg)`;
+    $('vJn').style.opacity = eo(pr(t, tSuf, .3));
+    const kv = pop($('vV'), t, tVie);
+    $('vV').style.transform = `translateY(${(1 - rebote(kv)) * 60}px) rotate(2deg)`;
+    const ke = pop($('etiqueta'), t, tConv);
+    $('etiqueta').style.transform = `rotate(${8 + Math.sin(t * 3) * 3}deg) scale(${1.6 - .6 * eo(ke)})`;
+  }
+
+  // 8 cierre: la portada con luz
+  if (ver($('e-cierre'), t, E.cierre.ini - .1, 1e3, .5)) {
+    portada($('portadaC'), t, E.cierre.ini, 1240, .58);
+    $('destello').style.opacity = .22 + .25 * Math.exp(-Math.max(0, t - tCita) * 1.5) * pr(t, tCita - .2, .2);
+    const antes = t < tCita - .2;
+    $('z1').style.display = antes && t >= tQue ? '' : 'none';
+    $('z2').style.display = antes && t >= tDios ? '' : 'none';
+    if (antes) { if (t >= tQue) entra($('z1'), t, tQue, 30); if (t >= tDios) entra($('z2'), t, tDios, 30); }
+    $('cita').style.display = antes ? 'none' : '';
+    $('pie').style.display = antes ? 'none' : '';
+    sCita.forEach((s, i) => { s.style.opacity = pr(t, pCita[i].ini - .1, .16); });
+    $('pie').style.opacity = eo(pr(t, T.duracion - .2, .6));
+  }
+
+  brasas(t, .5);
+  subtitulos(t);
+};
+window.seek(0);
+</script>
+</body></html>

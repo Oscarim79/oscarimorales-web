@@ -1,0 +1,1505 @@
+{
+ "duracion": 84.055,
+ "palabras": [
+  {
+   "texto": "Cada",
+   "escena": "gancho",
+   "ini": 0,
+   "fin": 0.255
+  },
+  {
+   "texto": "noviembre",
+   "escena": "gancho",
+   "ini": 0.313,
+   "fin": 0.755
+  },
+  {
+   "texto": "se",
+   "escena": "gancho",
+   "ini": 0.813,
+   "fin": 0.906
+  },
+  {
+   "texto": "oye",
+   "escena": "gancho",
+   "ini": 0.964,
+   "fin": 1.115
+  },
+  {
+   "texto": "lo",
+   "escena": "gancho",
+   "ini": 1.149,
+   "fin": 1.219
+  },
+  {
+   "texto": "mismo",
+   "escena": "gancho",
+   "ini": 1.265,
+   "fin": 1.521
+  },
+  {
+   "texto": "en",
+   "escena": "gancho",
+   "ini": 1.556,
+   "fin": 1.614
+  },
+  {
+   "texto": "Guatemala:",
+   "escena": "gancho",
+   "ini": 1.66,
+   "fin": 2.357
+  },
+  {
+   "texto": "Thanksgiving",
+   "escena": "gancho",
+   "ini": 2.821,
+   "fin": 3.425
+  },
+  {
+   "texto": "es",
+   "escena": "gancho",
+   "ini": 3.506,
+   "fin": 3.646
+  },
+  {
+   "texto": "otra",
+   "escena": "gancho",
+   "ini": 3.704,
+   "fin": 3.878
+  },
+  {
+   "texto": "cosa",
+   "escena": "gancho",
+   "ini": 3.936,
+   "fin": 4.203
+  },
+  {
+   "texto": "que",
+   "escena": "gancho",
+   "ini": 4.249,
+   "fin": 4.319
+  },
+  {
+   "texto": "les",
+   "escena": "gancho",
+   "ini": 4.354,
+   "fin": 4.47
+  },
+  {
+   "texto": "copiamos",
+   "escena": "gancho",
+   "ini": 4.528,
+   "fin": 4.946
+  },
+  {
+   "texto": "a",
+   "escena": "gancho",
+   "ini": 5.004,
+   "fin": 5.027
+  },
+  {
+   "texto": "los",
+   "escena": "gancho",
+   "ini": 5.062,
+   "fin": 5.178
+  },
+  {
+   "texto": "gringos.",
+   "escena": "gancho",
+   "ini": 5.224,
+   "fin": 5.851
+  },
+  {
+   "texto": "Y",
+   "escena": "gancho",
+   "ini": 6.316,
+   "fin": 6.385
+  },
+  {
+   "texto": "casi",
+   "escena": "gancho",
+   "ini": 6.467,
+   "fin": 6.676
+  },
+  {
+   "texto": "siempre",
+   "escena": "gancho",
+   "ini": 6.722,
+   "fin": 7.07
+  },
+  {
+   "texto": "lo",
+   "escena": "gancho",
+   "ini": 7.105,
+   "fin": 7.187
+  },
+  {
+   "texto": "dice",
+   "escena": "gancho",
+   "ini": 7.233,
+   "fin": 7.477
+  },
+  {
+   "texto": "alguien",
+   "escena": "gancho",
+   "ini": 7.535,
+   "fin": 7.837
+  },
+  {
+   "texto": "que",
+   "escena": "gancho",
+   "ini": 7.895,
+   "fin": 7.976
+  },
+  {
+   "texto": "repartió",
+   "escena": "gancho",
+   "ini": 8.034,
+   "fin": 8.44
+  },
+  {
+   "texto": "dulces",
+   "escena": "gancho",
+   "ini": 8.498,
+   "fin": 8.858
+  },
+  {
+   "texto": "en",
+   "escena": "gancho",
+   "ini": 8.916,
+   "fin": 8.975
+  },
+  {
+   "texto": "Halloween",
+   "escena": "gancho",
+   "ini": 9.044,
+   "fin": 9.52
+  },
+  {
+   "texto": "y",
+   "escena": "gancho",
+   "ini": 9.706,
+   "fin": 9.787
+  },
+  {
+   "texto": "que",
+   "escena": "gancho",
+   "ini": 9.868,
+   "fin": 9.95
+  },
+  {
+   "texto": "pronto",
+   "escena": "gancho",
+   "ini": 9.996,
+   "fin": 10.298
+  },
+  {
+   "texto": "va",
+   "escena": "gancho",
+   "ini": 10.344,
+   "fin": 10.437
+  },
+  {
+   "texto": "a",
+   "escena": "gancho",
+   "ini": 10.472,
+   "fin": 10.495
+  },
+  {
+   "texto": "armar",
+   "escena": "gancho",
+   "ini": 10.6,
+   "fin": 10.925
+  },
+  {
+   "texto": "su",
+   "escena": "gancho",
+   "ini": 10.983,
+   "fin": 11.076
+  },
+  {
+   "texto": "árbol",
+   "escena": "gancho",
+   "ini": 11.134,
+   "fin": 11.366
+  },
+  {
+   "texto": "de",
+   "escena": "gancho",
+   "ini": 11.424,
+   "fin": 11.471
+  },
+  {
+   "texto": "Navidad.",
+   "escena": "gancho",
+   "ini": 11.517,
+   "fin": 12.109
+  },
+  {
+   "texto": "El",
+   "escena": "pregunta",
+   "ini": 12.574,
+   "fin": 12.701
+  },
+  {
+   "texto": "origen",
+   "escena": "pregunta",
+   "ini": 12.759,
+   "fin": 13.038
+  },
+  {
+   "texto": "de",
+   "escena": "pregunta",
+   "ini": 13.084,
+   "fin": 13.131
+  },
+  {
+   "texto": "una",
+   "escena": "pregunta",
+   "ini": 13.189,
+   "fin": 13.328
+  },
+  {
+   "texto": "costumbre",
+   "escena": "pregunta",
+   "ini": 13.386,
+   "fin": 13.862
+  },
+  {
+   "texto": "casi",
+   "escena": "pregunta",
+   "ini": 13.92,
+   "fin": 14.152
+  },
+  {
+   "texto": "nunca",
+   "escena": "pregunta",
+   "ini": 14.21,
+   "fin": 14.477
+  },
+  {
+   "texto": "es",
+   "escena": "pregunta",
+   "ini": 14.512,
+   "fin": 14.582
+  },
+  {
+   "texto": "la",
+   "escena": "pregunta",
+   "ini": 14.64,
+   "fin": 14.698
+  },
+  {
+   "texto": "razón",
+   "escena": "pregunta",
+   "ini": 14.756,
+   "fin": 15.035
+  },
+  {
+   "texto": "por",
+   "escena": "pregunta",
+   "ini": 15.093,
+   "fin": 15.209
+  },
+  {
+   "texto": "la",
+   "escena": "pregunta",
+   "ini": 15.255,
+   "fin": 15.325
+  },
+  {
+   "texto": "que",
+   "escena": "pregunta",
+   "ini": 15.371,
+   "fin": 15.441
+  },
+  {
+   "texto": "la",
+   "escena": "pregunta",
+   "ini": 15.487,
+   "fin": 15.546
+  },
+  {
+   "texto": "aceptamos",
+   "escena": "pregunta",
+   "ini": 15.58,
+   "fin": 16.068
+  },
+  {
+   "texto": "o",
+   "escena": "pregunta",
+   "ini": 16.172,
+   "fin": 16.219
+  },
+  {
+   "texto": "la",
+   "escena": "pregunta",
+   "ini": 16.277,
+   "fin": 16.335
+  },
+  {
+   "texto": "rechazamos.",
+   "escena": "pregunta",
+   "ini": 16.393,
+   "fin": 17.171
+  },
+  {
+   "texto": "La",
+   "escena": "pregunta",
+   "ini": 17.577,
+   "fin": 17.67
+  },
+  {
+   "texto": "pregunta",
+   "escena": "pregunta",
+   "ini": 17.717,
+   "fin": 18.088
+  },
+  {
+   "texto": "que",
+   "escena": "pregunta",
+   "ini": 18.135,
+   "fin": 18.204
+  },
+  {
+   "texto": "vale",
+   "escena": "pregunta",
+   "ini": 18.251,
+   "fin": 18.425
+  },
+  {
+   "texto": "la",
+   "escena": "pregunta",
+   "ini": 18.471,
+   "fin": 18.541
+  },
+  {
+   "texto": "pena",
+   "escena": "pregunta",
+   "ini": 18.599,
+   "fin": 18.82
+  },
+  {
+   "texto": "es",
+   "escena": "pregunta",
+   "ini": 18.878,
+   "fin": 18.97
+  },
+  {
+   "texto": "qué",
+   "escena": "pregunta",
+   "ini": 19.028,
+   "fin": 19.133
+  },
+  {
+   "texto": "estaríamos",
+   "escena": "pregunta",
+   "ini": 19.168,
+   "fin": 19.667
+  },
+  {
+   "texto": "celebrando.",
+   "escena": "pregunta",
+   "ini": 19.713,
+   "fin": 20.433
+  },
+  {
+   "texto": "En",
+   "escena": "barco",
+   "ini": 21.072,
+   "fin": 21.211
+  },
+  {
+   "texto": "1620,",
+   "escena": "barco",
+   "ini": 21.269,
+   "fin": 22.511
+  },
+  {
+   "texto": "un",
+   "escena": "barco",
+   "ini": 22.616,
+   "fin": 22.709
+  },
+  {
+   "texto": "barco",
+   "escena": "barco",
+   "ini": 22.755,
+   "fin": 23.022
+  },
+  {
+   "texto": "llamado",
+   "escena": "barco",
+   "ini": 23.046,
+   "fin": 23.382
+  },
+  {
+   "texto": "Mayflower",
+   "escena": "barco",
+   "ini": 23.44,
+   "fin": 23.974
+  },
+  {
+   "texto": "zarpó",
+   "escena": "barco",
+   "ini": 24.079,
+   "fin": 24.381
+  },
+  {
+   "texto": "de",
+   "escena": "barco",
+   "ini": 24.427,
+   "fin": 24.474
+  },
+  {
+   "texto": "Inglaterra",
+   "escena": "barco",
+   "ini": 24.52,
+   "fin": 24.984
+  },
+  {
+   "texto": "con",
+   "escena": "barco",
+   "ini": 25.042,
+   "fin": 25.182
+  },
+  {
+   "texto": "102",
+   "escena": "barco",
+   "ini": 25.228,
+   "fin": 25.704
+  },
+  {
+   "texto": "pasajeros.",
+   "escena": "barco",
+   "ini": 25.762,
+   "fin": 26.505
+  },
+  {
+   "texto": "El",
+   "escena": "barco",
+   "ini": 27.144,
+   "fin": 27.295
+  },
+  {
+   "texto": "primer",
+   "escena": "barco",
+   "ini": 27.353,
+   "fin": 27.62
+  },
+  {
+   "texto": "invierno",
+   "escena": "barco",
+   "ini": 27.666,
+   "fin": 28.061
+  },
+  {
+   "texto": "fue",
+   "escena": "barco",
+   "ini": 28.119,
+   "fin": 28.247
+  },
+  {
+   "texto": "brutal.",
+   "escena": "barco",
+   "ini": 28.282,
+   "fin": 28.804
+  },
+  {
+   "texto": "Enterraron",
+   "escena": "barco",
+   "ini": 29.06,
+   "fin": 29.605
+  },
+  {
+   "texto": "a",
+   "escena": "barco",
+   "ini": 29.663,
+   "fin": 29.686
+  },
+  {
+   "texto": "casi",
+   "escena": "barco",
+   "ini": 29.744,
+   "fin": 29.977
+  },
+  {
+   "texto": "la",
+   "escena": "barco",
+   "ini": 30.023,
+   "fin": 30.081
+  },
+  {
+   "texto": "mitad",
+   "escena": "barco",
+   "ini": 30.128,
+   "fin": 30.406
+  },
+  {
+   "texto": "de",
+   "escena": "barco",
+   "ini": 30.429,
+   "fin": 30.488
+  },
+  {
+   "texto": "los",
+   "escena": "barco",
+   "ini": 30.534,
+   "fin": 30.65
+  },
+  {
+   "texto": "suyos.",
+   "escena": "barco",
+   "ini": 30.673,
+   "fin": 31.219
+  },
+  {
+   "texto": "Y",
+   "escena": "cosecha",
+   "ini": 31.683,
+   "fin": 31.788
+  },
+  {
+   "texto": "aun",
+   "escena": "cosecha",
+   "ini": 31.858,
+   "fin": 31.997
+  },
+  {
+   "texto": "así,",
+   "escena": "cosecha",
+   "ini": 32.043,
+   "fin": 32.415
+  },
+  {
+   "texto": "cuando",
+   "escena": "cosecha",
+   "ini": 32.45,
+   "fin": 32.717
+  },
+  {
+   "texto": "llegó",
+   "escena": "cosecha",
+   "ini": 32.74,
+   "fin": 32.96
+  },
+  {
+   "texto": "la",
+   "escena": "cosecha",
+   "ini": 33.007,
+   "fin": 33.077
+  },
+  {
+   "texto": "cosecha",
+   "escena": "cosecha",
+   "ini": 33.123,
+   "fin": 33.576
+  },
+  {
+   "texto": "hicieron",
+   "escena": "cosecha",
+   "ini": 33.634,
+   "fin": 34.005
+  },
+  {
+   "texto": "fiesta.",
+   "escena": "cosecha",
+   "ini": 34.063,
+   "fin": 34.609
+  },
+  {
+   "texto": "Uno",
+   "escena": "cosecha",
+   "ini": 35.015,
+   "fin": 35.224
+  },
+  {
+   "texto": "de",
+   "escena": "cosecha",
+   "ini": 35.271,
+   "fin": 35.352
+  },
+  {
+   "texto": "ellos",
+   "escena": "cosecha",
+   "ini": 35.399,
+   "fin": 35.631
+  },
+  {
+   "texto": "escribió:",
+   "escena": "cosecha",
+   "ini": 35.689,
+   "fin": 36.327
+  },
+  {
+   "texto": "por",
+   "escena": "cosecha",
+   "ini": 36.618,
+   "fin": 36.78
+  },
+  {
+   "texto": "la",
+   "escena": "cosecha",
+   "ini": 36.838,
+   "fin": 36.896
+  },
+  {
+   "texto": "bondad",
+   "escena": "cosecha",
+   "ini": 36.943,
+   "fin": 37.268
+  },
+  {
+   "texto": "de",
+   "escena": "cosecha",
+   "ini": 37.303,
+   "fin": 37.372
+  },
+  {
+   "texto": "Dios,",
+   "escena": "cosecha",
+   "ini": 37.419,
+   "fin": 37.86
+  },
+  {
+   "texto": "estamos",
+   "escena": "cosecha",
+   "ini": 37.976,
+   "fin": 38.359
+  },
+  {
+   "texto": "lejos",
+   "escena": "cosecha",
+   "ini": 38.44,
+   "fin": 38.707
+  },
+  {
+   "texto": "de",
+   "escena": "cosecha",
+   "ini": 38.754,
+   "fin": 38.8
+  },
+  {
+   "texto": "la",
+   "escena": "cosecha",
+   "ini": 38.847,
+   "fin": 38.905
+  },
+  {
+   "texto": "necesidad.",
+   "escena": "cosecha",
+   "ini": 38.951,
+   "fin": 39.671
+  },
+  {
+   "texto": "Esta",
+   "escena": "cosecha",
+   "ini": 40.31,
+   "fin": 40.577
+  },
+  {
+   "texto": "fecha",
+   "escena": "cosecha",
+   "ini": 40.635,
+   "fin": 40.89
+  },
+  {
+   "texto": "no",
+   "escena": "cosecha",
+   "ini": 40.936,
+   "fin": 41.017
+  },
+  {
+   "texto": "celebra",
+   "escena": "cosecha",
+   "ini": 41.052,
+   "fin": 41.412
+  },
+  {
+   "texto": "que",
+   "escena": "cosecha",
+   "ini": 41.459,
+   "fin": 41.551
+  },
+  {
+   "texto": "todo",
+   "escena": "cosecha",
+   "ini": 41.61,
+   "fin": 41.819
+  },
+  {
+   "texto": "salió",
+   "escena": "cosecha",
+   "ini": 41.865,
+   "fin": 42.109
+  },
+  {
+   "texto": "bien.",
+   "escena": "cosecha",
+   "ini": 42.155,
+   "fin": 42.573
+  },
+  {
+   "texto": "Celebra",
+   "escena": "cosecha",
+   "ini": 42.98,
+   "fin": 43.386
+  },
+  {
+   "texto": "que",
+   "escena": "cosecha",
+   "ini": 43.432,
+   "fin": 43.525
+  },
+  {
+   "texto": "Dios",
+   "escena": "cosecha",
+   "ini": 43.572,
+   "fin": 43.746
+  },
+  {
+   "texto": "sostuvo",
+   "escena": "cosecha",
+   "ini": 43.769,
+   "fin": 44.175
+  },
+  {
+   "texto": "a",
+   "escena": "cosecha",
+   "ini": 44.21,
+   "fin": 44.233
+  },
+  {
+   "texto": "su",
+   "escena": "cosecha",
+   "ini": 44.268,
+   "fin": 44.361
+  },
+  {
+   "texto": "gente",
+   "escena": "cosecha",
+   "ini": 44.408,
+   "fin": 44.779
+  },
+  {
+   "texto": "cuando",
+   "escena": "cosecha",
+   "ini": 44.86,
+   "fin": 45.162
+  },
+  {
+   "texto": "casi",
+   "escena": "cosecha",
+   "ini": 45.209,
+   "fin": 45.441
+  },
+  {
+   "texto": "nada",
+   "escena": "cosecha",
+   "ini": 45.499,
+   "fin": 45.731
+  },
+  {
+   "texto": "salía",
+   "escena": "cosecha",
+   "ini": 45.778,
+   "fin": 46.056
+  },
+  {
+   "texto": "bien.",
+   "escena": "cosecha",
+   "ini": 46.103,
+   "fin": 46.509
+  },
+  {
+   "texto": "La",
+   "escena": "libertad",
+   "ini": 46.915,
+   "fin": 47.02
+  },
+  {
+   "texto": "Biblia",
+   "escena": "libertad",
+   "ini": 47.066,
+   "fin": 47.368
+  },
+  {
+   "texto": "no",
+   "escena": "libertad",
+   "ini": 47.426,
+   "fin": 47.507
+  },
+  {
+   "texto": "manda",
+   "escena": "libertad",
+   "ini": 47.565,
+   "fin": 47.798
+  },
+  {
+   "texto": "guardar",
+   "escena": "libertad",
+   "ini": 47.844,
+   "fin": 48.181
+  },
+  {
+   "texto": "ese",
+   "escena": "libertad",
+   "ini": 48.227,
+   "fin": 48.355
+  },
+  {
+   "texto": "jueves,",
+   "escena": "libertad",
+   "ini": 48.39,
+   "fin": 48.924
+  },
+  {
+   "texto": "y",
+   "escena": "libertad",
+   "ini": 49.11,
+   "fin": 49.179
+  },
+  {
+   "texto": "tampoco",
+   "escena": "libertad",
+   "ini": 49.249,
+   "fin": 49.632
+  },
+  {
+   "texto": "peca",
+   "escena": "libertad",
+   "ini": 49.69,
+   "fin": 49.957
+  },
+  {
+   "texto": "quien",
+   "escena": "libertad",
+   "ini": 50.015,
+   "fin": 50.166
+  },
+  {
+   "texto": "pone",
+   "escena": "libertad",
+   "ini": 50.224,
+   "fin": 50.433
+  },
+  {
+   "texto": "la",
+   "escena": "libertad",
+   "ini": 50.468,
+   "fin": 50.526
+  },
+  {
+   "texto": "mesa.",
+   "escena": "libertad",
+   "ini": 50.572,
+   "fin": 51.025
+  },
+  {
+   "texto": "Cada",
+   "escena": "libertad",
+   "ini": 51.571,
+   "fin": 51.803
+  },
+  {
+   "texto": "uno",
+   "escena": "libertad",
+   "ini": 51.861,
+   "fin": 52.012
+  },
+  {
+   "texto": "esté",
+   "escena": "libertad",
+   "ini": 52.047,
+   "fin": 52.244
+  },
+  {
+   "texto": "plenamente",
+   "escena": "libertad",
+   "ini": 52.291,
+   "fin": 52.802
+  },
+  {
+   "texto": "convencido",
+   "escena": "libertad",
+   "ini": 52.86,
+   "fin": 53.417
+  },
+  {
+   "texto": "en",
+   "escena": "libertad",
+   "ini": 53.452,
+   "fin": 53.51
+  },
+  {
+   "texto": "su",
+   "escena": "libertad",
+   "ini": 53.556,
+   "fin": 53.649
+  },
+  {
+   "texto": "propia",
+   "escena": "libertad",
+   "ini": 53.696,
+   "fin": 53.986
+  },
+  {
+   "texto": "mente.",
+   "escena": "libertad",
+   "ini": 54.032,
+   "fin": 54.531
+  },
+  {
+   "texto": "Pero",
+   "escena": "destinatario",
+   "ini": 54.996,
+   "fin": 55.193
+  },
+  {
+   "texto": "se",
+   "escena": "destinatario",
+   "ini": 55.239,
+   "fin": 55.309
+  },
+  {
+   "texto": "puede",
+   "escena": "destinatario",
+   "ini": 55.355,
+   "fin": 55.588
+  },
+  {
+   "texto": "tener",
+   "escena": "destinatario",
+   "ini": 55.634,
+   "fin": 55.878
+  },
+  {
+   "texto": "la",
+   "escena": "destinatario",
+   "ini": 55.936,
+   "fin": 55.994
+  },
+  {
+   "texto": "mesa",
+   "escena": "destinatario",
+   "ini": 56.052,
+   "fin": 56.273
+  },
+  {
+   "texto": "llena",
+   "escena": "destinatario",
+   "ini": 56.307,
+   "fin": 56.656
+  },
+  {
+   "texto": "y",
+   "escena": "destinatario",
+   "ini": 56.818,
+   "fin": 56.899
+  },
+  {
+   "texto": "el",
+   "escena": "destinatario",
+   "ini": 56.946,
+   "fin": 57.016
+  },
+  {
+   "texto": "corazón",
+   "escena": "destinatario",
+   "ini": 57.074,
+   "fin": 57.41
+  },
+  {
+   "texto": "distraído.",
+   "escena": "destinatario",
+   "ini": 57.457,
+   "fin": 58.13
+  },
+  {
+   "texto": "Decimos",
+   "escena": "destinatario",
+   "ini": 58.478,
+   "fin": 58.85
+  },
+  {
+   "texto": "estoy",
+   "escena": "destinatario",
+   "ini": 58.908,
+   "fin": 59.14
+  },
+  {
+   "texto": "agradecido,",
+   "escena": "destinatario",
+   "ini": 59.175,
+   "fin": 59.872
+  },
+  {
+   "texto": "sin",
+   "escena": "destinatario",
+   "ini": 59.976,
+   "fin": 60.15
+  },
+  {
+   "texto": "decir",
+   "escena": "destinatario",
+   "ini": 60.185,
+   "fin": 60.429
+  },
+  {
+   "texto": "a",
+   "escena": "destinatario",
+   "ini": 60.475,
+   "fin": 60.499
+  },
+  {
+   "texto": "quién.",
+   "escena": "destinatario",
+   "ini": 60.557,
+   "fin": 60.951
+  },
+  {
+   "texto": "La",
+   "escena": "destinatario",
+   "ini": 61.416,
+   "fin": 61.509
+  },
+  {
+   "texto": "gratitud",
+   "escena": "destinatario",
+   "ini": 61.555,
+   "fin": 61.996
+  },
+  {
+   "texto": "bíblica",
+   "escena": "destinatario",
+   "ini": 62.043,
+   "fin": 62.437
+  },
+  {
+   "texto": "tiene",
+   "escena": "destinatario",
+   "ini": 62.496,
+   "fin": 62.728
+  },
+  {
+   "texto": "destinatario.",
+   "escena": "destinatario",
+   "ini": 62.774,
+   "fin": 63.622
+  },
+  {
+   "texto": "Toda",
+   "escena": "destinatario",
+   "ini": 64.167,
+   "fin": 64.411
+  },
+  {
+   "texto": "buena",
+   "escena": "destinatario",
+   "ini": 64.458,
+   "fin": 64.678
+  },
+  {
+   "texto": "dádiva",
+   "escena": "destinatario",
+   "ini": 64.725,
+   "fin": 65.05
+  },
+  {
+   "texto": "desciende",
+   "escena": "destinatario",
+   "ini": 65.108,
+   "fin": 65.537
+  },
+  {
+   "texto": "de",
+   "escena": "destinatario",
+   "ini": 65.584,
+   "fin": 65.653
+  },
+  {
+   "texto": "lo",
+   "escena": "destinatario",
+   "ini": 65.688,
+   "fin": 65.77
+  },
+  {
+   "texto": "alto,",
+   "escena": "destinatario",
+   "ini": 65.828,
+   "fin": 66.211
+  },
+  {
+   "texto": "y",
+   "escena": "destinatario",
+   "ini": 66.315,
+   "fin": 66.373
+  },
+  {
+   "texto": "la",
+   "escena": "destinatario",
+   "ini": 66.431,
+   "fin": 66.478
+  },
+  {
+   "texto": "mayor",
+   "escena": "destinatario",
+   "ini": 66.524,
+   "fin": 66.756
+  },
+  {
+   "texto": "de",
+   "escena": "destinatario",
+   "ini": 66.814,
+   "fin": 66.884
+  },
+  {
+   "texto": "todas",
+   "escena": "destinatario",
+   "ini": 66.931,
+   "fin": 67.232
+  },
+  {
+   "texto": "ya",
+   "escena": "destinatario",
+   "ini": 67.337,
+   "fin": 67.476
+  },
+  {
+   "texto": "nos",
+   "escena": "destinatario",
+   "ini": 67.523,
+   "fin": 67.639
+  },
+  {
+   "texto": "fue",
+   "escena": "destinatario",
+   "ini": 67.697,
+   "fin": 67.824
+  },
+  {
+   "texto": "dada",
+   "escena": "destinatario",
+   "ini": 67.859,
+   "fin": 68.08
+  },
+  {
+   "texto": "en",
+   "escena": "destinatario",
+   "ini": 68.115,
+   "fin": 68.173
+  },
+  {
+   "texto": "Cristo.",
+   "escena": "destinatario",
+   "ini": 68.231,
+   "fin": 68.73
+  },
+  {
+   "texto": "Y",
+   "escena": "viernes",
+   "ini": 69.136,
+   "fin": 69.206
+  },
+  {
+   "texto": "cuidado",
+   "escena": "viernes",
+   "ini": 69.264,
+   "fin": 69.6
+  },
+  {
+   "texto": "con",
+   "escena": "viernes",
+   "ini": 69.647,
+   "fin": 69.751
+  },
+  {
+   "texto": "el",
+   "escena": "viernes",
+   "ini": 69.798,
+   "fin": 69.856
+  },
+  {
+   "texto": "comercio.",
+   "escena": "viernes",
+   "ini": 69.902,
+   "fin": 70.541
+  },
+  {
+   "texto": "El",
+   "escena": "viernes",
+   "ini": 71.086,
+   "fin": 71.226
+  },
+  {
+   "texto": "jueves",
+   "escena": "viernes",
+   "ini": 71.284,
+   "fin": 71.574
+  },
+  {
+   "texto": "decimos",
+   "escena": "viernes",
+   "ini": 71.609,
+   "fin": 71.957
+  },
+  {
+   "texto": "que",
+   "escena": "viernes",
+   "ini": 72.004,
+   "fin": 72.073
+  },
+  {
+   "texto": "tenemos",
+   "escena": "viernes",
+   "ini": 72.12,
+   "fin": 72.445
+  },
+  {
+   "texto": "suficiente,",
+   "escena": "viernes",
+   "ini": 72.468,
+   "fin": 73.188
+  },
+  {
+   "texto": "y",
+   "escena": "viernes",
+   "ini": 73.374,
+   "fin": 73.432
+  },
+  {
+   "texto": "el",
+   "escena": "viernes",
+   "ini": 73.49,
+   "fin": 73.548
+  },
+  {
+   "texto": "viernes",
+   "escena": "viernes",
+   "ini": 73.594,
+   "fin": 73.919
+  },
+  {
+   "texto": "nos",
+   "escena": "viernes",
+   "ini": 73.977,
+   "fin": 74.093
+  },
+  {
+   "texto": "convencen",
+   "escena": "viernes",
+   "ini": 74.152,
+   "fin": 74.581
+  },
+  {
+   "texto": "de",
+   "escena": "viernes",
+   "ini": 74.628,
+   "fin": 74.674
+  },
+  {
+   "texto": "lo",
+   "escena": "viernes",
+   "ini": 74.72,
+   "fin": 74.79
+  },
+  {
+   "texto": "contrario.",
+   "escena": "viernes",
+   "ini": 74.825,
+   "fin": 75.475
+  },
+  {
+   "texto": "Si",
+   "escena": "cierre",
+   "ini": 76.021,
+   "fin": 76.16
+  },
+  {
+   "texto": "este",
+   "escena": "cierre",
+   "ini": 76.218,
+   "fin": 76.404
+  },
+  {
+   "texto": "año",
+   "escena": "cierre",
+   "ini": 76.462,
+   "fin": 76.671
+  },
+  {
+   "texto": "pones",
+   "escena": "cierre",
+   "ini": 76.706,
+   "fin": 76.938
+  },
+  {
+   "texto": "la",
+   "escena": "cierre",
+   "ini": 76.996,
+   "fin": 77.066
+  },
+  {
+   "texto": "mesa,",
+   "escena": "cierre",
+   "ini": 77.112,
+   "fin": 77.495
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 77.6,
+   "fin": 77.704
+  },
+  {
+   "texto": "cada",
+   "escena": "cierre",
+   "ini": 77.751,
+   "fin": 77.936
+  },
+  {
+   "texto": "uno",
+   "escena": "cierre",
+   "ini": 78.006,
+   "fin": 78.157
+  },
+  {
+   "texto": "nombre",
+   "escena": "cierre",
+   "ini": 78.215,
+   "fin": 78.505
+  },
+  {
+   "texto": "algo",
+   "escena": "cierre",
+   "ini": 78.552,
+   "fin": 78.761
+  },
+  {
+   "texto": "concreto",
+   "escena": "cierre",
+   "ini": 78.807,
+   "fin": 79.237
+  },
+  {
+   "texto": "que",
+   "escena": "cierre",
+   "ini": 79.283,
+   "fin": 79.353
+  },
+  {
+   "texto": "Dios",
+   "escena": "cierre",
+   "ini": 79.399,
+   "fin": 79.597
+  },
+  {
+   "texto": "le",
+   "escena": "cierre",
+   "ini": 79.655,
+   "fin": 79.713
+  },
+  {
+   "texto": "dio.",
+   "escena": "cierre",
+   "ini": 79.759,
+   "fin": 80.119
+  },
+  {
+   "texto": "La",
+   "escena": "cierre",
+   "ini": 80.665,
+   "fin": 80.769
+  },
+  {
+   "texto": "gratitud",
+   "escena": "cierre",
+   "ini": 80.816,
+   "fin": 81.245
+  },
+  {
+   "texto": "no",
+   "escena": "cierre",
+   "ini": 81.303,
+   "fin": 81.385
+  },
+  {
+   "texto": "tiene",
+   "escena": "cierre",
+   "ini": 81.431,
+   "fin": 81.64
+  },
+  {
+   "texto": "pasaporte,",
+   "escena": "cierre",
+   "ini": 81.675,
+   "fin": 82.36
+  },
+  {
+   "texto": "pero",
+   "escena": "cierre",
+   "ini": 82.406,
+   "fin": 82.58
+  },
+  {
+   "texto": "sí",
+   "escena": "cierre",
+   "ini": 82.627,
+   "fin": 82.72
+  },
+  {
+   "texto": "tiene",
+   "escena": "cierre",
+   "ini": 82.778,
+   "fin": 83.01
+  },
+  {
+   "texto": "destinatario.",
+   "escena": "cierre",
+   "ini": 83.056,
+   "fin": 84.055
+  }
+ ],
+ "escenas": [
+  {
+   "id": "gancho",
+   "ini": 0,
+   "fin": 12.109
+  },
+  {
+   "id": "pregunta",
+   "ini": 12.574,
+   "fin": 20.433
+  },
+  {
+   "id": "barco",
+   "ini": 21.072,
+   "fin": 31.219
+  },
+  {
+   "id": "cosecha",
+   "ini": 31.683,
+   "fin": 46.509
+  },
+  {
+   "id": "libertad",
+   "ini": 46.915,
+   "fin": 54.531
+  },
+  {
+   "id": "destinatario",
+   "ini": 54.996,
+   "fin": 68.73
+  },
+  {
+   "id": "viernes",
+   "ini": 69.136,
+   "fin": 75.475
+  },
+  {
+   "id": "cierre",
+   "ini": 76.021,
+   "fin": 84.055
+  }
+ ]
+}

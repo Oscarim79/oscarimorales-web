@@ -18,7 +18,11 @@
 - Cambios pedidos por Oscar ya aplicados: Lincoln en una sola frase; su oración «por años empezaba con lo que me duele,
   hoy empieza con gratitud»; en casa lo han celebrado solo en ocasiones y quiere adoptarlo por Alex y Sofi;
   «creyentes de raíz puritana a quienes llamaban separatistas» se queda así.
-- **Video: Oscar SÍ lo quiere**, para guardarlo o repostear el martes 24-nov (Thanksgiving es el jueves 26). Propósito
+- **Video ARMADO el 18-nov** (guion aprobado por Oscar): `vista-previa/reel-066-dar-gracias-no-tiene-pasaporte-con-musica.mp4`
+  (1:26, voz George 1.10, música integrada). Textos en `recursos/social/066-dar-gracias-no-tiene-pasaporte/reel.txt`.
+  **Falta que Oscar lo escuche** (sobre todo «Thanksgiving», «Mayflower» y «Halloween») y lo suba el martes 24-nov
+  a Reels (compartido a Facebook) y YouTube Shorts, con la etiqueta de IA y sin agregar otra música.
+- Historial del video: Oscar SÍ lo quiere, para guardarlo o repostear el martes 24-nov (Thanksgiving es el jueves 26). Propósito
   propuesto el 18-nov (falta su visto bueno antes del guion): que quien celebre o critique entienda que la fecha nació de
   gente que agradeció a Dios tras perder a la mitad de los suyos, y que dé gracias a Alguien; queda la frase
   «La gratitud no tiene pasaporte, pero sí tiene destinatario».
