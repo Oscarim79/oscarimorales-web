@@ -9,7 +9,22 @@
 
 ---
 
-## 📍 Dónde nos quedamos (18-nov-2026): post de Thanksgiving PROGRAMADO para el viernes 20-nov, 12:30 p. m.
+## 📍 Dónde nos quedamos (20-nov-2026): post de Thanksgiving PUBLICADO
+
+**«Dar gracias no tiene pasaporte»** ✅ publicado el viernes 20-nov-2026 a las 12:30 p. m. por la tarea programada
+(n=066, commit `335f5dd`) y **verificado en vivo**: https://oscarimorales.com/dar-gracias-no-tiene-pasaporte
+- La carpeta `programados/2026-11-20-dar-gracias-no-tiene-pasaporte/` ya se borró (y `programados/` quedó vacía y también se borró).
+- Pack social en `recursos/social/066-dar-gracias-no-tiene-pasaporte/` (commit `dc09d4a`): post.jpg, historia.jpg,
+  caption.txt, facebook.txt, x.txt, boletin.md (frase: «La gratitud no tiene pasaporte, pero sí tiene destinatario»).
+- **Pendientes de Oscar:** (a) programar las redes para las 6 p. m. de hoy (mismo párrafo en Instagram, Facebook y X);
+  (b) enviar el correo por Buttondown (asunto y cuerpo en `boletin.md`); (c) el **martes 24-nov** volver a compartirlo
+  junto con el video ya aprobado (Reels compartido a Facebook + YouTube Shorts, etiqueta de IA, sin otra música).
+  Thanksgiving es el jueves 26-nov.
+- Sin rastrear y sin tocar: `recursos/video/066-dar-gracias-lemo/` (de la prueba de la skill lemo-opuscar).
+
+---
+
+## Dónde nos quedamos (18-nov-2026): post de Thanksgiving PROGRAMADO para el viernes 20-nov, 12:30 p. m.
 
 **«Dar gracias no tiene pasaporte»** (Thanksgiving; Cultura y Actualidad · Familia), aprobado por Oscar el 18-nov.
 - ⏰ Tarea de la app `publicar-post-dar-gracias` (en «Programadas»; corre sola si la app está abierta, o al abrirla).
